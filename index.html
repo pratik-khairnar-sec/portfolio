@@ -1,0 +1,1601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pratik Khairnar — VAPT Engineer & Penetration Tester | Security Portfolio</title>
+  <meta name="description" content="Official Cybersecurity Portfolio of Pratik Khairnar — VAPT Engineer, Web Application Penetration Tester, and Security Tool Developer. Creator of AUTHENTIX v2.1.0, ReconArsenal, Reflectra, and BlindStrike.">
+  <meta name="author" content="Pratik Khairnar">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Pratik Khairnar — VAPT Engineer & Penetration Tester">
+  <meta property="og:description" content="Cybersecurity Researcher & Tool Developer focused on Web Application VAPT, Burp Suite Montoya API extensions, and IDOR/BOLA security research.">
+  <meta property="og:url" content="https://pratik-khairnar-sec.github.io/portfolio/">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-base: #030712;
+      --bg-surface: #070e20;
+      --bg-card: #0a1329;
+      --bg-card-hover: #101c3d;
+      --bg-terminal: #02050e;
+
+      --accent-cyan: #38bdf8;
+      --accent-cyan-glow: rgba(56, 189, 248, 0.25);
+      --accent-gold: #c8a96e;
+      --accent-gold-glow: rgba(200, 169, 110, 0.25);
+      --accent-emerald: #10b981;
+      --accent-emerald-glow: rgba(16, 185, 129, 0.25);
+      --accent-rose: #f43f5e;
+      --accent-purple: #a855f7;
+
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-glow: rgba(56, 189, 248, 0.28);
+      --border-gold: rgba(200, 169, 110, 0.35);
+
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-faint: #64748b;
+
+      --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      --font-mono: 'Fira Code', monospace;
+
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-xl: 24px;
+      --transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: var(--font-sans);
+      font-size: 15px;
+      line-height: 1.6;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Background Cyber Grid */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(rgba(56, 189, 248, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 189, 248, 0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    #particles-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container {
+      max-width: 1220px;
+      margin: 0 auto;
+      padding: 0 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      background: rgba(3, 7, 18, 0.85);
+      border-bottom: 1px solid var(--border-subtle);
+      z-index: 100;
+      padding: 16px 0;
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--text-main);
+      font-weight: 900;
+      font-size: 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .brand-icon {
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-md);
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-emerald));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #030712;
+      font-weight: 900;
+      font-size: 1rem;
+      box-shadow: 0 0 20px var(--accent-cyan-glow);
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 20px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--accent-emerald);
+      font-weight: 700;
+    }
+
+    .pulse-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-emerald);
+      box-shadow: 0 0 8px var(--accent-emerald);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 0.4; transform: scale(0.9); }
+      50% { opacity: 1; transform: scale(1.3); }
+      100% { opacity: 0.4; transform: scale(0.9); }
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 22px;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: var(--transition);
+    }
+    .nav-link:hover { color: var(--accent-cyan); }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      font-size: 0.86rem;
+      font-weight: 700;
+      border-radius: var(--radius-md);
+      text-decoration: none;
+      cursor: pointer;
+      transition: var(--transition);
+      border: none;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent-cyan), #0284c7);
+      color: #030712;
+      box-shadow: 0 4px 16px var(--accent-cyan-glow);
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(56, 189, 248, 0.45);
+      color: #000;
+    }
+
+    .btn-secondary {
+      background: var(--bg-surface);
+      color: var(--text-main);
+      border: 1px solid var(--border-subtle);
+    }
+    .btn-secondary:hover {
+      background: var(--bg-card-hover);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--accent-gold), #d9b87e);
+      color: #030712;
+      box-shadow: 0 4px 16px var(--accent-gold-glow);
+    }
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(200, 169, 110, 0.45);
+      color: #000;
+    }
+
+    /* Hero */
+    .hero {
+      padding: 80px 0 60px;
+      text-align: center;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 30px;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent-cyan);
+      margin-bottom: 24px;
+    }
+
+    .hero-title {
+      font-size: 4rem;
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, #ffffff 30%, var(--accent-cyan) 75%, var(--accent-emerald) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-subtitle-box {
+      min-height: 38px;
+      margin-bottom: 22px;
+    }
+
+    .hero-typing {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--accent-gold);
+      font-weight: 600;
+    }
+
+    .hero-desc {
+      font-size: 1.12rem;
+      color: var(--text-muted);
+      max-width: 820px;
+      margin: 0 auto 36px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 50px;
+    }
+
+    /* Metric Badges Strip */
+    .metrics-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      margin-bottom: 80px;
+    }
+
+    .metric-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 24px 18px;
+      text-align: center;
+      transition: var(--transition);
+    }
+    .metric-card:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .metric-val {
+      font-family: var(--font-mono);
+      font-size: 2.3rem;
+      font-weight: 900;
+      margin-bottom: 4px;
+    }
+    .val-cyan { color: var(--accent-cyan); }
+    .val-gold { color: var(--accent-gold); }
+    .val-emerald { color: var(--accent-emerald); }
+    .val-purple { color: var(--accent-purple); }
+
+    .metric-title {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+
+    /* Section Global */
+    .section-wrap {
+      margin-bottom: 90px;
+    }
+
+    .section-head {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    .section-tag {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--accent-cyan);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+      display: inline-block;
+      font-weight: 700;
+    }
+
+    .section-title {
+      font-size: 2.3rem;
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+      color: #fff;
+    }
+
+    .section-desc {
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto;
+      font-size: 0.98rem;
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+
+    .about-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 34px;
+    }
+
+    .about-card h3 {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .about-card p {
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+
+    .bullet-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .bullet-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: var(--text-muted);
+      font-size: 0.92rem;
+    }
+    .bullet-item svg {
+      width: 18px;
+      height: 18px;
+      color: var(--accent-emerald);
+      flex-shrink: 0;
+      margin-top: 3px;
+    }
+
+    /* Interactive Terminal */
+    .terminal-box {
+      background: var(--bg-terminal);
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.6);
+      margin-bottom: 80px;
+    }
+
+    .terminal-top {
+      background: #060b17;
+      border-bottom: 1px solid var(--border-subtle);
+      padding: 10px 18px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .terminal-dots {
+      display: flex;
+      gap: 8px;
+    }
+    .dot-red { width: 11px; height: 11px; border-radius: 50%; background: #ef4444; }
+    .dot-yellow { width: 11px; height: 11px; border-radius: 50%; background: #f59e0b; }
+    .dot-green { width: 11px; height: 11px; border-radius: 50%; background: #10b981; }
+
+    .terminal-title {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .terminal-body {
+      padding: 22px;
+      min-height: 280px;
+      max-height: 380px;
+      overflow-y: auto;
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+    }
+
+    .terminal-output {
+      line-height: 1.6;
+      color: #e2e8f0;
+      margin-bottom: 14px;
+      white-space: pre-wrap;
+    }
+
+    .terminal-prompt-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .terminal-user { color: var(--accent-emerald); font-weight: 700; }
+    .terminal-input {
+      background: transparent;
+      border: none;
+      color: var(--accent-cyan);
+      font-family: var(--font-mono);
+      font-size: 0.88rem;
+      outline: none;
+      flex: 1;
+    }
+
+    .terminal-chips {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border-subtle);
+    }
+    .t-chip {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      padding: 4px 10px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .t-chip:hover {
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+      background: var(--bg-card-hover);
+    }
+
+    /* Portfolio Arsenal Cards */
+    .filter-bar {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 34px;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 8px 16px;
+      border-radius: 30px;
+      font-size: 0.84rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+      font-family: inherit;
+    }
+    .filter-btn:hover {
+      color: var(--accent-cyan);
+      border-color: var(--accent-cyan);
+    }
+    .filter-btn.active {
+      background: rgba(56, 189, 248, 0.15);
+      border-color: var(--accent-cyan);
+      color: var(--accent-cyan);
+    }
+
+    .arsenal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+
+    .project-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-xl);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .project-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
+      transition: var(--transition);
+    }
+    .project-card:hover {
+      border-color: var(--accent-cyan);
+      transform: translateY(-4px);
+      box-shadow: 0 14px 34px rgba(0,0,0,0.6);
+    }
+    .project-card:hover::before {
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-emerald));
+    }
+
+    .project-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+
+    .project-tag {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 12px;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent-cyan);
+      font-weight: 700;
+    }
+    .tag-gold {
+      background: rgba(200, 169, 110, 0.15);
+      border-color: var(--accent-gold);
+      color: var(--accent-gold);
+    }
+
+    .project-version {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--text-faint);
+    }
+
+    .project-title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+    }
+
+    .project-desc {
+      color: var(--text-muted);
+      font-size: 0.92rem;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      flex-grow: 1;
+    }
+
+    .tech-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 22px;
+    }
+
+    .tech-pill {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: var(--radius-sm);
+      color: var(--text-muted);
+    }
+
+    .project-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .skill-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+    }
+
+    .skill-card h4 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      margin-bottom: 16px;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 6px 12px;
+      font-size: 0.85rem;
+      color: var(--text-main);
+      font-weight: 600;
+    }
+
+    /* Experience & Background */
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      bottom: 10px;
+      width: 2px;
+      background: var(--border-subtle);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 34px;
+    }
+    .timeline-dot {
+      position: absolute;
+      left: -26px;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent-cyan);
+      border: 3px solid var(--bg-base);
+      box-shadow: 0 0 10px var(--accent-cyan);
+    }
+    .timeline-content {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+    }
+    .timeline-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+    .timeline-role {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+    }
+    .timeline-date {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent-cyan);
+    }
+    .timeline-company {
+      font-size: 0.92rem;
+      color: var(--accent-gold);
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .timeline-desc {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* Contact Spotlight */
+    .contact-card {
+      background: linear-gradient(135deg, var(--bg-card), var(--bg-surface));
+      border: 1px solid var(--border-glow);
+      border-radius: var(--radius-xl);
+      padding: 48px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+    }
+
+    .contact-icon {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-emerald));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      color: #030712;
+    }
+    .contact-icon svg { width: 30px; height: 30px; }
+
+    .contact-email-row {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--bg-base);
+      border: 1px solid var(--border-glow);
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      margin: 24px 0 28px;
+      font-family: var(--font-mono);
+      font-size: 1.1rem;
+      color: var(--accent-cyan);
+    }
+
+    .copy-btn {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: var(--accent-cyan);
+      font-family: inherit;
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+    .copy-btn:hover {
+      background: var(--accent-cyan);
+      color: #030712;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    /* Footer */
+    .footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 40px 0;
+      text-align: center;
+      color: var(--text-faint);
+      font-size: 0.88rem;
+    }
+    .footer strong { color: var(--text-main); }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero-title { font-size: 2.8rem; }
+      .metrics-strip { grid-template-columns: repeat(2, 1fr); }
+      .about-grid { grid-template-columns: 1fr; }
+      .arsenal-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr; }
+      .nav-links { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#" class="brand">
+        <div class="brand-icon">PK</div>
+        <span>Pratik Khairnar</span>
+      </a>
+
+      <div class="status-pill">
+        <span class="pulse-dot"></span>
+        <span>OPEN FOR VAPT ROLES</span>
+      </div>
+
+      <nav class="nav-links">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#terminal" class="nav-link">Terminal</a>
+        <a href="#arsenal" class="nav-link">Security Arsenal</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="btn btn-primary btn-sm">Contact Email</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero container">
+    <div class="hero-badge">
+      <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 2.18l7 3.12v4.7c0 4.67-3.13 9.01-7 10.15-3.87-1.14-7-5.48-7-10.15V6.3l7-3.12z"/></svg>
+      CYBERSECURITY RESEARCHER &amp; SECURITY TOOL DEVELOPER
+    </div>
+
+    <h1 class="hero-title">Pratik Khairnar</h1>
+
+    <div class="hero-subtitle-box">
+      <span class="hero-typing" id="hero-typing-text"></span>
+    </div>
+
+    <p class="hero-desc">
+      Passionate security practitioner focused on <strong>Web Application Penetration Testing (VAPT)</strong>, 
+      PortSwigger <strong>Burp Suite Montoya API</strong> extension development, and empirical vulnerability verification. 
+      Actively seeking entry-level and junior penetration testing opportunities with immediate availability.
+    </p>
+
+    <div class="hero-actions">
+      <a href="#arsenal" class="btn btn-primary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 17l6-6-6-6M12 19h8"/></svg>
+        Explore 8 Security Suites
+      </a>
+      <a href="#terminal" class="btn btn-secondary">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+        Launch Interactive Terminal
+      </a>
+      <a href="#contact" class="btn btn-gold">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Get In Touch (Email)
+      </a>
+    </div>
+
+    <!-- Metrics Strip -->
+    <div class="metrics-strip">
+      <div class="metric-card">
+        <div class="metric-val val-cyan">8</div>
+        <div class="metric-title">Production Frameworks</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val val-gold">27</div>
+        <div class="metric-title">Formal Security Invariants</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val val-emerald">0.00%</div>
+        <div class="metric-title">False Positive Target</div>
+      </div>
+      <div class="metric-card">
+        <div class="metric-val val-purple">28</div>
+        <div class="metric-title">Deep Secret Rules</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Mission Section -->
+  <section id="about" class="container section-wrap">
+    <div class="section-head">
+      <span class="section-tag">Practitioner Philosophy</span>
+      <h2 class="section-title">Engineering High-Velocity Defensive Tooling</h2>
+      <p class="section-desc">Replacing noisy, heuristic guesswork with deterministic verification, empirical calibration, and headless browser confirmation.</p>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-card">
+        <h3>
+          <svg width="22" height="22" fill="none" stroke="var(--accent-cyan)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          VAPT &amp; Research Focus
+        </h3>
+        <p>
+          I am a final-year B.Tech Cyber Security and Forensics student with real-world exposure to web application security audits, digital forensics investigations, and defensive tooling architecture.
+        </p>
+        <p>
+          My focus centers on <strong>Broken Object Level Authorization (BOLA / IDOR)</strong>, <strong>Multi-Step Authentication Workflows</strong>, <strong>Host-Header Poisoning</strong>, and <strong>MFA lifecycle tampering</strong>.
+        </p>
+        <ul class="bullet-list">
+          <li class="bullet-item">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span><strong>Burp Suite Montoya API:</strong> Building native Java extensions that automate complex state-machine tracking.</span>
+          </li>
+          <li class="bullet-item">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span><strong>OWASP Top 10 &amp; ASVS:</strong> Manual penetration testing methodologies combined with targeted automation.</span>
+          </li>
+          <li class="bullet-item">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span><strong>Digital Forensics:</strong> Hands-on log analysis and cyber incident triage during police station internship.</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="about-card">
+        <h3>
+          <svg width="22" height="22" fill="none" stroke="var(--accent-emerald)" stroke-width="2" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+          Rigorous Engineering Principles
+        </h3>
+        <p>
+          Every security tool I design adheres to strict mathematical criteria and operational resilience:
+        </p>
+        <ul class="bullet-list">
+          <li class="bullet-item">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span><strong>Zero UI Freezes:</strong> Background worker thread pools ensuring fluid triage during high-volume scans.</span>
+          </li>
+          <li class="bullet-item">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span><strong>Empirical Latency Calibration:</strong> Baseline latency modeling before testing time-based blind injection vectors.</span>
+          </li>
+          <li class="bullet-item">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span><strong>Real-Time Telegram Dispatcher:</strong> Instant push alerts with terminal-ready Kali cURL reproduction commands.</span>
+          </li>
+          <li class="bullet-item">
+            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+            <span><strong>Security by Design:</strong> Sensitive tokens and credentials SHA-256 fingerprinted; raw secrets never stored.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Terminal Section -->
+  <section id="terminal" class="container section-wrap">
+    <div class="section-head">
+      <span class="section-tag">Interactive Console</span>
+      <h2 class="section-title">AppSec Terminal Emulator</h2>
+      <p class="section-desc">Type commands below or click quick action chips to inspect skills, tools, and background.</p>
+    </div>
+
+    <div class="terminal-box">
+      <div class="terminal-top">
+        <div class="terminal-dots">
+          <div class="dot-red"></div>
+          <div class="dot-yellow"></div>
+          <div class="dot-green"></div>
+        </div>
+        <div class="terminal-title">pratik@kali-vapt: ~ (v2.1.0)</div>
+        <div style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-emerald);">● CONNECTED</div>
+      </div>
+
+      <div class="terminal-body" id="terminal-body">
+        <div class="terminal-output" id="terminal-output">Welcome to Pratik Khairnar's VAPT &amp; Security Console [v2.1.0-release]
+Type 'help' for available commands, or click any chip below to run quickly.
+─────────────────────────────────────────────────────────────────────────────</div>
+        <div class="terminal-prompt-row">
+          <span class="terminal-user">pratik@sec:~$</span>
+          <input type="text" class="terminal-input" id="terminal-input" placeholder="type 'help', 'whoami', 'arsenal'..." autocomplete="off">
+        </div>
+
+        <div class="terminal-chips">
+          <button class="t-chip" onclick="runCommand('whoami')">whoami</button>
+          <button class="t-chip" onclick="runCommand('arsenal')">arsenal</button>
+          <button class="t-chip" onclick="runCommand('skills')">skills</button>
+          <button class="t-chip" onclick="runCommand('certs')">certs</button>
+          <button class="t-chip" onclick="runCommand('contact')">contact</button>
+          <button class="t-chip" onclick="runCommand('clear')">clear</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security Arsenal (8 Projects) -->
+  <section id="arsenal" class="container section-wrap">
+    <div class="section-head">
+      <span class="section-tag">Open Source Engineering</span>
+      <h2 class="section-title">The Complete Security Arsenal</h2>
+      <p class="section-desc">8 production-ready suites built for high-velocity offensive audits, zero false-positive triage, and recon automation.</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="filter-bar">
+      <button class="filter-btn active" onclick="filterProjects('all')">All Suites (8)</button>
+      <button class="filter-btn" onclick="filterProjects('flagship')">🏆 Flagship</button>
+      <button class="filter-btn" onclick="filterProjects('appsec')">🛡️ VAPT &amp; AppSec</button>
+      <button class="filter-btn" onclick="filterProjects('recon')">🔎 OSINT &amp; Recon</button>
+      <button class="filter-btn" onclick="filterProjects('extensions')">⚡ Chrome Extensions</button>
+    </div>
+
+    <div class="arsenal-grid" id="arsenal-grid-box">
+
+      <!-- 1. AUTHENTIX -->
+      <div class="project-card" data-cat="flagship appsec">
+        <div>
+          <div class="project-top">
+            <span class="project-tag tag-gold">🏆 FLAGSHIP SUITE</span>
+            <span class="project-version">v2.1.0 • Java 17/21</span>
+          </div>
+          <h3 class="project-title">AUTHENTIX Enterprise</h3>
+          <p class="project-desc">
+            Next-Gen Burp Suite Montoya API security extension for multi-step authentication testing, IDOR/BOLA cross-actor mapping, 27 mathematical security invariants, 28 secret rules, and automated Telegram alerting.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">Burp Suite Montoya</span>
+            <span class="tech-pill">Java</span>
+            <span class="tech-pill">State Machines</span>
+            <span class="tech-pill">IDOR/BOLA</span>
+            <span class="tech-pill">Telegram API</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://pratik-khairnar-sec.github.io/authentix-enterprise/" target="_blank" class="btn btn-gold btn-sm">🌐 Live Demo</a>
+          <a href="https://github.com/pratik-khairnar-sec/authentix-enterprise" target="_blank" class="btn btn-secondary btn-sm">GitHub Repo</a>
+        </div>
+      </div>
+
+      <!-- 2. ReconArsenal -->
+      <div class="project-card" data-cat="recon">
+        <div>
+          <div class="project-top">
+            <span class="project-tag">⚡ CORE SUITE</span>
+            <span class="project-version">v1.0.0 • Python / Web</span>
+          </div>
+          <h3 class="project-title">ReconArsenal</h3>
+          <p class="project-desc">
+            Unified OSINT and passive attack surface discovery suite combining Wayback Machine CDX API mining, AlienVault OTX intelligence, passive DNS resolution, and targeted search dorks.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">OSINT</span>
+            <span class="tech-pill">Wayback CDX</span>
+            <span class="tech-pill">OTX AlienVault</span>
+            <span class="tech-pill">Passive DNS</span>
+            <span class="tech-pill">Attack Surface</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://pratik-khairnar-sec.github.io/recon-arsenal/" target="_blank" class="btn btn-primary btn-sm">🌐 Live Demo</a>
+          <a href="https://github.com/pratik-khairnar-sec/recon-arsenal" target="_blank" class="btn btn-secondary btn-sm">GitHub Repo</a>
+        </div>
+      </div>
+
+      <!-- 3. Reflectra -->
+      <div class="project-card" data-cat="appsec">
+        <div>
+          <div class="project-top">
+            <span class="project-tag">🛡️ APPSEC</span>
+            <span class="project-version">v7.0.0 • Python 3.10+</span>
+          </div>
+          <h3 class="project-title">Reflectra</h3>
+          <p class="project-desc">
+            Context-aware XSS detection and verification framework with real Headless Chrome DOM execution, reflection context boundary analysis (HTML body, attributes, script blocks), and zero false-positive triage.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">DOM XSS</span>
+            <span class="tech-pill">Headless Chrome</span>
+            <span class="tech-pill">Context Engine</span>
+            <span class="tech-pill">HTML Triage</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://pratik-khairnar-sec.github.io/Reflectra/" target="_blank" class="btn btn-primary btn-sm">🌐 Live Demo</a>
+          <a href="https://github.com/pratik-khairnar-sec/Reflectra" target="_blank" class="btn btn-secondary btn-sm">GitHub Repo</a>
+        </div>
+      </div>
+
+      <!-- 4. BlindStrike -->
+      <div class="project-card" data-cat="appsec">
+        <div>
+          <div class="project-top">
+            <span class="project-tag">🛡️ APPSEC</span>
+            <span class="project-version">v7.0.0 • Python 3</span>
+          </div>
+          <h3 class="project-title">BlindStrike</h3>
+          <p class="project-desc">
+            High-precision Time-Based and Boolean-based Blind SQL Injection detection framework with empirical baseline latency calibration, multi-threaded probe concurrency, and automated Telegram alerts.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">Blind SQLi</span>
+            <span class="tech-pill">Time-Based</span>
+            <span class="tech-pill">Latency Baseline</span>
+            <span class="tech-pill">Telegram Bot</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://pratik-khairnar-sec.github.io/BlindStrike/" target="_blank" class="btn btn-primary btn-sm">🌐 Live Demo</a>
+          <a href="https://github.com/pratik-khairnar-sec/BlindStrike" target="_blank" class="btn btn-secondary btn-sm">GitHub Repo</a>
+        </div>
+      </div>
+
+      <!-- 5. WaybackLens -->
+      <div class="project-card" data-cat="extensions recon">
+        <div>
+          <div class="project-top">
+            <span class="project-tag">⚡ EXTENSION</span>
+            <span class="project-version">v1.0.0 • Manifest V3</span>
+          </div>
+          <h3 class="project-title">WaybackLens</h3>
+          <p class="project-desc">
+            High-performance Wayback Machine CDX reconnaissance and triage Chrome extension. Instantly extracts historical endpoints, hidden API parameters, and sensitive backups directly inside the browser.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">Chrome MV3</span>
+            <span class="tech-pill">Wayback CDX</span>
+            <span class="tech-pill">DevTools</span>
+            <span class="tech-pill">Endpoint Triage</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://pratik-khairnar-sec.github.io/wayback-lens/" target="_blank" class="btn btn-primary btn-sm">🌐 Live Demo</a>
+          <a href="https://github.com/pratik-khairnar-sec/wayback-lens" target="_blank" class="btn btn-secondary btn-sm">GitHub Repo</a>
+        </div>
+      </div>
+
+      <!-- 6. EndpointFinder -->
+      <div class="project-card" data-cat="extensions recon">
+        <div>
+          <div class="project-top">
+            <span class="project-tag">⚡ EXTENSION</span>
+            <span class="project-version">v1.0.0 • Manifest V3</span>
+          </div>
+          <h3 class="project-title">EndpointFinder</h3>
+          <p class="project-desc">
+            Autonomous Chrome extension for deep client-side JavaScript endpoint and hidden route extraction. Scrapes inline scripts, Fetch/Axios calls, and webpack bundles in real-time.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">Chrome MV3</span>
+            <span class="tech-pill">JS AST Scraper</span>
+            <span class="tech-pill">Fetch &amp; Axios Hook</span>
+            <span class="tech-pill">API Discovery</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://pratik-khairnar-sec.github.io/endpoint-finder-extension/" target="_blank" class="btn btn-primary btn-sm">🌐 Live Demo</a>
+          <a href="https://github.com/pratik-khairnar-sec/endpoint-finder-extension" target="_blank" class="btn btn-secondary btn-sm">GitHub Repo</a>
+        </div>
+      </div>
+
+      <!-- 7. ReconForge -->
+      <div class="project-card" data-cat="recon">
+        <div>
+          <div class="project-top">
+            <span class="project-tag">🔎 OSINT &amp; RECON</span>
+            <span class="project-version">v3.0.0 • HTML5/JS</span>
+          </div>
+          <h3 class="project-title">ReconForge</h3>
+          <p class="project-desc">
+            Master Bug Bounty &amp; VAPT multi-target reconnaissance framework with 33 structured testing phases, 13,600+ curated search queries, and offline target-triage wordlists.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">33 Phases</span>
+            <span class="tech-pill">13,600+ Dorks</span>
+            <span class="tech-pill">Wordlists</span>
+            <span class="tech-pill">Bug Bounty</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://pratik-khairnar-sec.github.io/ReconForge/" target="_blank" class="btn btn-primary btn-sm">🌐 Live Demo</a>
+          <a href="https://github.com/pratik-khairnar-sec/ReconForge" target="_blank" class="btn btn-secondary btn-sm">GitHub Repo</a>
+        </div>
+      </div>
+
+      <!-- 8. CORSair -->
+      <div class="project-card" data-cat="appsec">
+        <div>
+          <div class="project-top">
+            <span class="project-tag">🛡️ APPSEC</span>
+            <span class="project-version">v3.0.0 • Web Triage</span>
+          </div>
+          <h3 class="project-title">CORSair</h3>
+          <p class="project-desc">
+            Cross-Origin Resource Sharing (CORS) misconfiguration audit engine and automated PoC exploit staging suite. Validates null origin, wildcard subdomains, and credentialed leakage.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">CORS Exploitation</span>
+            <span class="tech-pill">PoC Generator</span>
+            <span class="tech-pill">ACAC &amp; ACAO</span>
+            <span class="tech-pill">Security Audit</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <a href="https://pratik-khairnar-sec.github.io/CORSair/" target="_blank" class="btn btn-primary btn-sm">🌐 Live Demo</a>
+          <a href="https://github.com/pratik-khairnar-sec/CORSair" target="_blank" class="btn btn-secondary btn-sm">GitHub Repo</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Technical Competencies & Stack -->
+  <section id="skills" class="container section-wrap">
+    <div class="section-head">
+      <span class="section-tag">Technical Competencies</span>
+      <h2 class="section-title">Security Stack &amp; Tooling</h2>
+      <p class="section-desc">Practical, hands-on proficiencies applied across manual VAPT, script development, and defensive engineering.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div class="skill-card">
+        <h4>
+          <svg width="20" height="20" fill="none" stroke="var(--accent-cyan)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Security Disciplines
+        </h4>
+        <div class="skill-tags">
+          <span class="skill-item">Web VAPT (OWASP Top 10)</span>
+          <span class="skill-item">IDOR / BOLA Discovery</span>
+          <span class="skill-item">OTP &amp; MFA Flow Tampering</span>
+          <span class="skill-item">Host-Header Poisoning</span>
+          <span class="skill-item">Pre-Auth Session Fixation</span>
+          <span class="skill-item">JWT Structure &amp; Confusion</span>
+          <span class="skill-item">DOM-based &amp; Blind XSS</span>
+          <span class="skill-item">Time/Boolean Blind SQLi</span>
+          <span class="skill-item">OSINT Attack Surface Recon</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h4>
+          <svg width="20" height="20" fill="none" stroke="var(--accent-emerald)" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          Tools &amp; Platforms
+        </h4>
+        <div class="skill-tags">
+          <span class="skill-item">Burp Suite Pro &amp; Community</span>
+          <span class="skill-item">Burp Montoya API</span>
+          <span class="skill-item">Kali Linux / Parrot OS</span>
+          <span class="skill-item">OWASP ZAP</span>
+          <span class="skill-item">Postman / cURL</span>
+          <span class="skill-item">Git &amp; GitHub Actions</span>
+          <span class="skill-item">Wireshark &amp; Nmap</span>
+          <span class="skill-item">Docker Containers</span>
+          <span class="skill-item">Chrome DevTools (MV3)</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <h4>
+          <svg width="20" height="20" fill="none" stroke="var(--accent-gold)" stroke-width="2" viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          Languages &amp; Runtimes
+        </h4>
+        <div class="skill-tags">
+          <span class="skill-item">Java 17 / 21</span>
+          <span class="skill-item">Python 3 (Requests, Selenium)</span>
+          <span class="skill-item">JavaScript (ES6+, DOM, Fetch)</span>
+          <span class="skill-item">Bash / Linux Shell Scripting</span>
+          <span class="skill-item">SQL (MySQL, PostgreSQL)</span>
+          <span class="skill-item">HTML5 / CSS3</span>
+          <span class="skill-item">Regex &amp; AST Analysis</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience & Background -->
+  <section id="experience" class="container section-wrap">
+    <div class="section-head">
+      <span class="section-tag">Professional Timeline</span>
+      <h2 class="section-title">Education &amp; Industry Experience</h2>
+      <p class="section-desc">Grounded in rigorous academic study, law enforcement cyber forensics, and active enterprise engagements.</p>
+    </div>
+
+    <div class="timeline">
+      <!-- 1 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <span class="timeline-role">Junior Penetration Tester</span>
+            <span class="timeline-date">Industry Experience</span>
+          </div>
+          <div class="timeline-company">GROOTT Services</div>
+          <p class="timeline-desc">
+            Conducted black-box and grey-box web application penetration testing aligned with OWASP Top 10 guidelines. Identified authentication logic flaws, parameter tampering vectors, and produced structured remediation documentation.
+          </p>
+        </div>
+      </div>
+
+      <!-- 2 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <span class="timeline-role">Cyber Crime &amp; Digital Forensics Intern</span>
+            <span class="timeline-date">Practical Law Enforcement Internship</span>
+          </div>
+          <div class="timeline-company">Cyber Police Station, Nashik</div>
+          <p class="timeline-desc">
+            Assisted sworn officers and forensic analysts in cybercrime investigations. Extracted digital evidence, analyzed CDR / IPDR telecommunication logs, investigated financial fraud transaction trails, and formatted formal technical evidentiary reports.
+          </p>
+        </div>
+      </div>
+
+      <!-- 3 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <span class="timeline-role">B.Tech in Cyber Security &amp; Forensics</span>
+            <span class="timeline-date">2022 — 2026 (Final Year)</span>
+          </div>
+          <div class="timeline-company">Sandip University, Nashik</div>
+          <p class="timeline-desc">
+            Focused curriculum covering Network Security, Cryptography, Reverse Engineering, Operating System Internals, Web Application Security, and Ethical Hacking Methodologies.
+          </p>
+        </div>
+      </div>
+
+      <!-- 4 -->
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-head">
+            <span class="timeline-role">Professional Certifications</span>
+            <span class="timeline-date">Industry Credentials</span>
+          </div>
+          <div class="timeline-company">EC-Council &amp; Cisco</div>
+          <p class="timeline-desc">
+            • <strong>Certified Ethical Hacker (CEH v13 AI)</strong> — EC-Council<br>
+            • <strong>Cisco Certified Network Associate (CCNA)</strong> — Enterprise Networking &amp; Security
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Direct Inquiries -->
+  <section id="contact" class="container section-wrap">
+    <div class="contact-card">
+      <div class="contact-icon">
+        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      </div>
+
+      <h2 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 10px; color: #fff;">Let's Connect</h2>
+      <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto; font-size: 1rem;">
+        Available for full-time <strong>VAPT Engineer</strong>, <strong>Web Application Penetration Tester</strong>, and <strong>Junior Security Consultant</strong> roles. Reach out directly via email:
+      </p>
+
+      <div class="contact-email-row">
+        <span>pratik.khairnar.sec@gmail.com</span>
+        <button class="copy-btn" id="copy-email-btn" onclick="copyEmail()">Copy Email</button>
+      </div>
+
+      <div class="contact-buttons">
+        <a href="mailto:pratik.khairnar.sec@gmail.com" class="btn btn-primary btn-lg">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          Send Email Directly
+        </a>
+        <a href="https://github.com/pratik-khairnar-sec" target="_blank" class="btn btn-secondary btn-lg">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub Profile
+        </a>
+        <a href="https://linkedin.com/in/pratik-khairnar-sec" target="_blank" class="btn btn-secondary btn-lg">
+          <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          LinkedIn Profile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p style="margin-bottom: 6px;">
+        Designed &amp; Maintained by <strong>Pratik Khairnar</strong>.
+      </p>
+      <p style="font-size: 0.82rem; color: var(--text-faint);">
+        Cybersecurity Researcher • VAPT Engineer • Burp Suite Montoya API Tool Developer.
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // Copy email helper
+    function copyEmail() {
+      const email = 'pratik.khairnar.sec@gmail.com';
+      navigator.clipboard.writeText(email).then(() => {
+        const btn = document.getElementById('copy-email-btn');
+        btn.innerText = 'Copied to Clipboard!';
+        btn.style.background = 'var(--accent-emerald)';
+        btn.style.color = '#030712';
+        setTimeout(() => {
+          btn.innerText = 'Copy Email';
+          btn.style.background = '';
+          btn.style.color = '';
+        }, 2500);
+      });
+    }
+
+    // Hero typing effect
+    const typingPhrases = [
+      "VAPT Engineer & Web Application Penetration Tester",
+      "Creator of AUTHENTIX v2.1.0, ReconArsenal & BlindStrike",
+      "Burp Suite Montoya API Extension Engineering",
+      "Empirical Zero-False-Positive Security Verification"
+    ];
+    let phraseIdx = 0;
+    let charIdx = 0;
+    let isDeleting = false;
+    const typingEl = document.getElementById('hero-typing-text');
+
+    function typeLoop() {
+      const current = typingPhrases[phraseIdx];
+      if (isDeleting) {
+        typingEl.textContent = current.substring(0, charIdx - 1);
+        charIdx--;
+      } else {
+        typingEl.textContent = current.substring(0, charIdx + 1);
+        charIdx++;
+      }
+
+      let speed = isDeleting ? 30 : 60;
+      if (!isDeleting && charIdx === current.length) {
+        speed = 1800;
+        isDeleting = true;
+      } else if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        phraseIdx = (phraseIdx + 1) % typingPhrases.length;
+        speed = 400;
+      }
+
+      setTimeout(typeLoop, speed);
+    }
+    typeLoop();
+
+    // Filter projects
+    function filterProjects(cat) {
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      event.target.classList.add('active');
+
+      const cards = document.querySelectorAll('.project-card');
+      cards.forEach(c => {
+        if (cat === 'all') {
+          c.style.display = 'flex';
+        } else {
+          const cats = c.getAttribute('data-cat') || '';
+          if (cats.includes(cat)) {
+            c.style.display = 'flex';
+          } else {
+            c.style.display = 'none';
+          }
+        }
+      });
+    }
+
+    // Terminal Emulator
+    const terminalOutput = document.getElementById('terminal-output');
+    const terminalInput = document.getElementById('terminal-input');
+
+    const COMMANDS = {
+      help: `Available commands:
+  • whoami    - Profile summary and career focus
+  • arsenal   - List all 8 security suites and versions
+  • skills    - Technical skills, languages, and tools
+  • certs     - Industry certifications and education
+  • contact   - Direct email and professional channels
+  • clear     - Clear the console screen`,
+      whoami: `[PRATIK KHAIRNAR]
+Role       : VAPT Engineer & Web Application Penetration Tester
+Focus      : IDOR/BOLA, OTP/MFA logic, Burp Suite Montoya extensions
+Availability: Immediate Joining (Entry-Level / Junior Roles)
+Education  : B.Tech Cyber Security & Forensics (Sandip University, 2026)`,
+      arsenal: `[SECURITY ARSENAL - 8 PRODUCTION SUITES]
+1. AUTHENTIX Enterprise (v2.1.0) - Burp Montoya API, 27 Invariants, 28 Secret Rules
+2. ReconArsenal (v1.0.0)         - Unified OSINT & Passive Attack Surface Suite
+3. Reflectra (v7.0.0)            - Context-Aware XSS with Headless Chrome Verification
+4. BlindStrike (v7.0.0)          - Latency-Calibrated Time/Boolean Blind SQLi
+5. WaybackLens (v1.0.0)          - High-Speed Wayback CDX Recon Chrome Extension (MV3)
+6. EndpointFinder (v1.0.0)       - Autonomous Client-Side JS Endpoint Miner (MV3)
+7. ReconForge (v3.0.0)           - Master Bug Bounty Multi-Target Framework (13.6k Dorks)
+8. CORSair (v3.0.0)              - CORS Misconfiguration Audit & PoC Staging Engine`,
+      skills: `[TECHNICAL STACK]
+Languages : Java 17/21, Python 3, JavaScript (ES6+), Bash, SQL
+Tools     : Burp Suite Pro, Montoya API, Kali Linux, OWASP ZAP, Git, Docker, Nmap
+VAPT      : OWASP Top 10, IDOR, Session Fixation, Host-Header Poisoning, JWT Flaws`,
+      certs: `[CREDENTIALS & BACKGROUND]
+• Certified Ethical Hacker (CEH v13 AI) - EC-Council
+• Cisco Certified Network Associate (CCNA) - Enterprise Networking & Security
+• Junior Penetration Tester - GROOTT Services
+• Cyber Crime & Forensics Intern - Cyber Police Station, Nashik`,
+      contact: `[DIRECT CONTACT]
+Email    : pratik.khairnar.sec@gmail.com
+GitHub   : https://github.com/pratik-khairnar-sec
+LinkedIn : https://linkedin.com/in/pratik-khairnar-sec`
+    };
+
+    function runCommand(cmd) {
+      cmd = cmd.trim().toLowerCase();
+      if (cmd === 'clear') {
+        terminalOutput.textContent = '';
+        return;
+      }
+      terminalOutput.textContent += `\npratik@sec:~$ ${cmd}\n`;
+      if (COMMANDS[cmd]) {
+        terminalOutput.textContent += COMMANDS[cmd] + '\n';
+      } else if (cmd) {
+        terminalOutput.textContent += `zsh: command not found: ${cmd}. Type 'help' for available commands.\n`;
+      }
+      const b = document.getElementById('terminal-body');
+      b.scrollTop = b.scrollHeight;
+    }
+
+    terminalInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        runCommand(terminalInput.value);
+        terminalInput.value = '';
+      }
+    });
+
+    // Particle Canvas Animation
+    const canvas = document.getElementById('particles-canvas');
+    const ctx = canvas.getContext('2d');
+    let width, height, particles;
+
+    function resizeCanvas() {
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
+      particles = [];
+      const count = Math.floor(width / 25);
+      for (let i = 0; i < count; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+          r: Math.random() * 1.5 + 0.8,
+          alpha: Math.random() * 0.35 + 0.1
+        });
+      }
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    function animateParticles() {
+      ctx.clearRect(0, 0, width, height);
+      ctx.fillStyle = '#38bdf8';
+
+      particles.forEach(p => {
+        p.x += p.vx;
+        p.y += p.vy;
+
+        if (p.x < 0) p.x = width;
+        if (p.x > width) p.x = 0;
+        if (p.y < 0) p.y = height;
+        if (p.y > height) p.y = 0;
+
+        ctx.globalAlpha = p.alpha;
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      requestAnimationFrame(animateParticles);
+    }
+    animateParticles();
+  </script>
+</body>
+</html>

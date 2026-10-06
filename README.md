@@ -17,7 +17,7 @@
 
 | Suite | Focus | Version | Live Demo |
 |---|---|---|---|
-| **AUTHENTIX Enterprise** | Burp Montoya API, 27 Invariants, 28 Secret Rules, 12 ATO Chains | `v2.1.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/authentix-enterprise/) |
+| **AUTHENTIX Enterprise** | Burp Montoya API, 29 Invariants, 28 Secret Rules, 12 ATO Chains | `v2.1.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/authentix-enterprise/) |
 | **ReconArsenal** | Unified OSINT & Passive Attack Surface Discovery | `v1.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/recon-arsenal/) |
 | **Reflectra** | Context-Aware XSS Scanner with Headless Chrome Verification | `v7.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/Reflectra/) |
 | **BlindStrike** | Latency-Calibrated Time/Boolean Blind SQLi Detection | `v7.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/BlindStrike/) |

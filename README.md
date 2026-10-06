@@ -18,7 +18,6 @@
 | Suite | Focus | Version | Live Demo |
 |---|---|---|---|
 | **AUTHENTIX Enterprise** | Burp Montoya API, 29 Invariants, 28 Secret Rules, 12 ATO Chains | `v2.1.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/authentix-enterprise/) |
-| **Kavach AI Enterprise** | Autonomous Career Copilot, 37+ Frontier AI Models, Smart Auto-Router & Zero-Code Discovery | `v2.2.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/kavach-enterprise/) |
 | **ReconArsenal** | Unified OSINT & Passive Attack Surface Discovery | `v1.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/recon-arsenal/) |
 | **Reflectra** | Context-Aware XSS Scanner with Headless Chrome Verification | `v7.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/Reflectra/) |
 | **BlindStrike** | Latency-Calibrated Time/Boolean Blind SQLi Detection | `v7.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/BlindStrike/) |

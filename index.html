@@ -850,6 +850,7 @@
         <a href="#arsenal" class="nav-link">Security Arsenal</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#experience" class="nav-link">Experience</a>
+        <a href="#research" class="nav-link">Research</a>
         <a href="#contact" class="btn btn-primary btn-sm">Contact Email</a>
       </nav>
     </div>
@@ -1339,6 +1340,83 @@ Type 'help' for available commands, or click any chip below to run quickly.
           </p>
         </div>
       </div>
+    </div>
+  <!-- Security Research & Technical Writeups -->
+  <section id="research" class="container section-wrap">
+    <div class="section-head">
+      <span class="section-tag">Publications &amp; Deep Dives</span>
+      <h2 class="section-title">Security Research &amp; Technical Writeups</h2>
+      <p class="section-desc">In-depth technical architecture breakdowns, empirical vulnerability research, and security engineering writeups.</p>
+    </div>
+
+    <div class="arsenal-grid" style="grid-template-columns: repeat(3, 1fr);">
+      
+      <!-- Article 1 -->
+      <div class="project-card" style="border-top: 3px solid var(--accent-gold);">
+        <div>
+          <div class="project-top">
+            <span class="project-tag tag-gold">BURP MONTOYA API</span>
+            <span class="project-version">Medium Article</span>
+          </div>
+          <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Inside AUTHENTIX: Building an Automated BOLA &amp; IDOR Detection Engine</h3>
+          <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
+            Why legacy HTTP proxies fail at access control, deterministic finite-state automation, cross-actor matrix verification, and 27 formal security invariants.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">State Machines</span>
+            <span class="tech-pill">Montoya API</span>
+            <span class="tech-pill">IDOR/BOLA</span>
+          </div>
+        </div>
+        <div class="project-links" style="margin-top: 20px;">
+          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" class="btn btn-gold btn-sm" style="width: 100%; justify-content: center;">Read on Medium</a>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="project-card" style="border-top: 3px solid var(--accent-cyan);">
+        <div>
+          <div class="project-top">
+            <span class="project-tag">BLIND SQLI RESEARCH</span>
+            <span class="project-version">Medium Article</span>
+          </div>
+          <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Beyond Latency: Eliminating False Positives in Time-Based Blind SQLi</h3>
+          <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
+            Statistical confidence intervals, network jitter mitigation, baseline timing calibration, and mathematical validation in BlindStrike.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">Latency Baseline</span>
+            <span class="tech-pill">Time-Based</span>
+            <span class="tech-pill">SQLi</span>
+          </div>
+        </div>
+        <div class="project-links" style="margin-top: 20px;">
+          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center;">Read on Medium</a>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="project-card" style="border-top: 3px solid var(--accent-emerald);">
+        <div>
+          <div class="project-top">
+            <span class="project-tag" style="color: var(--accent-emerald); border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1);">XSS VERIFICATION</span>
+            <span class="project-version">Medium Article</span>
+          </div>
+          <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Context-Aware Reflected XSS: Why Regex Scanners Fail</h3>
+          <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
+            Context-escaping heuristics, DOM-sink analysis, and headless Chrome verification to achieve 0% false positives in modern SPAs.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">Headless DOM</span>
+            <span class="tech-pill">Context Engine</span>
+            <span class="tech-pill">XSS</span>
+          </div>
+        </div>
+        <div class="project-links" style="margin-top: 20px;">
+          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; border-color: var(--accent-emerald); color: var(--accent-emerald);">Read on Medium</a>
+        </div>
+      </div>
+
     </div>
   </section>
 

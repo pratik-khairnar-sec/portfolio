@@ -5,6 +5,7 @@
 [![Live Portfolio](https://img.shields.io/badge/Live%20Portfolio-pratik--khairnar--sec.github.io%2Fportfolio-38bdf8?style=for-the-badge&logo=google-chrome&logoColor=white)](https://pratik-khairnar-sec.github.io/portfolio/)
 [![GitHub](https://img.shields.io/badge/GitHub-pratik--khairnar--sec-181717?style=for-the-badge&logo=github)](https://github.com/pratik-khairnar-sec)
 [![Email](https://img.shields.io/badge/Email-pratik.khairnar.sec%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pratik.khairnar.sec@gmail.com)
+[![Discord](https://img.shields.io/badge/Discord-pratik.khairnar.sec-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/1531910259080167494)
 
 ---
 
@@ -31,3 +32,4 @@
 - 📧 **Email**: [pratik.khairnar.sec@gmail.com](mailto:pratik.khairnar.sec@gmail.com)
 - 🐙 **GitHub**: [@pratik-khairnar-sec](https://github.com/pratik-khairnar-sec)
 - 💼 **LinkedIn**: [linkedin.com/in/pratik-khairnar-sec](https://linkedin.com/in/pratik-khairnar-sec)
+- 💬 **Discord**: [`pratik.khairnar.sec`](https://discord.com/users/1531910259080167494)

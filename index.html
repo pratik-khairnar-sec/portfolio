@@ -193,56 +193,53 @@
       gap: 16px;
     }
     .brand {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
       text-decoration: none;
       color: var(--text-main);
-      font-weight: 800;
-      font-size: 1.22rem;
-      letter-spacing: -0.02em;
+      transition: var(--transition);
+      flex-shrink: 0;
     }
-    .brand-icon {
-      width: 38px;
-      height: 38px;
-      border-radius: var(--radius-md);
-      background: linear-gradient(135deg, var(--accent-cyan), var(--accent-emerald));
+    .brand:hover .brand-emblem {
+      transform: scale(1.05);
+      filter: drop-shadow(0 0 16px var(--accent-cyan-glow));
+    }
+    .brand-emblem {
+      width: 42px;
+      height: 42px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #030712;
-      font-weight: 900;
-      font-size: 0.95rem;
-      box-shadow: 0 0 18px var(--accent-cyan-glow);
+      flex-shrink: 0;
+      transition: var(--transition);
     }
     .brand-meta {
       display: flex;
       flex-direction: column;
+      gap: 3px;
     }
-    .brand-meta span:first-child {
-      font-size: 1rem;
+    .brand-meta .brand-name {
+      font-family: var(--font-display);
+      font-size: 1.15rem;
       font-weight: 800;
-      color: #fff;
+      color: #ffffff;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
     }
-    .brand-meta span:last-child {
+    .brand-meta .brand-subtitle {
       font-family: var(--font-mono);
       font-size: 0.68rem;
       color: var(--accent-cyan);
       letter-spacing: 0.08em;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .nav-center-status {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 5px 12px;
-      border-radius: 20px;
-      background: rgba(16, 185, 129, 0.1);
-      border: 1px solid rgba(16, 185, 129, 0.35);
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--accent-emerald);
-      font-weight: 700;
+      display: none;
     }
     .pulse-dot {
       width: 7px;
@@ -1358,15 +1355,302 @@
       flex-wrap: wrap;
     }
 
-    /* Footer */
-    .footer {
+    /* Elite Cyber Footer */
+    .footer-elite {
+      background: linear-gradient(180deg, #030712 0%, #02050c 100%);
       border-top: 1px solid var(--border-subtle);
-      padding: 40px 0;
-      text-align: center;
-      color: var(--text-faint);
-      font-size: 0.88rem;
+      padding: 70px 0 35px 0;
+      position: relative;
+      margin-top: 80px;
     }
-    .footer strong { color: var(--text-main); }
+    .footer-elite::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 10%;
+      right: 10%;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--accent-cyan), var(--accent-emerald), transparent);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1.1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    .footer-brand-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    .footer-brand-emblem {
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .footer-brand-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+    .footer-brand-subtitle {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--accent-cyan);
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+    .footer-mission-text {
+      color: var(--text-muted);
+      font-size: 0.90rem;
+      line-height: 1.65;
+      margin-bottom: 18px;
+    }
+    .footer-status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: 20px;
+      padding: 5px 14px;
+      font-family: var(--font-mono);
+      font-size: 0.74rem;
+      color: var(--accent-emerald);
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .footer-credentials {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .cred-chip {
+      font-size: 0.80rem;
+      color: var(--text-faint);
+      font-family: var(--font-mono);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-heading {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      letter-spacing: 0.02em;
+    }
+    .heading-accent {
+      width: 6px;
+      height: 6px;
+      background: var(--accent-cyan);
+      border-radius: 2px;
+      box-shadow: 0 0 8px var(--accent-cyan);
+    }
+    .footer-links-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-links-list li a, .footer-discord-btn {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.86rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      transition: var(--transition);
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      text-align: left;
+      font-family: inherit;
+    }
+    .footer-links-list li a:hover, .footer-discord-btn:hover {
+      color: var(--accent-cyan);
+      transform: translateX(3px);
+    }
+    .footer-tag {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      color: var(--accent-gold);
+      background: rgba(200, 169, 110, 0.12);
+      padding: 2px 6px;
+      border-radius: 3px;
+      border: 1px solid rgba(200, 169, 110, 0.25);
+    }
+    .footer-disclosure-box {
+      background: rgba(10, 19, 41, 0.65);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 18px 24px;
+      margin-bottom: 30px;
+    }
+    .disclosure-badge {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--accent-amber);
+      font-weight: 800;
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .disclosure-text {
+      color: var(--text-faint);
+      font-size: 0.80rem;
+      line-height: 1.6;
+      margin: 0;
+    }
+    .footer-bottom-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 25px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .footer-copy {
+      color: var(--text-faint);
+      font-size: 0.82rem;
+    }
+    .footer-back-to-top {
+      font-family: var(--font-mono);
+      font-size: 0.78rem;
+      color: var(--accent-cyan);
+      text-decoration: none;
+      padding: 6px 14px;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      background: rgba(56, 189, 248, 0.05);
+      transition: var(--transition);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .footer-back-to-top:hover {
+      background: rgba(56, 189, 248, 0.18);
+      border-color: var(--accent-cyan);
+      box-shadow: 0 0 15px var(--accent-cyan-glow);
+      color: #fff;
+    }
+
+    /* Central Medium Dispatch Hub (Sole Research Centerpiece) */
+    .medium-dispatch-hub {
+      background: linear-gradient(135deg, rgba(8, 16, 36, 0.96), rgba(12, 26, 60, 0.96));
+      border: 1.5px solid rgba(56, 189, 248, 0.35);
+      border-radius: var(--radius-lg);
+      padding: 36px 40px;
+      margin-top: 24px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.55), inset 0 0 30px rgba(56, 189, 248, 0.04);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .medium-dispatch-hub::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .dispatch-badge-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 14px;
+      flex-wrap: wrap;
+    }
+    .dispatch-badge-tag {
+      font-family: var(--font-mono);
+      font-size: 0.80rem;
+      color: var(--accent-cyan);
+      font-weight: 800;
+      letter-spacing: 1.5px;
+    }
+    .dispatch-badge-sub {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      color: var(--accent-emerald);
+      padding: 3px 8px;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      border-radius: 4px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+    .dispatch-hub-title {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.3;
+      margin-bottom: 12px;
+      max-width: 760px;
+    }
+    .dispatch-hub-desc {
+      color: var(--text-muted);
+      font-size: 0.98rem;
+      line-height: 1.65;
+      max-width: 720px;
+      margin-bottom: 20px;
+    }
+    .dispatch-metrics-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .dispatch-metric {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      padding: 6px 12px;
+      border-radius: var(--radius-sm);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      font-family: var(--font-mono);
+    }
+    .dispatch-metric strong {
+      color: var(--accent-cyan);
+    }
+    .dispatch-hub-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    @media (max-width: 992px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 576px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+      .footer-elite { padding: 45px 0 25px 0; }
+      .medium-dispatch-hub { padding: 24px 20px; }
+      .dispatch-hub-title { font-size: 1.3rem; }
+    }
 
     
     /* Cyber Tactical Avatar HUD (Replaces Photo) */
@@ -1556,18 +1840,30 @@
        ========================================================================= -->
   <header class="navbar">
     <div class="container nav-content">
-      <a href="#" class="brand">
-        <div class="brand-icon">PK</div>
+      <a href="#" class="brand" aria-label="Pratik Khairnar Portfolio">
+        <div class="brand-emblem">
+          <svg width="42" height="42" viewBox="0 0 42 42" fill="none">
+            <polygon points="21,3 38,11 38,31 21,39 4,31 4,11" fill="rgba(6, 14, 32, 0.9)" stroke="url(#brandGrad)" stroke-width="2.2"/>
+            <polygon points="21,7 34,13 34,29 21,35 8,29 8,13" fill="none" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1"/>
+            <circle cx="21" cy="21" r="10" stroke="rgba(16, 185, 129, 0.6)" stroke-width="1.2" stroke-dasharray="3 2"/>
+            <circle cx="21" cy="21" r="3.5" fill="#10b981"/>
+            <line x1="21" y1="6" x2="21" y2="13" stroke="#38bdf8" stroke-width="1.8"/>
+            <line x1="21" y1="29" x2="21" y2="36" stroke="#38bdf8" stroke-width="1.8"/>
+            <line x1="6" y1="21" x2="13" y2="21" stroke="#38bdf8" stroke-width="1.8"/>
+            <line x1="29" y1="21" x2="36" y2="21" stroke="#38bdf8" stroke-width="1.8"/>
+            <defs>
+              <linearGradient id="brandGrad" x1="4" y1="3" x2="38" y2="39" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#38bdf8"/>
+                <stop offset="1" stop-color="#10b981"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
         <div class="brand-meta">
-          <span>Pratik Khairnar</span>
-          <span>VAPT // DEFENSE ARCHITECT</span>
+          <span class="brand-name">Pratik Khairnar</span>
+          <span class="brand-subtitle"><span class="pulse-dot" style="width:5px;height:5px;"></span> VAPT // DEFENSE ARCHITECT</span>
         </div>
       </a>
-
-      <div class="nav-center-status">
-        <span class="pulse-dot"></span>
-        <span>OPEN FOR VAPT ROLES (IMMEDIATE)</span>
-      </div>
 
       <nav class="nav-links">
         <a href="#about" class="nav-link">Philosophy</a>
@@ -1587,7 +1883,7 @@
           📺 CRT HUD
         </button>
         <button class="btn btn-emerald btn-sm" onclick="openRecruiterModal()">
-          ⚡ RECRUITER HUD
+          <span class="pulse-dot" style="width:6px;height:6px;"></span> RECRUITER HUD
         </button>
         <button class="mobile-menu-btn" id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu">
           ☰
@@ -2422,199 +2718,35 @@ Type 'help' for available commands, or click any chip below to execute.
       <p class="section-desc">Empirical vulnerability research, state-machine invariant proofs, and real-world offensive engineering publications.</p>
     </div>
 
-    <!-- 🔥 Featured Live Story: ReconForge v3 -->
-    <div class="featured-research-banner">
-      <div>
-        <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 14px; flex-wrap: wrap;">
-          <span class="project-tag" style="background: rgba(16, 185, 129, 0.15); border-color: var(--accent-emerald); color: var(--accent-emerald); font-weight: 800;">🔥 FEATURED PUBLICATION</span>
-          <span class="project-tag" style="background: rgba(56, 189, 248, 0.15); border-color: var(--accent-cyan); color: var(--accent-cyan); font-weight: 700;">OFFICIAL X THREAD LIVE</span>
-          <span style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent-gold);">12 Min Read &bull; 13,600+ Dork Engine &bull; 33 Phases</span>
-        </div>
-        <h3 style="font-family: var(--font-display); font-size: 1.7rem; font-weight: 800; line-height: 1.25; margin-bottom: 12px; color: #fff;">
-          ReconForge v3: Automating 33 Phases of Bug Bounty Reconnaissance, Zero-Install, 13,600+ Search Queries
-        </h3>
-        <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 22px;">
-          Full architectural deep dive into the 100% client-side reconnaissance operating system. 
-          Explores the tool-major multi-target pipeline engine, ergonomic anti-glare triage workspace, dual-channel Telegram bot reporting, 
-          and the curated 13,600+ Mega Dork Intelligence Vault.
-        </p>
-        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href="https://pratik-khairnar-sec.medium.com/reconforge-v3-automating-33-phases-of-bug-bounty-reconnaissance-zero-install-13-600-search-7c0e353a709b" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-            📖 Read Full Article on Medium ↗
-          </a>
-          <a href="https://x.com/PratikSec/status/2108584870293451190" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="border-color: var(--accent-cyan); color: var(--accent-cyan);">
-            <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            View Technical Thread on X ↗
-          </a>
-          <a href="https://pratik-khairnar-sec.github.io/ReconForge/" target="_blank" class="btn btn-gold">
-            🌐 Launch ReconForge v3
-          </a>
-        </div>
-      </div>
-      <div style="position: relative; border-radius: var(--radius-lg); overflow: hidden; border: 1px solid var(--border-subtle); box-shadow: 0 10px 25px rgba(0,0,0,0.6);">
-        <img src="assets/reconforge_hero_dashboard.png" alt="ReconForge v3 Tactical Dashboard" style="width: 100%; height: auto; display: block;">
-        <div style="position: absolute; bottom: 8px; right: 8px; background: rgba(3,7,18,0.85); backdrop-filter: blur(8px); padding: 4px 10px; border-radius: 4px; border: 1px solid var(--border-subtle); font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-cyan);">
-          ● VERIFIED PUBLISHED ARTICLE
-        </div>
-      </div>
-    </div>
-
     <!-- 🌐 Central Master Medium & X Publications Hub Box -->
-    <div style="background: linear-gradient(135deg, rgba(8, 16, 36, 0.95), rgba(12, 24, 54, 0.95)); border: 1.5px solid rgba(56, 189, 248, 0.35); border-radius: var(--radius-lg); padding: 24px 28px; margin-bottom: 28px; box-shadow: 0 10px 30px rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
-      <div>
-        <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+    <div class="medium-dispatch-hub">
+      <div class="dispatch-hub-info">
+        <div class="dispatch-badge-row">
           <span class="pulse-dot"></span>
-          <span style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-cyan); font-weight: 700; letter-spacing: 1px;">CENTRAL RESEARCH DISPATCH HUB</span>
+          <span class="dispatch-badge-tag">CENTRAL RESEARCH DISPATCH HUB</span>
+          <span class="dispatch-badge-sub">LIVE SYNCED • ZERO-FALSE-POSITIVE PROOFS</span>
         </div>
-        <h3 style="font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 6px;">
+        <h3 class="dispatch-hub-title">
           Read All In-Depth Technical Writeups &amp; Exploit Chains Directly on Medium
         </h3>
-        <p style="color: var(--text-muted); font-size: 0.92rem; max-width: 650px;">
+        <p class="dispatch-hub-desc">
           Explore comprehensive architectural whitepapers, mathematical baselining proofs, and weaponized PoC demonstrations covering all 7 flagship frameworks.
         </p>
+        <div class="dispatch-metrics-row">
+          <span class="dispatch-metric">🔥 <strong>13,600+</strong> Dork OSINT Engine</span>
+          <span class="dispatch-metric">🛡️ <strong>27</strong> Formal Invariants</span>
+          <span class="dispatch-metric">⚡ <strong>33</strong> Recon Phases</span>
+          <span class="dispatch-metric">🎯 <strong>0%</strong> False-Positive Headless PoCs</span>
+        </div>
       </div>
-      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-        <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-weight: 700;">
+      <div class="dispatch-hub-actions">
+        <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-lg" style="box-shadow: 0 0 25px var(--accent-cyan-glow);">
           📖 Open Medium Profile (@pratik-khairnar-sec) ↗
         </a>
-        <a href="https://x.com/PratikSec" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.3); color: #fff;">
-          🐦 Follow @PratikSec on X ↗
+        <a href="https://x.com/PratikSec" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-lg" style="border-color: rgba(255,255,255,0.25); color: #fff;">
+          <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Follow @PratikSec on X ↗
         </a>
-      </div>
-    </div>
-
-    <!-- 6 Technical Writeup Cards Directly Linking to Medium -->
-    <div class="research-grid">
-      <!-- Article 1: AUTHENTIX -->
-      <div class="research-card" style="border-top: 3px solid var(--accent-gold);">
-        <div>
-          <div class="project-top">
-            <span class="project-tag tag-gold">BURP MONTOYA API</span>
-            <span class="project-version" style="color: var(--accent-amber);">15 Min Read</span>
-          </div>
-          <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Inside AUTHENTIX: Eliminating BOLA &amp; IDOR with 27 Formal Invariants</h3>
-          <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
-            Why legacy HTTP proxies fail at access control, deterministic finite-state automation, cross-actor matrix verification, and 28 high-entropy secret rules in native Java 17/21.
-          </p>
-          <div class="tech-pills">
-            <span class="tech-pill">State Machines</span>
-            <span class="tech-pill">Montoya API</span>
-            <span class="tech-pill">IDOR/BOLA</span>
-          </div>
-        </div>
-        <div class="project-links" style="margin-top: 20px;">
-          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm" style="width: 100%; justify-content: center;">📖 Read on Medium ↗</a>
-        </div>
-      </div>
-
-      <!-- Article 2: CORSair -->
-      <div class="research-card" style="border-top: 3px solid var(--accent-cyan);">
-        <div>
-          <div class="project-top">
-            <span class="project-tag">WEB SECURITY &bull; CORS</span>
-            <span class="project-version" style="color: var(--accent-cyan);">13 Min Read</span>
-          </div>
-          <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Cross-Origin Resource Sharing Exploitation &amp; 1-Click Weaponization</h3>
-          <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
-            Why developers get CORS wrong, unanchored regex bypasses, null-origin sandboxed iframe escapes, and client-side exploit compilation in CORSair v3.0.
-          </p>
-          <div class="tech-pills">
-            <span class="tech-pill">CORS Exploitation</span>
-            <span class="tech-pill">PoC Engines</span>
-            <span class="tech-pill">SOP Bypasses</span>
-          </div>
-        </div>
-        <div class="project-links" style="margin-top: 20px;">
-          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center;">📖 Read on Medium ↗</a>
-        </div>
-      </div>
-
-      <!-- Article 3: BlindStrike -->
-      <div class="research-card" style="border-top: 3px solid var(--accent-cyan);">
-        <div>
-          <div class="project-top">
-            <span class="project-tag">BLIND SQLI RESEARCH</span>
-            <span class="project-version" style="color: var(--accent-cyan);">13 Min Read</span>
-          </div>
-          <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Beyond Latency: Eliminating False Positives in Time-Based Blind SQLi</h3>
-          <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
-            Moving beyond scalar timers: empirical latency baselining, IQR outlier thresholds, and linear time-scaling confirmation in BlindStrike v7.0.
-          </p>
-          <div class="tech-pills">
-            <span class="tech-pill">Latency Baseline</span>
-            <span class="tech-pill">Time-Based</span>
-            <span class="tech-pill">IQR 3σ Filter</span>
-          </div>
-        </div>
-        <div class="project-links" style="margin-top: 20px;">
-          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center;">📖 Read on Medium ↗</a>
-        </div>
-      </div>
-
-      <!-- Article 4: Reflectra -->
-      <div class="research-card" style="border-top: 3px solid var(--accent-emerald);">
-        <div>
-          <div class="project-top">
-            <span class="project-tag" style="color: var(--accent-emerald); border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1);">XSS VERIFICATION</span>
-            <span class="project-version" style="color: var(--accent-emerald);">13 Min Read</span>
-          </div>
-          <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Context-Aware Reflected XSS: Why Regex Scanners Fail</h3>
-          <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
-            Proving that string reflection does not equal JavaScript execution, syntactic context boundary tagging, and native Headless Chrome dialog trapping.
-          </p>
-          <div class="tech-pills">
-            <span class="tech-pill">Headless DOM</span>
-            <span class="tech-pill">Context Engine</span>
-            <span class="tech-pill">0% False Positives</span>
-          </div>
-        </div>
-        <div class="project-links" style="margin-top: 20px;">
-          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; border-color: var(--accent-emerald); color: var(--accent-emerald);">📖 Read on Medium ↗</a>
-        </div>
-      </div>
-
-      <!-- Article 5: Endpoint Hunter -->
-      <div class="research-card" style="border-top: 3px solid var(--accent-cyan);">
-        <div>
-          <div class="project-top">
-            <span class="project-tag">CHROME MV3 &bull; RECON</span>
-            <span class="project-version" style="color: var(--accent-cyan);">12 Min Read</span>
-          </div>
-          <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Inside Endpoint Hunter: Mining Hidden API Routes in SPAs</h3>
-          <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
-            Chrome Manifest V3 service worker pipeline, AST-aware false-positive suppression matrix, and human-kinematic stealth crawling.
-          </p>
-          <div class="tech-pills">
-            <span class="tech-pill">Manifest V3</span>
-            <span class="tech-pill">AST Filter</span>
-            <span class="tech-pill">API Mining</span>
-          </div>
-        </div>
-        <div class="project-links" style="margin-top: 20px;">
-          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; border-color: var(--accent-cyan); color: var(--accent-cyan);">📖 Read on Medium ↗</a>
-        </div>
-      </div>
-
-      <!-- Article 6: Wayback Lens -->
-      <div class="research-card" style="border-top: 3px solid var(--accent-amber);">
-        <div>
-          <div class="project-top">
-            <span class="project-tag" style="color: var(--accent-amber); border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">WAYBACK CDX &bull; OSINT</span>
-            <span class="project-version" style="color: var(--accent-amber);">12 Min Read</span>
-          </div>
-          <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Re-Engineering Archive Recon: Streaming 100k+ CDX Records</h3>
-          <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
-            Non-blocking ReadableStream chunk decoding, 3-tier autonomous risk engine, and asynchronous multi-worker HTTP 200 probers in Wayback Lens.
-          </p>
-          <div class="tech-pills">
-            <span class="tech-pill">Chunk Streams</span>
-            <span class="tech-pill">3-Tier Scoring</span>
-            <span class="tech-pill">Live 200 Probes</span>
-          </div>
-        </div>
-        <div class="project-links" style="margin-top: 20px;">
-          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; border-color: var(--accent-amber); color: var(--accent-amber);">📖 Read on Medium ↗</a>
-        </div>
       </div>
     </div>
   </section>
@@ -2666,14 +2798,150 @@ Type 'help' for available commands, or click any chip below to execute.
   </section>
 
   <!-- Footer -->
-  <footer class="footer">
+  <!-- =========================================================================
+       ELITE CYBERSECURITY FOOTER (TOP 1% ARCHITECTURE)
+       ========================================================================= -->
+  <footer class="footer-elite">
     <div class="container">
-      <p style="margin-bottom: 6px;">
-        Designed &amp; Architected by <strong>Pratik Khairnar</strong>.
-      </p>
-      <p style="font-size: 0.82rem; color: var(--text-faint);">
-        VAPT Engineer &bull; Burp Suite Montoya API Architect &bull; Cyber Crime Forensics Researcher &bull; Nashik, India.
-      </p>
+      <!-- Main Grid (4 Columns) -->
+      <div class="footer-grid">
+        <!-- Col 1: Identity, Mission & Verification -->
+        <div class="footer-col-brand">
+          <div class="footer-brand-header">
+            <div class="footer-brand-emblem">
+              <svg width="44" height="44" viewBox="0 0 42 42" fill="none">
+                <polygon points="21,3 38,11 38,31 21,39 4,31 4,11" fill="rgba(6, 14, 32, 0.9)" stroke="url(#footerBrandGrad)" stroke-width="2.2"/>
+                <polygon points="21,7 34,13 34,29 21,35 8,29 8,13" fill="none" stroke="rgba(56, 189, 248, 0.25)" stroke-width="1"/>
+                <circle cx="21" cy="21" r="10" stroke="rgba(16, 185, 129, 0.6)" stroke-width="1.2" stroke-dasharray="3 2"/>
+                <circle cx="21" cy="21" r="3.5" fill="#10b981"/>
+                <line x1="21" y1="6" x2="21" y2="13" stroke="#38bdf8" stroke-width="1.8"/>
+                <line x1="21" y1="29" x2="21" y2="36" stroke="#38bdf8" stroke-width="1.8"/>
+                <line x1="6" y1="21" x2="13" y2="21" stroke="#38bdf8" stroke-width="1.8"/>
+                <line x1="29" y1="21" x2="36" y2="21" stroke="#38bdf8" stroke-width="1.8"/>
+                <defs>
+                  <linearGradient id="footerBrandGrad" x1="4" y1="3" x2="38" y2="39" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#38bdf8"/>
+                    <stop offset="1" stop-color="#10b981"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <div>
+              <div class="footer-brand-title">Pratik Khairnar</div>
+              <div class="footer-brand-subtitle">VAPT ENGINEER &bull; DEFENSE ARCHITECT</div>
+            </div>
+          </div>
+          <p class="footer-mission-text">
+            Specializing in zero-false-positive offensive security tooling, Burp Suite Montoya API extensions, and empirical state-machine invariant proofs.
+          </p>
+          <div class="footer-status-pill">
+            <span class="pulse-dot"></span>
+            <span>AVAILABLE FOR VAPT / APPSEC ROLES &bull; IMMEDIATE JOINING</span>
+          </div>
+          <div class="footer-credentials">
+            <span class="cred-chip">🎓 Sandip University (2023–2027)</span>
+            <span class="cred-chip">🛡️ CEH v13</span>
+            <span class="cred-chip">🌐 CCNA</span>
+            <span class="cred-chip">📍 Nashik, India</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Production Security Arsenal (7 Tools) -->
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            <span class="heading-accent"></span> Security Arsenal (7)
+          </h4>
+          <ul class="footer-links-list">
+            <li><a href="https://pratik-khairnar-sec.github.io/authentix-enterprise/" target="_blank"><span>AUTHENTIX Enterprise</span> <span class="footer-tag">v2.1.0</span></a></li>
+            <li><a href="https://pratik-khairnar-sec.github.io/ReconForge/" target="_blank"><span>ReconForge 33-Phase</span> <span class="footer-tag">v3.0.0</span></a></li>
+            <li><a href="https://pratik-khairnar-sec.github.io/Reflectra/" target="_blank"><span>Reflectra XSS Suite</span> <span class="footer-tag">v7.0.0</span></a></li>
+            <li><a href="https://pratik-khairnar-sec.github.io/BlindStrike/" target="_blank"><span>BlindStrike SQLi</span> <span class="footer-tag">v7.0.0</span></a></li>
+            <li><a href="https://pratik-khairnar-sec.github.io/CORSair/" target="_blank"><span>CORSair Exploit Suite</span> <span class="footer-tag">v3.0.0</span></a></li>
+            <li><a href="https://pratik-khairnar-sec.github.io/endpoint-finder-extension/" target="_blank"><span>Endpoint Hunter MV3</span> <span class="footer-tag">v1.0.0</span></a></li>
+            <li><a href="https://pratik-khairnar-sec.github.io/wayback-lens/" target="_blank"><span>Wayback Lens CDX</span> <span class="footer-tag">v1.0.0</span></a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Navigation Architecture -->
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            <span class="heading-accent"></span> Navigation
+          </h4>
+          <ul class="footer-links-list">
+            <li><a href="#about">Core Philosophy &amp; Rules</a></li>
+            <li><a href="#playground">Interactive Sandboxes (5)</a></li>
+            <li><a href="#terminal">Tactical CLI Terminal</a></li>
+            <li><a href="#arsenal">Flagship Security Arsenal (7)</a></li>
+            <li><a href="#skills">Technical Competencies</a></li>
+            <li><a href="#experience">Education &amp; Experience</a></li>
+            <li><a href="#research">Central Research Dispatch Hub</a></li>
+            <li><a href="javascript:void(0)" onclick="openRecruiterModal()">Recruiter Dossier Modal ↗</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Verified Network & Direct Contact (ZERO PHONE / ZERO PHOTO) -->
+        <div class="footer-col">
+          <h4 class="footer-heading">
+            <span class="heading-accent"></span> Verified Dispatch
+          </h4>
+          <ul class="footer-links-list">
+            <li>
+              <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                <span>Medium Publications</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://x.com/PratikSec" target="_blank" rel="noopener noreferrer">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                <span>Twitter / X (@PratikSec)</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/in/pratik-khairnar-sec/" target="_blank" rel="noopener noreferrer">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn Profile</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/pratik-khairnar-sec" target="_blank" rel="noopener noreferrer">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub Repositories</span>
+              </a>
+            </li>
+            <li>
+              <a href="mailto:pratik.khairnar.sec@gmail.com">
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>pratik.khairnar.sec@gmail.com</span>
+              </a>
+            </li>
+            <li>
+              <button onclick="copyDiscordHandle()" class="footer-discord-btn" title="Click to copy Discord handle">
+                <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+                <span>Discord: pratik.khairnar.sec</span>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Strict Ethical Disclosure Banner -->
+      <div class="footer-disclosure-box">
+        <div class="disclosure-badge">⚠️ STRICT ETHICAL DISCLOSURE &amp; COMPLIANCE</div>
+        <p class="disclosure-text">
+          All offensive security tooling, exploit demonstration frameworks, and vulnerability research published across this portfolio are engineered strictly for <strong>authorized educational research</strong>, <strong>defensive penetration testing</strong>, and <strong>academic vulnerability verification</strong> under strict permission from system owners. Testing without prior written authorization is illegal. The author assumes zero liability for unauthorized usage.
+        </p>
+      </div>
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom-bar">
+        <div class="footer-copy">
+          &copy; 2023&ndash;2027 <strong>Pratik Khairnar</strong>. Built with mathematical precision &bull; Zero false positives.
+        </div>
+        <a href="#top" class="footer-back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;">
+          <span>&uarr; SYSTEM ROOT</span>
+        </a>
+      </div>
     </div>
   </footer>
 

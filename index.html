@@ -1453,22 +1453,29 @@
     }
     .footer-heading {
       font-family: var(--font-display);
-      font-size: 1.05rem;
+      font-size: 0.92rem;
       font-weight: 800;
       color: #ffffff;
       margin-bottom: 18px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
       display: flex;
       align-items: center;
       gap: 8px;
-      letter-spacing: 0.02em;
+      position: relative;
+      padding-bottom: 8px;
     }
-    .heading-accent {
-      width: 6px;
-      height: 6px;
-      background: var(--accent-cyan);
-      border-radius: 2px;
+    .footer-heading::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 28px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--accent-emerald));
       box-shadow: 0 0 8px var(--accent-cyan);
     }
+    .heading-accent { display: none; }
     .footer-links-list {
       list-style: none;
       padding: 0;
@@ -1481,10 +1488,10 @@
       color: var(--text-muted);
       text-decoration: none;
       font-size: 0.86rem;
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      justify-content: space-between;
-      gap: 8px;
+      justify-content: flex-start;
+      gap: 10px;
       transition: var(--transition);
       background: none;
       border: none;
@@ -1492,6 +1499,15 @@
       cursor: pointer;
       text-align: left;
       font-family: inherit;
+      width: 100%;
+    }
+    .footer-arsenal-item {
+      justify-content: space-between !important;
+    }
+    .footer-nav-item span:first-child {
+      color: var(--accent-cyan);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
     }
     .footer-links-list li a:hover, .footer-discord-btn:hover {
       color: var(--accent-cyan);
@@ -2695,7 +2711,7 @@ Type 'help' for available commands, or click any chip below to execute.
             <span class="timeline-role">B.Tech in Computer Science &amp; Engineering (Cyber Security &amp; Forensics)</span>
             <span class="timeline-date">2023 &ndash; 2027 (Final Year &bull; CGPA: 7.42/10)</span>
           </div>
-          <div class="timeline-company">Sandip University, Nashik (Academic Guide: Prof. Tushar Kaloge)</div>
+          <div class="timeline-company">Sandip University, Nashik</div>
           <p class="timeline-desc">
             Rigorous core curriculum in Network Defense, Cryptography, Reverse Engineering, Operating System Internals, and Application Security (VAPT). 
             Conducted deep research in deterministic state-machine security verification and automated web penetration testing frameworks.
@@ -2852,51 +2868,45 @@ Type 'help' for available commands, or click any chip below to execute.
             <span>AVAILABLE FOR VAPT / APPSEC ROLES &bull; IMMEDIATE JOINING</span>
           </div>
           <div class="footer-credentials">
-            <span class="cred-chip">🎓 Sandip University (2023–2027)</span>
-            <span class="cred-chip">🛡️ CEH v13</span>
-            <span class="cred-chip">🌐 CCNA</span>
-            <span class="cred-chip">📍 Nashik, India</span>
+            <span class="cred-chip"><svg width="14" height="14" fill="none" stroke="var(--accent-cyan)" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> Sandip University (2023&ndash;2027)</span>
+            <span class="cred-chip"><svg width="14" height="14" fill="none" stroke="var(--accent-emerald)" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> CEH v13 (Certified Ethical Hacker)</span>
+            <span class="cred-chip"><svg width="14" height="14" fill="none" stroke="var(--accent-cyan)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg> CCNA (Cisco Certified Network Associate)</span>
+            <span class="cred-chip"><svg width="14" height="14" fill="none" stroke="var(--accent-gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg> Nashik, Maharashtra, India</span>
           </div>
         </div>
 
         <!-- Col 2: Production Security Arsenal (7 Tools) -->
         <div class="footer-col">
-          <h4 class="footer-heading">
-            <span class="heading-accent"></span> Security Arsenal (7)
-          </h4>
+          <h4 class="footer-heading">Security Arsenal (7)</h4>
           <ul class="footer-links-list">
-            <li><a href="https://pratik-khairnar-sec.github.io/authentix-enterprise/" target="_blank"><span>AUTHENTIX Enterprise</span> <span class="footer-tag">v2.1.0</span></a></li>
-            <li><a href="https://pratik-khairnar-sec.github.io/ReconForge/" target="_blank"><span>ReconForge 33-Phase</span> <span class="footer-tag">v3.0.0</span></a></li>
-            <li><a href="https://pratik-khairnar-sec.github.io/Reflectra/" target="_blank"><span>Reflectra XSS Suite</span> <span class="footer-tag">v7.0.0</span></a></li>
-            <li><a href="https://pratik-khairnar-sec.github.io/BlindStrike/" target="_blank"><span>BlindStrike SQLi</span> <span class="footer-tag">v7.0.0</span></a></li>
-            <li><a href="https://pratik-khairnar-sec.github.io/CORSair/" target="_blank"><span>CORSair Exploit Suite</span> <span class="footer-tag">v3.0.0</span></a></li>
-            <li><a href="https://pratik-khairnar-sec.github.io/endpoint-finder-extension/" target="_blank"><span>Endpoint Hunter MV3</span> <span class="footer-tag">v1.0.0</span></a></li>
-            <li><a href="https://pratik-khairnar-sec.github.io/wayback-lens/" target="_blank"><span>Wayback Lens CDX</span> <span class="footer-tag">v1.0.0</span></a></li>
+            <li><a href="https://pratik-khairnar-sec.github.io/authentix-enterprise/" target="_blank" class="footer-arsenal-item"><span>AUTHENTIX Enterprise</span> <span class="footer-tag">v2.1.0</span></a></li>
+            <li><a href="https://pratik-khairnar-sec.github.io/ReconForge/" target="_blank" class="footer-arsenal-item"><span>ReconForge 33-Phase</span> <span class="footer-tag">v3.0.0</span></a></li>
+            <li><a href="https://pratik-khairnar-sec.github.io/Reflectra/" target="_blank" class="footer-arsenal-item"><span>Reflectra XSS Suite</span> <span class="footer-tag">v7.0.0</span></a></li>
+            <li><a href="https://pratik-khairnar-sec.github.io/BlindStrike/" target="_blank" class="footer-arsenal-item"><span>BlindStrike SQLi</span> <span class="footer-tag">v7.0.0</span></a></li>
+            <li><a href="https://pratik-khairnar-sec.github.io/CORSair/" target="_blank" class="footer-arsenal-item"><span>CORSair Exploit Suite</span> <span class="footer-tag">v3.0.0</span></a></li>
+            <li><a href="https://pratik-khairnar-sec.github.io/endpoint-finder-extension/" target="_blank" class="footer-arsenal-item"><span>Endpoint Hunter MV3</span> <span class="footer-tag">v1.0.0</span></a></li>
+            <li><a href="https://pratik-khairnar-sec.github.io/wayback-lens/" target="_blank" class="footer-arsenal-item"><span>Wayback Lens CDX</span> <span class="footer-tag">v1.0.0</span></a></li>
           </ul>
         </div>
 
         <!-- Col 3: Navigation Architecture -->
         <div class="footer-col">
-          <h4 class="footer-heading">
-            <span class="heading-accent"></span> Navigation
-          </h4>
+          <h4 class="footer-heading">Navigation</h4>
           <ul class="footer-links-list">
-            <li><a href="#about">Core Philosophy &amp; Rules</a></li>
-            <li><a href="#playground">Interactive Sandboxes (5)</a></li>
-            <li><a href="#terminal">Tactical CLI Terminal</a></li>
-            <li><a href="#arsenal">Flagship Security Arsenal (7)</a></li>
-            <li><a href="#skills">Technical Competencies</a></li>
-            <li><a href="#experience">Education &amp; Experience</a></li>
-            <li><a href="#research">Central Research Dispatch Hub</a></li>
-            <li><a href="assets/pratik_khairnar_resume.pdf" download="Pratik_Khairnar_Resume.pdf">Verified Resume (PDF) &rarr;</a></li>
+            <li><a href="#about" class="footer-nav-item"><span>&rsaquo;</span> Philosophy &amp; Rules</a></li>
+            <li><a href="#playground" class="footer-nav-item"><span>&rsaquo;</span> Interactive Sandboxes (5)</a></li>
+            <li><a href="#terminal" class="footer-nav-item"><span>&rsaquo;</span> Tactical CLI Terminal</a></li>
+            <li><a href="#arsenal" class="footer-nav-item"><span>&rsaquo;</span> Security Arsenal (7)</a></li>
+            <li><a href="#skills" class="footer-nav-item"><span>&rsaquo;</span> Technical Competencies</a></li>
+            <li><a href="#experience" class="footer-nav-item"><span>&rsaquo;</span> Education &amp; Timeline</a></li>
+            <li><a href="#research" class="footer-nav-item"><span>&rsaquo;</span> Research Publications</a></li>
+            <li><a href="assets/pratik_khairnar_resume.pdf" download="Pratik_Khairnar_Resume.pdf" class="footer-nav-item"><span>&rsaquo;</span> Verified Resume (PDF)</a></li>
           </ul>
         </div>
 
         <!-- Col 4: Verified Network & Direct Contact (ZERO PHONE / ZERO PHOTO) -->
         <div class="footer-col">
-          <h4 class="footer-heading">
-            <span class="heading-accent"></span> Verified Dispatch
-          </h4>
+          <h4 class="footer-heading">Verified Dispatch</h4>
           <ul class="footer-links-list">
             <li>
               <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer">
@@ -2940,7 +2950,10 @@ Type 'help' for available commands, or click any chip below to execute.
 
       <!-- Strict Ethical Disclosure Banner -->
       <div class="footer-disclosure-box">
-        <div class="disclosure-badge">⚠️ STRICT ETHICAL DISCLOSURE &amp; COMPLIANCE</div>
+        <div class="disclosure-badge">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          STRICT ETHICAL DISCLOSURE &bull; COMPLIANCE NOTICE
+        </div>
         <p class="disclosure-text">
           All offensive security tooling, exploit demonstration frameworks, and vulnerability research published across this portfolio are engineered strictly for <strong>authorized educational research</strong>, <strong>defensive penetration testing</strong>, and <strong>academic vulnerability verification</strong> under strict permission from system owners. Testing without prior written authorization is illegal. The author assumes zero liability for unauthorized usage.
         </p>

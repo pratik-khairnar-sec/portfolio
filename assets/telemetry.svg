@@ -1,0 +1,56 @@
+<svg width="1000" height="150" viewBox="0 0 1000 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="tel-bg" x1="0" y1="0" x2="1000" y2="150" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#040711"/>
+      <stop offset="100%" stop-color="#0a1222"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="150" rx="12" fill="url(#tel-bg)"/>
+  <rect width="998" height="148" x="1" y="1" rx="11" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Top Title -->
+  <text x="30" y="32" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="800" letter-spacing="1.2">
+    🛡️ VAPT CAPABILITIES &amp; SECURITY VERIFICATION TELEMETRY
+  </text>
+  <text x="970" y="32" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" text-anchor="end">
+    ● READY FOR IMMEDIATE JOINING
+  </text>
+  <line x1="30" y1="44" x2="970" y2="44" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Metric Cards -->
+  <!-- Box 1 -->
+  <g transform="translate(30, 58)">
+    <rect width="170" height="70" rx="8" fill="#030712" stroke="#1e293b" stroke-width="1"/>
+    <text x="85" y="26" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">PRIMARY FOCUS</text>
+    <text x="85" y="52" fill="#10b981" font-family="monospace" font-size="18" font-weight="800" text-anchor="middle">VAPT / APPSEC</text>
+  </g>
+
+  <!-- Box 2 -->
+  <g transform="translate(225, 58)">
+    <rect width="170" height="70" rx="8" fill="#030712" stroke="#1e293b" stroke-width="1"/>
+    <text x="85" y="26" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">BUILT FRAMEWORKS</text>
+    <text x="85" y="52" fill="#38bdf8" font-family="monospace" font-size="20" font-weight="800" text-anchor="middle">8 SUITES</text>
+  </g>
+
+  <!-- Box 3 -->
+  <g transform="translate(420, 58)">
+    <rect width="170" height="70" rx="8" fill="#030712" stroke="#1e293b" stroke-width="1"/>
+    <text x="85" y="26" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">SECURITY INVARIANTS</text>
+    <text x="85" y="52" fill="#c8a96e" font-family="monospace" font-size="20" font-weight="800" text-anchor="middle">27 FORMAL</text>
+  </g>
+
+  <!-- Box 4 -->
+  <g transform="translate(615, 58)">
+    <rect width="170" height="70" rx="8" fill="#030712" stroke="#1e293b" stroke-width="1"/>
+    <text x="85" y="26" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">SECRET SCAN RULES</text>
+    <text x="85" y="52" fill="#f43f5e" font-family="monospace" font-size="20" font-weight="800" text-anchor="middle">28 PATTERNS</text>
+  </g>
+
+  <!-- Box 5 -->
+  <g transform="translate(810, 58)">
+    <rect width="160" height="70" rx="8" fill="#030712" stroke="#1e293b" stroke-width="1"/>
+    <text x="80" y="26" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" text-anchor="middle">FALSE POSITIVES</text>
+    <text x="80" y="52" fill="#10b981" font-family="monospace" font-size="20" font-weight="800" text-anchor="middle">0.00%</text>
+  </g>
+</svg>

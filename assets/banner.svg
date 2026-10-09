@@ -1,0 +1,85 @@
+<svg width="1000" height="230" viewBox="0 0 1000 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="230" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#071328"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="text-glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="accent-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#c8a96e"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0284c7" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="1000" height="230" rx="14" fill="url(#bg-grad)"/>
+  <rect width="998" height="228" x="1" y="1" rx="13" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Cyber Grid Lines -->
+  <g stroke="#0f172a" stroke-width="1" opacity="0.6">
+    <line x1="0" y1="46" x2="1000" y2="46"/>
+    <line x1="0" y1="92" x2="1000" y2="92"/>
+    <line x1="0" y1="138" x2="1000" y2="138"/>
+    <line x1="0" y1="184" x2="1000" y2="184"/>
+    <line x1="200" y1="0" x2="200" y2="230"/>
+    <line x1="400" y1="0" x2="400" y2="230"/>
+    <line x1="600" y1="0" x2="600" y2="230"/>
+    <line x1="800" y1="0" x2="800" y2="230"/>
+  </g>
+
+  <!-- Subtle Glowing Curves -->
+  <path d="M0 190 Q250 145 500 175 T1000 160" stroke="#06b6d4" stroke-width="2.5" fill="none" opacity="0.35"/>
+  <path d="M0 200 Q250 170 500 190 T1000 175" stroke="#10b981" stroke-width="1.8" fill="none" opacity="0.3"/>
+
+  <!-- Top Hiring Status Pill -->
+  <g transform="translate(290, 22)">
+    <rect width="420" height="28" rx="14" fill="#0f172a" stroke="#10b981" stroke-width="1.2"/>
+    <circle cx="20" cy="14" r="5" fill="#10b981">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="215" y="19" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11.5" font-weight="700" letter-spacing="1.5" text-anchor="middle">
+      🎯 ACTIVELY SEEKING: VAPT ENGINEER / PENTESTER ROLES
+    </text>
+  </g>
+
+  <!-- Main Name Title -->
+  <text x="500" y="105" fill="url(#text-glow)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', sans-serif" font-size="46" font-weight="900" letter-spacing="3" text-anchor="middle" filter="url(#shadow)">
+    PRATIK KHAIRNAR
+  </text>
+
+  <!-- Professional Subtitle -->
+  <text x="500" y="138" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" letter-spacing="1.2" text-anchor="middle">
+    VAPT Engineer • Web Application Penetration Tester • Security Tool Developer
+  </text>
+  <text x="500" y="160" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" text-anchor="middle">
+    Active Learner &amp; Practitioner • Authentication Research, IDOR/BOLA, OWASP Top 10 &amp; Burp Suite Montoya API
+  </text>
+
+  <!-- Bottom Badges Row -->
+  <g transform="translate(140, 182)">
+    <!-- Badge 1: VAPT -->
+    <rect x="0" y="0" width="165" height="26" rx="6" fill="#030712" stroke="#10b981" stroke-width="1"/>
+    <text x="82" y="17" fill="#10b981" font-family="monospace" font-size="10.5" font-weight="700" text-anchor="middle">🛡️ VAPT / Pentesting</text>
+    
+    <!-- Badge 2: Flagship -->
+    <rect x="180" y="0" width="175" height="26" rx="6" fill="#030712" stroke="#c8a96e" stroke-width="1"/>
+    <text x="267" y="17" fill="#fcd34d" font-family="monospace" font-size="10.5" font-weight="700" text-anchor="middle">🏆 AUTHENTIX v2.1.0</text>
+
+    <!-- Badge 3: OSINT Suite -->
+    <rect x="370" y="0" width="175" height="26" rx="6" fill="#030712" stroke="#38bdf8" stroke-width="1"/>
+    <text x="457" y="17" fill="#38bdf8" font-family="monospace" font-size="10.5" font-weight="700" text-anchor="middle">⚡ ReconArsenal v1.0</text>
+
+    <!-- Badge 4: AppSec -->
+    <rect x="560" y="0" width="165" height="26" rx="6" fill="#030712" stroke="#a855f7" stroke-width="1"/>
+    <text x="642" y="17" fill="#c084fc" font-family="monospace" font-size="10.5" font-weight="700" text-anchor="middle">🔎 Reflectra &amp; BlindSQL</text>
+  </g>
+</svg>

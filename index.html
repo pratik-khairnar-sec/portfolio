@@ -1445,9 +1445,9 @@
   </header>
 
   <!-- =========================================================================
-       HERO COMMAND SECTION
+       HERO COMMAND SECTION & PRACTITIONER PHILOSOPHY
        ========================================================================= -->
-  <section class="hero container">
+  <section id="about" class="hero container">
     <div class="hero-badge-wrap">
       <a href="#research" class="hero-badge" style="text-decoration: none; border-color: rgba(56, 189, 248, 0.55); background: rgba(56, 189, 248, 0.15); font-weight: 700;">
         🔥 FEATURED: ReconForge v3 Writeup Live on Medium &amp; X &rarr;
@@ -2018,6 +2018,7 @@ Type 'help' for available commands, or click any chip below to execute.
         <div class="project-links">
           <a href="https://pratik-khairnar-sec.github.io/CORSair/" target="_blank" class="btn btn-primary btn-sm">🌐 Live Demo</a>
           <a href="https://github.com/pratik-khairnar-sec/CORSair" target="_blank" class="btn btn-secondary btn-sm">GitHub Repo</a>
+          <button class="btn btn-secondary btn-sm" onclick="openDossierModal('corsair')">🔍 Deep Dossier</button>
         </div>
       </div>
 
@@ -2043,6 +2044,7 @@ Type 'help' for available commands, or click any chip below to execute.
         <div class="project-links">
           <a href="https://pratik-khairnar-sec.github.io/endpoint-finder-extension/" target="_blank" class="btn btn-primary btn-sm">🌐 Live Demo</a>
           <a href="https://github.com/pratik-khairnar-sec/endpoint-finder-extension" target="_blank" class="btn btn-secondary btn-sm">GitHub Repo</a>
+          <button class="btn btn-secondary btn-sm" onclick="openDossierModal('endpoint')">🔍 Deep Dossier</button>
         </div>
       </div>
 
@@ -2068,6 +2070,7 @@ Type 'help' for available commands, or click any chip below to execute.
         <div class="project-links">
           <a href="https://pratik-khairnar-sec.github.io/wayback-lens/" target="_blank" class="btn btn-primary btn-sm">🌐 Live Demo</a>
           <a href="https://github.com/pratik-khairnar-sec/wayback-lens" target="_blank" class="btn btn-secondary btn-sm">GitHub Repo</a>
+          <button class="btn btn-secondary btn-sm" onclick="openDossierModal('wayback')">🔍 Deep Dossier</button>
         </div>
       </div>
 
@@ -2370,7 +2373,7 @@ Type 'help' for available commands, or click any chip below to execute.
         <div>
           <div class="project-top">
             <span class="project-tag" style="color: var(--accent-emerald); border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1);">XSS VERIFICATION</span>
-            <span class="project-version" style="color: var(--accent-emerald);">● Publishing Tonight</span>
+            <span class="project-version" style="color: var(--accent-emerald);">● Upcoming Daily Drop</span>
           </div>
           <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Context-Aware Reflected XSS: Why Regex Scanners Fail</h3>
           <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
@@ -2384,6 +2387,50 @@ Type 'help' for available commands, or click any chip below to execute.
         </div>
         <div class="project-links" style="margin-top: 20px;">
           <button class="btn btn-secondary btn-sm" onclick="openWriteupModal('reflectra')" style="width: 100%; justify-content: center; border-color: var(--accent-emerald); color: var(--accent-emerald);">📖 Read Full Writeup (In-App) &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Article 5: Endpoint Hunter -->
+      <div class="research-card" style="border-top: 3px solid var(--accent-cyan);">
+        <div>
+          <div class="project-top">
+            <span class="project-tag">CHROME MV3 &bull; RECON</span>
+            <span class="project-version" style="color: var(--accent-cyan);">● Upcoming Daily Drop</span>
+          </div>
+          <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Inside Endpoint Hunter: Mining Hidden API Routes in SPAs</h3>
+          <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
+            Extracting hidden endpoints from minified Single-Page Applications with Manifest V3 service workers, AST regex parsing, and kinematic stealth crawling.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">Manifest V3</span>
+            <span class="tech-pill">AST Filter</span>
+            <span class="tech-pill">API Mining</span>
+          </div>
+        </div>
+        <div class="project-links" style="margin-top: 20px;">
+          <button class="btn btn-secondary btn-sm" onclick="openWriteupModal('endpoint')" style="width: 100%; justify-content: center; border-color: var(--accent-cyan); color: var(--accent-cyan);">📖 Read Full Writeup (In-App) &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Article 6: Wayback Lens -->
+      <div class="research-card" style="border-top: 3px solid var(--accent-amber);">
+        <div>
+          <div class="project-top">
+            <span class="project-tag" style="color: var(--accent-amber); border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">WAYBACK CDX &bull; OSINT</span>
+            <span class="project-version" style="color: var(--accent-amber);">● Upcoming Daily Drop</span>
+          </div>
+          <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Re-Engineering Archive Recon: Streaming 100k+ CDX Records</h3>
+          <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
+            Transforming Internet Archive CDX API into an interactive high-speed workspace with non-blocking chunk streaming, 3-tier risk scoring, and async HEAD probers.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">Chunk Streams</span>
+            <span class="tech-pill">3-Tier Scoring</span>
+            <span class="tech-pill">Live 200 Probes</span>
+          </div>
+        </div>
+        <div class="project-links" style="margin-top: 20px;">
+          <button class="btn btn-secondary btn-sm" onclick="openWriteupModal('wayback')" style="width: 100%; justify-content: center; border-color: var(--accent-amber); color: var(--accent-amber);">📖 Read Full Writeup (In-App) &rarr;</button>
         </div>
       </div>
     </div>
@@ -3188,23 +3235,81 @@ HIGHLIGHTS :
       reflectra: {
         title: "Reflectra v7.0.0 — Context-Aware XSS Dossier",
         meta: "HEADLESS CHROME VERIFICATION &bull; DOM SINK DETECTION &bull; ZERO FALSE POSITIVES",
-        img: "assets/06_idor_demo.png",
+        img: "assets/reflectra_dashboard.png",
         content: `
           <p style="color: var(--text-muted); margin-bottom: 14px;">
             Unlike heuristic scanners that only test string reflection, Reflectra parses HTML execution contexts 
             (attribute, body, script block) and confirms real DOM execution via headless browser instrumentation.
           </p>
+          <div style="background: var(--bg-terminal); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; margin-bottom: 16px; font-family: var(--font-mono); font-size: 0.8rem;">
+            &bull; Native Headless Chromium Dialog Traps: Confirms alert, confirm, and prompt events.<br>
+            &bull; 5 HTML Execution Context Boundaries: Attributes, body, scripts, and DOM sinks.<br>
+            &bull; Real-time Telegram Findings Dispatch with instant CVSS scoring.
+          </div>
+          <div style="display: flex; gap: 12px;">
+            <a href="https://pratik-khairnar-sec.github.io/Reflectra/" target="_blank" class="btn btn-primary btn-sm">Launch Live Docs &amp; Demo</a>
+            <a href="https://github.com/pratik-khairnar-sec/Reflectra" target="_blank" class="btn btn-secondary btn-sm">GitHub Repository</a>
+          </div>
         `
       },
       blindstrike: {
         title: "BlindStrike v7.0.0 — Latency-Calibrated SQLi Dossier",
         meta: "STATISTICAL IQR FILTER &bull; TIME/BOOLEAN BLIND &bull; MULTITHREADED",
-        img: "assets/14_presentation_stats_verified.png",
+        img: "assets/blindstrike_dashboard.png",
         content: `
           <p style="color: var(--text-muted); margin-bottom: 14px;">
             Eliminates the #1 flaw of time-based SQL injection tooling: network jitter false positives. 
             Calibrates dynamic 3σ baseline latency models before firing sleep-delay payloads.
           </p>
+          <div style="background: var(--bg-terminal); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; margin-bottom: 16px; font-family: var(--font-mono); font-size: 0.8rem;">
+            &bull; Dynamic 3σ Latency Baselining: Outlier rejection via statistical IQR filter.<br>
+            &bull; Multi-DBMS Dialects: MySQL, MSSQL, PostgreSQL, and Oracle sleep vectors.<br>
+            &bull; Automated Confirmation Retests &amp; Telegram Alert Delivery.
+          </div>
+          <div style="display: flex; gap: 12px;">
+            <a href="https://pratik-khairnar-sec.github.io/BlindStrike/" target="_blank" class="btn btn-primary btn-sm">Launch Live Docs &amp; Demo</a>
+            <a href="https://github.com/pratik-khairnar-sec/BlindStrike" target="_blank" class="btn btn-secondary btn-sm">GitHub Repository</a>
+          </div>
+        `
+      },
+      endpoint: {
+        title: "Endpoint Hunter v1.0.0 — Chrome Manifest V3 Recon Dossier",
+        meta: "MANIFEST V3 &bull; JS AST FILTER &bull; KINEMATIC CRAWLER",
+        img: "assets/endpoint_finder_dashboard.png",
+        content: `
+          <p style="color: var(--text-muted); margin-bottom: 14px;">
+            Autonomous Chrome extension for deep client-side JavaScript endpoint and hidden route extraction. 
+            Filters out XML/SVG schemas and library internals using AST-level heuristic sanitization.
+          </p>
+          <div style="background: var(--bg-terminal); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; margin-bottom: 16px; font-family: var(--font-mono); font-size: 0.8rem;">
+            &bull; 5-Tier Attack Surface Categorization: Admin, Auth, API, GraphQL, and Storage.<br>
+            &bull; Kinematic Human Evasion: Randomized scrolling and delays to bypass bot detection.<br>
+            &bull; Zero False-Positive Filter: Drops third-party vendor noise and broken tag fragments.
+          </div>
+          <div style="display: flex; gap: 12px;">
+            <a href="https://pratik-khairnar-sec.github.io/endpoint-finder-extension/" target="_blank" class="btn btn-primary btn-sm">Launch Live Demo</a>
+            <a href="https://github.com/pratik-khairnar-sec/endpoint-finder-extension" target="_blank" class="btn btn-secondary btn-sm">GitHub Repository</a>
+          </div>
+        `
+      },
+      wayback: {
+        title: "Wayback Lens v1.0.0 — High-Speed CDX Recon Dossier",
+        meta: "CHUNKED STREAMING &bull; 3-TIER RISK SCORING &bull; ASYNC HEAD PROBERS",
+        img: "assets/reconforge_dashboard.png",
+        content: `
+          <p style="color: var(--text-muted); margin-bottom: 14px;">
+            Transforms the Internet Archive CDX API into an interactive high-speed triage workspace. 
+            Streams 100,000+ historical records non-blocking and prioritizes high-risk exposed assets.
+          </p>
+          <div style="background: var(--bg-terminal); border: 1px solid var(--border-subtle); border-radius: var(--radius-md); padding: 16px; margin-bottom: 16px; font-family: var(--font-mono); font-size: 0.8rem;">
+            &bull; Non-Blocking Streaming Pipeline: Under 60MB RAM footprint for 100k+ records.<br>
+            &bull; 3-Tier Security Risk Engine: Flags .env, private keys, database dumps, and source maps.<br>
+            &bull; Live 200 HTTP Verification: Lightweight asynchronous HEAD prober confirms active targets.
+          </div>
+          <div style="display: flex; gap: 12px;">
+            <a href="https://pratik-khairnar-sec.github.io/wayback-lens/" target="_blank" class="btn btn-primary btn-sm">Launch Live Demo</a>
+            <a href="https://github.com/pratik-khairnar-sec/wayback-lens" target="_blank" class="btn btn-secondary btn-sm">GitHub Repository</a>
+          </div>
         `
       }
     };

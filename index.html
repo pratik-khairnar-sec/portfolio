@@ -10,7 +10,7 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Pratik Khairnar — VAPT Engineer & Security Tool Architect">
-  <meta property="og:description" content="Official Cybersecurity Portfolio & Defense Tooling Suite. Creator of AUTHENTIX v2.1.0, ReconForge v3, Reflectra, and BlindStrike. Final-Year Cyber Security & Forensics Engineer.">
+  <meta property="og:description" content="Official Cybersecurity Portfolio & Defense Tooling Suite. Creator of AUTHENTIX v2.1.0, ReconForge v3, Reflectra, and BlindStrike. B.Tech Cyber Security & Forensics (2023–2027) • Sandip University.">
   <meta property="og:url" content="https://pratik-khairnar-sec.github.io/portfolio/">
   <meta property="og:image" content="assets/reconforge_hero_dashboard.png">
 
@@ -1368,6 +1368,142 @@
     }
     .footer strong { color: var(--text-main); }
 
+    
+    /* Cyber Tactical Avatar HUD (Replaces Photo) */
+    .cyber-avatar-wrap {
+      position: relative;
+      width: 140px;
+      height: 140px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .cyber-avatar-ring {
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 2px dashed rgba(56, 189, 248, 0.45);
+      animation: spinAvatarRing 24s linear infinite;
+    }
+    .cyber-avatar-radar {
+      position: absolute;
+      inset: -2px;
+      border-radius: 50%;
+      background: conic-gradient(from 0deg, transparent 0deg, rgba(56, 189, 248, 0.22) 60deg, transparent 120deg);
+      animation: spinAvatarRadar 4s linear infinite;
+    }
+    .cyber-avatar-core {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 35% 35%, #0c1836, #030712);
+      border: 2.5px solid var(--accent-cyan);
+      box-shadow: 0 0 25px rgba(56, 189, 248, 0.4), inset 0 0 20px rgba(56, 189, 248, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      overflow: hidden;
+    }
+    .cyber-avatar-initials {
+      font-family: var(--font-display);
+      font-weight: 900;
+      font-size: 2.4rem;
+      color: #fff;
+      line-height: 1;
+      letter-spacing: -1px;
+      text-shadow: 0 0 15px var(--accent-cyan);
+    }
+    .cyber-avatar-badge {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      letter-spacing: 2px;
+      color: var(--accent-emerald);
+      font-weight: 700;
+      margin-top: 3px;
+    }
+    .cyber-avatar-status {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      width: 18px;
+      height: 18px;
+      background: var(--accent-emerald);
+      border: 3px solid #030712;
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent-emerald);
+      z-index: 3;
+      animation: statusPulse 2s ease-in-out infinite;
+    }
+    @keyframes spinAvatarRing { 100% { transform: rotate(360deg); } }
+    @keyframes spinAvatarRadar { 100% { transform: rotate(360deg); } }
+    @keyframes statusPulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.15); opacity: 0.8; }
+    }
+
+    /* Mobile Drawer Menu */
+    .mobile-menu-btn {
+      display: none;
+      background: rgba(56, 189, 248, 0.1);
+      border: 1px solid var(--border-subtle);
+      color: var(--accent-cyan);
+      padding: 7px 12px;
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-size: 1.1rem;
+      line-height: 1;
+      transition: var(--transition);
+    }
+    .mobile-menu-btn:hover {
+      background: rgba(56, 189, 248, 0.2);
+      border-color: var(--accent-cyan);
+    }
+    .mobile-drawer {
+      position: fixed;
+      top: 68px;
+      left: 0;
+      width: 100%;
+      background: rgba(3, 7, 18, 0.98);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-glow);
+      padding: 20px 24px;
+      display: none;
+      flex-direction: column;
+      gap: 12px;
+      z-index: 998;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+      animation: drawerSlideDown 0.22s ease-out;
+    }
+    .mobile-drawer.open {
+      display: flex;
+    }
+    .mobile-drawer-link {
+      font-family: var(--font-mono);
+      font-size: 0.95rem;
+      color: var(--text-main);
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid transparent;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: var(--transition);
+    }
+    .mobile-drawer-link:hover, .mobile-drawer-link:active {
+      background: rgba(56, 189, 248, 0.12);
+      border-color: rgba(56, 189, 248, 0.3);
+      color: var(--accent-cyan);
+    }
+    @keyframes drawerSlideDown {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
     /* =========================================================================
        RESPONSIVE ADAPTATIONS
        ========================================================================= */
@@ -1376,17 +1512,30 @@
       .arsenal-grid { grid-template-columns: 1fr; }
       .research-grid { grid-template-columns: 1fr; }
       .featured-research-banner { grid-template-columns: 1fr; }
-      .featured-research-banner { grid-template-columns: 1fr; }
       .skills-grid { grid-template-columns: 1fr; }
       .dossier-grid { grid-template-columns: 1fr; }
       .bola-layout { grid-template-columns: 1fr; }
     }
-    @media (max-width: 768px) {
-      .hero-title { font-size: 2.8rem; }
-      .metrics-strip { grid-template-columns: repeat(2, 1fr); }
+    @media (max-width: 900px) {
       .nav-links { display: none; }
+      .mobile-menu-btn { display: inline-flex; }
+      .nav-center-status { display: none; }
+    }
+    @media (max-width: 768px) {
+      .hero-title { font-size: 2.2rem; }
+      .hero-desc { font-size: 0.95rem; }
+      .hero-actions { flex-direction: column; width: 100%; }
+      .hero-actions .btn { width: 100%; justify-content: center; }
+      .metrics-strip { grid-template-columns: repeat(2, 1fr); }
       .blind-controls { grid-template-columns: 1fr; }
       .entropy-stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .cyber-avatar-wrap { width: 110px; height: 110px; }
+      .cyber-avatar-core { width: 96px; height: 96px; }
+      .cyber-avatar-initials { font-size: 1.9rem; }
+    }
+    @media (max-width: 480px) {
+      .metrics-strip { grid-template-columns: 1fr; }
+      .hero-badge-wrap { flex-direction: column; align-items: flex-start; }
     }
   </style>
 </head>
@@ -1424,7 +1573,7 @@
         <a href="#about" class="nav-link">Philosophy</a>
         <a href="#playground" class="nav-link">Sandboxes</a>
         <a href="#terminal" class="nav-link">Terminal</a>
-        <a href="#arsenal" class="nav-link">Arsenal (8)</a>
+        <a href="#arsenal" class="nav-link">Arsenal (7)</a>
         <a href="#skills" class="nav-link">Skills</a>
         <a href="#experience" class="nav-link">Experience</a>
         <a href="#research" class="nav-link">Research</a>
@@ -1440,9 +1589,24 @@
         <button class="btn btn-emerald btn-sm" onclick="openRecruiterModal()">
           ⚡ RECRUITER HUD
         </button>
+        <button class="mobile-menu-btn" id="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Toggle Navigation Menu">
+          ☰
+        </button>
       </div>
     </div>
   </header>
+  <!-- Mobile Navigation Drawer -->
+  <div class="mobile-drawer" id="mobile-drawer">
+    <a href="#about" class="mobile-drawer-link" onclick="toggleMobileMenu()"><span>Philosophy</span><span>&rarr;</span></a>
+    <a href="#playground" class="mobile-drawer-link" onclick="toggleMobileMenu()"><span>Interactive Sandboxes</span><span>&rarr;</span></a>
+    <a href="#terminal" class="mobile-drawer-link" onclick="toggleMobileMenu()"><span>Tactical Terminal</span><span>&rarr;</span></a>
+    <a href="#arsenal" class="mobile-drawer-link" onclick="toggleMobileMenu()"><span>Security Arsenal (7)</span><span>&rarr;</span></a>
+    <a href="#skills" class="mobile-drawer-link" onclick="toggleMobileMenu()"><span>Technical Skills</span><span>&rarr;</span></a>
+    <a href="#experience" class="mobile-drawer-link" onclick="toggleMobileMenu()"><span>Education &amp; Experience</span><span>&rarr;</span></a>
+    <a href="#research" class="mobile-drawer-link" onclick="toggleMobileMenu()"><span>Security Research &amp; Medium</span><span>&rarr;</span></a>
+    <a href="#contact" class="mobile-drawer-link" onclick="toggleMobileMenu()"><span>Contact</span><span>&rarr;</span></a>
+  </div>
+
 
   <!-- =========================================================================
        HERO COMMAND SECTION & PRACTITIONER PHILOSOPHY
@@ -1460,14 +1624,19 @@
         🏆 CREATOR OF AUTHENTIX &bull; RECONFORGE &bull; REFLECTRA &bull; BLINDSTRIKE
       </div>
       <div class="hero-badge badge-emerald">
-        🎯 FRESH GRADUATE (2026) &bull; IMMEDIATE JOINING
+        🎯 B.TECH CYBER SECURITY &amp; FORENSICS (2023–2027) &bull; IMMEDIATE JOINING
       </div>
     </div>
 
     <div style="display: flex; align-items: center; gap: 32px; margin-bottom: 24px; flex-wrap: wrap;">
-      <div style="position: relative; flex-shrink: 0;">
-        <img src="assets/pratik_khairnar.png" alt="Pratik Khairnar" style="width: 140px; height: 140px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent-cyan); box-shadow: 0 0 30px rgba(56, 189, 248, 0.45);">
-        <span style="position: absolute; bottom: 8px; right: 8px; width: 18px; height: 18px; background: var(--accent-emerald); border: 3px solid #030712; border-radius: 50%;"></span>
+      <div class="cyber-avatar-wrap">
+        <div class="cyber-avatar-ring"></div>
+        <div class="cyber-avatar-radar"></div>
+        <div class="cyber-avatar-core">
+          <span class="cyber-avatar-initials">PK</span>
+          <span class="cyber-avatar-badge">DEFSEC</span>
+        </div>
+        <span class="cyber-avatar-status" title="Active VAPT Practitioner • Ready to Deploy"></span>
       </div>
       <div>
         <h1 class="hero-title" style="margin-bottom: 6px;">Pratik Khairnar</h1>
@@ -1481,7 +1650,7 @@
       Architecting high-velocity, <strong>zero-false-positive offensive verification suites</strong> and deterministic security frameworks. 
       Creator of <strong>AUTHENTIX Enterprise v2.1.0</strong> (Burp Suite Montoya API), <strong>ReconForge v3</strong> (13,600+ Dork Engine), 
       <strong>Reflectra v7</strong> (Context-Aware XSS), <strong>BlindStrike v7</strong> (Blind SQLi), and <strong>CORSair v3</strong> (In-Browser CORS Weaponization). 
-      Final-year <strong>B.Tech Cyber Security &amp; Forensics</strong> engineer with hands-on law enforcement digital forensics internship at <strong>Cyber Police Station, Nashik</strong>.
+      B.Tech <strong>Cyber Security &amp; Forensics (2023–2027)</strong> practitioner at Sandip University with hands-on law enforcement digital forensics internship at <strong>Cyber Police Station, Nashik</strong> and manual web VAPT at <strong>GROOTT Services</strong>.
     </p>
 
     <div class="hero-actions">
@@ -1548,11 +1717,11 @@
             <h4>📋 Candidate Overview</h4>
             <ul class="dossier-list">
               <li><strong>Target Roles:</strong> VAPT Engineer, Web Pentester, AppSec Engineer, Security Consultant</li>
-              <li><strong>Availability:</strong> <span style="color: var(--accent-emerald); font-weight: 700;">Immediate Joining &bull; Fresh Graduate (2026)</span></li>
+              <li><strong>Availability:</strong> <span style="color: var(--accent-emerald); font-weight: 700;">Immediate Joining Available</span></li>
               <li><strong>Location:</strong> Nashik, Maharashtra, India (Open to Relocation & Remote)</li>
-              <li><strong>Degree:</strong> B.Tech CSE (Cyber Security & Forensics) &bull; Sandip University</li>
-              <li><strong>Direct Email:</strong> <a href="mailto:pratik.khairnar.sec@gmail.com" style="color: var(--accent-cyan);">pratik.khairnar.sec@gmail.com</a></li>
-              <li><strong>Verified Phone:</strong> Available upon formal interview request</li>
+              <li><strong>Education:</strong> B.Tech CSE (Cyber Security &amp; Forensics) &bull; Sandip University (2023–2027, Final Year, CGPA: 7.42/10)</li>
+              <li><strong>Direct Email:</strong> <a href="mailto:pratik.khairnar.sec@gmail.com" style="color: var(--accent-cyan); font-weight: 600;">pratik.khairnar.sec@gmail.com</a></li>
+              <li><strong>Certifications:</strong> CEH v13 (EC-Council) &bull; Cisco CCNA</li>
             </ul>
           </div>
 
@@ -1609,8 +1778,11 @@
           <a href="mailto:pratik.khairnar.sec@gmail.com?subject=Interview%20Invitation%20-%20VAPT%20Engineer%20Role%20(Pratik%20Khairnar)" class="btn btn-primary">
             📧 Schedule Interview Directly
           </a>
+          <a href="assets/pratik_khairnar_resume.pdf" download="Pratik_Khairnar_Resume.pdf" class="btn btn-gold">
+            📄 Download Verified Resume (PDF)
+          </a>
           <button onclick="downloadCandidateSummary()" class="btn btn-emerald">
-            📄 Export ATS Summary
+            📋 Export ATS Summary
           </button>
           <a href="https://linkedin.com/in/pratik-khairnar-sec/" target="_blank" class="btn btn-secondary">
             LinkedIn Profile
@@ -2212,7 +2384,7 @@ Type 'help' for available commands, or click any chip below to execute.
         <div class="timeline-content">
           <div class="timeline-head">
             <span class="timeline-role">B.Tech in Cyber Security &amp; Forensics</span>
-            <span class="timeline-date">2022 — 2026 (Final Year)</span>
+            <span class="timeline-date">2023 — 2027 (Final Year &bull; CGPA: 7.42/10)</span>
           </div>
           <div class="timeline-company">Sandip University, Nashik (Academic Guide: Prof. Tushar Kaloge)</div>
           <p class="timeline-desc">
@@ -2245,16 +2417,16 @@ Type 'help' for available commands, or click any chip below to execute.
        ========================================================================= -->
   <section id="research" class="container section-wrap">
     <div class="section-head">
-      <span class="section-tag">Official Publications &amp; Technical Threads</span>
+      <span class="section-tag">Official Publications &amp; Technical Methodologies</span>
       <h2 class="section-title">Security Research &amp; Deep Dives</h2>
-      <p class="section-desc">In-depth technical architecture breakdowns, empirical vulnerability research, and field-tested offensive methodologies.</p>
+      <p class="section-desc">Empirical vulnerability research, state-machine invariant proofs, and real-world offensive engineering publications.</p>
     </div>
 
-    <!-- 🔥 Featured Latest Release Banner -->
+    <!-- 🔥 Featured Live Story: ReconForge v3 -->
     <div class="featured-research-banner">
       <div>
         <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 14px; flex-wrap: wrap;">
-          <span class="project-tag" style="background: rgba(16, 185, 129, 0.15); border-color: var(--accent-emerald); color: var(--accent-emerald); font-weight: 800;">🔥 LATEST PUBLISHED ARTICLE</span>
+          <span class="project-tag" style="background: rgba(16, 185, 129, 0.15); border-color: var(--accent-emerald); color: var(--accent-emerald); font-weight: 800;">🔥 FEATURED PUBLICATION</span>
           <span class="project-tag" style="background: rgba(56, 189, 248, 0.15); border-color: var(--accent-cyan); color: var(--accent-cyan); font-weight: 700;">OFFICIAL X THREAD LIVE</span>
           <span style="font-family: var(--font-mono); font-size: 0.76rem; color: var(--accent-gold);">12 Min Read &bull; 13,600+ Dork Engine &bull; 33 Phases</span>
         </div>
@@ -2264,15 +2436,15 @@ Type 'help' for available commands, or click any chip below to execute.
         <p style="color: var(--text-muted); font-size: 0.95rem; line-height: 1.65; margin-bottom: 22px;">
           Full architectural deep dive into the 100% client-side reconnaissance operating system. 
           Explores the tool-major multi-target pipeline engine, ergonomic anti-glare triage workspace, dual-channel Telegram bot reporting, 
-          and the mathematical 13,600+ curated Mega Dork Intelligence Vault.
+          and the curated 13,600+ Mega Dork Intelligence Vault.
         </p>
         <div style="display: flex; gap: 12px; flex-wrap: wrap;">
-          <a href="https://pratik-khairnar-sec.medium.com/reconforge-v3-automating-33-phases-of-bug-bounty-reconnaissance-zero-install-13-600-search-7c0e353a709b" target="_blank" class="btn btn-primary">
-            📖 Read Full Article on Medium
+          <a href="https://pratik-khairnar-sec.medium.com/reconforge-v3-automating-33-phases-of-bug-bounty-reconnaissance-zero-install-13-600-search-7c0e353a709b" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+            📖 Read Full Article on Medium ↗
           </a>
-          <a href="https://x.com/PratikSec/status/2108584870293451190" target="_blank" class="btn btn-secondary" style="border-color: var(--accent-cyan); color: var(--accent-cyan);">
+          <a href="https://x.com/PratikSec/status/2108584870293451190" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="border-color: var(--accent-cyan); color: var(--accent-cyan);">
             <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-            View Technical Thread on X
+            View Technical Thread on X ↗
           </a>
           <a href="https://pratik-khairnar-sec.github.io/ReconForge/" target="_blank" class="btn btn-gold">
             🌐 Launch ReconForge v3
@@ -2287,31 +2459,42 @@ Type 'help' for available commands, or click any chip below to execute.
       </div>
     </div>
 
-    <!-- Notice of Nightly Expanded Publications -->
-    <div style="background: rgba(16, 185, 129, 0.08); border: 1px dashed rgba(16, 185, 129, 0.35); border-radius: var(--radius-md); padding: 14px 20px; margin-bottom: 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-      <div style="display: flex; align-items: center; gap: 10px;">
-        <span class="pulse-dot"></span>
-        <span style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-emerald); font-weight: 700;">
-          ACTIVE RESEARCH EXPANSION &bull; Additional In-Depth Technical Articles Publishing Tonight on Medium
-        </span>
+    <!-- 🌐 Central Master Medium & X Publications Hub Box -->
+    <div style="background: linear-gradient(135deg, rgba(8, 16, 36, 0.95), rgba(12, 24, 54, 0.95)); border: 1.5px solid rgba(56, 189, 248, 0.35); border-radius: var(--radius-lg); padding: 24px 28px; margin-bottom: 28px; box-shadow: 0 10px 30px rgba(0,0,0,0.45); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+      <div>
+        <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 8px;">
+          <span class="pulse-dot"></span>
+          <span style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-cyan); font-weight: 700; letter-spacing: 1px;">CENTRAL RESEARCH DISPATCH HUB</span>
+        </div>
+        <h3 style="font-size: 1.35rem; font-weight: 800; color: #fff; margin-bottom: 6px;">
+          Read All In-Depth Technical Writeups &amp; Exploit Chains Directly on Medium
+        </h3>
+        <p style="color: var(--text-muted); font-size: 0.92rem; max-width: 650px;">
+          Explore comprehensive architectural whitepapers, mathematical baselining proofs, and weaponized PoC demonstrations covering all 7 flagship frameworks.
+        </p>
       </div>
-      <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" class="btn btn-secondary btn-sm" style="color: var(--accent-emerald); border-color: rgba(16, 185, 129, 0.4);">
-        Follow Medium Profile (@pratik-khairnar-sec) &rarr;
-      </a>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+        <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="font-weight: 700;">
+          📖 Open Medium Profile (@pratik-khairnar-sec) ↗
+        </a>
+        <a href="https://x.com/PratikSec" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="border-color: rgba(255,255,255,0.3); color: #fff;">
+          🐦 Follow @PratikSec on X ↗
+        </a>
+      </div>
     </div>
 
-    <!-- Research Cards Grid -->
+    <!-- 6 Technical Writeup Cards Directly Linking to Medium -->
     <div class="research-grid">
       <!-- Article 1: AUTHENTIX -->
       <div class="research-card" style="border-top: 3px solid var(--accent-gold);">
         <div>
           <div class="project-top">
             <span class="project-tag tag-gold">BURP MONTOYA API</span>
-            <span class="project-version" style="color: var(--accent-amber);">● Publishing Tonight</span>
+            <span class="project-version" style="color: var(--accent-amber);">15 Min Read</span>
           </div>
-          <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Inside AUTHENTIX: Building an Automated BOLA &amp; IDOR Detection Engine</h3>
+          <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Inside AUTHENTIX: Eliminating BOLA &amp; IDOR with 27 Formal Invariants</h3>
           <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
-            Why legacy HTTP proxies fail at access control, deterministic finite-state automation, cross-actor matrix verification, and 27 formal security invariants.
+            Why legacy HTTP proxies fail at access control, deterministic finite-state automation, cross-actor matrix verification, and 28 high-entropy secret rules in native Java 17/21.
           </p>
           <div class="tech-pills">
             <span class="tech-pill">State Machines</span>
@@ -2320,7 +2503,7 @@ Type 'help' for available commands, or click any chip below to execute.
           </div>
         </div>
         <div class="project-links" style="margin-top: 20px;">
-          <button class="btn btn-gold btn-sm" onclick="openWriteupModal('authentix')" style="width: 100%; justify-content: center;">📖 Read Full Writeup (In-App) &rarr;</button>
+          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm" style="width: 100%; justify-content: center;">📖 Read on Medium ↗</a>
         </div>
       </div>
 
@@ -2329,20 +2512,20 @@ Type 'help' for available commands, or click any chip below to execute.
         <div>
           <div class="project-top">
             <span class="project-tag">WEB SECURITY &bull; CORS</span>
-            <span class="project-version" style="color: var(--accent-cyan);">● In-Depth Writeup</span>
+            <span class="project-version" style="color: var(--accent-cyan);">13 Min Read</span>
           </div>
           <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Cross-Origin Resource Sharing Exploitation &amp; 1-Click Weaponization</h3>
           <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
-            Why developers get CORS wrong, unanchored regex bypasses, null-origin sandboxed iframe escapes, and client-side exploit compilation.
+            Why developers get CORS wrong, unanchored regex bypasses, null-origin sandboxed iframe escapes, and client-side exploit compilation in CORSair v3.0.
           </p>
           <div class="tech-pills">
             <span class="tech-pill">CORS Exploitation</span>
             <span class="tech-pill">PoC Engines</span>
-            <span class="tech-pill">Same-Origin Policy</span>
+            <span class="tech-pill">SOP Bypasses</span>
           </div>
         </div>
         <div class="project-links" style="margin-top: 20px;">
-          <button class="btn btn-primary btn-sm" onclick="openWriteupModal('corsair')" style="width: 100%; justify-content: center;">📖 Read Full Writeup (In-App) &rarr;</button>
+          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center;">📖 Read on Medium ↗</a>
         </div>
       </div>
 
@@ -2351,11 +2534,11 @@ Type 'help' for available commands, or click any chip below to execute.
         <div>
           <div class="project-top">
             <span class="project-tag">BLIND SQLI RESEARCH</span>
-            <span class="project-version" style="color: var(--accent-cyan);">● Publishing Tonight</span>
+            <span class="project-version" style="color: var(--accent-cyan);">13 Min Read</span>
           </div>
           <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Beyond Latency: Eliminating False Positives in Time-Based Blind SQLi</h3>
           <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
-            Statistical confidence intervals, network jitter mitigation, baseline timing calibration, and mathematical validation in BlindStrike.
+            Moving beyond scalar timers: empirical latency baselining, IQR outlier thresholds, and linear time-scaling confirmation in BlindStrike v7.0.
           </p>
           <div class="tech-pills">
             <span class="tech-pill">Latency Baseline</span>
@@ -2364,7 +2547,7 @@ Type 'help' for available commands, or click any chip below to execute.
           </div>
         </div>
         <div class="project-links" style="margin-top: 20px;">
-          <button class="btn btn-primary btn-sm" onclick="openWriteupModal('blindstrike')" style="width: 100%; justify-content: center;">📖 Read Full Writeup (In-App) &rarr;</button>
+          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm" style="width: 100%; justify-content: center;">📖 Read on Medium ↗</a>
         </div>
       </div>
 
@@ -2373,20 +2556,20 @@ Type 'help' for available commands, or click any chip below to execute.
         <div>
           <div class="project-top">
             <span class="project-tag" style="color: var(--accent-emerald); border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.1);">XSS VERIFICATION</span>
-            <span class="project-version" style="color: var(--accent-emerald);">● Upcoming Daily Drop</span>
+            <span class="project-version" style="color: var(--accent-emerald);">13 Min Read</span>
           </div>
           <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Context-Aware Reflected XSS: Why Regex Scanners Fail</h3>
           <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
-            Context-escaping heuristics, DOM-sink analysis, and headless Chrome verification to achieve 0% false positives in modern SPAs.
+            Proving that string reflection does not equal JavaScript execution, syntactic context boundary tagging, and native Headless Chrome dialog trapping.
           </p>
           <div class="tech-pills">
             <span class="tech-pill">Headless DOM</span>
             <span class="tech-pill">Context Engine</span>
-            <span class="tech-pill">XSS</span>
+            <span class="tech-pill">0% False Positives</span>
           </div>
         </div>
         <div class="project-links" style="margin-top: 20px;">
-          <button class="btn btn-secondary btn-sm" onclick="openWriteupModal('reflectra')" style="width: 100%; justify-content: center; border-color: var(--accent-emerald); color: var(--accent-emerald);">📖 Read Full Writeup (In-App) &rarr;</button>
+          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; border-color: var(--accent-emerald); color: var(--accent-emerald);">📖 Read on Medium ↗</a>
         </div>
       </div>
 
@@ -2395,11 +2578,11 @@ Type 'help' for available commands, or click any chip below to execute.
         <div>
           <div class="project-top">
             <span class="project-tag">CHROME MV3 &bull; RECON</span>
-            <span class="project-version" style="color: var(--accent-cyan);">● Upcoming Daily Drop</span>
+            <span class="project-version" style="color: var(--accent-cyan);">12 Min Read</span>
           </div>
           <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Inside Endpoint Hunter: Mining Hidden API Routes in SPAs</h3>
           <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
-            Extracting hidden endpoints from minified Single-Page Applications with Manifest V3 service workers, AST regex parsing, and kinematic stealth crawling.
+            Chrome Manifest V3 service worker pipeline, AST-aware false-positive suppression matrix, and human-kinematic stealth crawling.
           </p>
           <div class="tech-pills">
             <span class="tech-pill">Manifest V3</span>
@@ -2408,7 +2591,7 @@ Type 'help' for available commands, or click any chip below to execute.
           </div>
         </div>
         <div class="project-links" style="margin-top: 20px;">
-          <button class="btn btn-secondary btn-sm" onclick="openWriteupModal('endpoint')" style="width: 100%; justify-content: center; border-color: var(--accent-cyan); color: var(--accent-cyan);">📖 Read Full Writeup (In-App) &rarr;</button>
+          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; border-color: var(--accent-cyan); color: var(--accent-cyan);">📖 Read on Medium ↗</a>
         </div>
       </div>
 
@@ -2417,11 +2600,11 @@ Type 'help' for available commands, or click any chip below to execute.
         <div>
           <div class="project-top">
             <span class="project-tag" style="color: var(--accent-amber); border-color: rgba(245,158,11,0.3); background: rgba(245,158,11,0.1);">WAYBACK CDX &bull; OSINT</span>
-            <span class="project-version" style="color: var(--accent-amber);">● Upcoming Daily Drop</span>
+            <span class="project-version" style="color: var(--accent-amber);">12 Min Read</span>
           </div>
           <h3 class="project-title" style="font-size: 1.15rem; line-height: 1.4;">Re-Engineering Archive Recon: Streaming 100k+ CDX Records</h3>
           <p class="project-desc" style="font-size: 0.88rem; margin: 12px 0 16px;">
-            Transforming Internet Archive CDX API into an interactive high-speed workspace with non-blocking chunk streaming, 3-tier risk scoring, and async HEAD probers.
+            Non-blocking ReadableStream chunk decoding, 3-tier autonomous risk engine, and asynchronous multi-worker HTTP 200 probers in Wayback Lens.
           </p>
           <div class="tech-pills">
             <span class="tech-pill">Chunk Streams</span>
@@ -2430,15 +2613,12 @@ Type 'help' for available commands, or click any chip below to execute.
           </div>
         </div>
         <div class="project-links" style="margin-top: 20px;">
-          <button class="btn btn-secondary btn-sm" onclick="openWriteupModal('wayback')" style="width: 100%; justify-content: center; border-color: var(--accent-amber); color: var(--accent-amber);">📖 Read Full Writeup (In-App) &rarr;</button>
+          <a href="https://pratik-khairnar-sec.medium.com/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm" style="width: 100%; justify-content: center; border-color: var(--accent-amber); color: var(--accent-amber);">📖 Read on Medium ↗</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- =========================================================================
-       ENCRYPTED DISPATCH & CONTACT CENTER
-       ========================================================================= -->
   <section id="contact" class="container section-wrap">
     <div class="contact-card">
       <div class="contact-icon">
@@ -2671,7 +2851,7 @@ GitHub    : https://github.com/pratik-khairnar-sec
 LinkedIn  : https://linkedin.com/in/pratik-khairnar-sec/
 Twitter   : https://x.com/PratikSec (@PratikSec)
 Location  : Nashik, Maharashtra, India (Open to Relocation & Remote)
-Status    : Actively Seeking Roles • Immediate Joining • Fresh Graduate (2026)
+Status    : Actively Seeking Roles • Immediate Joining • B.Tech (2023–2027)
 
 TARGET ROLES:
 • VAPT Engineer
@@ -2686,7 +2866,7 @@ CORE COMPETENCIES & MOAT:
 • Author of 7 Production Security Frameworks (AUTHENTIX, ReconForge, Reflectra, BlindStrike, CORSair)
 
 CREDENTIALS & EDUCATION:
-• B.Tech in Cyber Security & Forensics (2022-2026) - Sandip University, Nashik
+• B.Tech in Cyber Security & Forensics (2023–2027) - Sandip University, Nashik
 • Certified Ethical Hacker (CEH v13 AI) - EC-Council
 • Cisco Certified Network Associate (CCNA) - Cisco
 • Cyber Crime & Forensics Intern - Cyber Police Station, Nashik
@@ -2750,7 +2930,7 @@ X-Authentix-DFA-Rule: INVARIANT_27_VIOLATED
 X-Tenant-Isolation: FAILED
 
 {
-  "invoice_id": "INV-2026-992",
+  "invoice_id": "INV-2027-992",
   "victim_tenant": "408_FINANCE_CORP",
   "billing_amount": "$48,920.00",
   "recipient_iban": "DE89370400440532013000",
@@ -2765,7 +2945,7 @@ X-Authentix-DFA-Rule: INVARIANT_PASS
 X-Tenant-Isolation: LEGITIMATE_OWNER
 
 {
-  "invoice_id": "INV-2026-992",
+  "invoice_id": "INV-2027-992",
   "status": "AUTHORIZED_ACCESS",
   "notes": "Token matched object tenant scope."
 }`;
@@ -2897,7 +3077,7 @@ X-Tenant-Isolation: LEGITIMATE_OWNER
       const input = document.getElementById('entropy-text-input');
       if (type === 'gcp') input.value = 'AIzaSyDx9B3q7V0_8LkM9pQzWx21Y7RaN4U8J2';
       else if (type === 'jwt') input.value = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlByYXRpayJ9';
-      else input.value = 'admin_username_test_login_page_2026';
+      else input.value = 'admin_username_test_login_page_2027';
       calculateLiveEntropy();
       if (sfxEnabled) playClickSFX();
     }
@@ -2976,7 +3156,7 @@ X-Tenant-Isolation: LEGITIMATE_OWNER
   • neofetch    - System telemetry and architecture badge
   • whoami      - Executive practitioner profile & philosophy
   • writeups    - Featured Medium publications & official X threads
-  • arsenal     - Catalog of all 8 production security suites
+  • arsenal     - Catalog of all 7 production security suites
   • scan <url>  - Run simulated multi-worker VAPT recon scan
   • cat resume  - Render structured ATS candidate resume
   • experience  - Professional timeline & police forensics work
@@ -3046,7 +3226,7 @@ Medium Profile: https://pratik-khairnar-sec.medium.com/ | X: https://x.com/Prati
       whoami: `[PRATIK KHAIRNAR — PROFILE TELEMETRY]
 Role         : VAPT Engineer & Web Application Penetration Tester
 Focus        : BOLA/IDOR State Automata, Burp Montoya API Extensions, Client-Side Secret SAST
-Availability : IMMEDIATE JOINING • Fresh Graduate (2026)
+Availability : IMMEDIATE JOINING • B.Tech Cyber Security & Forensics (2023–2027)
 Location     : Nashik, Maharashtra, India (Open to Relocation & Remote)
 Affiliation  : Sandip University (B.Tech Cyber Security & Forensics)
 Law Enforce  : Cyber Crime & Digital Forensics Intern (Cyber Police Station, Nashik)`,
@@ -3056,14 +3236,14 @@ Law Enforce  : Cyber Crime & Digital Forensics Intern (Cyber Police Station, Nas
       /     \\           ────────────────
      | () () |          OS       : Kali Linux x86_64 / DefSec Kernel 6.8
       \\  -  /           Host     : Pratik Khairnar Security Workstation
-       \`---\`            Uptime   : 2022 — 2026 (Final Year B.Tech)
+       \`---\`            Uptime   : 2023 — 2027 (Final Year B.Tech)
      /|     |\\          Shell    : zsh 5.9 (Burp Montoya v2.1.0)
-    / |     | \\         Tools    : 8 Verified Production Security Suites
+    / |     | \\         Tools    : 7 Verified Production Security Suites
    (  |_____|  )        Target   : VAPT Engineer / AppSec Analyst
     \`-       -\`         Status   : Open For Immediate Joining
 `,
 
-      arsenal: `[THE COMPLETE PRODUCTION SECURITY ARSENAL (8 SUITES)]
+      arsenal: `[THE COMPLETE PRODUCTION SECURITY ARSENAL (7 SUITES)]
 1. AUTHENTIX Enterprise (v2.1.0) - Burp Montoya API, 27 DFA Invariants, 28 Secret Rules
 2. CORSair (v3.0.0)              - In-Browser CORS Exploitation & Automated PoC Suite
 3. ReconForge (v3.0.0)           - Master Bug Bounty 33-Phase Recon Framework (13.6k Dorks)
@@ -3078,7 +3258,7 @@ Law Enforce  : Cyber Crime & Digital Forensics Intern (Cyber Police Station, Nas
    - Manual web app VAPT, OWASP Top 10 auditing, authorization logic tampering.
 2. Cyber Crime & Digital Forensics Intern @ Cyber Police Station, Nashik
    - Practical law enforcement forensic casework, CDR/IPDR telecommunications analysis.
-3. B.Tech in Cyber Security & Forensics @ Sandip University (2022-2026)
+3. B.Tech in Cyber Security & Forensics @ Sandip University (2023–2027)
    - Academic study in Application Security, Network Defense & Forensics.`,
 
       skills: `[TECHNICAL PROFICIENCIES]
@@ -3101,7 +3281,7 @@ Discord  : pratik.khairnar.sec`,
       "cat resume": `[ATS CANDIDATE DOSSIER — PRATIK KHAIRNAR]
 NAME       : Pratik Khairnar
 ROLE       : VAPT Engineer / Web Pentester
-EDUCATION  : B.Tech CSE (Cyber Security & Forensics), Sandip University, Nashik (2026)
+EDUCATION  : B.Tech CSE (Cyber Security & Forensics), Sandip University, Nashik (2023–2027)
 HIGHLIGHTS :
 - Built AUTHENTIX Enterprise: Burp Suite Montoya API Java extension with 27 DFA invariants.
 - Built CORSair & Reflectra: Automated web security auditing & proof-of-concept frameworks.
@@ -3805,41 +3985,5 @@ HIGHLIGHTS :
   <!-- =========================================================================
        IN-APP TECHNICAL WRITEUP DOSSIER MODAL
        ========================================================================= -->
-  <div class="modal-backdrop" id="writeup-modal" onclick="if(event.target.id === 'writeup-modal') closeWriteupModal()">
-    <div class="modal-dossier" style="max-width: 920px;" onclick="event.stopPropagation()">
-      <div class="modal-header" style="border-bottom: 1px solid rgba(56, 189, 248, 0.25);">
-        <div class="modal-title-box">
-          <div style="display: flex; gap: 8px; align-items: center; margin-bottom: 6px; flex-wrap: wrap;">
-            <span class="project-tag" style="background: rgba(56, 189, 248, 0.15); border-color: var(--accent-cyan); color: var(--accent-cyan);">📖 IN-APP RESEARCH DOSSIER</span>
-            <span style="font-family: var(--font-mono); font-size: 0.72rem; color: var(--accent-gold);" id="w-modal-meta">READ TIME: 14 MINS</span>
-          </div>
-          <h3 id="w-modal-title" style="font-size: 1.45rem; line-height: 1.3; color: #fff;">Technical Writeup Title</h3>
-          <p id="w-modal-sub" style="font-size: 0.85rem; color: var(--text-muted); margin-top: 4px;">Subtitle & Architectural Context</p>
-        </div>
-        <button class="modal-close-btn" onclick="closeWriteupModal()" title="Close Writeup">&times;</button>
-      </div>
-
-      <div class="modal-body" style="max-height: 72vh; overflow-y: auto; padding: 24px;">
-        <div style="display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;" id="w-modal-tags">
-          <!-- Tags inserted dynamically -->
-        </div>
-
-        <div id="w-modal-body" style="font-family: var(--font-body); font-size: 0.95rem; line-height: 1.8; color: var(--text-normal);">
-          <!-- Content inserted dynamically -->
-        </div>
-
-        <div class="modal-actions" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border-subtle); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px;">
-          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <button onclick="copyWriteupText()" class="btn btn-secondary btn-sm">📋 Copy Article Text</button>
-            <a href="#" id="w-modal-github" target="_blank" class="btn btn-secondary btn-sm">🐙 GitHub Repository</a>
-          </div>
-          <div>
-            <a href="#" id="w-modal-ext-btn" target="_blank" class="btn btn-primary btn-sm">Launch Live Tool</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</body>
+  </body>
 </html>

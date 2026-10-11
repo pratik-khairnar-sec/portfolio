@@ -76,7 +76,7 @@
 
     <!-- Badge 3: OSINT Suite -->
     <rect x="370" y="0" width="175" height="26" rx="6" fill="#030712" stroke="#38bdf8" stroke-width="1"/>
-    <text x="457" y="17" fill="#38bdf8" font-family="monospace" font-size="10.5" font-weight="700" text-anchor="middle">⚡ ReconArsenal v1.0</text>
+    <text x="457" y="17" fill="#38bdf8" font-family="monospace" font-size="10.5" font-weight="700" text-anchor="middle">⚡ ReconForge v3.0</text>
 
     <!-- Badge 4: AppSec -->
     <rect x="560" y="0" width="165" height="26" rx="6" fill="#030712" stroke="#a855f7" stroke-width="1"/>

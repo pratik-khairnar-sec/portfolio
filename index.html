@@ -2453,6 +2453,7 @@ Type 'help' for available commands, or click any chip below to execute.
       <button class="filter-btn" onclick="filterProjects('cloud')">☁️ Cloud &amp; Secret SAST</button>
       <button class="filter-btn" onclick="filterProjects('recon')">🔎 OSINT &amp; Recon</button>
       <button class="filter-btn" onclick="filterProjects('extensions')">⚡ Chrome Extensions</button>
+      <button class="filter-btn" onclick="filterProjects('private')">🔒 Private Repos</button>
     </div>
 
     <div class="arsenal-grid" id="arsenal-grid-box">
@@ -2484,7 +2485,30 @@ Type 'help' for available commands, or click any chip below to execute.
         </div>
       </div>
 
-
+      <!-- 2. ReconArsenal (Private Enterprise Tool) -->
+      <div class="project-card" data-cat="recon private">
+        <div>
+          <div class="project-top">
+            <span class="project-tag" style="background: rgba(239, 68, 68, 0.12); color: #f87171; border-color: rgba(239, 68, 68, 0.35);">🔒 PRIVATE REPO</span>
+            <span class="project-version">v1.0.0 &bull; Python/Bash &bull; Internal Recon Pipeline</span>
+          </div>
+          <h3 class="project-title">ReconArsenal</h3>
+          <p class="project-desc">
+            Proprietary automated attack surface mapping &amp; multi-engine OSINT triage pipeline. 
+            Automates passive/active asset discovery, subfinder pipelines, live screenshotting, and automated vulnerability triage.
+          </p>
+          <div class="tech-pills">
+            <span class="tech-pill">Asset Discovery</span>
+            <span class="tech-pill">Attack Surface</span>
+            <span class="tech-pill">Subdomain Triage</span>
+            <span class="tech-pill">Internal Tool</span>
+          </div>
+        </div>
+        <div class="project-links">
+          <span class="btn btn-secondary btn-sm" style="border-color: rgba(239, 68, 68, 0.4); color: #f87171; cursor: default;">🔒 Private / NDA Protected</span>
+          <a href="mailto:pratik.khairnar.sec@gmail.com?subject=ReconArsenal%20Private%20Repository%20Inquiry" class="btn btn-secondary btn-sm">Inquire Access</a>
+        </div>
+      </div>
 
       <!-- 3. ReconForge v3 -->
       <div class="project-card" data-cat="flagship recon">
@@ -2959,6 +2983,7 @@ Type 'help' for available commands, or click any chip below to execute.
             <li><a href="https://pratik-khairnar-sec.github.io/CORSair/" target="_blank" class="footer-arsenal-item"><span>CORSair Exploit Suite</span> <span class="footer-tag">v3.0.0</span></a></li>
             <li><a href="https://pratik-khairnar-sec.github.io/endpoint-finder-extension/" target="_blank" class="footer-arsenal-item"><span>Endpoint Hunter MV3</span> <span class="footer-tag">v1.0.0</span></a></li>
             <li><a href="https://pratik-khairnar-sec.github.io/wayback-lens/" target="_blank" class="footer-arsenal-item"><span>Wayback Lens CDX</span> <span class="footer-tag">v1.0.0</span></a></li>
+            <li><span class="footer-arsenal-item" style="opacity: 0.8; cursor: default;"><span>🔒 ReconArsenal (Private)</span> <span class="footer-tag" style="border-color: rgba(239, 68, 68, 0.4); color: #f87171;">Private</span></span></li>
           </ul>
         </div>
 
@@ -3635,9 +3660,9 @@ Law Enforce  : Cyber Crime & Digital Forensics Intern (Cyber Police Station, Nas
     \`-       -\`         Status   : Open For Immediate Joining
 `,
 
-      arsenal: `[THE COMPLETE PRODUCTION SECURITY ARSENAL (7 SUITES)]
+      arsenal: `[THE COMPLETE PRODUCTION SECURITY ARSENAL (8 SUITES)]
 1. AUTHENTIX Enterprise (v2.1.0) - Burp Montoya API, 27 DFA Invariants, 28 Secret Rules
-2. CORSair (v3.0.0)              - In-Browser CORS Exploitation & Automated PoC Suite
+2. ReconArsenal (v1.0.0) [PRIVATE] - Automated Attack Surface & Multi-Engine Recon Pipeline
 3. ReconForge (v3.0.0)           - Master Bug Bounty 33-Phase Recon Framework (13.6k Dorks)
 4. Reflectra (v7.0.0)            - Context-Aware XSS with Headless Chrome DOM Verification
 5. BlindStrike (v7.0.0)          - Latency-Calibrated Time/Boolean Blind SQLi Detection

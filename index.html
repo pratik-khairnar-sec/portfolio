@@ -2470,13 +2470,15 @@
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          name: name,
-          email: email,
-          subject: subject,
-          message: message,
-          _subject: `[VAPT Portfolio Inquiry] ${subject} - from ${name}`,
+          "Client / Recruiter Name": name,
+          "Email Address": email,
+          "Subject": subject,
+          "Message": message,
+          "Portfolio Source": "https://pratikkhairnarsec.web.app",
+          _replyto: email,
+          _subject: `⚡ [VAPT Portfolio Inquiry] ${subject} — from ${name}`,
           _captcha: "false",
-          _template: 'table'
+          _template: 'box'
         })
       })
       .then(response => response.json())

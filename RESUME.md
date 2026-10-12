@@ -1,7 +1,7 @@
 # PRATIK SANJAY KHAIRNAR
 **Certified Ethical Hacker (CEH v13) | Associate Penetration Tester & Web VAPT Engineer**  
 **Location:** Pune, Maharashtra, India | **Phone / WhatsApp:** [+91 87999 81052](tel:+918799981052) | **Email:** [pratik.khairnar.sec@gmail.com](mailto:pratik.khairnar.sec@gmail.com)  
-**LinkedIn:** [linkedin.com/in/pratik-khairnar-sec](https://linkedin.com/in/pratik-khairnar-sec) | **GitHub:** [github.com/pratik-khairnar-sec](https://github.com/pratik-khairnar-sec) | **Portfolio:** [pratik-khairnar-sec.github.io/portfolio](https://pratik-khairnar-sec.github.io/portfolio/)
+**LinkedIn:** [linkedin.com/in/pratik-khairnar-sec](https://linkedin.com/in/pratik-khairnar-sec) | **GitHub:** [github.com/pratik-khairnar-sec](https://github.com/pratik-khairnar-sec) | **Portfolio:** [pratikkhairnarsec.web.app](https://pratikkhairnarsec.web.app/)
 
 ---
 

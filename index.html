@@ -13,15 +13,15 @@
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <meta name="google-site-verification" content="lTtofk1AWoFPbJ_YgV44BtHWFRtF90CK2snG87KbeQc" />
   <meta name="google-site-verification" content="lvdwXQmscQChX-_WT4NeAkgPef6qy0_tws3tvjl5EX8" />
-  <link rel="canonical" href="https://pratik-khairnar-sec.github.io/portfolio/">
+  <link rel="canonical" href="https://pratikkhairnarsec.web.app/">
 
   <!-- Open Graph / Social Meta -->
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Pratik Khairnar — Certified Ethical Hacker (CEH v13) &amp; VAPT Engineer">
   <meta property="og:description"
     content="Certified Ethical Hacker (CEH v13) & Web Application Penetration Tester specializing in OWASP Top 10, API Security, and custom offensive security extensions.">
-  <meta property="og:url" content="https://pratik-khairnar-sec.github.io/portfolio/">
-  <meta property="og:image" content="https://pratik-khairnar-sec.github.io/portfolio/assets/reconforge_hero_dashboard.png">
+  <meta property="og:url" content="https://pratikkhairnarsec.web.app/">
+  <meta property="og:image" content="https://pratikkhairnarsec.web.app/assets/reconforge_hero_dashboard.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@PratikSec">
   <meta name="twitter:title" content="Pratik Khairnar — Certified Ethical Hacker (CEH v13) &amp; VAPT Engineer">
@@ -38,7 +38,7 @@
     "jobTitle": "Certified Ethical Hacker & VAPT Engineer",
     "telephone": "+91-8799981052",
     "email": "mailto:pratik.khairnar.sec@gmail.com",
-    "url": "https://pratik-khairnar-sec.github.io/portfolio/",
+    "url": "https://pratikkhairnarsec.web.app/",
     "sameAs": [
       "https://github.com/pratik-khairnar-sec",
       "https://linkedin.com/in/pratik-khairnar-sec",
@@ -1187,10 +1187,207 @@
       .about-card {
         padding: 24px;
       }
-      .contact-info-column,
-      .contact-form-column {
-        padding: 24px;
-      }
+    /* ==========================================================================
+       Interactive Cyber Terminal (Neat, Clean, High-Precision CLI)
+       ========================================================================== */
+    #terminal {
+      background: #000000;
+      padding: 95px 0 75px 0;
+      position: relative;
+    }
+
+    body.light-mode #terminal {
+      background: #f8fafc;
+    }
+
+    .terminal-container {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #090a0f;
+      border: 1px solid rgba(220, 53, 69, 0.4);
+      border-radius: 12px;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 35px rgba(220, 53, 69, 0.12);
+      overflow: hidden;
+      font-family: 'Fira Code', 'Courier New', monospace;
+      transition: all 0.3s ease;
+    }
+
+    .terminal-container:hover {
+      border-color: rgba(220, 53, 69, 0.7);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 45px rgba(220, 53, 69, 0.2);
+    }
+
+    .terminal-header {
+      background: #11131a;
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      user-select: none;
+    }
+
+    .terminal-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .terminal-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .dot-close { background: #ff5f56; }
+    .dot-minimize { background: #ffbd2e; }
+    .dot-maximize { background: #27c93f; }
+
+    .terminal-title {
+      font-size: 0.82rem;
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+    }
+
+    .terminal-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .terminal-action-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #94a3b8;
+      font-size: 0.72rem;
+      padding: 3px 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .terminal-action-btn:hover {
+      background: rgba(220, 53, 69, 0.2);
+      border-color: #dc3545;
+      color: #ffffff;
+    }
+
+    .terminal-quick-chips {
+      background: #0d0f16;
+      padding: 10px 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .chip-label {
+      font-size: 0.75rem;
+      color: #64748b;
+      font-weight: 600;
+      margin-right: 4px;
+    }
+
+    .quick-chip {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      padding: 3px 9px;
+      border-radius: 4px;
+      font-size: 0.73rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .quick-chip:hover {
+      background: rgba(220, 53, 69, 0.25);
+      border-color: #dc3545;
+      color: #ffffff;
+      transform: translateY(-1px);
+    }
+
+    .terminal-body {
+      padding: 20px 22px;
+      min-height: 330px;
+      max-height: 460px;
+      overflow-y: auto;
+      color: #e2e8f0;
+      font-size: 0.88rem;
+      line-height: 1.65;
+    }
+
+    .terminal-body::-webkit-scrollbar {
+      width: 7px;
+    }
+    .terminal-body::-webkit-scrollbar-thumb {
+      background: rgba(220, 53, 69, 0.4);
+      border-radius: 4px;
+    }
+
+    .terminal-welcome {
+      color: #94a3b8;
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+      font-size: 0.84rem;
+    }
+
+    .terminal-output-item {
+      margin-bottom: 14px;
+    }
+
+    .cmd-line {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+
+    .prompt-user {
+      color: #dc3545;
+      font-weight: 700;
+    }
+    .prompt-path {
+      color: #38bdf8;
+    }
+
+    .cmd-output {
+      padding-left: 12px;
+      color: #cbd5e1;
+      border-left: 2px solid rgba(220, 53, 69, 0.35);
+      font-size: 0.86rem;
+    }
+
+    .terminal-input-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 10px;
+    }
+
+    .terminal-input {
+      background: transparent;
+      border: none;
+      outline: none;
+      color: #ffffff;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.9rem;
+      flex: 1;
+      caret-color: #dc3545;
+    }
+
+    .terminal-input::placeholder {
+      color: #475569;
+      font-size: 0.84rem;
     }
   </style>
 </head>
@@ -1215,6 +1412,7 @@
           <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">SKILLS</a></li>
+          <li class="nav-item"><a class="nav-link" href="#terminal">CONSOLE</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">PROJECTS</a></li>
           <li class="nav-item"><a class="nav-link" href="#timeline">EXPERIENCE</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
@@ -1258,11 +1456,14 @@
           </p>
 
           <div class="hero-btns mt-4">
-            <a href="#projects" class="btn btn-danger mr-3 mb-2">
+            <a href="#projects" class="btn btn-danger mr-2 mb-2">
               <i class="fas fa-shield-halved mr-2"></i>View Projects
             </a>
-            <a href="assets/pratik_khairnar_resume.pdf" download="Pratik_Khairnar_Resume.pdf" class="btn btn-outline-light mb-2">
+            <a href="assets/pratik_khairnar_resume.pdf" download="Pratik_Khairnar_Resume.pdf" class="btn btn-outline-light mr-2 mb-2">
               <i class="fas fa-download mr-2"></i>Download CV
+            </a>
+            <a href="#terminal" class="btn btn-outline-danger mb-2">
+              <i class="fas fa-terminal mr-2"></i>Live Console
             </a>
           </div>
         </div>
@@ -1504,6 +1705,66 @@
               <span class="badge badge-pill badge-outline-danger">Network Traffic PCAP Forensics</span>
               <span class="badge badge-pill badge-outline-danger">CERT-In Guidelines Compliance</span>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Cyber Terminal (CLI Simulator) -->
+  <section id="terminal">
+    <div class="container">
+      <h2 class="section-title">Offensive Console</h2>
+      <p class="section-lead">Interactive terminal simulating real-time VAPT workflows, reconnaissance modules, authorization testing, and credentials verification.</p>
+
+      <div class="terminal-container">
+        <!-- Window Bar -->
+        <div class="terminal-header">
+          <div class="terminal-controls">
+            <span class="terminal-dot dot-close"></span>
+            <span class="terminal-dot dot-minimize"></span>
+            <span class="terminal-dot dot-maximize"></span>
+          </div>
+          <div class="terminal-title">
+            <i class="fas fa-terminal text-danger"></i>
+            <span>pratik@sec-workstation:~ (CEH v13 Offensive Shell)</span>
+          </div>
+          <div class="terminal-actions">
+            <button type="button" class="terminal-action-btn" id="terminal-clear-btn" title="Clear screen">
+              <i class="fas fa-eraser mr-1"></i>Clear
+            </button>
+            <button type="button" class="terminal-action-btn" id="terminal-copy-btn" title="Copy output">
+              <i class="fas fa-copy mr-1"></i>Copy
+            </button>
+          </div>
+        </div>
+
+        <!-- Quick Action Command Chips -->
+        <div class="terminal-quick-chips">
+          <span class="chip-label"><i class="fas fa-bolt text-danger mr-1"></i>Quick Exec:</span>
+          <button type="button" class="quick-chip" data-cmd="whoami">whoami</button>
+          <button type="button" class="quick-chip" data-cmd="skills">skills</button>
+          <button type="button" class="quick-chip" data-cmd="tools">tools</button>
+          <button type="button" class="quick-chip" data-cmd="vapt-scan demo.corp">vapt-scan demo.corp</button>
+          <button type="button" class="quick-chip" data-cmd="certs">certs</button>
+          <button type="button" class="quick-chip" data-cmd="exp">exp</button>
+          <button type="button" class="quick-chip" data-cmd="contact">contact</button>
+          <button type="button" class="quick-chip" data-cmd="help">help</button>
+        </div>
+
+        <!-- Terminal Output Screen -->
+        <div class="terminal-body" id="terminal-body">
+          <div class="terminal-welcome">
+            <div><span class="text-crimson font-weight-bold">[+]</span> Pratik Khairnar Offensive Security Workstation <span class="badge badge-danger">v2.1.0</span></div>
+            <div><span class="text-crimson font-weight-bold">[+]</span> CEH v13 Certified &bull; Web VAPT Engineer &bull; Pune, India</div>
+            <div class="mt-1 text-muted"><span class="text-info">[i]</span> Type <strong class="text-white">help</strong> for command list, or click any quick command above. Tab completion &amp; &uarr;/&darr; history enabled.</div>
+          </div>
+          <div id="terminal-history"></div>
+
+          <!-- Prompt Input Line -->
+          <div class="terminal-input-row">
+            <span class="prompt-user">pratik@sec</span>:<span class="prompt-path">~</span>$&nbsp;
+            <input type="text" id="terminal-input" class="terminal-input" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Type a command (e.g. whoami, tools, vapt-scan)..." />
           </div>
         </div>
       </div>
@@ -2232,6 +2493,217 @@
         toast.innerHTML = `<div class="d-flex align-items-center"><i class="fas fa-envelope text-warning mr-3" style="font-size: 1.8rem;"></i><div><strong style="font-size: 1.05rem;">Automated Submission Unavailable</strong><br><span class="small">Please send your inquiry directly via email to <a href="mailto:pratik.khairnar.sec@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('From: ' + name + '\nEmail: ' + email + '\n\n' + message)}" class="text-danger font-weight-bold">pratik.khairnar.sec@gmail.com</a>.</span></div></div>`;
       });
     }
+
+    // ==========================================================================
+    // Interactive Cyber Terminal Logic (CEH v13 CLI Simulator)
+    // ==========================================================================
+    (function initCyberTerminal() {
+      const termBody = document.getElementById('terminal-body');
+      const termHistory = document.getElementById('terminal-history');
+      const termInput = document.getElementById('terminal-input');
+      const clearBtn = document.getElementById('terminal-clear-btn');
+      const copyBtn = document.getElementById('terminal-copy-btn');
+      const quickChips = document.querySelectorAll('.quick-chip');
+
+      if (!termInput || !termHistory) return;
+
+      const cmdHistory = [];
+      let historyIndex = -1;
+
+      const availableCommands = [
+        'help', 'whoami', 'skills', 'tools', 'vapt-scan', 'certs', 'exp', 'contact', 'clear'
+      ];
+
+      function scrollToBottom() {
+        if (termBody) {
+          termBody.scrollTop = termBody.scrollHeight;
+        }
+      }
+
+      function executeCommand(rawCmd) {
+        const cmd = rawCmd.trim();
+        if (!cmd) return;
+
+        cmdHistory.push(cmd);
+        historyIndex = cmdHistory.length;
+
+        const parts = cmd.split(' ');
+        const mainCmd = parts[0].toLowerCase();
+        const arg = parts.slice(1).join(' ');
+
+        let outputHtml = '';
+
+        switch (mainCmd) {
+          case 'help':
+            outputHtml = `
+              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 4px;">Available Offensive Commands:</div>
+              <table style="width: 100%; border-collapse: collapse; font-size: 0.84rem;">
+                <tr><td style="color: #dc3545; width: 160px; font-weight: 600;">whoami</td><td style="color: #94a3b8;">Display identity, credentials, and core operational profile.</td></tr>
+                <tr><td style="color: #dc3545; font-weight: 600;">skills</td><td style="color: #94a3b8;">List offensive proficiencies, standards (OWASP/ASVS), and tools.</td></tr>
+                <tr><td style="color: #dc3545; font-weight: 600;">tools</td><td style="color: #94a3b8;">Show security arsenal (AUTHENTIX, ReconForge, Reflectra, etc.).</td></tr>
+                <tr><td style="color: #dc3545; font-weight: 600;">vapt-scan &lt;host&gt;</td><td style="color: #94a3b8;">Simulate 4-phase manual &amp; automated penetration assessment.</td></tr>
+                <tr><td style="color: #dc3545; font-weight: 600;">certs</td><td style="color: #94a3b8;">Show verified industry certifications (CEH v13, CCNA).</td></tr>
+                <tr><td style="color: #dc3545; font-weight: 600;">exp</td><td style="color: #94a3b8;">Show professional timeline (GROOTT Services, Nashik Police).</td></tr>
+                <tr><td style="color: #dc3545; font-weight: 600;">contact</td><td style="color: #94a3b8;">Display direct communication channels and relocation availability.</td></tr>
+                <tr><td style="color: #dc3545; font-weight: 600;">clear</td><td style="color: #94a3b8;">Clear all current output on the terminal screen.</td></tr>
+              </table>`;
+            break;
+
+          case 'whoami':
+            outputHtml = `
+              <div style="margin-bottom: 4px;"><strong class="text-white">Pratik Sanjay Khairnar</strong> &bull; <span class="badge badge-danger">CEH v13 Certified</span></div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Role:</strong> Associate Penetration Tester &amp; Web VAPT Engineer</div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Focus:</strong> Manual Web VAPT, API Security (BOLA/IDOR), Custom Offensive Tooling</div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Education:</strong> B.Tech Cyber Security &amp; Forensics (Sandip University, Nashik &bull; 2023–2027)</div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Location:</strong> Pune, Maharashtra, India (Open to immediate relocation &amp; full-time roles)</div>`;
+            break;
+
+          case 'skills':
+            outputHtml = `
+              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">[Core Competencies &amp; Arsenal]</div>
+              <div style="color: #cbd5e1; margin-bottom: 4px;"><strong class="text-white">&bull; Web VAPT:</strong> OWASP Top 10 (2021), BOLA/IDOR, SQLi/Blind SQLi, Reflected &amp; DOM XSS, SSRF, Business Logic Flaws.</div>
+              <div style="color: #cbd5e1; margin-bottom: 4px;"><strong class="text-white">&bull; API &amp; Auth:</strong> OWASP API Top 10 (2023), Postman Suites, GraphQL/REST, JWT Token Security, OAuth 2.0.</div>
+              <div style="color: #cbd5e1; margin-bottom: 4px;"><strong class="text-white">&bull; Standards:</strong> OWASP WSTG v4.2, ASVS v4.0, CVSS v3.1 Scoring, SANS Top 25, NIST SP 800-115, PCI-DSS v4.0.</div>
+              <div style="color: #cbd5e1; margin-bottom: 4px;"><strong class="text-white">&bull; Scripting:</strong> Python 3 (Requests, Regex, PoC scripts), Bash, Java 17/21 (Burp Extension APIs).</div>
+              <div style="color: #cbd5e1;">&bull; Forensics: Evidence Chain of Custody, CDR/IPDR Analysis, Wireshark PCAP, Android APK Triage.</div>`;
+            break;
+
+          case 'tools':
+            outputHtml = `
+              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">[Security Arsenal &amp; Extensions]</div>
+              <div style="color: #cbd5e1; margin-bottom: 4px;"><span style="color: #dc3545; font-weight: 600;">1. AUTHENTIX Enterprise (v2.1.0):</span> Burp Suite extension for real-time BOLA/IDOR, token replay &amp; state audit.</div>
+              <div style="color: #cbd5e1; margin-bottom: 4px;"><span style="color: #dc3545; font-weight: 600;">2. ReconForge (v3.0.0):</span> Master bug bounty reconnaissance engine (30 phases, 52,600+ dorks).</div>
+              <div style="color: #cbd5e1; margin-bottom: 4px;"><span style="color: #dc3545; font-weight: 600;">3. Reflectra (v7.0.0):</span> Context-aware XSS scanner with Headless Chrome verification &amp; 0 false positives.</div>
+              <div style="color: #cbd5e1; margin-bottom: 4px;"><span style="color: #dc3545; font-weight: 600;">4. BlindStrike (v7.0.0):</span> Latency-calibrated Time/Boolean Blind SQLi extraction with IQR baseline filtering.</div>
+              <div style="color: #cbd5e1; margin-bottom: 4px;"><span style="color: #dc3545; font-weight: 600;">5. CORSair (v3.0.0):</span> In-browser CORS auditor with dynamic origin reflection &amp; Shannon entropy calculations.</div>
+              <div style="color: #cbd5e1;"><span style="color: #dc3545; font-weight: 600;">6. WaybackLens (v1.0.0):</span> Chrome extension (MV3) for high-speed Wayback CDX endpoint reconnaissance.</div>`;
+            break;
+
+          case 'vapt-scan':
+            const targetHost = arg ? arg : 'demo-target.corp';
+            outputHtml = `
+              <div style="color: #fbbf24; font-weight: bold;">[*] Initializing Precision VAPT Audit Engine on: <span class="text-white">${targetHost}</span></div>
+              <div style="color: #94a3b8;">[Phase 1/4] Passive Recon &amp; Attack Surface Mapping... <span style="color: #34d399;">✔ Found 12 subdomains &bull; 86 active endpoints</span></div>
+              <div style="color: #94a3b8;">[Phase 2/4] Testing OWASP API Top 10 &amp; Authorization... <span style="color: #f87171;">⚠ DETECTED: BOLA/IDOR at /api/v2/users/{id}/profile</span></div>
+              <div style="color: #94a3b8;">[Phase 3/4] Injection &amp; Business Logic Verification... <span style="color: #34d399;">✔ CORS Origin verified &bull; Blind SQLi baseline clean</span></div>
+              <div style="color: #94a3b8;">[Phase 4/4] CVSS v3.1 Impact Calculation: <strong style="color: #dc3545;">8.5 HIGH</strong> (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N)</div>
+              <div style="color: #38bdf8; margin-top: 4px;">[+] Output: Sanitized PoC generated &amp; developer mitigation blueprint dispatched.</div>`;
+            break;
+
+          case 'certs':
+            outputHtml = `
+              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">[Industry Credentials &amp; Certifications]</div>
+              <div style="color: #cbd5e1; margin-bottom: 4px;"><strong class="text-white">&bull; Certified Ethical Hacker (CEH v13)</strong> &bull; EC-Council &bull; <span class="text-success">[ACTIVE &bull; VERIFIED]</span></div>
+              <div style="color: #cbd5e1;">&bull; <strong class="text-white">Cisco Certified Network Associate (CCNA)</strong> &bull; Cisco Networking Academy &bull; <span class="text-success">[VERIFIED]</span></div>`;
+            break;
+
+          case 'exp':
+            outputHtml = `
+              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">[Professional Experience Timeline]</div>
+              <div style="margin-bottom: 6px;">
+                <span class="text-white font-weight-bold">&bull; Junior Penetration Tester</span> &bull; GROOTT Services <span class="text-muted">(Jun 2025 – Oct 2025)</span><br>
+                <span style="color: #94a3b8; padding-left: 10px;">Conducted manual Web VAPT, identified critical BOLA/IDOR, Auth bypasses, and produced CVSS v3.1 reports.</span>
+              </div>
+              <div>
+                <span class="text-white font-weight-bold">&bull; Cyber Crime Intern</span> &bull; Cyber Police Station, Nashik Police Commissionerate <span class="text-muted">(Jan 2026 – May 2026)</span><br>
+                <span style="color: #94a3b8; padding-left: 10px;">Investigated 15+ live cybercrime cases, chain of custody evidence, Wireshark PCAP triage, and CDR/IPDR telecom intelligence.</span>
+              </div>`;
+            break;
+
+          case 'contact':
+            outputHtml = `
+              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">[Direct Contact Channels]</div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Email:</strong> <a href="mailto:pratik.khairnar.sec@gmail.com" class="text-white">pratik.khairnar.sec@gmail.com</a></div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Phone / WhatsApp:</strong> +91 87999 81052</div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">LinkedIn:</strong> <a href="https://linkedin.com/in/pratik-khairnar-sec" target="_blank" class="text-info">linkedin.com/in/pratik-khairnar-sec</a></div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">GitHub:</strong> <a href="https://github.com/pratik-khairnar-sec" target="_blank" class="text-info">github.com/pratik-khairnar-sec</a></div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Availability:</strong> Open for immediate full-time VAPT roles (Pune / Open to Relocation)</div>`;
+            break;
+
+          case 'clear':
+            termHistory.innerHTML = '';
+            return;
+
+          default:
+            outputHtml = `<span style="color: #f87171;">Command not found: <strong>${cmd}</strong>. Type <strong style="color: #38bdf8;">help</strong> to inspect available commands.</span>`;
+            break;
+        }
+
+        const entryDiv = document.createElement('div');
+        entryDiv.className = 'terminal-output-item';
+        entryDiv.innerHTML = `
+          <div class="cmd-line">
+            <span class="prompt-user">pratik@sec</span>:<span class="prompt-path">~</span>$&nbsp;<span>${cmd}</span>
+          </div>
+          <div class="cmd-output">${outputHtml}</div>`;
+
+        termHistory.appendChild(entryDiv);
+        scrollToBottom();
+      }
+
+      // Input Event Listeners
+      termInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          const val = termInput.value;
+          termInput.value = '';
+          executeCommand(val);
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          if (cmdHistory.length > 0 && historyIndex > 0) {
+            historyIndex--;
+            termInput.value = cmdHistory[historyIndex] || '';
+          }
+        } else if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          if (historyIndex < cmdHistory.length - 1) {
+            historyIndex++;
+            termInput.value = cmdHistory[historyIndex] || '';
+          } else {
+            historyIndex = cmdHistory.length;
+            termInput.value = '';
+          }
+        } else if (e.key === 'Tab') {
+          e.preventDefault();
+          const currentVal = termInput.value.trim().toLowerCase();
+          if (currentVal) {
+            const match = availableCommands.find(c => c.startsWith(currentVal));
+            if (match) {
+              termInput.value = match;
+            }
+          }
+        }
+      });
+
+      // Quick Chips Clicking
+      quickChips.forEach(chip => {
+        chip.addEventListener('click', () => {
+          const cmd = chip.getAttribute('data-cmd');
+          if (cmd) {
+            termInput.value = '';
+            executeCommand(cmd);
+          }
+        });
+      });
+
+      // Clear Button
+      if (clearBtn) {
+        clearBtn.addEventListener('click', () => {
+          termHistory.innerHTML = '';
+        });
+      }
+
+      // Copy Button
+      if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+          const text = termHistory.innerText;
+          navigator.clipboard.writeText(text || 'Pratik Khairnar Security Terminal v2.1.0').then(() => {
+            const orig = copyBtn.innerHTML;
+            copyBtn.innerHTML = '<i class="fas fa-check mr-1 text-success"></i>Copied!';
+            setTimeout(() => { copyBtn.innerHTML = orig; }, 2000);
+          });
+        });
+      }
+    })();
   </script>
 </body>
 

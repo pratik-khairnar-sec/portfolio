@@ -2,7 +2,7 @@
 
 > **VAPT Engineer • Web Application Penetration Tester • Security Tool Developer**
 
-[![Live Portfolio](https://img.shields.io/badge/Live%20Portfolio-pratik--khairnar--sec.github.io%2Fportfolio-38bdf8?style=for-the-badge&logo=google-chrome&logoColor=white)](https://pratik-khairnar-sec.github.io/portfolio/)
+[![Live Portfolio](https://img.shields.io/badge/Live%20Portfolio-pratikkhairnarsec.web.app-38bdf8?style=for-the-badge&logo=google-chrome&logoColor=white)](https://pratikkhairnarsec.web.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-pratik--khairnar--sec-181717?style=for-the-badge&logo=github)](https://github.com/pratik-khairnar-sec)
 [![Email](https://img.shields.io/badge/Email-pratik.khairnar.sec%40gmail.com-ea4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:pratik.khairnar.sec@gmail.com)
 [![Discord](https://img.shields.io/badge/Discord-pratik.khairnar.sec-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/users/1531910259080167494)
@@ -10,7 +10,7 @@
 ---
 
 ## 🌐 Live Interactive Portfolio
-👉 **[https://pratik-khairnar-sec.github.io/portfolio/](https://pratik-khairnar-sec.github.io/portfolio/)**
+👉 **[https://pratikkhairnarsec.web.app/](https://pratikkhairnarsec.web.app/)**
 
 ---
 

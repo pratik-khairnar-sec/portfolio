@@ -1,0 +1,25 @@
+# Compiled Java artifacts
+*.class
+
+# Python bytecode and cache
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Temporary and backup files
+*.bak
+*.backup.*
+*.tmp
+temp_frames/
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE configuration
+.idea/
+.vscode/
+*.swp
+*.swo

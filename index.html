@@ -1191,6 +1191,65 @@
       .contact-form-column {
         padding: 24px;
       }
+
+      /* Terminal Mobile Optimization (iPhone / Android) */
+      #terminal {
+        padding: 60px 0 50px 0;
+      }
+      .terminal-container {
+        border-radius: 10px;
+        margin: 0;
+      }
+      .terminal-header {
+        padding: 10px 12px !important;
+      }
+      .terminal-title {
+        font-size: 0.76rem !important;
+        max-width: 160px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .terminal-action-btn {
+        padding: 3px 8px !important;
+        font-size: 0.68rem !important;
+      }
+      .terminal-quick-chips {
+        padding: 8px 12px !important;
+        gap: 5px !important;
+      }
+      .chip-label {
+        font-size: 0.7rem !important;
+        width: 100%;
+        margin-bottom: 2px;
+      }
+      .quick-chip {
+        font-size: 0.7rem !important;
+        padding: 3px 8px !important;
+      }
+      .terminal-body {
+        padding: 14px 12px !important;
+        min-height: 280px !important;
+        max-height: 380px !important;
+        font-size: 0.8rem !important;
+        line-height: 1.55 !important;
+        word-break: break-word !important;
+        -webkit-overflow-scrolling: touch;
+      }
+      .terminal-input-row {
+        gap: 4px !important;
+      }
+      .prompt-user, .prompt-path {
+        font-size: 0.78rem !important;
+      }
+      .terminal-input {
+        font-size: 0.78rem !important;
+        min-width: 0 !important;
+      }
+      .cmd-output {
+        padding-left: 8px !important;
+        font-size: 0.78rem !important;
+      }
     }
 
     /* ==========================================================================
@@ -1735,7 +1794,7 @@
           </div>
           <div class="terminal-title">
             <i class="fas fa-terminal text-danger"></i>
-            <span>pratik@sec-workstation:~ (CEH v13 Offensive Shell)</span>
+            <span class="terminal-main-label">pratik@sec:~</span><span class="text-muted d-none d-md-inline">&nbsp;(CEH v13 Offensive Shell)</span>
           </div>
           <div class="terminal-actions">
             <button type="button" class="terminal-action-btn" id="terminal-clear-btn" title="Clear screen">
@@ -2546,17 +2605,17 @@
         switch (mainCmd) {
           case 'help':
             outputHtml = `
-              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 4px;">Available Offensive Commands:</div>
-              <table style="width: 100%; border-collapse: collapse; font-size: 0.84rem;">
-                <tr><td style="color: #dc3545; width: 160px; font-weight: 600;">whoami</td><td style="color: #94a3b8;">Display identity, credentials, and core operational profile.</td></tr>
-                <tr><td style="color: #dc3545; font-weight: 600;">skills</td><td style="color: #94a3b8;">List offensive proficiencies, standards (OWASP/ASVS), and tools.</td></tr>
-                <tr><td style="color: #dc3545; font-weight: 600;">tools</td><td style="color: #94a3b8;">Show security arsenal (AUTHENTIX, ReconForge, Reflectra, etc.).</td></tr>
-                <tr><td style="color: #dc3545; font-weight: 600;">vapt-scan &lt;host&gt;</td><td style="color: #94a3b8;">Simulate 4-phase manual &amp; automated penetration assessment.</td></tr>
-                <tr><td style="color: #dc3545; font-weight: 600;">certs</td><td style="color: #94a3b8;">Show verified industry certifications (CEH v13, CCNA).</td></tr>
-                <tr><td style="color: #dc3545; font-weight: 600;">exp</td><td style="color: #94a3b8;">Show professional timeline (GROOTT Services, Nashik Police).</td></tr>
-                <tr><td style="color: #dc3545; font-weight: 600;">contact</td><td style="color: #94a3b8;">Display direct communication channels and relocation availability.</td></tr>
-                <tr><td style="color: #dc3545; font-weight: 600;">clear</td><td style="color: #94a3b8;">Clear all current output on the terminal screen.</td></tr>
-              </table>`;
+              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">Available Offensive Commands:</div>
+              <div style="display: flex; flex-direction: column; gap: 4px; font-size: 0.82rem;">
+                <div><span style="color: #dc3545; font-weight: bold; display: inline-block; min-width: 110px;">whoami</span><span style="color: #94a3b8;">— Identity, CEH credentials &amp; profile</span></div>
+                <div><span style="color: #dc3545; font-weight: bold; display: inline-block; min-width: 110px;">skills</span><span style="color: #94a3b8;">— Offensive skills &amp; OWASP frameworks</span></div>
+                <div><span style="color: #dc3545; font-weight: bold; display: inline-block; min-width: 110px;">tools</span><span style="color: #94a3b8;">— Security tools (AUTHENTIX, ReconForge, etc.)</span></div>
+                <div><span style="color: #dc3545; font-weight: bold; display: inline-block; min-width: 110px;">vapt-scan &lt;host&gt;</span><span style="color: #94a3b8;">— Simulate 4-phase VAPT audit engine</span></div>
+                <div><span style="color: #dc3545; font-weight: bold; display: inline-block; min-width: 110px;">certs</span><span style="color: #94a3b8;">— Verified credentials (CEH v13, CCNA)</span></div>
+                <div><span style="color: #dc3545; font-weight: bold; display: inline-block; min-width: 110px;">exp</span><span style="color: #94a3b8;">— Experience (GROOTT Services, Nashik Police)</span></div>
+                <div><span style="color: #dc3545; font-weight: bold; display: inline-block; min-width: 110px;">contact</span><span style="color: #94a3b8;">— Direct email, phone, LinkedIn &amp; relocation</span></div>
+                <div><span style="color: #dc3545; font-weight: bold; display: inline-block; min-width: 110px;">clear</span><span style="color: #94a3b8;">— Clear terminal screen output</span></div>
+              </div>`;
             break;
 
           case 'whoami':

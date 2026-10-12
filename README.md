@@ -19,7 +19,7 @@
 | Suite | Focus | Version | Live Demo |
 |---|---|---|---|
 | **AUTHENTIX Enterprise** | Burp Montoya API, 27 Invariants, 28 Secret Rules, 12 ATO Chains | `v2.1.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/authentix-enterprise/) |
-| **ReconForge** | Master Bug Bounty Multi-Target Reconnaissance (13,600+ Dorks) | `v3.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/ReconForge/) |
+| **ReconForge** | Master Bug Bounty Multi-Target Reconnaissance (30 Phases & 52,600+ Dorks) | `v3.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/ReconForge/) |
 | **Reflectra** | Context-Aware XSS Scanner with Headless Chrome Verification | `v7.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/Reflectra/) |
 | **BlindStrike** | Latency-Calibrated Time/Boolean Blind SQLi Detection | `v7.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/BlindStrike/) |
 | **CORSair** | CORS Misconfiguration Auditor & PoC Exploit Generator | `v3.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/CORSair/) |

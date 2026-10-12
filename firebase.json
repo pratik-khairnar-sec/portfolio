@@ -7,7 +7,6 @@
       ".firebaserc",
       "**/.git/**",
       ".git/**",
-      "**/.*",
       "**/node_modules/**",
       "scripts/**",
       "README.md",

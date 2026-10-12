@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LinkedIn 1-Click ATS Profile Updater — Pratik Khairnar</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #090a0f;
+      color: #e2e8f0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 30px 20px;
+      line-height: 1.5;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+      border-bottom: 1px solid rgba(220, 53, 69, 0.3);
+      padding-bottom: 20px;
+    }
+    h1 {
+      color: #ffffff;
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
+    h1 span { color: #dc3545; }
+    p.lead {
+      color: #94a3b8;
+      font-size: 1rem;
+    }
+    .card {
+      background: rgba(22, 22, 28, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 22px;
+      margin-bottom: 20px;
+      transition: all 0.2s ease;
+    }
+    .card:hover {
+      border-color: rgba(220, 53, 69, 0.4);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+    }
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 12px;
+    }
+    .card-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ff6b7a;
+    }
+    .char-count {
+      font-size: 0.8rem;
+      color: #10b981;
+      background: rgba(16, 185, 129, 0.1);
+      padding: 3px 8px;
+      border-radius: 6px;
+      border: 1px solid rgba(16, 185, 129, 0.2);
+    }
+    textarea, input[type="text"] {
+      width: 100%;
+      background: #040711;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 8px;
+      color: #f8fafc;
+      font-family: inherit;
+      font-size: 0.92rem;
+      padding: 12px;
+      resize: vertical;
+      margin-bottom: 14px;
+    }
+    textarea:focus, input[type="text"]:focus {
+      outline: none;
+      border-color: #38bdf8;
+    }
+    .btn-group {
+      display: flex;
+      gap: 12px;
+    }
+    button {
+      cursor: pointer;
+      font-weight: 600;
+      padding: 10px 18px;
+      border-radius: 8px;
+      border: none;
+      font-size: 0.9rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .btn-copy {
+      background: #dc3545;
+      color: #ffffff;
+    }
+    .btn-copy:hover {
+      background: #bb2d3b;
+      transform: translateY(-1px);
+    }
+    .btn-open {
+      background: #0077b5;
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+    .btn-open:hover {
+      background: #005582;
+      transform: translateY(-1px);
+    }
+    .toast {
+      position: fixed;
+      bottom: 25px;
+      right: 25px;
+      background: #10b981;
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: 8px;
+      font-weight: 700;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+      display: none;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="header">
+      <h1>⚡ LinkedIn <span>1-Click ATS Profile Updater</span></h1>
+      <p class="lead">Click <b>"Copy to Clipboard"</b>, then click <b>"Open LinkedIn Modal"</b> and press <b>Ctrl + V</b> to save!</p>
+    </div>
+
+    <!-- Step 1: Headline -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">1️⃣ Professional Headline</div>
+        <div class="char-count">194 / 220 chars</div>
+      </div>
+      <input type="text" id="headlineText" readonly value="VAPT Engineer | Web App Penetration Tester | CEH v13 & CCNA Certified | OWASP Top 10 • API Security (BOLA/IDOR) • Burp Suite Pro | Ex-GROOTT Services & Cyber Police Intern | Immediate Joining" />
+      <div class="btn-group">
+        <button class="btn-copy" onclick="copyText('headlineText', 'Headline copied! Now press Ctrl + V in LinkedIn.')">📋 Copy Headline</button>
+        <a class="btn-open" href="https://www.linkedin.com/in/pratik-khairnar-sec/edit/forms/intro/new/?profileFormEntryPoint=PROFILE_SECTION" target="_blank">🔗 Open LinkedIn Intro Modal ↗</a>
+      </div>
+    </div>
+
+    <!-- Step 2: About -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">2️⃣ About / Summary Section</div>
+        <div class="char-count">ATS Ranked #1</div>
+      </div>
+      <textarea id="aboutText" rows="12" readonly>Certified Ethical Hacker (CEH v13) and Offensive Security Engineer specializing in manual Web Application Penetration Testing (Web VAPT), REST API authorization auditing (BOLA/IDOR), and custom security tooling.
+
+Having executed commercial vulnerability assessments across multi-tenant applications at GROOTT Services and assisted in 15+ live cybercrime and financial fraud investigations with the Cyber Police Station, Nashik Police Commissionerate, I approach application security with both an attacker's mindset and deep defensive rigor.
+
+I do not rely solely on automated scanners. My methodology is hands-on and manual: pairing strict mathematical baselining and zero-false-positive verification with clear CVSS v3.1 risk ratings and developer-ready remediation roadmaps.
+
+🎯 WHAT I BRING TO YOUR SECURITY TEAM:
+• Manual Web VAPT: In-depth assessments benchmarked against OWASP Top 10 (2021) and WSTG v4.2. Specializing in high-severity business logic flaws, broken access control (BOLA/IDOR), multi-tenant privilege escalation, and auth bypasses.
+• API Security Testing: Deep authorization and session state security aligned with OWASP API Security Top 10 (2023) — identifying BOLA (API1), BFLA (API5), JWT signing flaws, and OAuth 2.0 flow bypasses.
+• Tooling & Extension Architecture: Author of AUTHENTIX Enterprise v2.1.0 (native Burp Suite Montoya API extension in Java 17/21 with 27 state-machine invariants & 12 ATO attack chains), Reflectra v7.0.0 (DOM XSS engine), and BlindStrike v7.0.0 (IQR-calibrated SQLi).
+• Digital Forensics & Investigation: Evidence chain of custody, Wireshark packet dissection, CDR/IPDR telecom intelligence, and Indicator of Compromise (IOC) triage.
+
+📜 VERIFIED CREDENTIALS & ACADEMICS:
+• Certified Ethical Hacker (CEH v13) — EC-Council (Exam ID: ECC8042517936)
+• Cisco Certified Network Associate (CCNA) — Cisco Networking Academy
+• B.Tech in CSE (Cyber Security & Forensics) — Sandip University (CGPA: 7.42 / 10)
+
+💼 HIRING STATUS:
+Actively seeking full-time roles as a VAPT Engineer, Web Application Penetration Tester, or Application Security (AppSec) Engineer.
+• Availability: Immediate Joining Available
+• Location Preference: Pune / Mumbai / Bengaluru / Delhi-NCR / Remote
+
+📬 CONNECT & EXPLORE:
+• Interactive Portfolio: https://pratikkhairnarsec.web.app/
+• GitHub Arsenal: https://github.com/pratik-khairnar-sec
+• Email: pratik.khairnar.sec@gmail.com
+• Phone / WhatsApp: +91 87999 81052</textarea>
+      <div class="btn-group">
+        <button class="btn-copy" onclick="copyText('aboutText', 'About section copied! Now press Ctrl + V in LinkedIn.')">📋 Copy About Section</button>
+        <a class="btn-open" href="https://www.linkedin.com/in/pratik-khairnar-sec/edit/forms/summary/new/?profileFormEntryPoint=PROFILE_SECTION" target="_blank">🔗 Open LinkedIn About Modal ↗</a>
+      </div>
+    </div>
+
+    <!-- Step 3: Experience (GROOTT) -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">3️⃣ Experience: Junior Penetration Tester (GROOTT Services)</div>
+        <div class="char-count">Jun 2025 – Oct 2025</div>
+      </div>
+      <textarea id="groottText" rows="6" readonly>• Executed manual Web Application Penetration Testing (Web VAPT) and REST API security audits across production client environments benchmarked against OWASP Top 10 (2021) and WSTG v4.2 standards.
+• Discovered and exploited high-severity vulnerabilities including Broken Object Level Authorization (BOLA / IDOR), Broken Function Level Authorization (BFLA), OAuth 2.0 authentication bypasses, JWT token signature tampering, and Boolean Blind SQL injection.
+• Formulated technical and executive-ready VAPT documentation featuring CVSS v3.1 severity scores, reproducible Proof-of-Concepts (PoCs), curl reproduction scripts, and practical remediation roadmaps.
+• Conducted post-remediation closure retesting alongside software engineering teams, verifying root-cause vulnerability resolution prior to production release.</textarea>
+      <div class="btn-group">
+        <button class="btn-copy" onclick="copyText('groottText', 'GROOTT description copied! Paste in Description.')">📋 Copy Description</button>
+        <a class="btn-open" href="https://www.linkedin.com/in/pratik-khairnar-sec/edit/forms/position/new/?profileFormEntryPoint=PROFILE_SECTION" target="_blank">🔗 Add New Position ↗</a>
+      </div>
+    </div>
+
+    <!-- Step 4: Experience (Cyber Police Station) -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">4️⃣ Experience: Cyber Crime Intern (Cyber Police Station Nashik)</div>
+        <div class="char-count">Jan 2026 – May 2026</div>
+      </div>
+      <textarea id="policeText" rows="6" readonly>• Investigated 15+ live cybercrime, financial fraud, unauthorized data access, and identity theft cases in direct coordination with law enforcement officers, maintaining strict legal Chain of Custody protocols.
+• Performed deep packet-level network traffic analysis using Wireshark to reconstruct malicious network sessions, extract active payload delivery mechanisms, and trace compromised communication endpoints.
+• Analyzed suspicious Android APK packages, correlated Call Detail Records (CDR) and IP Detail Records (IPDR) telecom intelligence, and isolated high-fidelity Indicators of Compromise (IOCs) to support formal evidentiary proceedings.</textarea>
+      <div class="btn-group">
+        <button class="btn-copy" onclick="copyText('policeText', 'Cyber Police description copied! Paste in Description.')">📋 Copy Description</button>
+        <a class="btn-open" href="https://www.linkedin.com/in/pratik-khairnar-sec/edit/forms/position/new/?profileFormEntryPoint=PROFILE_SECTION" target="_blank">🔗 Add New Position ↗</a>
+      </div>
+    </div>
+
+    <!-- Step 5: Direct Links to Other Modals -->
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title">5️⃣ Quick Navigation to Remaining LinkedIn Modals</div>
+      </div>
+      <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+        <a class="btn-open" href="https://www.linkedin.com/in/pratik-khairnar-sec/edit/forms/certification/new/?profileFormEntryPoint=PROFILE_SECTION" target="_blank">📜 Add CEH v13 / CCNA Cert ↗</a>
+        <a class="btn-open" href="https://www.linkedin.com/in/pratik-khairnar-sec/edit/forms/skills/new/?profileFormEntryPoint=PROFILE_SECTION" target="_blank">⭐ Add VAPT / AppSec Skills ↗</a>
+        <a class="btn-open" href="https://www.linkedin.com/in/pratik-khairnar-sec/overlay/featured-create/link/?profileFormEntryPoint=PROFILE_SECTION" target="_blank">📌 Pin Portfolio to Featured ↗</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">Copied to clipboard!</div>
+
+  <script>
+    function copyText(elementId, msg) {
+      const el = document.getElementById(elementId);
+      navigator.clipboard.writeText(el.value).then(() => {
+        showToast(msg || 'Copied to clipboard!');
+      });
+    }
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.style.display = 'block';
+      setTimeout(() => { t.style.display = 'none'; }, 3000);
+    }
+  </script>
+</body>
+</html>

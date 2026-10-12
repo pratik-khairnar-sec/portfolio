@@ -23,3 +23,9 @@ desktop.ini
 .vscode/
 *.swp
 *.swo
+
+# Firebase
+.firebase/
+firebase-debug.log
+firebase-debug.*.log
+

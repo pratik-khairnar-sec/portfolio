@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "site": "pratikkhairnarsec",
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      ".firebaserc",
+      "**/.git/**",
+      ".git/**",
+      "**/.*",
+      "**/node_modules/**",
+      "scripts/**",
+      "README.md",
+      "RESUME.md"
+    ]
+  }
+}

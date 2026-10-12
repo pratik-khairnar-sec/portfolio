@@ -422,23 +422,30 @@
       background-color: rgba(22, 22, 28, 0.85);
       border: 1px solid rgba(220, 53, 69, 0.25);
       border-radius: 20px;
-      padding: 18px 22px;
-      max-width: 420px;
+      padding: 20px 24px;
+      max-width: 480px;
+      width: 100%;
       text-align: center;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+      transition: border-color 0.3s ease;
+    }
+
+    .language-details:hover {
+      border-color: rgba(220, 53, 69, 0.45);
     }
 
     .language-details h4 {
       color: #dc3545;
       font-weight: 800;
-      margin-bottom: 6px;
-      font-size: 1.2rem;
+      margin-bottom: 8px;
+      font-size: 1.25rem;
+      letter-spacing: 0.3px;
     }
 
     .language-details p {
       color: #e2e8f0;
-      line-height: 1.55;
-      margin-bottom: 12px;
+      line-height: 1.6;
+      margin-bottom: 14px;
       font-size: 0.88rem;
     }
 
@@ -446,17 +453,27 @@
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 7px;
     }
 
     .language-details .used-for span {
       background-color: rgba(220, 53, 69, 0.15);
       color: #ff6b7a;
       border: 1px solid rgba(220, 53, 69, 0.3);
-      padding: 3px 10px;
+      padding: 4px 11px;
       border-radius: 14px;
-      font-size: 0.74rem;
+      font-size: 0.75rem;
       font-weight: 600;
+      letter-spacing: 0.2px;
+      transition: all 0.2s ease;
+      display: inline-block;
+    }
+
+    .language-details .used-for span:hover {
+      background-color: rgba(220, 53, 69, 0.3);
+      border-color: rgba(220, 53, 69, 0.6);
+      color: #ffffff;
+      transform: translateY(-1px);
     }
 
     /* ==========================================================================
@@ -1551,15 +1568,17 @@
             </div>
 
             <div class="language-details" id="languageDetails">
-              <h4 id="languageName">Web VAPT</h4>
+              <h4 id="languageName">Manual Web Application VAPT</h4>
               <p id="languageDescription">
-                Manual and automated web application penetration testing targeting OWASP Top 10 vulnerabilities, BOLA/IDOR authorization flaws, and business logic bypasses.
+                In-depth manual penetration testing benchmarked against OWASP Top 10 (2021) and WSTG v4.2. Specializing in high-impact business logic bypasses, broken access control (BOLA/IDOR), multi-tenant privilege escalation, and defensible CVSS v3.1 scoring.
               </p>
               <div class="used-for" id="usedForTags">
-                <span>OWASP Top 10</span>
+                <span>OWASP Top 10 (2021)</span>
+                <span>OWASP WSTG v4.2</span>
+                <span>Broken Access Control</span>
                 <span>BOLA / IDOR</span>
-                <span>Auth Bypass</span>
-                <span>Burp Suite</span>
+                <span>CVSS v3.1 Scoring</span>
+                <span>Burp Suite Pro</span>
               </div>
             </div>
           </div>
@@ -2307,24 +2326,29 @@
     // Rotating Wheel Physics (Sandesh Standard)
     const wheelData = {
       "Web VAPT": {
-        description: "Manual and automated web application penetration testing targeting OWASP Top 10 vulnerabilities, BOLA/IDOR authorization flaws, and business logic bypasses.",
-        usedFor: ["OWASP Top 10", "BOLA / IDOR", "Broken Auth", "Burp Suite"]
+        title: "Manual Web Application VAPT",
+        description: "In-depth manual penetration testing benchmarked against OWASP Top 10 (2021) and WSTG v4.2. Specializing in high-impact business logic bypasses, broken access control (BOLA/IDOR), multi-tenant privilege escalation, and defensible CVSS v3.1 scoring.",
+        usedFor: ["OWASP Top 10 (2021)", "OWASP WSTG v4.2", "Broken Access Control", "BOLA / IDOR", "CVSS v3.1 Scoring", "Burp Suite Pro"]
       },
       "API Security": {
-        description: "Comprehensive REST API and GraphQL assessments testing Broken Object Level Authorization (BOLA/IDOR), authentication bypasses, and data exposure.",
-        usedFor: ["REST APIs", "BOLA / IDOR", "JWT Tokens", "Postman", "OAuth 2.0"]
+        title: "REST & GraphQL API Security",
+        description: "End-to-end authorization and session state security assessments aligned with OWASP API Security Top 10 (2023). Uncovering BOLA/IDOR, broken function authorization (BFLA), JWT signing vulnerabilities, and OAuth 2.0 flow bypasses.",
+        usedFor: ["OWASP API Top 10", "BOLA (API1:2023)", "BFLA (API5:2023)", "JWT Security", "OAuth 2.0 Flows", "Postman Suites"]
       },
       "Blind SQLi": {
-        description: "Statistical latency calibration, Interquartile Range (IQR) network variance filtering, and multi-threaded precision extraction across multi-database engines.",
-        usedFor: ["Time-Based SQLi", "Boolean SQLi", "IQR Statistics", "BlindStrike v7.0.0"]
+        title: "Time & Boolean Blind SQLi",
+        description: "Deterministic time-based and boolean blind injection extraction utilizing Interquartile Range (IQR) jitter calibration to isolate and eliminate network latency variance. Multi-threaded database enumeration with zero false positives.",
+        usedFor: ["Time-Based SQLi", "Boolean Blind SQLi", "Statistical IQR Triage", "Multi-DB Extraction", "WAF Evasion Logic", "BlindStrike Engine"]
       },
       "DOM XSS": {
-        description: "Context-aware Cross-Site Scripting identification evaluating HTML, attribute, and JavaScript execution contexts with zero false positives.",
-        usedFor: ["DOM Execution", "Context Parsing", "XSS PoC Suite", "Reflectra v7.0.0"]
+        title: "DOM & Context-Aware XSS",
+        description: "Advanced client-side source-to-sink dataflow analysis evaluating HTML, attribute, URI, and JavaScript execution contexts. Accurately verifies exploitability and CSP bypass vectors via headless Chrome dialog interception with zero false positives.",
+        usedFor: ["Source-to-Sink Triage", "Context Parsing", "DOM Execution", "CSP Bypass Analysis", "Headless Chrome PoC", "Reflectra Engine"]
       },
       "OSINT Recon": {
-        description: "Structured target reconnaissance, curated search dorks, attack surface mapping, and passive asset enumeration executed 100% client-side.",
-        usedFor: ["Asset Triage", "Recon Phases", "Attack Surface", "ReconForge v3"]
+        title: "Attack Surface Recon (EASM)",
+        description: "Systematic multi-target reconnaissance pipeline featuring 30 structured phases, passive DNS correlation, certificate transparency auditing, subdomain permutation scanning, and 52,600+ curated search dorks.",
+        usedFor: ["Attack Surface (EASM)", "Passive OSINT", "Subdomain Enumeration", "Cert Transparency", "52k+ Curated Dorks", "ReconForge Engine"]
       }
     };
 
@@ -2372,7 +2396,7 @@
 
     function updateWheelInfo(domain) {
       if (!wheelData[domain]) domain = 'Web VAPT';
-      languageName.textContent = domain;
+      languageName.textContent = wheelData[domain].title || domain;
       languageDescription.textContent = wheelData[domain].description;
 
       usedForTags.innerHTML = '';

@@ -39,8 +39,8 @@ Certified Ethical Hacker (CEH v13) pursuing B.Tech in Cyber Security & Forensics
 
 ## OFFENSIVE SECURITY PROJECTS & TOOLING
 
-* **AUTHENTIX Enterprise v2.1.0** *(Burp Suite Extension | Java 17/21 | BOLA/IDOR Testing)*  
-  Native Burp Suite extension engineered for automated authorization (BOLA/IDOR) testing, session validation, and token replay verification. Evaluates multi-tenant API endpoints in real time with verifiable reproduction logs.  
+* **AUTHENTIX Enterprise v3.0.0** *(Burp Suite Extension | Java 17/21 | BOLA/IDOR Testing)*  
+  Native Burp Suite Montoya extension with 34 deterministic security invariants, 3-Way Differential IDOR Engine with Soft-200 Error Disambiguation, and 16 compound ATO attack chains. Evaluates multi-tenant API endpoints in real time with 0.0% false positives.  
   *GitHub:* `github.com/pratik-khairnar-sec/authentix-enterprise`
 
 * **ReconForge v3** *(OSINT Framework | 52,600+ Dork Vault | 30 Master Phases)*  

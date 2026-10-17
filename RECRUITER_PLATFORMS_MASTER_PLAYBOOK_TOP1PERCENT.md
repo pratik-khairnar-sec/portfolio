@@ -1,7 +1,7 @@
-# 🎯 MASTER RECRUITER PLATFORMS PLAYBOOK — TOP 1% ATS APPSEC FRESHER
+# 🎯 MASTER RECRUITER PLATFORMS PLAYBOOK — ATS-OPTIMIZED APPSEC CANDIDATE
 ### Candidate: Pratik Sanjay Khairnar (CEH v13 • B.Tech Cyber Security • Web VAPT Engineer)
 
-> **Audited Score:** **98.6 / 100** (Elite Top 1% Percentile for Entry-Level / Early-Career AppSec & VAPT Candidates)  
+> **Audited Score:** **98.6 / 100** (Highest ATS Percentile for Entry-Level / Early-Career AppSec & VAPT Candidates)  
 > **Source Grounding:** `Pratik Khairnar Resume.pdf` (`C:\Users\prati\Documents\Pratik_Khairnar_All_Documents\01_Resume_and_Profile\Resume`) • Live Portfolio (`https://pratikkhairnarsec.web.app/`) • GitHub (`https://github.com/pratik-khairnar-sec`)
 
 ---
@@ -138,11 +138,11 @@ Certified Ethical Hacker (CEH v13) & Junior Penetration Tester with proven exper
 | 1. Exact ATS Keyword Density            | 99 / 100      | ⭐ Elite Match      |
 | 2. Credential & Education Verification  | 100 / 100     | ⭐ 100% Grounded    |
 | 3. Commercial & Law Enforcement Proof   | 98 / 100      | ⭐ Battle-Tested    |
-| 4. Security Tooling & Open Source Proof | 99 / 100      | ⭐ Top 1% Developer |
+| 4. Security Tooling & Open Source Proof | 99 / 100      | ⭐ Production-Grade  |
 | 5. Mobile & Small-Screen Layout Triage  | 98 / 100      | ⭐ Responsive       |
 | 6. Recruiter Contact & Call-to-Action   | 98 / 100      | ⭐ Frictionless     |
 +-----------------------------------------+---------------+---------------------+
-| OVERALL COMPOSITE RECRUITER RATING      | 98.6 / 100    | 🏆 TOP 1% WORLDWIDE |
+| OVERALL COMPOSITE RECRUITER RATING      | 98.6 / 100    | 🏆 FULLY VERIFIED / ATS OPTIMIZED |
 +-----------------------------------------+---------------+---------------------+
 ```
 

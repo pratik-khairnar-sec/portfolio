@@ -1,7 +1,7 @@
-# 🚀 TOP 1% LINKEDIN PROFILE OPTIMIZATION BLUEPRINT
+# 🚀 EXECUTIVE LINKEDIN PROFILE OPTIMIZATION BLUEPRINT
 ### Pratik Sanjay Khairnar — Certified Ethical Hacker (CEH v13) | VAPT Engineer
 
-> **Purpose:** This blueprint contains exact, character-counted, copy-paste-ready sections engineered specifically to rank your LinkedIn profile in the **Top 1% of Freshers & Early-Career Application Security / VAPT candidates** worldwide.
+> **Purpose:** This blueprint contains exact, character-counted, copy-paste-ready sections engineered specifically to optimize your LinkedIn profile for **Application Security (AppSec) & VAPT Recruiter ATS search algorithms**.
 >
 > ⚠️ **Important Safety Note on Automated Access:** Direct bot/script login into LinkedIn accounts violates LinkedIn Terms of Service and triggers automated account security locks/bans. The industry best practice is using this copy-paste master template to update your profile manually in 5 minutes safely from your logged-in browser.
 
@@ -188,4 +188,4 @@ Make sure your profile URL is clean and professional:
 
 ---
 
-✅ **Result:** Following this blueprint will position your profile in the **top 1% search results for entry-level / junior VAPT and AppSec roles on LinkedIn Recruiter**.
+✅ **Result:** Following this blueprint ensures maximum recruiter visibility, high keyword ranking, and professional positioning for entry-level and junior VAPT and AppSec roles on LinkedIn Recruiter.

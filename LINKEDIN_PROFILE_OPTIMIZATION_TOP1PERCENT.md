@@ -35,7 +35,7 @@ I do not rely solely on automated scanners. My methodology is hands-on and manua
 🎯 WHAT I BRING TO YOUR SECURITY TEAM:
 • Manual Web VAPT: In-depth assessments benchmarked against OWASP Top 10 (2021) and WSTG v4.2. Specializing in high-severity business logic flaws, broken access control (BOLA/IDOR), multi-tenant privilege escalation, and auth bypasses.
 • API Security Testing: Deep authorization and session state security aligned with OWASP API Security Top 10 (2023) — identifying BOLA (API1), BFLA (API5), JWT signing flaws, and OAuth 2.0 flow bypasses.
-• Tooling & Extension Architecture: Author of AUTHENTIX Enterprise v2.1.0 (native Burp Suite Montoya API extension in Java 17/21 with 27 state-machine invariants & 12 ATO attack chains), Reflectra v7.0.0 (DOM XSS engine), and BlindStrike v7.0.0 (IQR-calibrated SQLi).
+• Tooling & Extension Architecture: Author of AUTHENTIX Enterprise v3.0.0 (native Burp Suite Montoya API extension in Java 17/21 with 34 state-machine invariants & 16 ATO attack chains), Reflectra v7.0.0 (DOM XSS engine), and BlindStrike v7.0.0 (IQR-calibrated SQLi).
 • Digital Forensics & Investigation: Evidence chain of custody, Wireshark packet dissection, CDR/IPDR telecom intelligence, and Indicator of Compromise (IOC) triage.
 
 📜 VERIFIED CREDENTIALS & ACADEMICS:
@@ -134,8 +134,8 @@ Pin these 4 links in your **Featured** section (Click `Add profile section` -> `
 
 2. **Item 2 (Flagship Security Suite):**
    * **URL:** `https://pratik-khairnar-sec.github.io/authentix-enterprise/`
-   * **Title:** `🛡️ AUTHENTIX Enterprise v2.1.0 — Burp Suite Montoya Security Suite`
-   * **Description:** `Enterprise authentication, IDOR/BOLA scanner and secret analysis suite for Burp Suite (Java 17/21 • 27 Invariants • 12 ATO Chains).`
+   * **Title:** `🛡️ AUTHENTIX Enterprise v3.0.0 — Burp Suite Montoya Security Suite`
+   * **Description:** `Enterprise authentication, IDOR/BOLA scanner and secret analysis suite for Burp Suite (Java 17/21 • 34 Invariants • 16 ATO Chains).`
 
 3. **Item 3 (GitHub Profile):**
    * **URL:** `https://github.com/pratik-khairnar-sec`

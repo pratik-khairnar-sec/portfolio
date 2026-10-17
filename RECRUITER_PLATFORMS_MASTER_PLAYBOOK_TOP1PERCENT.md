@@ -69,7 +69,7 @@ CEH v13 Certified VAPT & AppSec Engineer | Author of AUTHENTIX (Burp Suite Monto
 I am a Certified Ethical Hacker (CEH v13) and Offensive Security Engineer specializing in manual Web Application Penetration Testing (Web VAPT) and REST API authorization auditing (BOLA/IDOR).
 
 I build production-grade security tools and Burp Suite extensions:
-• AUTHENTIX Enterprise v2.1.0: Burp Suite Montoya API suite with 27 state-machine invariants & 12 ATO attack chains.
+• AUTHENTIX Enterprise v3.0.0: Burp Suite Montoya API suite with 34 state-machine invariants & 16 ATO attack chains.
 • Reflectra v7.0.0: Context-aware XSS engine with headless Chrome PoC verification.
 • BlindStrike v7.0.0: Latency-calibrated Time/Boolean Blind SQLi framework.
 
@@ -100,7 +100,7 @@ As a Certified Ethical Hacker (CEH v13, EC-Council Exam ID: ECC8042517936) pursu
 
 During my tenure as a Junior Penetration Tester at GROOTT Services, I conducted comprehensive vulnerability assessments across client applications, uncovering and remediating high-severity Broken Object Level Authorization (BOLA/IDOR), OAuth 2.0 bypasses, and Blind SQL injection vulnerabilities benchmarked against OWASP WSTG v4.2 and CVSS v3.1 standards. Additionally, my internship at the Cyber Police Station, Nashik Police Commissionerate gave me deep experience investigating 15+ live cybercrime cases using Wireshark network dissection and digital forensics protocols.
 
-Beyond testing, I actively develop offensive security frameworks, including AUTHENTIX Enterprise v2.1.0 (a native Burp Suite Montoya API extension) and ReconForge v3.0 (a 30-phase reconnaissance workspace).
+Beyond testing, I actively develop offensive security frameworks, including AUTHENTIX Enterprise v3.0.0 (a native Burp Suite Montoya API extension) and ReconForge v4.0 (a 30-phase reconnaissance workspace).
 
 I am available for Immediate Joining and would welcome the opportunity to discuss how my offensive skillset and verifiable testing methodologies can protect your applications.
 

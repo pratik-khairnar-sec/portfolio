@@ -880,6 +880,8 @@
       display: flex;
       align-items: center;
       transition: all 0.3s ease;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     .contact-card-tile:hover {
@@ -900,13 +902,14 @@
       justify-content: center;
       color: #dc3545;
       font-size: 1.15rem;
-      margin-right: 15px;
       flex-shrink: 0;
+      align-self: center;
     }
 
     .contact-card-info {
-      flex-grow: 1;
-      overflow: hidden;
+      flex: 1 1 210px;
+      min-width: 0;
+      overflow: visible;
     }
 
     .contact-card-tag {
@@ -915,18 +918,21 @@
       font-weight: 700;
       letter-spacing: 0.8px;
       text-transform: uppercase;
-      margin-bottom: 2px;
+      margin-bottom: 3px;
     }
 
     .contact-card-val {
-      font-size: 0.92rem;
+      font-size: 0.95rem;
       color: #ffffff;
       margin: 0;
       font-weight: 500;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
+      white-space: normal !important;
+      word-break: break-word !important;
+      overflow-wrap: anywhere !important;
+      text-overflow: clip !important;
       text-decoration: none !important;
+      display: inline-block;
+      line-height: 1.45;
     }
 
     .contact-card-val:hover {
@@ -937,13 +943,14 @@
       background: rgba(220, 53, 69, 0.1);
       border: 1px solid rgba(220, 53, 69, 0.4);
       color: #ff6b7a;
-      padding: 5px 12px;
+      padding: 6px 14px;
       border-radius: 6px;
       font-size: 0.75rem;
       font-weight: 600;
-      margin-left: 10px;
+      margin-left: auto;
       transition: all 0.2s ease;
       flex-shrink: 0;
+      cursor: pointer;
     }
 
     .btn-copy-tile:hover {
@@ -1844,7 +1851,7 @@
         </div>
       </div>
 
-      <!-- Row 2: Secondary Credentials (CCNA, Java, EC-Council Specialist) -->
+      <!-- Row 2: Secondary Credentials (Cisco CCNA & Academic Foundation) -->
       <div class="row">
         <!-- Cisco CCNA -->
         <div class="col-lg-6 mb-4">
@@ -1872,29 +1879,29 @@
           </div>
         </div>
 
-        <!-- Specialized Accreditations -->
+        <!-- Academic Foundation & Specialized Technical Engineering -->
         <div class="col-lg-6 mb-4">
           <div class="cert-secondary-card">
             <div class="d-flex align-items-center justify-content-between mb-3">
               <div class="d-flex align-items-center gap-3">
                 <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(234, 179, 8, 0.15); border: 1px solid rgba(234, 179, 8, 0.3); display: flex; align-items: center; justify-content: center; color: #facc15; font-size: 1.4rem;">
-                  <i class="fas fa-award"></i>
+                  <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div>
-                  <h5 class="text-white font-weight-bold mb-0">Specialized Accreditations</h5>
-                  <span class="text-muted small">Offensive Tooling &amp; Database Security</span>
+                  <h5 class="text-white font-weight-bold mb-0">B.Tech — Cyber Security &amp; Forensics</h5>
+                  <span class="text-muted small">Sandip University, Nashik &bull; CGPA: 7.42/10</span>
                 </div>
               </div>
-              <span class="badge badge-warning" style="background: rgba(234, 179, 8, 0.2); color: #fef08a; border: 1px solid rgba(234, 179, 8, 0.35);">ACTIVE</span>
+              <span class="badge badge-warning" style="background: rgba(234, 179, 8, 0.2); color: #fef08a; border: 1px solid rgba(234, 179, 8, 0.35);">DEGREE</span>
             </div>
             <ul class="list-unstyled text-muted small mb-3" style="line-height: 1.7; flex: 1;">
-              <li><i class="fas fa-check text-danger mr-2"></i><strong>Java Programming Certification</strong> — Core &amp; Advanced Java (Burp Montoya API Tool Architecture)</li>
-              <li><i class="fas fa-check text-danger mr-2"></i><strong>EC-Council PenTest Lab Specialist</strong> — Practical vulnerability exploitation &amp; privilege escalation</li>
-              <li><i class="fas fa-check text-danger mr-2"></i><strong>SQLi Vulnerability Specialist</strong> — Advanced Boolean/Time-based blind injection evaluation</li>
-              <li><i class="fas fa-check text-danger mr-2"></i><strong>Oracle Database Security Specialist</strong> — Enterprise database security &amp; access auditing</li>
+              <li><i class="fas fa-check text-danger mr-2"></i><strong>Academic Specialization</strong> — 4-Year B.Tech in Cyber Security &amp; Forensics (Sandip University, 2023–2027).</li>
+              <li><i class="fas fa-check text-danger mr-2"></i><strong>Montoya Tool Architecture</strong> — Engineered AUTHENTIX Enterprise using native Java 17/21 for automated BOLA/IDOR auditing.</li>
+              <li><i class="fas fa-check text-danger mr-2"></i><strong>Statistical Blind SQLi Engine</strong> — Developed BlindStrike v7.0.0 in Python 3 using Interquartile Range (IQR) noise filtration.</li>
+              <li><i class="fas fa-check text-danger mr-2"></i><strong>Evidentiary Forensics Standards</strong> — ISO/IEC 27037 chain-of-custody protocols executed in 15+ live cybercrime investigations.</li>
             </ul>
             <div style="font-size: 0.8rem; color: #94a3b8;">
-              <i class="fas fa-shield-halved text-danger mr-1"></i>Grounded in rigorous academic B.Tech degree (CGPA: 7.42/10).
+              <i class="fas fa-shield-halved text-danger mr-1"></i>Academic Transcripts verified &bull; Grounded in defensive &amp; offensive systems engineering.
             </div>
           </div>
         </div>

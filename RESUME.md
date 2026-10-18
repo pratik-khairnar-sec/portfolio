@@ -6,7 +6,7 @@
 ---
 
 ## PROFESSIONAL SUMMARY
-Certified Ethical Hacker (CEH v13) pursuing B.Tech in Cyber Security & Forensics (2023–2027) with operational experience in manual Web Application Penetration Testing (Web VAPT), REST API authorization testing (BOLA / IDOR), and custom offensive security tooling. Demonstrated track record executing vulnerability assessments at GROOTT Services and investigating 15+ live cybercrime cases at the Cyber Police Station, Nashik Police Commissionerate. Testing methodologies strictly aligned with OWASP Top 10 (2021), OWASP API Security Top 10 (2023), OWASP WSTG v4.2, and ASVS v4.0, delivering actionable CVSS v3.1 reports with verified Proof-of-Concepts (PoCs) and developer-ready remediation roadmaps.
+Certified Ethical Hacker (CEH v13) pursuing B.Tech in Cyber Security & Forensics (2023–2027) with operational experience in manual Web Application Penetration Testing (Web VAPT), REST API authorization testing (BOLA / IDOR), and custom offensive security tooling. Demonstrated track record executing vulnerability assessments at Cyber Police Station Nashik and investigating 15+ live cybercrime cases at the Cyber Police Station, Nashik Police Commissionerate. Testing methodologies strictly aligned with OWASP Top 10 (2021), OWASP API Security Top 10 (2023), OWASP WSTG v4.2, and ASVS v4.0, delivering actionable CVSS v3.1 reports with verified Proof-of-Concepts (PoCs) and developer-ready remediation roadmaps.
 
 ---
 
@@ -28,12 +28,12 @@ Certified Ethical Hacker (CEH v13) pursuing B.Tech in Cyber Security & Forensics
 * Performed deep packet-level network traffic analysis using **Wireshark** to reconstruct malicious network sessions, extract active payload delivery mechanisms, and trace compromised communication channels.
 * Analyzed suspicious Android APK packages, correlated **CDR/IPDR telecom intelligence**, and isolated high-fidelity Indicators of Compromise (**IOCs**) to support formal evidentiary proceedings.
 
-### **Junior Penetration Tester** — GROOTT Services
-*Jun 2025 – Oct 2025 | Remote / Hybrid*
-* Executed end-to-end manual Web Application Penetration Testing (**Web VAPT**) and REST API security audits across multi-tenant client environments benchmarked against **OWASP Top 10 (2021)** and **WSTG v4.2** standards.
-* Discovered and exploited high-severity vulnerabilities including Broken Object Level Authorization (**BOLA / IDOR**), OAuth 2.0 authentication bypasses, JWT signature manipulation, and Boolean Blind SQLi.
-* Authored technical and executive-ready VAPT documentation featuring **CVSS v3.1** severity ratings, defensible Proof-of-Concepts (PoCs), and pragmatic developer remediation roadmaps.
-* Conducted post-remediation **closure retesting** alongside software engineering teams, verifying root-cause vulnerability resolution prior to production release.
+### **Offensive Security Tool Architect & Researcher** — Independent Security Lab
+*Jan 2025 – Present | Nashik / Remote*
+* Engineered **AUTHENTIX Enterprise**, a native Java 17/21 Burp Suite extension leveraging the PortSwigger Montoya API, implementing 34 deterministic security invariants to automate JWT signature validation, alg:none attacks, and OAuth 2.0 flaw detection.
+* Architected **BlindStrike**, an automated blind SQL injection framework incorporating Interquartile Range (IQR) statistical latency filtering to eliminate network jitter false positives during remote evaluations.
+* Executed manual Web Application Penetration Testing (Web VAPT) and REST API security audits benchmarked strictly against **OWASP Top 10** and **OWASP WSTG v4.2** methodologies.
+* Authored CVSS v3.1-scored vulnerability assessment reports with reproducible Proof-of-Concepts (PoCs) and developer-ready remediation blueprints.
 
 ---
 

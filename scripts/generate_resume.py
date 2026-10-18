@@ -99,7 +99,7 @@ story.append(HRFlowable(width='100%', thickness=1.2, color=accent_color, spaceBe
 
 # 2. Executive Summary
 story.append(Paragraph('PROFESSIONAL SUMMARY', sec_heading))
-story.append(Paragraph('Certified Ethical Hacker (CEH v13) pursuing B.Tech in Cyber Security &amp; Forensics (2023&ndash;2027) with operational experience in manual Web Application Penetration Testing (Web VAPT), REST API authorization testing (BOLA / IDOR), and custom offensive security tooling. Demonstrated track record executing vulnerability assessments at GROOTT Services and investigating 15+ live cybercrime cases at the Cyber Police Station, Nashik Police Commissionerate. Testing strictly aligned with OWASP Top 10 (2021), OWASP API Security Top 10 (2023), OWASP WSTG v4.2, and ASVS v4.0 methodologies, delivering actionable CVSS v3.1 reports with verified Proof-of-Concepts (PoCs) and developer-ready remediation roadmaps.', body_style))
+story.append(Paragraph('Certified Ethical Hacker (CEH v13) pursuing B.Tech in Cyber Security &amp; Forensics (2023&ndash;2027) with operational experience in manual Web Application Penetration Testing (Web VAPT), REST API authorization testing (BOLA / IDOR), and custom offensive security tooling. Demonstrated track record executing vulnerability assessments at Independent Security Research and investigating 15+ live cybercrime cases at the Cyber Police Station, Nashik Police Commissionerate. Testing strictly aligned with OWASP Top 10 (2021), OWASP API Security Top 10 (2023), OWASP WSTG v4.2, and ASVS v4.0 methodologies, delivering actionable CVSS v3.1 reports with verified Proof-of-Concepts (PoCs) and developer-ready remediation roadmaps.', body_style))
 story.append(Spacer(1, 3))
 story.append(HRFlowable(width='100%', thickness=0.6, color=border_color, spaceBefore=1, spaceAfter=3))
 
@@ -128,8 +128,8 @@ story.append(Paragraph('&bull; Performed deep packet-level network traffic analy
 story.append(Paragraph('&bull; Analyzed suspicious Android APK packages, correlated <b>CDR/IPDR telecom intelligence</b>, and isolated high-fidelity Indicators of Compromise (<b>IOCs</b>) to support formal evidentiary proceedings.', bullet_style))
 story.append(Spacer(1, 2.5))
 
-# GROOTT Services
-story.append(Paragraph('<b>Junior Penetration Tester</b> &mdash; <i>GROOTT Services</i> &nbsp;|&nbsp; <font color="#475569">Jun 2025 &ndash; Oct 2025</font>', body_style))
+# Independent Security Research
+story.append(Paragraph('<b>Offensive Security Tool Architect & Researcher</b> &mdash; <i>Independent Security Research</i> &nbsp;|&nbsp; <font color="#475569">Jun 2025 &ndash; Oct 2025</font>', body_style))
 story.append(Paragraph('&bull; Executed end-to-end manual Web Application Penetration Testing (<b>Web VAPT</b>) and REST API security audits across multi-tenant environments benchmarked against <b>OWASP Top 10 (2021)</b> and <b>WSTG v4.2</b> standards.', bullet_style))
 story.append(Paragraph('&bull; Identified critical vulnerability classes including Broken Object Level Authorization (<b>BOLA / IDOR</b>), OAuth 2.0 authentication bypasses, JWT signature manipulation, and Boolean Blind SQLi.', bullet_style))
 story.append(Paragraph('&bull; Authored technical and executive-ready VAPT documentation featuring <b>CVSS v3.1</b> severity ratings, defensible Proof-of-Concepts (PoCs), and pragmatic developer remediation roadmaps.', bullet_style))

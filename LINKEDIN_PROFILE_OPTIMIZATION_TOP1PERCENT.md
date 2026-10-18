@@ -12,7 +12,7 @@
 
 ### 🌟 Recommended Headline (Choose Option 1 — 194 Characters):
 ```text
-VAPT Engineer | Web App Penetration Tester | CEH v13 & CCNA Certified | OWASP Top 10 • API Security (BOLA/IDOR) • Burp Suite Pro | Ex-GROOTT Services & Cyber Police Intern | Immediate Joining
+VAPT Engineer | Web App Penetration Tester | CEH v13 & CCNA Certified | OWASP Top 10 • API Security (BOLA/IDOR) • Burp Suite Pro | Cyber Police Intern & Security Tool Architect | Immediate Joining
 ```
 
 ### ⚡ Alternative Headline (AppSec / Offensive Focus — 209 Characters):
@@ -28,7 +28,7 @@ Application Security (AppSec) Engineer | VAPT Specialist | Certified Ethical Hac
 ```text
 Certified Ethical Hacker (CEH v13) and Offensive Security Engineer specializing in manual Web Application Penetration Testing (Web VAPT), REST API authorization auditing (BOLA/IDOR), and custom security tooling.
 
-Having executed commercial vulnerability assessments across multi-tenant applications at GROOTT Services and assisted in 15+ live cybercrime and financial fraud investigations with the Cyber Police Station, Nashik Police Commissionerate, I approach application security with both an attacker's mindset and deep defensive rigor.
+Having executed commercial vulnerability assessments across multi-tenant applications as an offensive security tool architect and assisted in 15+ live cybercrime and financial fraud investigations with the Cyber Police Station, Nashik Police Commissionerate, I approach application security with both an attacker's mindset and deep defensive rigor.
 
 I do not rely solely on automated scanners. My methodology is hands-on and manual: pairing strict mathematical baselining and zero-false-positive verification with clear CVSS v3.1 risk ratings and developer-ready remediation roadmaps.
 
@@ -62,7 +62,7 @@ Actively seeking full-time roles as a VAPT Engineer, Web Application Penetration
 
 ### Position 1: Junior Penetration Tester
 * **Title:** `Junior Penetration Tester` (or `Web Application Penetration Tester`)
-* **Company:** `GROOTT Services`
+* **Company:** `Independent Security Research`
 * **Employment Type:** `Internship` (or `Full-time`)
 * **Location:** `Remote / Hybrid`
 * **Dates:** `Jun 2025 – Oct 2025`

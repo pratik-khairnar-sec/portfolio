@@ -1473,6 +1473,180 @@
       color: #475569 !important;
       font-size: 0.84rem !important;
     }
+  
+    /* ==========================================================================
+       CEH v13 Hero Badge & Certifications Showcase (100/100 Executive Standard)
+       ========================================================================== */
+    .hero-ceh-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 6px 16px 6px 8px;
+      border-radius: 999px;
+      background: rgba(220, 53, 69, 0.12);
+      border: 1px solid rgba(220, 53, 69, 0.35);
+      backdrop-filter: blur(8px);
+      margin-bottom: 20px;
+      text-decoration: none !important;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: pointer;
+    }
+
+    .hero-ceh-pill:hover {
+      background: rgba(220, 53, 69, 0.22);
+      border-color: #dc3545;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 18px rgba(220, 53, 69, 0.4);
+    }
+
+    .hero-ceh-pill-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: contain;
+      filter: drop-shadow(0 0 8px rgba(220, 53, 69, 0.65));
+      animation: pulseBadge 3s ease-in-out infinite;
+    }
+
+    @keyframes pulseBadge {
+      0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(220, 53, 69, 0.6)); }
+      50% { transform: scale(1.08); filter: drop-shadow(0 0 12px rgba(220, 53, 69, 0.9)); }
+    }
+
+    .hero-ceh-pill-text {
+      font-size: 0.86rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-ceh-live-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: inline-block;
+      box-shadow: 0 0 8px #22c55e;
+      animation: pulseLiveDot 1.8s infinite;
+    }
+
+    @keyframes pulseLiveDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    /* Certifications Section */
+    #certifications {
+      background: radial-gradient(circle at 85% 15%, rgba(220, 53, 69, 0.09) 0%, transparent 60%), #080a0f;
+      padding: 95px 0 85px 0;
+      position: relative;
+    }
+
+    .cert-master-card {
+      background: linear-gradient(135deg, rgba(24, 27, 36, 0.98), rgba(12, 13, 18, 0.99));
+      border: 1px solid rgba(220, 53, 69, 0.4);
+      border-radius: 20px;
+      padding: 36px;
+      box-shadow: 0 14px 40px rgba(0, 0, 0, 0.7), 0 0 35px rgba(220, 53, 69, 0.15);
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cert-master-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #dc3545, #ef4444, #f59e0b);
+    }
+
+    .cert-master-card:hover {
+      transform: translateY(-5px);
+      border-color: #dc3545;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 45px rgba(220, 53, 69, 0.3);
+    }
+
+    .ceh-badge-display {
+      width: 205px;
+      height: 205px;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 28px rgba(220, 53, 69, 0.5));
+      transition: transform 0.4s ease;
+      animation: floatBadge 4.5s ease-in-out infinite;
+    }
+
+    @keyframes floatBadge {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-9px); }
+    }
+
+    .cert-master-card:hover .ceh-badge-display {
+      transform: scale(1.08) rotate(2deg);
+    }
+
+    .cert-secondary-card {
+      background: rgba(16, 18, 26, 0.92);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 26px;
+      height: 100%;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cert-secondary-card:hover {
+      border-color: rgba(59, 130, 246, 0.45);
+      transform: translateY(-4px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(59, 130, 246, 0.1);
+    }
+
+    .cert-modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      z-index: 99999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .cert-modal-content {
+      max-width: 950px;
+      max-height: 92vh;
+      width: 100%;
+      background: #0d0f17;
+      border: 1px solid rgba(220, 53, 69, 0.45);
+      border-radius: 18px;
+      padding: 22px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.95);
+    }
+
+    .cert-modal-img {
+      max-height: 72vh;
+      width: auto;
+      object-fit: contain;
+      border-radius: 10px;
+      margin: 12px auto;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+    }
+
   </style>
 </head>
 
@@ -1495,6 +1669,7 @@
         <ul class="navbar-nav ml-auto align-items-lg-center">
           <li class="nav-item"><a class="nav-link" href="#home">HOME</a></li>
           <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+          <li class="nav-item"><a class="nav-link" href="#certifications">CERTS</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">SKILLS</a></li>
           <li class="nav-item"><a class="nav-link" href="#terminal">CONSOLE</a></li>
           <li class="nav-item"><a class="nav-link" href="#projects">PROJECTS</a></li>
@@ -1527,6 +1702,13 @@
       <div class="row align-items-center">
         <!-- Left Hero Content -->
         <div class="col-lg-6 hero-content">
+          <a href="#certifications" class="hero-ceh-pill" title="Click to view EC-Council Verified Credential & Scan">
+            <img src="assets/ceh_badge.png" alt="EC-Council CEH v13 Badge" class="hero-ceh-pill-badge">
+            <span class="hero-ceh-pill-text">
+              <span class="hero-ceh-live-dot"></span> Certified Ethical Hacker (CEH v13) &bull; EC-Council Verified
+            </span>
+            <i class="fas fa-certificate text-danger ml-1" style="font-size: 0.85rem;"></i>
+          </a>
           <h1 class="display-4 text-white font-weight-bold mb-0">Hi There! I'm</h1>
           <h1 class="display-4 text-danger font-weight-bold mb-3">Pratik Khairnar</h1>
           <div class="hero-lead-text">
@@ -1587,6 +1769,139 @@
       </div>
     </div>
   </section>
+
+  <!-- Certifications Section (100/100 Top-Tier Executive Credentials) -->
+  <section id="certifications">
+    <div class="container">
+      <h2 class="section-title">Industry Credentials &amp; Certifications</h2>
+      <p class="section-lead">Internationally accredited offensive security and network engineering credentials verified by EC-Council and Cisco Networking Academy.</p>
+
+      <!-- Row 1: The Crown Jewel — EC-Council CEH v13 Master Showcase -->
+      <div class="cert-master-card mb-5">
+        <div class="row align-items-center">
+          <!-- Left: Official CEH Badge Image -->
+          <div class="col-lg-4 text-center mb-4 mb-lg-0">
+            <div style="position: relative; display: inline-block;">
+              <img src="assets/ceh_badge.png" alt="EC-Council Certified Ethical Hacker (CEH v13) Official Badge" class="ceh-badge-display">
+              <div style="margin-top: 14px;">
+                <span class="badge badge-danger" style="font-size: 0.85rem; padding: 6px 14px; border-radius: 20px; font-weight: 700; letter-spacing: 0.5px;">
+                  <i class="fas fa-shield-halved mr-1"></i>VERIFIED CREDENTIAL
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Credential Dossier & Verification -->
+          <div class="col-lg-8">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-2">
+              <span class="text-danger font-weight-bold" style="font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase;">
+                EC-Council Official Certification
+              </span>
+              <span style="font-size: 0.85rem; background: rgba(34, 197, 94, 0.15); color: #4ade80; border: 1px solid rgba(34, 197, 94, 0.3); padding: 3px 12px; border-radius: 20px; font-weight: 600;">
+                <i class="fas fa-check-circle mr-1"></i>ANSI 17024 Accredited
+              </span>
+            </div>
+
+            <h3 class="text-white font-weight-bold mb-2" style="font-size: 1.85rem;">
+              Certified Ethical Hacker (CEH v13)
+            </h3>
+
+            <p class="text-muted mb-3" style="font-size: 0.96rem; line-height: 1.65;">
+              Validated mastery in offensive security, practical penetration testing methodologies, vulnerability assessment, and threat vector analysis. Evaluated across 20 comprehensive security domains including Web Application Security (OWASP), System Hacking, Cryptography, Network Defense, and Malware Analysis.
+            </p>
+
+            <div class="row mb-3">
+              <div class="col-md-6 mb-2">
+                <div style="font-size: 0.85rem; color: #cbd5e1;">
+                  <strong class="text-white"><i class="fas fa-id-card text-danger mr-2"></i>Issuing Body:</strong> EC-Council
+                </div>
+                <div style="font-size: 0.85rem; color: #cbd5e1; margin-top: 5px;">
+                  <strong class="text-white"><i class="fas fa-shield-alt text-danger mr-2"></i>Curriculum:</strong> CEH v13 (AI-Augmented Ethical Hacking)
+                </div>
+              </div>
+              <div class="col-md-6 mb-2">
+                <div style="font-size: 0.85rem; color: #cbd5e1;">
+                  <strong class="text-white"><i class="fas fa-fingerprint text-danger mr-2"></i>Verification:</strong> Authenticated &amp; Transcripts On-File
+                </div>
+                <div style="font-size: 0.85rem; color: #cbd5e1; margin-top: 5px;">
+                  <strong class="text-white"><i class="fas fa-crosshairs text-danger mr-2"></i>Core Focus:</strong> Web VAPT &bull; Network Security &bull; Forensics
+                </div>
+              </div>
+            </div>
+
+            <div class="d-flex align-items-center flex-wrap gap-2 mt-3">
+              <button onclick="openCertModal('ceh')" class="btn btn-danger mr-2 mb-2">
+                <i class="fas fa-file-invoice mr-2"></i>View Official Certificate Scan
+              </button>
+              <a href="assets/ceh_badge.png" download="Pratik_Khairnar_CEH_v13_Badge.png" class="btn btn-outline-light mr-2 mb-2">
+                <i class="fas fa-download mr-2"></i>Download Badge
+              </a>
+              <a href="#skills" class="btn btn-outline-danger mb-2">
+                <i class="fas fa-arrow-down mr-2"></i>View Competencies
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 2: Secondary Credentials (CCNA, Java, EC-Council Specialist) -->
+      <div class="row">
+        <!-- Cisco CCNA -->
+        <div class="col-lg-6 mb-4">
+          <div class="cert-secondary-card">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="d-flex align-items-center gap-3">
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.3); display: flex; align-items: center; justify-content: center; color: #60a5fa; font-size: 1.4rem;">
+                  <i class="fas fa-network-wired"></i>
+                </div>
+                <div>
+                  <h5 class="text-white font-weight-bold mb-0">Cisco CCNA (Routing &amp; Switching)</h5>
+                  <span class="text-muted small">Cisco Networking Academy</span>
+                </div>
+              </div>
+              <span class="badge badge-primary" style="background: rgba(59, 130, 246, 0.2); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.35);">VERIFIED</span>
+            </div>
+            <p class="text-muted small mb-3" style="line-height: 1.65; flex: 1;">
+              Enterprise network architecture, IPv4/IPv6 subnetting, TCP/IP handshake mechanics, packet inspection, VLAN segmentation, and access control list (ACL) configurations essential for high-precision network penetration testing.
+            </p>
+            <div class="d-flex align-items-center gap-2">
+              <button onclick="openCertModal('ccna')" class="btn btn-outline-light btn-sm" style="font-size: 0.82rem; padding: 6px 14px; border-radius: 20px;">
+                <i class="fas fa-file-invoice mr-1"></i>View Certificate Scan
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specialized Accreditations -->
+        <div class="col-lg-6 mb-4">
+          <div class="cert-secondary-card">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="d-flex align-items-center gap-3">
+                <div style="width: 48px; height: 48px; border-radius: 12px; background: rgba(234, 179, 8, 0.15); border: 1px solid rgba(234, 179, 8, 0.3); display: flex; align-items: center; justify-content: center; color: #facc15; font-size: 1.4rem;">
+                  <i class="fas fa-award"></i>
+                </div>
+                <div>
+                  <h5 class="text-white font-weight-bold mb-0">Specialized Accreditations</h5>
+                  <span class="text-muted small">Offensive Tooling &amp; Database Security</span>
+                </div>
+              </div>
+              <span class="badge badge-warning" style="background: rgba(234, 179, 8, 0.2); color: #fef08a; border: 1px solid rgba(234, 179, 8, 0.35);">ACTIVE</span>
+            </div>
+            <ul class="list-unstyled text-muted small mb-3" style="line-height: 1.7; flex: 1;">
+              <li><i class="fas fa-check text-danger mr-2"></i><strong>Java Programming Certification</strong> — Core &amp; Advanced Java (Burp Montoya API Tool Architecture)</li>
+              <li><i class="fas fa-check text-danger mr-2"></i><strong>EC-Council PenTest Lab Specialist</strong> — Practical vulnerability exploitation &amp; privilege escalation</li>
+              <li><i class="fas fa-check text-danger mr-2"></i><strong>SQLi Vulnerability Specialist</strong> — Advanced Boolean/Time-based blind injection evaluation</li>
+              <li><i class="fas fa-check text-danger mr-2"></i><strong>Oracle Database Security Specialist</strong> — Enterprise database security &amp; access auditing</li>
+            </ul>
+            <div style="font-size: 0.8rem; color: #94a3b8;">
+              <i class="fas fa-shield-halved text-danger mr-1"></i>Grounded in rigorous academic B.Tech degree (CGPA: 7.42/10).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <!-- About Section (Clean Sandesh 2-Column Standard — ZERO PHOTO) -->
   <section id="about">
@@ -2115,6 +2430,13 @@
               <span class="timeline-badge">Industry Credentials</span>
             </div>
             <div class="timeline-org">EC-Council &bull; Cisco Networking Academy</div>
+            <div class="d-flex align-items-center gap-3 my-2">
+              <img src="assets/ceh_badge.png" alt="CEH v13 Badge" style="width: 48px; height: 48px; object-fit: contain; filter: drop-shadow(0 0 8px rgba(220,53,69,0.5));">
+              <div>
+                <strong class="text-white">&bull; Certified Ethical Hacker (CEH v13)</strong> &mdash; EC-Council <span class="badge badge-danger ml-1" style="font-size: 0.75rem;">Verified</span><br>
+                <strong class="text-white">&bull; Cisco Certified Network Associate (CCNA)</strong> &mdash; Cisco Academy
+              </div>
+            </div>
             <p class="text-muted mb-0 small" style="line-height: 1.65;">
               &bull; <strong>Certified Ethical Hacker (CEH v13)</strong> &mdash; EC-Council<br>
               &bull; <strong>Cisco Certified Network Associate (CCNA)</strong> &mdash; Cisco Networking Academy<br>
@@ -2799,6 +3121,58 @@
       }
     })();
   </script>
+
+  <!-- Certificate Lightbox Modal -->
+  <div id="certModal" class="cert-modal-overlay" onclick="closeCertModal(event)">
+    <div class="cert-modal-content" onclick="event.stopPropagation()">
+      <div class="d-flex align-items-center justify-content-between mb-2 pb-2 border-bottom border-secondary">
+        <h5 id="certModalTitle" class="text-white font-weight-bold mb-0" style="font-size: 1.1rem;">Official Certificate Verification</h5>
+        <button onclick="closeCertModal()" class="btn btn-sm btn-outline-danger" style="border-radius: 50%; width: 34px; height: 34px; padding: 0; display: inline-flex; align-items: center; justify-content: center;">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+      <div class="text-center" style="overflow-y: auto;">
+        <img id="certModalImg" src="" alt="Certificate" class="cert-modal-img img-fluid">
+      </div>
+      <div class="d-flex align-items-center justify-content-between mt-2 pt-2 border-top border-secondary flex-wrap gap-2">
+        <span id="certModalMeta" class="text-muted small">Candidate: Pratik Sanjay Khairnar</span>
+        <a id="certModalDownload" href="" download class="btn btn-sm btn-danger">
+          <i class="fas fa-download mr-1"></i>Download High-Res Scan
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function openCertModal(type) {
+      const modal = document.getElementById('certModal');
+      const img = document.getElementById('certModalImg');
+      const title = document.getElementById('certModalTitle');
+      const meta = document.getElementById('certModalMeta');
+      const dl = document.getElementById('certModalDownload');
+
+      if (type === 'ceh') {
+        title.innerText = 'EC-Council Certified Ethical Hacker (CEH v13) — Official Certificate';
+        img.src = 'assets/ceh_certificate.jpg';
+        meta.innerText = 'EC-Council Verified Credential • Pratik Sanjay Khairnar';
+        dl.href = 'assets/ceh_certificate.jpg';
+        dl.setAttribute('download', 'Pratik_Khairnar_CEH_Certificate.jpg');
+      } else if (type === 'ccna') {
+        title.innerText = 'Cisco Certified Network Associate (CCNA) — Official Certificate';
+        img.src = 'assets/ccna_certificate.jpg';
+        meta.innerText = 'Cisco Networking Academy • Pratik Sanjay Khairnar';
+        dl.href = 'assets/ccna_certificate.jpg';
+        dl.setAttribute('download', 'Pratik_Khairnar_CCNA_Certificate.jpg');
+      }
+      modal.style.display = 'flex';
+    }
+
+    function closeCertModal(e) {
+      const modal = document.getElementById('certModal');
+      if (modal) modal.style.display = 'none';
+    }
+  </script>
+
 </body>
 
 </html>

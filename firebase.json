@@ -22,6 +22,18 @@
           }
         ]
       }
+    ],
+    "redirects": [
+      {
+        "source": "/assets/Pratik_Khairnar_Official_VAPT_Resume_2026.pdf",
+        "destination": "/assets/Pratik_Khairnar_Resume.pdf",
+        "type": 301
+      },
+      {
+        "source": "/assets/pratik_khairnar_resume.pdf",
+        "destination": "/assets/Pratik_Khairnar_Resume.pdf",
+        "type": 301
+      }
     ]
   }
 }

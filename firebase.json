@@ -11,6 +11,17 @@
       "scripts/**",
       "README.md",
       "RESUME.md"
+    ],
+    "headers": [
+      {
+        "source": "**/*.@(pdf|html|svg)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-cache, no-store, must-revalidate"
+          }
+        ]
+      }
     ]
   }
 }

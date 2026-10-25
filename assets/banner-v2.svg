@@ -1,0 +1,81 @@
+<svg width="1000" height="230" viewBox="0 0 1000 230" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0" y1="0" x2="1000" y2="230" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#030712"/>
+      <stop offset="50%" stop-color="#071328"/>
+      <stop offset="100%" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="text-glow" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#e0f2fe"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+    <linearGradient id="accent-bar" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#10b981"/>
+      <stop offset="50%" stop-color="#38bdf8"/>
+      <stop offset="100%" stop-color="#c8a96e"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#0284c7" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background Card -->
+  <rect width="1000" height="230" rx="14" fill="url(#bg-grad)"/>
+  <rect width="998" height="228" x="1" y="1" rx="13" stroke="#1e293b" stroke-width="1.5"/>
+
+  <!-- Cyber Grid Lines -->
+  <g stroke="#0f172a" stroke-width="1" opacity="0.6">
+    <line x1="0" y1="46" x2="1000" y2="46"/>
+    <line x1="0" y1="92" x2="1000" y2="92"/>
+    <line x1="0" y1="138" x2="1000" y2="138"/>
+    <line x1="0" y1="184" x2="1000" y2="184"/>
+    <line x1="200" y1="0" x2="200" y2="230"/>
+    <line x1="400" y1="0" x2="400" y2="230"/>
+    <line x1="600" y1="0" x2="600" y2="230"/>
+    <line x1="800" y1="0" x2="800" y2="230"/>
+  </g>
+
+  <!-- Subtle Glowing Curves -->
+  <path d="M0 190 Q250 145 500 175 T1000 160" stroke="#06b6d4" stroke-width="2.5" fill="none" opacity="0.35"/>
+  <path d="M0 200 Q250 170 500 190 T1000 175" stroke="#10b981" stroke-width="1.8" fill="none" opacity="0.3"/>
+
+  <!-- Top Credential Status Pill (Spacious & Centered with Zero Overflow) -->
+  <g transform="translate(225, 22)">
+    <rect width="550" height="28" rx="14" fill="#0f172a" stroke="#38bdf8" stroke-width="1.2"/>
+    <circle cx="22" cy="14" r="4.5" fill="#38bdf8">
+      <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <text x="290" y="18.5" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10.5" font-weight="700" letter-spacing="1" text-anchor="middle">
+      🛡️ CERTIFIED ETHICAL HACKER (CEH v13) • SECURITY TOOL ARCHITECT
+    </text>
+  </g>
+
+  <!-- Main Name Title -->
+  <text x="500" y="105" fill="url(#text-glow)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'JetBrains Mono', sans-serif" font-size="46" font-weight="900" letter-spacing="3" text-anchor="middle" filter="url(#shadow)">
+    PRATIK KHAIRNAR
+  </text>
+
+  <!-- Professional Subtitle -->
+  <text x="500" y="138" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="700" letter-spacing="1.2" text-anchor="middle">
+    Certified Ethical Hacker (CEH v13) • Offensive Security Engineer • Web &amp; API VAPT
+  </text>
+  <text x="500" y="160" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="500" text-anchor="middle">
+    Offensive Tooling (Java 17/21 • Python 3) • Law Enforcement Forensics (ISO/IEC 27037) • OWASP Top 10
+  </text>
+
+  <!-- Bottom Badges Row (Evenly Spaced & Centered) -->
+  <g transform="translate(135, 182)">
+    <!-- Badge 1: CEH v13 -->
+    <rect x="0" y="0" width="200" height="26" rx="6" fill="#030712" stroke="#dc2626" stroke-width="1"/>
+    <text x="100" y="17" fill="#f87171" font-family="monospace" font-size="10.5" font-weight="700" text-anchor="middle">🛡️ CEH v13 Verified</text>
+    
+    <!-- Badge 2: Flagship -->
+    <rect x="235" y="0" width="230" height="26" rx="6" fill="#030712" stroke="#c8a96e" stroke-width="1"/>
+    <text x="350" y="17" fill="#fcd34d" font-family="monospace" font-size="10.5" font-weight="700" text-anchor="middle">🏆 AUTHENTIX Enterprise</text>
+
+    <!-- Badge 3: AppSec -->
+    <rect x="500" y="0" width="230" height="26" rx="6" fill="#030712" stroke="#10b981" stroke-width="1"/>
+    <text x="615" y="17" fill="#34d399" font-family="monospace" font-size="10.5" font-weight="700" text-anchor="middle">⚡ BlindStrike &amp; Reflectra</text>
+  </g>
+</svg>

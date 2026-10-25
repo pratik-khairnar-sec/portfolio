@@ -1,0 +1,123 @@
+<svg width="1000" height="225" viewBox="0 0 1000 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Space & Mesh Gradient -->
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="40%" stop-color="#071228"/>
+      <stop offset="75%" stop-color="#0a1936"/>
+      <stop offset="100%" stop-color="#030712"/>
+    </linearGradient>
+
+    <!-- Glowing Top Neon Accent Bar -->
+    <linearGradient id="neon-bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="35%" stop-color="#818cf8"/>
+      <stop offset="70%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+
+    <!-- Name Metallic & Cyber Glow Gradient -->
+    <linearGradient id="name-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="45%" stop-color="#e0f2fe"/>
+      <stop offset="85%" stop-color="#7dd3fc"/>
+      <stop offset="100%" stop-color="#38bdf8"/>
+    </linearGradient>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="cyber-grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1e293b" stroke-width="0.7" stroke-opacity="0.35"/>
+    </pattern>
+
+    <!-- Filter for Subtle Name Drop Shadow -->
+    <filter id="cyber-glow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="2" stdDeviation="6" flood-color="#0284c7" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Card Frame -->
+  <rect x="2" y="2" width="996" height="221" rx="16" fill="url(#bg-grad)" stroke="#1e293b" stroke-width="1.6"/>
+  <rect x="2" y="2" width="996" height="221" rx="16" fill="url(#cyber-grid)"/>
+  <rect x="6" y="6" width="988" height="213" rx="12" fill="none" stroke="#38bdf8" stroke-width="0.75" stroke-opacity="0.2"/>
+
+  <!-- Top Accent Laser -->
+  <path d="M 18 6 L 982 6" stroke="url(#neon-bar)" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Subtle Cyber Decorative Traces (Left & Right Flanks) -->
+  <g opacity="0.35" stroke="#38bdf8" stroke-width="1.2" fill="none">
+    <!-- Left Circuit Node -->
+    <path d="M 24 50 L 70 50 L 90 70 L 130 70"/>
+    <circle cx="24" cy="50" r="3" fill="#38bdf8"/>
+    <circle cx="130" cy="70" r="2.5" fill="#818cf8"/>
+
+    <!-- Right Circuit Node -->
+    <path d="M 976 50 L 930 50 L 910 70 L 870 70"/>
+    <circle cx="976" cy="50" r="3" fill="#34d399"/>
+    <circle cx="870" cy="70" r="2.5" fill="#38bdf8"/>
+  </g>
+
+  <!-- Top Terminal Bar (Left: Shell Breadcrumb / Right: Live Status Pill) -->
+  <g transform="translate(32, 22)">
+    <!-- Terminal Window Controls -->
+    <circle cx="6" cy="8" r="4.5" fill="#ef4444" opacity="0.9"/>
+    <circle cx="20" cy="8" r="4.5" fill="#f59e0b" opacity="0.9"/>
+    <circle cx="34" cy="8" r="4.5" fill="#10b981" opacity="0.9"/>
+    
+    <!-- Terminal Prompt Text -->
+    <text x="50" y="12" fill="#94a3b8" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="11" font-weight="600" letter-spacing="0.5">
+      <tspan fill="#38bdf8">pratik@offensive-core</tspan>:<tspan fill="#cbd5e1">~#</tspan> ./exec_surface_audit --live
+    </text>
+
+    <!-- Right-Hand Status Indicator -->
+    <g transform="translate(710, -3)">
+      <rect x="0" y="0" width="225" height="24" rx="12" fill="#030712" stroke="#10b981" stroke-width="1" stroke-opacity="0.45"/>
+      <circle cx="14" cy="12" r="4" fill="#10b981">
+        <animate attributeName="opacity" values="1;0.35;1" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="26" y="15.5" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="10" font-weight="700" letter-spacing="0.8">STATUS : OPERATIONAL // VAPT</text>
+    </g>
+  </g>
+
+  <!-- Center Identity Area -->
+  <!-- Primary Name -->
+  <text x="500" y="94" fill="url(#name-grad)" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'JetBrains Mono', Roboto, sans-serif" font-size="44" font-weight="900" letter-spacing="4" text-anchor="middle" filter="url(#cyber-glow)">
+    PRATIK KHAIRNAR
+  </text>
+
+  <!-- Primary Headline (Clean, Powerful, Non-Repetitive) -->
+  <text x="500" y="124" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" letter-spacing="1.4" text-anchor="middle">
+    OFFENSIVE SECURITY ENGINEER • APPSEC RESEARCHER • FORENSIC INVESTIGATOR
+  </text>
+
+  <!-- Secondary Architecture & Scope Line -->
+  <text x="500" y="146" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.6" text-anchor="middle">
+    Automated Logic Invariant Engines • Zero-Day Exploit Tooling • Multi-Tenant Privilege Audits
+  </text>
+
+  <!-- Bottom Row: 3 Distinct Value Pillar Cards (No Duplication!) -->
+  <g transform="translate(42, 168)">
+    <!-- Pillar 1: Accredited Certification -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="288" height="32" rx="8" fill="#061226" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.65"/>
+      <text x="144" y="20.5" fill="#7dd3fc" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.4">
+        🛡️ CEH v13 Verified (EC-Council)
+      </text>
+    </g>
+
+    <!-- Pillar 2: Flagship Security Architecture -->
+    <g transform="translate(314, 0)">
+      <rect x="0" y="0" width="288" height="32" rx="8" fill="#181308" stroke="#f59e0b" stroke-width="1.2" stroke-opacity="0.65"/>
+      <text x="144" y="20.5" fill="#fcd34d" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.4">
+        🏆 AUTHENTIX Enterprise Flagship
+      </text>
+    </g>
+
+    <!-- Pillar 3: Law Enforcement Evidentiary Forensics -->
+    <g transform="translate(628, 0)">
+      <rect x="0" y="0" width="288" height="32" rx="8" fill="#051912" stroke="#10b981" stroke-width="1.2" stroke-opacity="0.65"/>
+      <text x="144" y="20.5" fill="#34d399" font-family="'JetBrains Mono', monospace" font-size="11" font-weight="700" text-anchor="middle" letter-spacing="0.4">
+        ⚖️ Police Forensics (15+ Live Cases)
+      </text>
+    </g>
+  </g>
+</svg>

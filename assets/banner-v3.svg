@@ -65,7 +65,7 @@
     
     <!-- Terminal Prompt Text -->
     <text x="50" y="12" fill="#94a3b8" font-family="'JetBrains Mono', 'Fira Code', 'Courier New', monospace" font-size="11" font-weight="600" letter-spacing="0.5">
-      <tspan fill="#38bdf8">pratik@offensive-core</tspan>:<tspan fill="#cbd5e1">~#</tspan> ./exec_surface_audit --live
+      <tspan fill="#38bdf8">pratik@offensive-sec</tspan>:<tspan fill="#cbd5e1">~#</tspan> ./audit_surface.sh --owasp-top10
     </text>
 
     <!-- Right-Hand Status Indicator -->
@@ -84,14 +84,14 @@
     PRATIK KHAIRNAR
   </text>
 
-  <!-- Primary Headline (Clean, Powerful, Non-Repetitive) -->
+  <!-- Primary Headline (Grounded in Official Resume) -->
   <text x="500" y="124" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="15" font-weight="700" letter-spacing="1.4" text-anchor="middle">
-    OFFENSIVE SECURITY ENGINEER • APPSEC RESEARCHER • FORENSIC INVESTIGATOR
+    WEB &amp; API PENETRATION TESTER • OFFENSIVE SECURITY ENGINEER • APPSEC
   </text>
 
-  <!-- Secondary Architecture & Scope Line -->
+  <!-- Secondary Architecture & Scope Line (Replaced with Authentic Core Competencies) -->
   <text x="500" y="146" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12.5" font-weight="500" letter-spacing="0.6" text-anchor="middle">
-    Automated Logic Invariant Engines • Zero-Day Exploit Tooling • Multi-Tenant Privilege Audits
+    Manual VAPT (OWASP Top 10 &amp; WSTG v4.2) • BOLA/IDOR &amp; Business Logic • Custom Tooling (Java &amp; Python)
   </text>
 
   <!-- Bottom Row: 3 Distinct Value Pillar Cards (No Duplication!) -->

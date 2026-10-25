@@ -33,7 +33,6 @@
 | Suite / Tool | Core Architecture & Technology | Version | Live Demo | Repository |
 |---|---|---|---|---|
 | **AUTHENTIX Enterprise** | Native Burp Suite Montoya API: 34 Invariants, 30+ Secret Rules, 16 ATO Chains (Java 17/21) | `v2.1.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/authentix-enterprise/) | [`authentix-enterprise`](https://github.com/pratik-khairnar-sec/authentix-enterprise) |
-| **TaintQL** | Second-Order SQLi & Stored Data Flow Tracer: Dual-Role Boundary Audit & Deep UI State Unfolder | `v2.0.0` | [📖 System Docs](https://github.com/pratik-khairnar-sec/TaintQL#readme) | [`TaintQL`](https://github.com/pratik-khairnar-sec/TaintQL) |
 | **BlindStrike** | Latency-calibrated Time & Boolean Blind SQLi Framework with Interquartile Range (IQR) noise filtering | `v7.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/BlindStrike/) | [`BlindStrike`](https://github.com/pratik-khairnar-sec/BlindStrike) |
 | **Reflectra** | Context-aware DOM XSS scanner with Headless Chrome verification & zero false positives | `v7.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/Reflectra/) | [`Reflectra`](https://github.com/pratik-khairnar-sec/Reflectra) |
 | **ReconForge** | Master Bug Bounty & VAPT Reconnaissance Operating System (30 Phases & 52,630+ Curated Dorks) | `v3.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/ReconForge/) | [`ReconForge`](https://github.com/pratik-khairnar-sec/ReconForge) |

@@ -1,83 +1,58 @@
 # PRATIK SANJAY KHAIRNAR
-**Certified Ethical Hacker (CEH v13) | Associate Penetration Tester & Web VAPT Engineer**  
-**Location:** Pune, Maharashtra, India | **Phone / WhatsApp:** [+91 87999 81052](tel:+918799981052) | **Email:** [pratik.khairnar.sec@gmail.com](mailto:pratik.khairnar.sec@gmail.com)  
-**LinkedIn:** [linkedin.com/in/pratik-khairnar-sec](https://linkedin.com/in/pratik-khairnar-sec) | **GitHub:** [github.com/pratik-khairnar-sec](https://github.com/pratik-khairnar-sec) | **Portfolio:** [pratikkhairnarsec.web.app](https://pratikkhairnarsec.web.app/)
+**Web Penetration Tester (VAPT) | CEH v13**  
+Pune, Maharashtra, India | +91 87999 81052 | pratik.khairnar.sec@gmail.com  
+[linkedin.com/in/pratik-khairnar-sec](https://linkedin.com/in/pratik-khairnar-sec) | [github.com/pratik-khairnar-sec](https://github.com/pratik-khairnar-sec) | [pratikkhairnarsec.web.app](https://pratikkhairnarsec.web.app)
 
 ---
 
 ## PROFESSIONAL SUMMARY
-Certified Ethical Hacker (CEH v13) pursuing B.Tech in Cyber Security & Forensics (2023–2027) with operational experience in manual Web Application Penetration Testing (Web VAPT), REST API authorization testing (BOLA / IDOR), and custom offensive security tooling. Demonstrated track record executing vulnerability assessments at Cyber Police Station Nashik and investigating 15+ live cybercrime cases at the Cyber Police Station, Nashik Police Commissionerate. Testing methodologies strictly aligned with OWASP Top 10 (2021), OWASP API Security Top 10 (2023), OWASP WSTG v4.2, and ASVS v4.0, delivering actionable CVSS v3.1 reports with verified Proof-of-Concepts (PoCs) and developer-ready remediation roadmaps.
-
----
-
-## CORE TECHNICAL COMPETENCIES
-
-* **Application Security & VAPT:** Manual Web VAPT, OWASP Top 10 (2021), OWASP API Security Top 10 (2023), Broken Object Level Authorization (BOLA/IDOR), Broken Function Level Authorization (BFLA), Business Logic Flaws, Authentication Bypasses (OAuth 2.0 / JWT), Privilege Escalation, SQL Injection (Blind Time/Boolean), Cross-Site Scripting (DOM/Reflected XSS), Server-Side Request Forgery (SSRF), CORS Misconfigurations.
-* **Methodologies & Frameworks:** OWASP WSTG v4.2, OWASP ASVS v4.0, SANS Top 25, NIST SP 800-115, CVSS v3.1 Severity Scoring, Threat Modeling, Secure SDLC (SSDLC) Principles, Remediation Verification & Closure Retesting.
-* **Security Tools & Arsenal:** Burp Suite Professional (Intruder, Repeater, Sequencer, Custom Extensions), Postman, Nmap, Wireshark, SQLMap, OWASP ZAP, Git, Linux / Kali Linux CLI, Headless Chrome Automation.
-* **Scripting & Languages:** Python 3 (Requests, Regex, Custom PoC Automation), Bash Scripting, Java 17/21 (Burp Extension Development), JavaScript / DOM Analysis.
-* **Digital Forensics & Law Enforcement:** Evidence Chain of Custody Protocols, CDR / IPDR Telecom Forensics, Android APK Malware Triage, Indicator of Compromise (IOC) Analysis, PCAP Traffic Dissection, CERT-In Reporting Standards.
+CEH v13-certified final-year B.Tech (Cyber Security & Forensics, CGPA 7.42/10) focused on manual web application and REST/GraphQL API VAPT, backed by custom offensive tooling: Burp Montoya API extensions (Java 17/21) and statistical blind-SQLi and headless-browser XSS engines (Python). Handled evidence on 15+ live cybercrime and multi-lakh financial fraud cases with the Nashik Police Cyber Cell under ISO/IEC 27037. Reports follow OWASP Top 10, WSTG v4.2, ASVS v4.0 and CVSS v3.1, with deterministic PoCs.
 
 ---
 
 ## PROFESSIONAL EXPERIENCE
 
-### **Cyber Crime Intern** — Cyber Police Station, Nashik Police Commissionerate
-*Jan 2026 – May 2026 | Nashik, MH*
-* Investigated 15+ live cybercrime, financial fraud, and identity theft cases in direct coordination with law enforcement officers, strictly adhering to legal evidence **Chain of Custody** standards.
-* Performed deep packet-level network traffic analysis using **Wireshark** to reconstruct malicious network sessions, extract active payload delivery mechanisms, and trace compromised communication channels.
-* Analyzed suspicious Android APK packages, correlated **CDR/IPDR telecom intelligence**, and isolated high-fidelity Indicators of Compromise (**IOCs**) to support formal evidentiary proceedings.
+### **Penetration Testing Intern (VAPT)** | Cyber Warfare Intelligence Lab (OPC) Pvt. Ltd.
+*Nov 2026 – Present*
+* **Web & API Security Testing:** Perform manual testing of authorised web applications, APIs and networks for OWASP Top 10 flaws: injection, broken authentication, access control (IDOR/BOLA), XSS, SSRF and security misconfiguration.
+* **Recon & Scanning:** Map attack surface and entry points using Nmap, Nessus/OpenVAS, OWASP ZAP and Burp Suite.
+* **Verification & Reporting:** Manually validate scanner findings, remove false positives and prove impact with reproducible PoCs (Burp Suite, SQLMap, custom scripts); rate with CVSS v3.1, map to OWASP Top 10 and report with evidence and remediation.
+* **Retesting & Collaboration:** Support senior testers, retest fixes to confirm closure and follow scope and rules of engagement.
 
-### **Offensive Security Tool Architect & Researcher** — Independent Security Lab
-*Jan 2025 – Present | Nashik / Remote*
-* Engineered **AUTHENTIX Enterprise**, a native Java 17/21 Burp Suite extension leveraging the PortSwigger Montoya API, implementing 34 deterministic security invariants to automate JWT signature validation, alg:none attacks, and OAuth 2.0 flaw detection.
-* Architected **BlindStrike**, an automated blind SQL injection framework incorporating Interquartile Range (IQR) statistical latency filtering to eliminate network jitter false positives during remote evaluations.
-* Executed manual Web Application Penetration Testing (Web VAPT) and REST API security audits benchmarked strictly against **OWASP Top 10** and **OWASP WSTG v4.2** methodologies.
-* Authored CVSS v3.1-scored vulnerability assessment reports with reproducible Proof-of-Concepts (PoCs) and developer-ready remediation blueprints.
+### **Cyber Crime & Digital Forensics Intern** | Cyber Police Station, Nashik Police Commissionerate
+*Jan 2026 – May 2026*
+* **Live Investigations:** Assisted officers on 15+ live cybercrime, intrusion, identity theft and multi-lakh financial fraud cases; acquired, hashed and preserved evidence under ISO/IEC 27037 chain of custody.
+* **PCAP & C2 Reconstruction:** Analysed Wireshark captures to rebuild malicious TCP/HTTP sessions, uncover beaconing and isolate C2 infrastructure and payload delivery paths.
+* **CDR/IPDR Forensics:** Correlated CDR/IPDR records (across NAT timestamps) with bank transaction logs to trace fraudulent payment gateways; aided charge sheet preparation.
+* **APK Reverse Engineering:** Triaged malicious Android APKs with Jadx/Apktool; extracted hardcoded C2 endpoints, SMS-interception permissions and IOCs for CERT-In.
 
 ---
 
-## OFFENSIVE SECURITY PROJECTS & TOOLING
+## PROJECTS — OFFENSIVE SECURITY TOOLING
+* **AUTHENTIX Enterprise v3.0.0 (Java 17/21, Montoya API):** Burp extension with asynchronous traffic analysis and a 3-way differential IDOR engine (Attacker, Victim, Admin) with soft-200 disambiguation; 34 deterministic invariants (OTP replay, session fixation, JWT alg:none/key confusion) chained into 16 account-takeover paths; live detection of 30+ credential patterns.
+* **TaintQL v2.0.0 (Python 3, Playwright):** GraphQL auditor parsing query ASTs for introspection exposure, depth limits and batching bypasses; intercepts client mutations at runtime; Burp proxy routing, JSON output, 27/27 pytest tests passing.
+* **BlindStrike v7.0.0 (Python 3):** Blind SQLi framework that baselines latency and filters network jitter using IQR bounds (Q3+1.5*IQR); multi-threaded time/boolean extraction on MySQL, PostgreSQL, MSSQL, Oracle and SQLite.
+* **Reflectra v7.0.0 (Python 3, Headless Chrome):** 2,600+ context-prioritised DOM XSS payloads (HTML, attribute, JavaScript) confirmed via headless dialog-event hooks (alert/prompt/confirm) to eliminate false positives.
 
-* **AUTHENTIX Enterprise v3.0.0** *(Burp Suite Extension | Java 17/21 | BOLA/IDOR Testing)*  
-  Native Burp Suite Montoya extension with 34 deterministic security invariants, 3-Way Differential IDOR Engine with Soft-200 Error Disambiguation, and 16 compound ATO attack chains. Evaluates multi-tenant API endpoints in real time with 0.0% false positives.  
-  *GitHub:* `github.com/pratik-khairnar-sec/authentix-enterprise`
+---
 
-* **ReconForge v3** *(OSINT Framework | 52,600+ Dork Vault | 30 Master Phases)*  
-  Client-side Bug Bounty reconnaissance workspace featuring 30 structured target phases and 52,630+ curated dorks. Automates asset triage, attack surface mapping, and tool-major CLI syntax pipelines executing 100% locally with zero cloud leakage.  
-  *GitHub:* `github.com/pratik-khairnar-sec/ReconForge`
-
-* **Reflectra v7.0.0** *(Context-Aware DOM XSS Engine | Python 3 | Headless Chrome)*  
-  High-accuracy Cross-Site Scripting scanner evaluating 2,600+ context-prioritized payloads across HTML, attribute, and JS execution contexts. Validates genuine exploitability via automated headless browser dialog evaluation with zero false positives.  
-  *GitHub:* `github.com/pratik-khairnar-sec/Reflectra`
-
-* **BlindStrike v7.0.0** *(Statistical Blind SQLi Framework | Python 3 | Multi-DB Support)*  
-  Empirical latency calibration framework for Time-Based and Boolean Blind SQL Injection. Implements Interquartile Range (IQR) network variance filtering and multi-threaded extraction across multi-database environments.  
-  *GitHub:* `github.com/pratik-khairnar-sec/BlindStrike`
-
-* **CORSair v3.0.0** *(CORS Misconfiguration Auditor | Shannon Entropy | PoC Suite)*  
-  Dynamic origin reflection scanner evaluating ACAO/ACAC header misconfigurations, credential exposure, Shannon entropy token leakage, and automated exploit PoC generation.  
-  *GitHub:* `github.com/pratik-khairnar-sec/CORSair`
+## TECHNICAL SKILLS
+* **AppSec & VAPT:** BOLA/IDOR, BFLA, business logic flaws, OAuth 2.0/JWT attacks, race conditions, blind SQLi, XSS, SSRF, CORS
+* **API & Protocols:** REST auditing, GraphQL (introspection, depth tampering, AST), WebSockets, gRPC triage, HTTP smuggling
+* **Engineering:** Java 17/21 (Montoya API, Swing), Python 3, Bash, Playwright/CDP, Docker
+* **OS:** Kali Linux, Android, Tails, Windows
+* **Standards:** OWASP Top 10 2021, WSTG v4.2, ASVS v4.0, NIST SP 800-115, CVSS v3.1, Threat Modeling, SSDLC
+* **Tools:** Burp Suite Pro, Postman, Nmap, SQLMap, OWASP ZAP, Metasploit, Nessus/OpenVAS, Wireshark, Jadx, Apktool, Git
+* **Forensics:** Chain of Custody (ISO/IEC 27037), CDR/IPDR Analysis, PCAP Analysis, APK Analysis, IOC Extraction, CERT-In Reporting
 
 ---
 
 ## EDUCATION
-
-### **Bachelor of Technology (B.Tech) in Computer Science & Engineering (Cyber Security & Forensics)**
-**Sandip University, Nashik, Maharashtra** | *2023 – 2027* | **CGPA: 7.42 / 10**  
-*Relevant Coursework:* Application Security (VAPT), Secure Software Development Lifecycle (SSDLC), Network Defense, Cryptography, Reverse Engineering, Digital Forensics, Linux Operating Systems.
+* **B.Tech, CSE (Cyber Security & Forensics)** | Sandip University, Nashik, Maharashtra | **CGPA: 7.42/10** *(2023 – 2027)*  
+  *Relevant Coursework:* Application Security & VAPT, Digital Forensics, Network Defense, Cryptography, Reverse Engineering, SSDLC, Computer Networks, Operating Systems, Database Management Systems, Web Technologies
 
 ---
 
-## CERTIFICATIONS & CREDENTIALS
-
-* **Certified Ethical Hacker (CEH v13)** — EC-Council | Verified Credential (Exam ID: ECC8042517936)
-* **Cisco Certified Network Associate (CCNA)** — Cisco Networking Academy
-* *Domain Expertise:* Enterprise Network Defense, Web Application Attacks, Threat Intelligence, and Penetration Testing Methodologies.
-
----
-
-## HIRING AVAILABILITY & ATTRIBUTES
-
-* **Availability:** Immediate Joining | Open to Full-Time Associate Penetration Tester & AppSec roles in **Pune / Hybrid / Remote**.
-* **Operational Strengths:** Defensible PoC Formulation, Zero False-Positive Triage, Secure Code Remediation Advisory, Collaborative Team Problem Solving.
+## CERTIFICATIONS
+* **Certified Ethical Hacker (CEH v13)** | EC-Council | Exam ID: ECC8042517936
+* **Cisco Certified Network Associate (CCNA)**

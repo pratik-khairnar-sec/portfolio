@@ -14,7 +14,7 @@
 2. **About Section:**  
    Full 2,426-character master narrative detailing manual testing methodology, zero-false-positive IQR filtering, verified EC-Council CEH v13 credentials, commercial Offensive Security Lab VAPT achievements, Cyber Police forensics, and direct contact details.
 3. **Experience 1 (Commercial):**  
-   `Junior Penetration Tester` at `Independent Security Research` *(Remote • Jun 2025 – Oct 2025)* with 4 technical STAR-methodology bullets covering OWASP Top 10, BOLA/IDOR, CVSS v3.1 scoring, and closure retesting.
+   `Web Penetration Tester` at `Independent Security Research` *(Remote • Jun 2025 – Oct 2025)* with 4 technical STAR-methodology bullets covering OWASP Top 10, BOLA/IDOR, CVSS v3.1 scoring, and closure retesting.
 4. **Experience 2 (Law Enforcement):**  
    `Cyber Crime & Digital Forensics Intern` at `Cyber Police Station, Nashik Police Commissionerate` *(On-site • Jan 2026 – May 2026)* covering 15+ live cybercrime investigations, chain of custody, Wireshark PCAP triage, and CDR/IPDR telecom intelligence.
 5. **Licenses & Certifications:**  
@@ -49,7 +49,7 @@ Portfolio: https://pratikkhairnarsec.web.app/ | GitHub: https://github.com/prati
 ```
 
 ### 4. Naukri Employment Details:
-* **Current/Latest Designation:** `Junior Penetration Tester`
+* **Current/Latest Designation:** `Web Penetration Tester`
 * **Company:** `Independent Security Research`
 * **Notice Period:** `15 Days or less` (or `Serving Notice Period / Immediate Joiner`)
 * **Preferred Location:** `Pune`, `Mumbai`, `Bengaluru`, `Remote`
@@ -122,7 +122,7 @@ Pratik Sanjay Khairnar
 
 ### 2. Hirist.tech Summary:
 ```text
-Certified Ethical Hacker (CEH v13) & Junior Penetration Tester with proven experience in manual Web VAPT, REST API security (BOLA/IDOR), and Burp Suite Montoya API extension development. Track record auditing multi-tenant web applications as an offensive security tool architect and assisting in 15+ cybercrime investigations at Cyber Police Station Nashik. Expert in OWASP Top 10, WSTG v4.2, CVSS v3.1 scoring, and developer remediation. Available immediately for Pune / Remote / Hybrid roles.
+Certified Ethical Hacker (CEH v13) & Web Penetration Tester with proven experience in manual Web VAPT, REST API security (BOLA/IDOR), and Burp Suite Montoya API extension development. Track record auditing multi-tenant web applications as an offensive security tool architect and assisting in 15+ cybercrime investigations at Cyber Police Station Nashik. Expert in OWASP Top 10, WSTG v4.2, CVSS v3.1 scoring, and developer remediation. Available immediately for Pune / Remote / Hybrid roles.
 ```
 
 ---

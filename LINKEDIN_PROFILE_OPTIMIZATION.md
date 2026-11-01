@@ -60,8 +60,8 @@ Actively seeking full-time roles as a VAPT Engineer, Web Application Penetration
 ## 📌 STEP 3: EXPERIENCE SECTION
 > Add these two positions exactly as formatted below. Tag the skills so they appear under each role.
 
-### Position 1: Junior Penetration Tester
-* **Title:** `Junior Penetration Tester` (or `Web Application Penetration Tester`)
+### Position 1: Web Penetration Tester
+* **Title:** `Web Penetration Tester` (or `Web Application Penetration Tester`)
 * **Company:** `Independent Security Research`
 * **Employment Type:** `Internship` (or `Full-time`)
 * **Location:** `Remote / Hybrid`

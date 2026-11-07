@@ -4,9 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pratik Khairnar — Certified Ethical Hacker (CEH v13) &amp; VAPT Engineer</title>
+  <title>Pratik Khairnar — VAPT &amp; Offensive Security Engineer | CWIL | CEH v13</title>
   <meta name="description"
-    content="Official Cybersecurity Portfolio of Pratik Khairnar (@pratik-khairnar-sec) — Certified Ethical Hacker (CEH v13) & Associate Penetration Tester specializing in Web VAPT, OWASP Top 10, OWASP API Security Top 10, ASVS, CVSS v3.1, BOLA/IDOR, and offensive security tooling.">
+    content="Official Cybersecurity &amp; Red Team Portfolio of Pratik Khairnar (@pratik-khairnar-sec) — Penetration Testing Intern at Cyber Warfare Intelligence Lab (CWIL) &amp; Certified Ethical Hacker (CEH v13) specializing in Web/API VAPT, OWASP Top 10, BOLA/IDOR, Burp Montoya tooling, and offensive security research.">
   <meta name="keywords"
     content="Pratik Khairnar, Certified Ethical Hacker, CEH v13, Associate Penetration Tester, VAPT Engineer, Web VAPT, AppSec, API Penetration Testing, OWASP Top 10, OWASP API Top 10, OWASP WSTG v4.2, ASVS v4.0, CVSS v3.1, SANS Top 25, BOLA, IDOR, SQL Injection, XSS, SSRF, Burp Suite Professional, Postman, Nmap, Wireshark, SQLMap, Python Security, CCNA, Pune, Nashik, PCI-DSS, Cyber Security Fresher">
   <meta name="author" content="Pratik Sanjay Khairnar">
@@ -594,40 +594,504 @@
     }
 
     /* ==========================================================================
-       Projects Section (Exact Sandesh Card + Hover Overlay)
+       Red Team Cyber Arsenal & Tactical Dossier Section (High-Tech HUD UI/UX)
        ========================================================================== */
     #projects {
-      background-color: #000000;
-      padding: 95px 0;
+      background-color: #05070a;
+      background-image: 
+        radial-gradient(circle at 15% 20%, rgba(220, 53, 69, 0.09) 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, rgba(56, 189, 248, 0.05) 0%, transparent 45%),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+      padding: 100px 0 110px 0;
+      position: relative;
+      overflow: hidden;
     }
 
-    .project-card {
-      background-color: rgba(22, 22, 28, 0.75);
+    #projects::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(220, 53, 69, 0.6), transparent);
+    }
+
+    .tactical-kicker {
+      display: inline-flex;
+      align-items: center;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.78rem;
+      letter-spacing: 2px;
+      color: #ff4d61;
+      background: rgba(220, 53, 69, 0.12);
+      border: 1px solid rgba(220, 53, 69, 0.35);
+      padding: 6px 16px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+      text-transform: uppercase;
+      box-shadow: 0 0 15px rgba(220, 53, 69, 0.15);
+    }
+
+    .live-pulse-dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #22c55e;
+      display: inline-block;
+      box-shadow: 0 0 8px #22c55e;
+      animation: livePulse 1.8s infinite;
+    }
+
+    .live-pulse-dot.pulse-red {
+      background: #ff0033;
+      box-shadow: 0 0 10px #ff0033;
+    }
+
+    @keyframes livePulse {
+      0% { transform: scale(0.9); opacity: 0.8; }
+      50% { transform: scale(1.3); opacity: 1; }
+      100% { transform: scale(0.9); opacity: 0.8; }
+    }
+
+    /* Telemetry Strip */
+    .arsenal-telemetry-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 20px;
+      margin-top: 20px;
+      padding: 12px 20px;
+      background: rgba(10, 14, 22, 0.85);
       border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      overflow: hidden;
-      transition: all 0.3s ease;
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      max-width: 1020px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .telemetry-chip {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .telemetry-label {
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    .telemetry-val {
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* Controls Bar */
+    .arsenal-controls-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      margin: 36px auto 26px auto;
+      max-width: 1360px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .arsenal-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .filter-chip {
+      background: rgba(15, 23, 42, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94a3b8;
+      padding: 7px 16px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      outline: none !important;
+    }
+
+    .filter-chip:hover {
+      background: rgba(220, 53, 69, 0.18);
+      border-color: rgba(220, 53, 69, 0.45);
+      color: #ffffff;
+    }
+
+    .filter-chip.active {
+      background: #dc3545;
+      border-color: #dc3545;
+      color: #ffffff;
+      box-shadow: 0 0 16px rgba(220, 53, 69, 0.45);
+    }
+
+    .chip-count {
+      background: rgba(0, 0, 0, 0.4);
+      padding: 2px 7px;
+      border-radius: 10px;
+      font-size: 0.7rem;
+      margin-left: 6px;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .view-switch-group {
+      display: flex;
+      background: rgba(10, 14, 22, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 3px;
+    }
+
+    .view-switch-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 16px;
+      border-radius: 16px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      outline: none !important;
+    }
+
+    .view-switch-btn.active {
+      background: #dc3545;
+      color: #ffffff;
+      box-shadow: 0 2px 10px rgba(220, 53, 69, 0.4);
+    }
+
+    /* Dossier Layout: Left Deck + Right Console */
+    .arsenal-dossier-layout {
+      display: grid;
+      grid-template-columns: 370px 1fr;
+      gap: 24px;
+      max-width: 1360px;
+      margin: 0 auto;
+      align-items: start;
+    }
+
+    @media (max-width: 991px) {
+      .arsenal-dossier-layout {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Left Deck */
+    .arsenal-deck {
       display: flex;
       flex-direction: column;
-      height: 100%;
+      gap: 12px;
+      max-height: 820px;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+
+    .arsenal-deck::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .arsenal-deck::-webkit-scrollbar-thumb {
+      background: rgba(220, 53, 69, 0.45);
+      border-radius: 3px;
+    }
+
+    .arsenal-weapon-item {
+      background: rgba(15, 20, 30, 0.75);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 10px;
+      padding: 14px 16px;
+      cursor: pointer;
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
       position: relative;
-    }
-
-    .project-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 16px 36px rgba(220, 53, 69, 0.25);
-      border-color: rgba(220, 53, 69, 0.35);
-    }
-
-    .project-img-box {
-      height: 195px;
       overflow: hidden;
-      background: #090b10;
-      position: relative;
+      display: block;
+      user-select: none;
     }
 
-    .project-card img {
+    .arsenal-weapon-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 3px;
+      background: transparent;
+      transition: all 0.25s ease;
+    }
+
+    .arsenal-weapon-item:hover {
+      background: rgba(25, 32, 48, 0.9);
+      border-color: rgba(220, 53, 69, 0.35);
+      transform: translateX(4px);
+    }
+
+    .arsenal-weapon-item.active {
+      background: linear-gradient(90deg, rgba(220, 53, 69, 0.16) 0%, rgba(15, 20, 30, 0.98) 100%);
+      border-color: rgba(220, 53, 69, 0.7);
+      box-shadow: 0 4px 22px rgba(220, 53, 69, 0.22);
+    }
+
+    .arsenal-weapon-item.active::before {
+      background: #dc3545;
+      box-shadow: 0 0 12px #dc3545;
+    }
+
+    .weapon-item-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .weapon-codex-id {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.72rem;
+      color: #38bdf8;
+      letter-spacing: 1px;
+    }
+
+    .weapon-badge-pill {
+      font-size: 0.68rem;
+      font-weight: 700;
+      padding: 2px 7px;
+      border-radius: 4px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .weapon-name-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .weapon-name {
+      font-size: 1.02rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin: 0;
+      transition: color 0.2s ease;
+    }
+
+    .arsenal-weapon-item.active .weapon-name {
+      color: #ff4d61;
+    }
+
+    .weapon-tagline {
+      color: #94a3b8;
+      font-size: 0.8rem;
+      line-height: 1.45;
+      margin: 5px 0 8px 0;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .weapon-micro-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .weapon-chip {
+      background: rgba(0, 0, 0, 0.45);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      font-size: 0.68rem;
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-family: 'Fira Code', monospace;
+    }
+
+    /* Right Console */
+    .arsenal-dossier-console {
+      background: rgba(12, 16, 26, 0.92);
+      border: 1px solid rgba(220, 53, 69, 0.4);
+      border-radius: 14px;
+      box-shadow: 0 10px 45px rgba(0, 0, 0, 0.65), inset 0 0 25px rgba(220, 53, 69, 0.06);
+      padding: 28px;
+      position: relative;
+      backdrop-filter: blur(14px);
+      min-height: 820px;
+    }
+
+    /* Corner Crosshairs */
+    .hud-crosshair {
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      border-color: #dc3545;
+      pointer-events: none;
+    }
+    .hud-ch-tl { top: 6px; left: 6px; border-top: 2px solid; border-left: 2px solid; }
+    .hud-ch-tr { top: 6px; right: 6px; border-top: 2px solid; border-right: 2px solid; }
+    .hud-ch-bl { bottom: 6px; left: 6px; border-bottom: 2px solid; border-left: 2px solid; }
+    .hud-ch-br { bottom: 6px; right: 6px; border-bottom: 2px solid; border-right: 2px solid; }
+
+    /* Console Header */
+    .dossier-header-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 20px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .dossier-meta-crumb {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.75rem;
+      color: #38bdf8;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .dossier-title {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .dossier-tagline {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      margin: 6px 0 0 0;
+      line-height: 1.5;
+    }
+
+    .dossier-threat-scope {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.74rem;
+      color: #fbbf24;
+      background: rgba(251, 191, 36, 0.1);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      padding: 4px 10px;
+      border-radius: 4px;
+      margin-top: 10px;
+    }
+
+    .dossier-action-btns {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .arsenal-btn-primary {
+      background: #dc3545;
+      color: #ffffff !important;
+      font-weight: 700;
+      font-size: 0.85rem;
+      padding: 9px 18px;
+      border-radius: 8px;
+      text-decoration: none !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(220, 53, 69, 0.45);
+      transition: all 0.25s ease;
+      border: none;
+    }
+
+    .arsenal-btn-primary:hover {
+      background: #ef4444;
+      transform: translateY(-2px);
+      box-shadow: 0 6px 22px rgba(220, 53, 69, 0.65);
+    }
+
+    .arsenal-btn-secondary {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #ffffff !important;
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 8px 16px;
+      border-radius: 8px;
+      text-decoration: none !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.25s ease;
+    }
+
+    .arsenal-btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.14);
+      border-color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .arsenal-btn-cli {
+      background: rgba(15, 23, 42, 0.95);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: #38bdf8 !important;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.78rem;
+      padding: 8px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+
+    .arsenal-btn-cli:hover {
+      background: rgba(56, 189, 248, 0.18);
+      border-color: #38bdf8;
+    }
+
+    /* Viewport & Visual Box */
+    .dossier-viewport-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-bottom: 22px;
+    }
+
+    @media (max-width: 991px) {
+      .dossier-viewport-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .viewport-img-frame {
+      position: relative;
+      height: 250px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #020408;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: 0 6px 24px rgba(0, 0, 0, 0.75);
+      cursor: pointer;
+    }
+
+    .viewport-img-frame img {
       width: 100%;
       height: 100%;
       object-fit: cover;
@@ -635,97 +1099,485 @@
       transition: transform 0.4s ease;
     }
 
-    .project-card:hover img {
-      transform: scale(1.06);
+    .viewport-img-frame:hover img {
+      transform: scale(1.04);
     }
 
-    .project-card .card-body {
-      padding: 1.25rem;
+    /* CRT Scanlines Overlay */
+    .crt-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.35) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.04), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.04));
+      background-size: 100% 3px, 6px 100%;
+      z-index: 2;
+      transition: opacity 0.3s ease;
+    }
+
+    .crt-overlay.disabled {
+      opacity: 0;
+    }
+
+    .viewport-tools-bar {
+      position: absolute;
+      bottom: 8px;
+      right: 8px;
+      display: flex;
+      gap: 6px;
+      z-index: 3;
+    }
+
+    .viewport-tool-btn {
+      background: rgba(0, 0, 0, 0.8);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      color: #cbd5e1;
+      font-size: 0.72rem;
+      padding: 3px 9px;
+      border-radius: 4px;
+      cursor: pointer;
+      backdrop-filter: blur(4px);
+    }
+
+    .viewport-tool-btn:hover {
+      background: #dc3545;
+      color: #ffffff;
+      border-color: #dc3545;
+    }
+
+    .viewport-telemetry-badge {
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      background: rgba(0, 0, 0, 0.85);
+      border: 1px solid rgba(220, 53, 69, 0.6);
+      color: #ff6b7a;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.7rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 4px;
+      z-index: 3;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    /* Technical Details Pane */
+    .dossier-tech-pane {
       display: flex;
       flex-direction: column;
-      flex-grow: 1;
+      justify-content: space-between;
     }
 
-    .project-card .card-title {
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 1.12rem;
-      margin-bottom: 0.45rem;
+    .dossier-breakthrough-box {
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 14px 16px;
+      margin-bottom: 12px;
     }
 
-    .project-card:hover .card-title {
-      color: #dc3545;
+    .breakthrough-label {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.72rem;
+      color: #38bdf8;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 6px;
     }
 
-    .project-card .card-text {
-      color: #a0aec0;
-      font-size: 0.86rem;
+    .breakthrough-text {
+      font-size: 0.88rem;
+      color: #cbd5e1;
       line-height: 1.6;
-      margin-bottom: 0.8rem;
-      flex-grow: 1;
+      margin: 0;
     }
 
-    .project-tags {
+    .dossier-vectors-box {
+      margin-bottom: 12px;
+    }
+
+    .vectors-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .vectors-chips {
       display: flex;
       flex-wrap: wrap;
       gap: 5px;
-      margin-bottom: 0.8rem;
     }
 
-    .project-tag {
-      background-color: rgba(220, 53, 69, 0.12);
-      color: #ff6b7a;
-      border: 1px solid rgba(220, 53, 69, 0.25);
+    .vector-chip {
+      background: rgba(220, 53, 69, 0.12);
+      border: 1px solid rgba(220, 53, 69, 0.3);
+      color: #ff8593;
+      font-size: 0.72rem;
       padding: 2px 8px;
-      border-radius: 12px;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .dossier-specs-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .spec-chip {
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94a3b8;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.72rem;
+      padding: 3px 8px;
+      border-radius: 4px;
+    }
+
+    /* Simulated Terminal Sandbox */
+    .arsenal-term-sandbox {
+      background: #06090e;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8);
+      margin-top: 10px;
+    }
+
+    .term-sandbox-bar {
+      background: #0d131d;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .term-window-dots {
+      display: flex;
+      gap: 6px;
+    }
+
+    .term-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .term-dot-red { background: #ef4444; }
+    .term-dot-yellow { background: #f59e0b; }
+    .term-dot-green { background: #10b981; }
+
+    .term-sandbox-title {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.72rem;
+      color: #64748b;
+      letter-spacing: 1px;
+    }
+
+    .term-rerun-btn {
+      background: transparent;
+      border: 1px solid rgba(220, 53, 69, 0.4);
+      color: #ff6b7a;
+      font-family: 'Fira Code', monospace;
       font-size: 0.7rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .term-rerun-btn:hover {
+      background: #dc3545;
+      color: #ffffff;
+    }
+
+    .term-sandbox-body {
+      padding: 14px 16px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.78rem;
+      line-height: 1.6;
+      max-height: 220px;
+      overflow-y: auto;
+      color: #94a3b8;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    .term-sandbox-body::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .term-sandbox-body::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 3px;
+    }
+
+    /* Arsenal Matrix Table */
+    .arsenal-matrix-container {
+      max-width: 1360px;
+      margin: 0 auto;
+      background: rgba(12, 16, 26, 0.88);
+      border: 1px solid rgba(220, 53, 69, 0.35);
+      border-radius: 12px;
+      overflow-x: auto;
+      padding: 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    }
+
+    .matrix-table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0;
+      color: #cbd5e1;
+      font-size: 0.85rem;
+    }
+
+    .matrix-table th {
+      background: rgba(15, 23, 42, 0.95);
+      color: #38bdf8;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.75rem;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 12px 16px;
+      border-bottom: 2px solid rgba(220, 53, 69, 0.4);
+    }
+
+    .matrix-table td {
+      padding: 14px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      vertical-align: middle;
+    }
+
+    .matrix-table tr:hover td {
+      background: rgba(220, 53, 69, 0.08);
+    }
+
+    .matrix-codex {
+      font-family: 'Fira Code', monospace;
+      color: #38bdf8;
       font-weight: 600;
     }
 
-    /* Hover Links Overlay */
-    .project-links-container {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
+    .matrix-tool-name {
+      font-weight: 700;
+      color: #ffffff;
+      display: block;
+    }
+
+    .matrix-badge {
+      font-size: 0.7rem;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+
+    .matrix-links {
       display: flex;
-      justify-content: center;
-      padding: 0.8rem 0;
-      background: linear-gradient(to top, rgba(12, 12, 16, 0.96) 65%, transparent);
-      opacity: 0;
-      transform: translateY(100%);
-      transition: all 0.3s ease;
-      z-index: 5;
+      gap: 8px;
     }
 
-    .project-card:hover .project-links-container {
-      opacity: 1;
-      transform: translateY(0);
+    .matrix-link-btn {
+      background: rgba(220, 53, 69, 0.15);
+      border: 1px solid rgba(220, 53, 69, 0.4);
+      color: #ff6b7a !important;
+      padding: 4px 9px;
+      border-radius: 4px;
+      font-size: 0.76rem;
+      text-decoration: none !important;
+      transition: all 0.2s ease;
     }
 
-    .project-links {
-      display: flex;
-      gap: 12px;
-    }
-
-    .project-link {
-      background-color: #dc3545;
+    .matrix-link-btn:hover {
+      background: #dc3545;
       color: #ffffff !important;
-      width: 38px;
-      height: 38px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      font-size: 0.95rem;
     }
 
-    .project-link:hover {
-      transform: scale(1.15);
-      background-color: #ffffff;
-      color: #dc3545 !important;
+    /* Light Mode Adaptations for Arsenal */
+    body.light-mode #projects {
+      background-color: #f8fafc;
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+    }
+
+    body.light-mode .arsenal-telemetry-strip {
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    }
+
+    body.light-mode .filter-chip {
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.12);
+      color: #475569;
+    }
+
+    body.light-mode .filter-chip.active {
+      background: #dc3545;
+      color: #ffffff;
+    }
+
+    body.light-mode .arsenal-weapon-item {
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    }
+
+    body.light-mode .arsenal-weapon-item.active {
+      background: linear-gradient(90deg, rgba(220, 53, 69, 0.08) 0%, #ffffff 100%);
+      border-color: rgba(220, 53, 69, 0.5);
+    }
+
+    body.light-mode .weapon-name {
+      color: #0f172a;
+    }
+
+    body.light-mode .weapon-tagline {
+      color: #64748b;
+    }
+
+    body.light-mode .arsenal-dossier-console {
+      background: #ffffff;
+      border-color: rgba(220, 53, 69, 0.3);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    body.light-mode .dossier-title {
+      color: #0f172a;
+    }
+
+    body.light-mode .dossier-breakthrough-box {
+      background: #f1f5f9;
+      border-color: rgba(0, 0, 0, 0.06);
+    }
+
+    body.light-mode .breakthrough-text {
+      color: #334155;
+    }
+
+    body.light-mode .arsenal-matrix-container {
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    body.light-mode .matrix-table th {
+      background: #f8fafc;
+      color: #0369a1;
+    }
+
+    body.light-mode .matrix-tool-name {
+      color: #0f172a;
+    }
+
+    /* Hero CWIL Pill */
+    .hero-cwil-pill {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(220, 53, 69, 0.12);
+      border: 1px solid rgba(220, 53, 69, 0.35);
+      border-radius: 30px;
+      padding: 6px 14px;
+      transition: all 0.3s ease;
+      backdrop-filter: blur(8px);
+      text-decoration: none !important;
+    }
+
+    .hero-cwil-pill:hover {
+      background: rgba(220, 53, 69, 0.2);
+      border-color: #dc3545;
+      transform: translateY(-2px);
+    }
+
+    .hero-cwil-badge-img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
+      margin-right: 8px;
+    }
+
+    .hero-cwil-pill-text {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: 0.4px;
+    }
+
+    /* Timeline CWIL Styles */
+    @keyframes pulseGlow {
+      0% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.7); }
+      70% { box-shadow: 0 0 0 10px rgba(220, 53, 69, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(220, 53, 69, 0); }
+    }
+
+    .timeline-dot-active {
+      background: #ff0033 !important;
+      box-shadow: 0 0 10px #ff0033;
+      animation: pulseGlow 2s infinite;
+    }
+
+    .timeline-badge-active {
+      background: rgba(220, 53, 69, 0.2) !important;
+      border: 1px solid #dc3545 !important;
+      color: #ff4d61 !important;
+      font-weight: 700 !important;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .timeline-org-logo {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: #000000;
+      padding: 4px;
+      border: 1px solid rgba(220, 53, 69, 0.4);
+      box-shadow: 0 0 12px rgba(220, 53, 69, 0.3);
+    }
+
+    .timeline-scope-pill {
+      background: rgba(220, 53, 69, 0.08);
+      border-left: 3px solid #dc3545;
+      padding: 6px 12px;
+      border-radius: 0 6px 6px 0;
+      font-size: 0.84rem;
+      color: #fca5a5;
+    }
+
+    .timeline-tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 14px;
+    }
+
+    .timeline-tech-chip {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #cbd5e1;
+      font-size: 0.74rem;
+      padding: 3px 9px;
+      border-radius: 4px;
+      font-family: 'Fira Code', monospace;
+    }
+
+    body.light-mode .timeline-tech-chip {
+      background: #f1f5f9;
+      border-color: rgba(0, 0, 0, 0.1);
+      color: #334155;
+    }
+
+    body.light-mode .timeline-org-logo {
+      background: #ffffff;
+      border-color: rgba(220, 53, 69, 0.3);
     }
 
     /* ==========================================================================
@@ -1709,13 +2561,21 @@
       <div class="row align-items-center">
         <!-- Left Hero Content -->
         <div class="col-lg-6 hero-content">
-          <a href="#certifications" class="hero-ceh-pill" title="Click to view EC-Council Verified Credential & Scan">
-            <img src="assets/ceh_badge.png" alt="EC-Council CEH v13 Badge" class="hero-ceh-pill-badge">
-            <span class="hero-ceh-pill-text">
-              <span class="hero-ceh-live-dot"></span> Certified Ethical Hacker (CEH v13) &bull; EC-Council Verified
-            </span>
-            <i class="fas fa-certificate text-danger ml-1" style="font-size: 0.85rem;"></i>
-          </a>
+          <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
+            <a href="#timeline" class="hero-cwil-pill mr-2 mb-2" title="Penetration Testing Intern @ Cyber Warfare Intelligence Lab">
+              <img src="assets/cwil_logo.png" alt="CWIL Logo" class="hero-cwil-badge-img">
+              <span class="hero-cwil-pill-text">
+                <span class="live-pulse-dot mr-1"></span> VAPT Intern &bull; CWIL
+              </span>
+            </a>
+            <a href="#certifications" class="hero-ceh-pill mb-2" title="Click to view EC-Council Verified Credential & Scan">
+              <img src="assets/ceh_badge.png" alt="EC-Council CEH v13 Badge" class="hero-ceh-pill-badge">
+              <span class="hero-ceh-pill-text">
+                <span class="hero-ceh-live-dot"></span> CEH v13 Verified
+              </span>
+              <i class="fas fa-certificate text-danger ml-1" style="font-size: 0.85rem;"></i>
+            </a>
+          </div>
           <h1 class="display-4 text-white font-weight-bold mb-0">Hi There! I'm</h1>
           <h1 class="display-4 text-danger font-weight-bold mb-3">Pratik Khairnar</h1>
           <div class="hero-lead-text">
@@ -1723,9 +2583,9 @@
           </div>
 
           <p class="hero-bio">
-            Certified Ethical Hacker (CEH v13) &amp; Associate Penetration Tester based in <strong>Pune, India</strong>. 
-            Specializing in <strong>manual Web VAPT</strong>, API security (<strong>OWASP API Top 10 &bull; BOLA / IDOR</strong>), 
-            and vulnerability assessments aligned with <strong>OWASP WSTG v4.2</strong>, <strong>ASVS</strong>, and <strong>CVSS v3.1</strong> reporting standards.
+            VAPT &amp; Penetration Testing Intern at <strong>Cyber Warfare Intelligence Lab (CWIL)</strong> and <strong>Certified Ethical Hacker (CEH v13)</strong> based in <strong>Pune, India</strong>. 
+            Specializing in <strong>manual Web &amp; API VAPT</strong>, deep authorization testing (<strong>OWASP API Top 10 &bull; BOLA / IDOR</strong>), 
+            and offensive security engineering aligned with <strong>OWASP WSTG v4.2</strong>, <strong>ASVS</strong>, and <strong>CVSS v3.1</strong> reporting standards.
           </p>
 
           <div class="hero-btns mt-4">
@@ -1922,10 +2782,10 @@
             <i class="fas fa-user-shield mr-2"></i>Professional Summary
           </h3>
           <p class="text-muted" style="line-height: 1.85; font-size: 1.02rem;">
-            I am a <strong>Certified Ethical Hacker (CEH v13)</strong> pursuing my <strong>B.Tech in Cyber Security &amp; Forensics (2023&ndash;2027)</strong> at Sandip University, Nashik. My core operational focus is on <strong>manual web application penetration testing (Web VAPT)</strong>, deep <strong>authorization flaw verification (IDOR / BOLA)</strong>, and <strong>custom offensive security extension architecture</strong>.
+            I am a <strong>Penetration Testing Intern (VAPT) &amp; Security Researcher</strong> at <strong>Cyber Warfare Intelligence Lab (CWIL)</strong> and a <strong>Certified Ethical Hacker (CEH v13)</strong> pursuing my <strong>B.Tech in Cyber Security &amp; Forensics (2023&ndash;2027)</strong> at Sandip University, Nashik. My core operational focus centers on <strong>manual enterprise web application &amp; API penetration testing</strong>, authorization vulnerability discovery (<strong>IDOR / BOLA</strong>), and <strong>offensive security tool architecture</strong>.
           </p>
           <p class="text-muted mb-0" style="line-height: 1.85; font-size: 1.02rem;">
-            Backed by operational experience investigating live cybercrime cases at the <strong>Cyber Police Station, Nashik Police Commissionerate</strong> and architecting custom offensive security tooling (<strong>AUTHENTIX Enterprise</strong>, <strong>BlindStrike</strong>), I specialize in identifying high-severity business logic flaws, authentication bypasses, and injection vectors beyond conventional automated scanners. Every assessment strictly adheres to <strong>OWASP Top 10</strong>, <strong>OWASP WSTG</strong>, and <strong>ASVS</strong> methodologies, delivering defensible <strong>CVSS v3.1</strong>-scored reports with verified Proof-of-Concepts (PoCs) and actionable, developer-ready remediation guidance.
+            Backed by current security operations at <strong>CWIL</strong>, real-world investigative experience at the <strong>Cyber Police Station, Nashik Police Commissionerate</strong>, and authoring production-grade offensive tooling (<strong>AUTHENTIX Enterprise</strong>, <strong>BlindStrike</strong>, <strong>Reflectra</strong>), I specialize in uncovering high-severity business logic flaws, authentication bypasses, and complex injection vectors beyond conventional scanners. Every assessment strictly adheres to <strong>OWASP Top 10</strong>, <strong>OWASP WSTG v4.2</strong>, and <strong>ASVS v4.0</strong> standards, delivering defensible <strong>CVSS v3.1</strong>-scored reports with deterministic PoCs and remediation blueprints.
           </p>
         </div>
 
@@ -2179,199 +3039,112 @@
     </div>
   </section>
 
-  <!-- Projects Section (6 Core Offensive Frameworks & Tools) -->
+  <!-- Projects Section (Red Team Cyber Command & Interactive Arsenal Dossier) -->
   <section id="projects">
-    <div class="container">
-      <h2 class="section-title">My Projects</h2>
-      <p class="section-lead">Core production security tools, frameworks, and extensions developed and maintained by Pratik Khairnar.</p>
-
-      <div class="row">
-
-        <!-- 1. AUTHENTIX Enterprise -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="project-card">
-            <div class="project-img-box">
-              <img src="assets/authentix_extension_dashboard.webp" alt="AUTHENTIX Enterprise" loading="lazy">
-            </div>
-            <div class="card-body">
-              <div class="project-tags">
-                <span class="project-tag">Burp Suite Montoya</span>
-                <span class="project-tag">34 Invariants</span>
-                <span class="project-tag">3-Way Diff IDOR</span>
-                <span class="project-tag">16 ATO Chains</span>
-              </div>
-              <h5 class="card-title">AUTHENTIX Enterprise v3.0.0</h5>
-              <p class="card-text">
-                Native Burp Suite Montoya extension with 34 deterministic security invariants, 3-Way Differential IDOR Engine with Soft-200 Error Disambiguation, 16 compound ATO chains, FlatLaf Darcula UI, and 14,880 req/sec throughput.
-              </p>
-              <div class="project-links-container">
-                <div class="project-links">
-                  <a href="https://pratik-khairnar-sec.github.io/authentix-enterprise/" target="_blank" class="project-link" title="Live Demo">
-                    <i class="fas fa-link"></i>
-                  </a>
-                  <a href="https://github.com/pratik-khairnar-sec/authentix-enterprise" target="_blank" class="project-link" title="GitHub">
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
+    <div class="container-fluid px-lg-5">
+      <!-- Header with Operational HUD Telemetry -->
+      <div class="text-center mb-4">
+        <div class="tactical-kicker">
+          <span class="live-pulse-dot mr-2"></span> DEFCON-1 // OFFENSIVE SECURITY ARSENAL
+        </div>
+        <h2 class="section-title">Red Team Cyber Arsenal</h2>
+        <p class="section-lead">Production-grade offensive tooling, Burp Suite Montoya API extensions, and statistical AST auditing engines engineered for zero false positives.</p>
+        
+        <!-- Telemetry Status Bar -->
+        <div class="arsenal-telemetry-strip">
+          <div class="telemetry-chip">
+            <span class="telemetry-label">SYSTEM STATUS:</span>
+            <span class="telemetry-val text-success"><i class="fas fa-circle text-success mr-1"></i>OPERATIONAL</span>
+          </div>
+          <div class="telemetry-chip">
+            <span class="telemetry-label">WEAPONIZED SUITES:</span>
+            <span class="telemetry-val text-danger">07 ACTIVE</span>
+          </div>
+          <div class="telemetry-chip">
+            <span class="telemetry-label">DETERMINISTIC INVARIANTS:</span>
+            <span class="telemetry-val text-info">34+ COVERED</span>
+          </div>
+          <div class="telemetry-chip">
+            <span class="telemetry-label">FALSE POSITIVE RATE:</span>
+            <span class="telemetry-val text-warning">0.00% VERIFIED</span>
+          </div>
+          <div class="telemetry-chip">
+            <span class="telemetry-label">ORGANIZATION:</span>
+            <span class="telemetry-val text-white">CWIL RESEARCH LAB</span>
           </div>
         </div>
+      </div>
 
-        <!-- 2. ReconForge v4 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="project-card">
-            <div class="project-img-box">
-              <img src="assets/reconforge_hero_dashboard.webp" alt="ReconForge v4" loading="lazy">
-            </div>
-            <div class="card-body">
-              <div class="project-tags">
-                <span class="project-tag">52.6k+ Dorks</span>
-                <span class="project-tag">30 Phases</span>
-                <span class="project-tag">OSINT Recon</span>
-              </div>
-              <h5 class="card-title">ReconForge v4</h5>
-              <p class="card-text">
-                Multi-target Bug Bounty reconnaissance framework with 30 Master Phases, 52,630+ Universal Dork Vault, 
-                and tool-major CLI generator executing 100% offline client-side.
-              </p>
-              <div class="project-links-container">
-                <div class="project-links">
-                  <a href="https://pratik-khairnar-sec.github.io/ReconForge/" target="_blank" class="project-link" title="Live Demo">
-                    <i class="fas fa-link"></i>
-                  </a>
-                  <a href="https://github.com/pratik-khairnar-sec/ReconForge" target="_blank" class="project-link" title="GitHub">
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+      <!-- Arsenal Controls: Filter Tabs + Mode Switcher -->
+      <div class="arsenal-controls-bar">
+        <!-- Filter Chips -->
+        <div class="arsenal-filters" id="arsenalFilters">
+          <button class="filter-chip active" data-filter="all" onclick="filterArsenal('all')">
+            <i class="fas fa-layer-group mr-1"></i>All Arsenal <span class="chip-count">7</span>
+          </button>
+          <button class="filter-chip" data-filter="burp" onclick="filterArsenal('burp')">
+            <i class="fas fa-plug text-danger mr-1"></i>Burp Montoya <span class="chip-count">1</span>
+          </button>
+          <button class="filter-chip" data-filter="exploit" onclick="filterArsenal('exploit')">
+            <i class="fas fa-crosshairs text-danger mr-1"></i>Exploitation <span class="chip-count">2</span>
+          </button>
+          <button class="filter-chip" data-filter="api" onclick="filterArsenal('api')">
+            <i class="fas fa-network-wired text-danger mr-1"></i>API &amp; GraphQL <span class="chip-count">2</span>
+          </button>
+          <button class="filter-chip" data-filter="recon" onclick="filterArsenal('recon')">
+            <i class="fas fa-satellite-dish text-danger mr-1"></i>Recon &amp; OSINT <span class="chip-count">2</span>
+          </button>
         </div>
 
-        <!-- 3. Reflectra v7.0.0 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="project-card">
-            <div class="project-img-box">
-              <img src="assets/reflectra_dashboard.webp" alt="Reflectra v7" loading="lazy">
-            </div>
-            <div class="card-body">
-              <div class="project-tags">
-                <span class="project-tag">DOM XSS</span>
-                <span class="project-tag">Python 3</span>
-                <span class="project-tag">Headless Chrome</span>
-              </div>
-              <h5 class="card-title">Reflectra v7.0.0</h5>
-              <p class="card-text">
-                Context-aware XSS scanner confirming execution via real Headless Chrome dialog evaluation with 2,600+ context-prioritized payloads and zero false positives.
-              </p>
-              <div class="project-links-container">
-                <div class="project-links">
-                  <a href="https://pratik-khairnar-sec.github.io/Reflectra/" target="_blank" class="project-link" title="Live Demo">
-                    <i class="fas fa-link"></i>
-                  </a>
-                  <a href="https://github.com/pratik-khairnar-sec/Reflectra" target="_blank" class="project-link" title="GitHub">
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- View Switcher -->
+        <div class="view-switch-group">
+          <button class="view-switch-btn active" id="btnViewDossier" onclick="switchArsenalView('dossier')" title="Interactive Mission Dossier View">
+            <i class="fas fa-desktop mr-1"></i>Tactical Dossier
+          </button>
+          <button class="view-switch-btn" id="btnViewMatrix" onclick="switchArsenalView('matrix')" title="Technical Engineering Comparison Matrix">
+            <i class="fas fa-table-cells mr-1"></i>Arsenal Matrix
+          </button>
+        </div>
+      </div>
+
+      <!-- 1. TACTICAL DOSSIER VIEW (Default Interactive Command Console) -->
+      <div id="arsenalDossierView" class="arsenal-dossier-layout">
+        <!-- Left: Weapon Selector Deck -->
+        <div class="arsenal-deck" id="arsenalDeck" tabindex="0" aria-label="Weapon Arsenal List">
+          <!-- Weapon items will be injected by JavaScript -->
         </div>
 
-        <!-- 4. BlindStrike v7.0.0 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="project-card">
-            <div class="project-img-box">
-              <img src="assets/blindstrike_dashboard.webp" alt="BlindStrike v7" loading="lazy">
-            </div>
-            <div class="card-body">
-              <div class="project-tags">
-                <span class="project-tag">Blind SQLi</span>
-                <span class="project-tag">IQR Baseline</span>
-                <span class="project-tag">Multi-DB</span>
-              </div>
-              <h5 class="card-title">BlindStrike v7.0.0</h5>
-              <p class="card-text">
-                Time-Based &amp; Boolean Blind SQL Injection framework with empirical latency baseline measurement, 
-                statistical IQR jitter filtering, and multi-threaded extraction.
-              </p>
-              <div class="project-links-container">
-                <div class="project-links">
-                  <a href="https://pratik-khairnar-sec.github.io/BlindStrike/" target="_blank" class="project-link" title="Live Demo">
-                    <i class="fas fa-link"></i>
-                  </a>
-                  <a href="https://github.com/pratik-khairnar-sec/BlindStrike" target="_blank" class="project-link" title="GitHub">
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
+        <!-- Right: Interactive Mission Dossier & HUD Viewport -->
+        <div class="arsenal-dossier-console" id="arsenalConsole">
+          <!-- Corner Crosshairs -->
+          <div class="hud-crosshair hud-ch-tl"></div>
+          <div class="hud-crosshair hud-ch-tr"></div>
+          <div class="hud-crosshair hud-ch-bl"></div>
+          <div class="hud-crosshair hud-ch-br"></div>
+          
+          <div id="dossierContent">
+            <!-- Dynamic Content Injected Here by JS -->
           </div>
         </div>
+      </div>
 
-        <!-- 5. CORSair v3.0.0 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="project-card">
-            <div class="project-img-box">
-              <img src="assets/corsair_dashboard.webp" alt="CORSair v3" loading="lazy">
-            </div>
-            <div class="card-body">
-              <div class="project-tags">
-                <span class="project-tag">CORS Auditor</span>
-                <span class="project-tag">Shannon Entropy</span>
-                <span class="project-tag">PoC Suite</span>
-              </div>
-              <h5 class="card-title">CORSair v3.0.0</h5>
-              <p class="card-text">
-                In-browser CORS misconfiguration testing tool with dynamic origin reflection verification (ACAC/ACAO), 
-                Shannon entropy token leakage calculations, and automated PoC generation.
-              </p>
-              <div class="project-links-container">
-                <div class="project-links">
-                  <a href="https://pratik-khairnar-sec.github.io/CORSair/" target="_blank" class="project-link" title="Live Demo">
-                    <i class="fas fa-link"></i>
-                  </a>
-                  <a href="https://github.com/pratik-khairnar-sec/CORSair" target="_blank" class="project-link" title="GitHub">
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. WaybackLens v1.0.0 -->
-        <div class="col-lg-4 col-md-6 mb-4">
-          <div class="project-card">
-            <div class="project-img-box">
-              <img src="assets/wayback_lens_dashboard.webp" alt="WaybackLens" loading="lazy">
-            </div>
-            <div class="card-body">
-              <div class="project-tags">
-                <span class="project-tag">Chrome Ext (MV3)</span>
-                <span class="project-tag">Wayback CDX</span>
-                <span class="project-tag">Risk Ranking</span>
-              </div>
-              <h5 class="card-title">WaybackLens v1.0.0</h5>
-              <p class="card-text">
-                Wayback Machine CDX reconnaissance workspace for Chrome (MV3). Stream historical endpoints, 
-                rank by security risk, verify live 200s, and export triage targets.
-              </p>
-              <div class="project-links-container">
-                <div class="project-links">
-                  <a href="https://pratik-khairnar-sec.github.io/wayback-lens/" target="_blank" class="project-link" title="Live Demo">
-                    <i class="fas fa-link"></i>
-                  </a>
-                  <a href="https://github.com/pratik-khairnar-sec/wayback-lens" target="_blank" class="project-link" title="GitHub">
-                    <i class="fab fa-github"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
+      <!-- 2. ARSENAL MATRIX VIEW (Tabular Spec Comparison) -->
+      <div id="arsenalMatrixView" class="arsenal-matrix-container" style="display: none;">
+        <table class="matrix-table">
+          <thead>
+            <tr>
+              <th>Codex ID</th>
+              <th>Tool &amp; Release</th>
+              <th>Operational Domain</th>
+              <th>Architectural Breakthrough</th>
+              <th>Verified Metric</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="matrixTableBody">
+            <!-- Populated dynamically by JS -->
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
@@ -2383,7 +3156,52 @@
       <p class="section-lead">Industry penetration testing experience, law enforcement cybercrime investigations, and academic training.</p>
 
       <div class="timeline-wrap">
-        <!-- 1. Cyber Crime Intern (Jan 2026 – May 2026) -->
+        <!-- 1. CWIL - Cyber Warfare Intelligence Lab (Nov 2026 – Present) -->
+        <div class="timeline-item timeline-current">
+          <div class="timeline-dot timeline-dot-active"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <div class="d-flex align-items-center">
+                <img src="assets/cwil_logo.png" alt="Cyber Warfare Intelligence Lab Official Logo" class="timeline-org-logo mr-3">
+                <div>
+                  <h4 class="timeline-title mb-1">
+                    <i class="fas fa-crosshairs text-danger mr-2"></i>Penetration Testing Intern (VAPT) &amp; Security Researcher
+                  </h4>
+                  <div class="timeline-org">Cyber Warfare Intelligence Lab (OPC) Pvt. Ltd. (CWIL) &bull; Pune / Hybrid</div>
+                </div>
+              </div>
+              <span class="timeline-badge timeline-badge-active"><span class="live-pulse-dot mr-1"></span> Nov 2026 &ndash; Present (Active)</span>
+            </div>
+
+            <div class="timeline-scope-pill my-2">
+              <i class="fas fa-shield-halved text-danger mr-1"></i> <strong>Core Mandate:</strong> Enterprise Web &amp; API VAPT, Exploit Tooling &amp; Vulnerability Research
+            </div>
+
+            <p class="text-muted mb-2 small" style="line-height: 1.65;">
+              Conducting end-to-end manual penetration testing on authorized enterprise web applications and REST/GraphQL APIs aligned with <strong>OWASP Top 10 (2021)</strong>, <strong>OWASP API Security Top 10 (2023)</strong>, <strong>WSTG v4.2</strong>, and <strong>ASVS v4.0</strong> standards.
+            </p>
+            <ul class="text-muted mb-3 small pl-3" style="line-height: 1.65;">
+              <li><strong>High-Severity Flaw Discovery &amp; Exploitation:</strong> Identified and proved impact for critical authorization flaws (<strong>BOLA/IDOR</strong>), Broken Authentication, SSRF, and sensitive PII exposures across active client targets (e.g., MediBuddy healthcare SSO/CookieBridge analysis, Kewal Kiran Clothing infrastructure).</li>
+              <li><strong>Offensive Tooling &amp; Fuzzing Pipelines:</strong> Engineered custom assessment tools, automated multi-threaded target fuzzing harnesses (Dirsearch/FFUF integration), race condition testing engines (<strong>RaceSentinel</strong>), and cyber intelligence automation (<strong>WARSENTINEL</strong>).</li>
+              <li><strong>Telemetry Validation &amp; Defensible Reporting:</strong> Manually validated automated scanner findings from <strong>Burp Suite Pro</strong>, <strong>Nessus</strong>, and <strong>Nmap</strong> to eradicate false positives; formulated defensible <strong>CVSS v3.1</strong>-scored technical reports with deterministic PoCs and developer-ready remediation blueprints.</li>
+              <li><strong>Red Team Training SOPs &amp; Mentorship:</strong> Authored standardized penetration testing SOPs on XSS discovery, advanced Google Dorking, and subdomain enumeration; trained and mentored junior security analysts in ethical penetration testing methodologies.</li>
+            </ul>
+
+            <div class="timeline-tech-stack">
+              <span class="timeline-tech-chip">OWASP Top 10</span>
+              <span class="timeline-tech-chip">BOLA / IDOR</span>
+              <span class="timeline-tech-chip">API VAPT</span>
+              <span class="timeline-tech-chip">Burp Suite Pro</span>
+              <span class="timeline-tech-chip">CVSS v3.1</span>
+              <span class="timeline-tech-chip">WSTG v4.2</span>
+              <span class="timeline-tech-chip">Python 3</span>
+              <span class="timeline-tech-chip">Offensive Automation</span>
+              <span class="timeline-tech-chip">Race Conditions</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Cyber Crime Intern (Jan 2026 – May 2026) -->
         <div class="timeline-item">
           <div class="timeline-dot"></div>
           <div class="timeline-content">
@@ -2616,11 +3434,11 @@
 
     // Dynamic typewriter roles (Recruiter & ATS Optimized)
     const roles = [
-      "Associate Penetration Tester (Web & API)",
+      "VAPT Intern @ Cyber Warfare Intelligence Lab (CWIL)",
       "Certified Ethical Hacker (CEH v13)",
-      "Application Security (AppSec) Engineer",
-      "Vulnerability Assessment & Pentesting (VAPT)",
-      "OWASP Top 10 & API Security Specialist"
+      "Offensive Security Tool Architect & Researcher",
+      "Manual Web & API Penetration Tester (OWASP Top 10)",
+      "Burp Montoya API Developer (Java 17/21)"
     ];
     let roleIndex = 0;
     let charIndex = 0;
@@ -2974,10 +3792,11 @@
 
           case 'whoami':
             outputHtml = `
-              <div style="margin-bottom: 4px;"><strong class="text-white">Pratik Sanjay Khairnar</strong> &bull; <span class="badge badge-danger">CEH v13 Certified</span></div>
-              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Role:</strong> Associate Penetration Tester &amp; Web VAPT Engineer</div>
-              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Focus:</strong> Manual Web VAPT, API Security (BOLA/IDOR), Custom Offensive Tooling</div>
-              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Education:</strong> B.Tech Cyber Security &amp; Forensics (Sandip University, Nashik &bull; 2023–2027)</div>
+              <div style="margin-bottom: 4px;"><strong class="text-white">Pratik Sanjay Khairnar</strong> &bull; <span class="badge badge-danger">CEH v13 Certified</span> &bull; <span class="badge badge-danger">CWIL VAPT Intern</span></div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Current Role:</strong> Penetration Testing Intern @ Cyber Warfare Intelligence Lab (CWIL)</div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Specialization:</strong> Manual Web &amp; API VAPT (OWASP Top 10, WSTG v4.2, ASVS), Custom Offensive Tooling</div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Arsenal:</strong> AUTHENTIX Enterprise (Montoya Java 17/21), BlindStrike (IQR SQLi), Reflectra (DOM XSS), ReconForge</div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Education:</strong> B.Tech Cyber Security &amp; Forensics (Sandip University, Nashik &bull; 2023–2027 &bull; CGPA: 7.42/10)</div>
               <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Location:</strong> Pune, Maharashtra, India (Open to immediate relocation &amp; full-time roles)</div>`;
             break;
 
@@ -3023,13 +3842,20 @@
           case 'exp':
             outputHtml = `
               <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">[Professional Experience Timeline]</div>
-              <div style="margin-bottom: 6px;">
-                <span class="text-white font-weight-bold">&bull; Offensive Security Tool Architect</span> &bull; Independent Lab <span class="text-muted">(2025 – Present)</span><br>
-                <span style="color: #94a3b8; padding-left: 10px;">Architected AUTHENTIX Burp extension, BlindStrike IQR SQLi engine, and conducted manual OWASP Top 10 Web VAPT.</span>
+              <div style="margin-bottom: 8px;">
+                <span class="text-white font-weight-bold">&bull; Penetration Testing Intern (VAPT) &amp; Security Researcher</span><br>
+                <span style="color: #dc3545; font-weight: 600;">Cyber Warfare Intelligence Lab (OPC) Pvt. Ltd. (CWIL)</span> <span class="badge badge-danger ml-1" style="font-size: 0.7rem;">ACTIVE</span> <span class="text-muted">(Nov 2026 – Present)</span><br>
+                <span style="color: #94a3b8; padding-left: 10px; display: inline-block;">Enterprise Web/API VAPT (OWASP Top 10, ASVS v4.0), BOLA/IDOR exploitation, automated testing tooling (WARSENTINEL, RaceSentinel), false positive elimination, and CVSS v3.1 reporting.</span>
+              </div>
+              <div style="margin-bottom: 8px;">
+                <span class="text-white font-weight-bold">&bull; Cyber Crime &amp; Digital Forensics Intern</span><br>
+                <span style="color: #dc3545; font-weight: 600;">Cyber Police Station, Nashik Police Commissionerate</span> <span class="text-muted">(Jan 2026 – May 2026)</span><br>
+                <span style="color: #94a3b8; padding-left: 10px; display: inline-block;">Investigated 15+ live cybercrime cases, chain of custody evidence (ISO/IEC 27037), Wireshark PCAP triage, CDR/IPDR telecom intelligence, and malicious APK reverse engineering.</span>
               </div>
               <div>
-                <span class="text-white font-weight-bold">&bull; Cyber Crime Intern</span> &bull; Cyber Police Station, Nashik Police Commissionerate <span class="text-muted">(Jan 2026 – May 2026)</span><br>
-                <span style="color: #94a3b8; padding-left: 10px;">Investigated 15+ live cybercrime cases, chain of custody evidence, Wireshark PCAP triage, and CDR/IPDR telecom intelligence.</span>
+                <span class="text-white font-weight-bold">&bull; Offensive Security Tool Architect &amp; Researcher</span><br>
+                <span style="color: #dc3545; font-weight: 600;">Independent Offensive Lab</span> <span class="text-muted">(2025 – Present)</span><br>
+                <span style="color: #94a3b8; padding-left: 10px; display: inline-block;">Architected AUTHENTIX Enterprise (Burp Montoya), BlindStrike (IQR SQLi engine), Reflectra (Headless DOM XSS), and ReconForge.</span>
               </div>`;
             break;
 
@@ -3151,7 +3977,7 @@
   </div>
 
   <script>
-    function openCertModal(type) {
+    function openCertModal(type, customSrc, customTitle) {
       const modal = document.getElementById('certModal');
       const img = document.getElementById('certModalImg');
       const title = document.getElementById('certModalTitle');
@@ -3159,17 +3985,24 @@
       const dl = document.getElementById('certModalDownload');
 
       if (type === 'ceh') {
-        title.innerText = 'EC-Council Certified Ethical Hacker (CEH v13) — Official Certificate';
+        title.innerHTML = '<i class="fas fa-shield-halved text-danger mr-2"></i>EC-Council Certified Ethical Hacker (CEH v13) — Official Certificate';
         img.src = 'assets/ceh_certificate.jpg';
         meta.innerText = 'EC-Council Verified Credential • Pratik Sanjay Khairnar';
         dl.href = 'assets/ceh_certificate.jpg';
         dl.setAttribute('download', 'Pratik_Khairnar_CEH_Certificate.jpg');
       } else if (type === 'ccna') {
-        title.innerText = 'Cisco Certified Network Associate (CCNA) — Official Certificate';
+        title.innerHTML = '<i class="fas fa-network-wired text-danger mr-2"></i>Cisco Certified Network Associate (CCNA) — Official Certificate';
         img.src = 'assets/ccna_certificate.jpg';
         meta.innerText = 'Cisco Networking Academy • Pratik Sanjay Khairnar';
         dl.href = 'assets/ccna_certificate.jpg';
         dl.setAttribute('download', 'Pratik_Khairnar_CCNA_Certificate.jpg');
+      } else if (type === 'custom') {
+        img.src = customSrc;
+        img.alt = customTitle || 'Operational Telemetry View';
+        title.innerHTML = '<i class="fas fa-desktop text-danger mr-2"></i>' + (customTitle || 'Technical Telemetry Inspection');
+        meta.innerText = 'Architecture & Dashboard Telemetry • Offensive Tooling Suite';
+        dl.href = customSrc;
+        dl.setAttribute('download', 'telemetry_screenshot.png');
       }
       modal.style.display = 'flex';
     }
@@ -3178,6 +4011,528 @@
       const modal = document.getElementById('certModal');
       if (modal) modal.style.display = 'none';
     }
+
+    // ==========================================================================
+    // Red Team Cyber Arsenal & Tactical Dossier Controller (7 Master Tools)
+    // ==========================================================================
+    const arsenalData = [
+      {
+        id: "authentix",
+        codex: "#AX-MONT-01",
+        category: "burp",
+        categoryLabel: "Burp Montoya Extension",
+        badgeClass: "badge-danger",
+        name: "AUTHENTIX Enterprise v3.0.0",
+        tagline: "Asynchronous Burp Suite Montoya Extension with 3-Way Differential IDOR & 16 Compound ATO Chains",
+        threatScope: "OWASP Top 10 (A01:2021, A07:2021) • OWASP API Top 10 (API1, API2) • ASVS v4.0 • CVSS v3.1",
+        img: "assets/authentix_extension_dashboard.webp",
+        benchmark: "14,880 Req/s Throughput • 34 Deterministic Invariants",
+        demoUrl: "https://pratik-khairnar-sec.github.io/authentix-enterprise/",
+        repoUrl: "https://github.com/pratik-khairnar-sec/authentix-enterprise",
+        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/authentix-enterprise.git",
+        breakthrough: "Eliminates authorization false positives through an asynchronous 3-Way Differential IDOR Engine (comparing Attacker, Victim, and Unauthenticated/Admin contexts) coupled with Soft-200 Heuristic Disambiguation. Automatically correlates session state machines across 34 invariants to construct 16 compound Account Takeover (ATO) exploit chains.",
+        vectors: [
+          "3-Way Differential IDOR",
+          "Soft-200 Error Disambiguation",
+          "JWT alg:none & Key Confusion",
+          "16 Compound ATO Pathways",
+          "Session Fixation & Replay",
+          "OAuth2 Flow Tampering"
+        ],
+        specs: ["Java 17/21", "PortSwigger Montoya API", "FlatLaf Darcula UI", "ThreadPoolExecutor", "Jackson JSON"],
+        terminalLog: `[+] AUTHENTIX Enterprise v3.0.0 Engine Initialized (Montoya API 2024.1)
+[*] Asynchronous ThreadPool active (8 worker threads, queue: 1024)
+[*] Injecting 3-Way Context Matrix: [Attacker: User_0x42] vs [Victim: User_0x99]
+--> POST /api/v2/account/profile HTTP/1.1 (Victim Context: HTTP 200 OK | Body: 4,120 bytes)
+--> POST /api/v2/account/profile HTTP/1.1 (Attacker Context: HTTP 200 OK | Body: 4,118 bytes)
+[!] CRITICAL: 3-Way Differential IDOR Confirmed!
+    [+] Heuristic Soft-200 Check: PASSED (Disambiguated from generic error envelope)
+    [+] Parameter Mutated: account_id=98214 (Victim PII Leaked to Attacker Session)
+    [+] Compound Chain Triggered: [ATO_CHAIN_07] IDOR -> Password Reset Token Exfiltration
+    [+] CVSS v3.1 Score: 8.8 HIGH (CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:N)
+[+] Audit Artifact Dispatched to Burp Issue Activity & JSON Log`
+      },
+      {
+        id: "reconforge",
+        codex: "#RF-EASM-02",
+        category: "recon",
+        categoryLabel: "EASM & OSINT Matrix",
+        badgeClass: "badge-info",
+        name: "ReconForge v4.0",
+        tagline: "Multi-Target Bug Bounty Reconnaissance Operating System with 30 Master Phases & 52,630+ Dork Vault",
+        threatScope: "External Attack Surface Management (EASM) • OSINT Threat Profiling • NIST SP 800-115",
+        img: "assets/reconforge_hero_dashboard.webp",
+        benchmark: "52,630+ Curated Dorks • 30 Master Phases • 100% Offline Client-Side",
+        demoUrl: "https://pratik-khairnar-sec.github.io/ReconForge/",
+        repoUrl: "https://github.com/pratik-khairnar-sec/ReconForge",
+        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/ReconForge.git",
+        breakthrough: "Standardizes disparate reconnaissance workflows into a unified 30-phase offensive pipeline. Features an offline, zero-telemetry vault of 52,630+ indexed Google, GitHub, and Shodan dorks, generating 1-click weaponized execution chains for Subfinder, HTTPX, Katana, Nuclei, and Gau.",
+        vectors: [
+          "Subdomain Permutation Matrix",
+          "Leaked S3 / GCP Storage Buckets",
+          "Exposed Admin & Debug Consoles",
+          "Historical Wayback CDX Streams",
+          "Sensitive .env & .git Disclosures",
+          "Shadow API Endpoint Discovery"
+        ],
+        specs: ["Vanilla ES6+ JS", "Web Crypto API", "Web Workers (Offline)", "Tailwind / Custom CSS", "Zero Telemetry"],
+        terminalLog: `[+] ReconForge v4.0 Initialized | Target Domain: target.com
+[*] Loading Master Dork Vault (52,630 entries across 30 operational categories)...
+[Phase 01] Passive Certificate Transparency & Subdomain Permutations:
+    --> Subfinder: 142 unique subdomains discovered
+    --> HTTPX Probing: 89 active HTTP/HTTPS hosts (200 OK / 403 Forbidden)
+[Phase 08] Cloud Storage & Origin Unmasking:
+    --> Discovered S3 Bucket: target-internal-assets.s3.amazonaws.com [READABLE]
+[Phase 14] Sensitive File Disclosures & Backup Extraction:
+    --> Google Dork matched: site:target.com ext:sql | ext:env | ext:log | ext:json
+    [!] HIGH RISK: Exposed .git repository at https://dev-api.target.com/.git/
+[+] Automated Tool Dispatch: Generated 1-click execution script for Katana + Nuclei`
+      },
+      {
+        id: "reflectra",
+        codex: "#RE-XSS-03",
+        category: "exploit",
+        categoryLabel: "Headless DOM XSS Engine",
+        badgeClass: "badge-warning",
+        name: "Reflectra v7.0.0",
+        tagline: "Context-Aware DOM XSS Engine Verifying Real Execution via Headless Chrome Dialog Interception",
+        threatScope: "OWASP Top 10 (A03:2021 Injection) • ASVS v4.0 5.3 • CWE-79",
+        img: "assets/reflectra_dashboard.webp",
+        benchmark: "2,600+ Context Payloads • 0.00% False Positive Rate • CDP Interception",
+        demoUrl: "https://pratik-khairnar-sec.github.io/Reflectra/",
+        repoUrl: "https://github.com/pratik-khairnar-sec/Reflectra",
+        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/Reflectra.git",
+        breakthrough: "Solves regex scanner false positives by hooking into the Chrome DevTools Protocol (CDP). Evaluates DOM source-to-sink flows across HTML, attribute, script, and URI contexts, confirming vulnerabilities only when real JavaScript execution fires intercepted dialog events (alert, prompt, confirm).",
+        vectors: [
+          "DOM-based XSS",
+          "Source-to-Sink Dataflow Triage",
+          "Headless Chrome CDP Hooks",
+          "CSP Bypass Analysis",
+          "Context-Specific Attribute Escapes",
+          "Deterministic PoC Reproduction"
+        ],
+        specs: ["Python 3", "Playwright / CDP", "Headless Chromium", "AST Lexical Tokenizer", "Colorama"],
+        terminalLog: `[+] Reflectra v7.0.0 — Context-Aware DOM XSS Auditing Engine
+[*] Target URL: https://app.target.corp/search?q=FUZZ
+[*] Analyzing DOM Context: Sink located inside <script> tag: var query = "FUZZ";
+[*] Context Engine selected: SCRIPT_STRING_BREAKOUT (Prioritized 42 payloads)
+[-->] Injecting Payload: "-alert(document.domain)-"
+[*] Chrome DevTools Protocol Hook: Intercepting Runtime events...
+[!] VULNERABILITY CONFIRMED: Real Execution Triggered!
+    [+] Dialog Event: Page.javascriptDialogOpening fired!
+    [+] Dialog Type: alert | Message: "app.target.corp"
+    [+] Source Sink Chain: location.search -> eval() / innerHTML
+    [+] False Positive Probability: 0.00% (Confirmed via DOM engine execution)
+    [+] Proof-of-Concept: Sanitized reproduction URL generated & saved.`
+      },
+      {
+        id: "blindstrike",
+        codex: "#BS-SQLI-04",
+        category: "exploit",
+        categoryLabel: "Statistical Blind SQLi",
+        badgeClass: "badge-danger",
+        name: "BlindStrike v7.0.0",
+        tagline: "Algorithmic Time-Based & Boolean Blind SQLi Framework with Statistical IQR Jitter Filtering",
+        threatScope: "OWASP Top 10 (A03:2021 Injection) • SANS Top 25 • CWE-89",
+        img: "assets/blindstrike_dashboard.webp",
+        benchmark: "IQR Latency Jitter Filtering • Multi-Threaded Character Extraction • 5 DB Engines",
+        demoUrl: "https://pratik-khairnar-sec.github.io/BlindStrike/",
+        repoUrl: "https://github.com/pratik-khairnar-sec/BlindStrike",
+        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/BlindStrike.git",
+        breakthrough: "Eliminates network latency variance in time-based blind SQL injection using Interquartile Range (IQR) Statistical Outlier Filtering (Q3 + 1.5 * IQR). Baselines dynamic round-trip times and executes multi-threaded binary search character extraction across 5 major database engines.",
+        vectors: [
+          "Time-Based Blind SQLi",
+          "Boolean Blind SQLi",
+          "IQR Statistical Latency Filtering",
+          "MySQL / Postgres / MSSQL / Oracle / SQLite",
+          "Dynamic Network RTT Calibration",
+          "Binary Search Character Extraction"
+        ],
+        specs: ["Python 3", "NumPy", "Persistent Keep-Alive HTTP", "Concurrent.Futures", "Thread-Safe SQLite"],
+        terminalLog: `[+] BlindStrike v7.0.0 — Statistical Blind SQLi Framework
+[*] Calibrating baseline network latency (50 samples)...
+    [+] Mean RTT: 41.2ms | Standard Deviation: 3.1ms | IQR: 4.8ms
+    [+] Calculated Outlier Threshold: [Q3 + 1.5 * IQR] = 58.4ms
+[*] Injecting Time-Delay Vector (Sleep 5s):
+    --> Payload: ' OR IF(1=1, SLEEP(5), 0)-- -
+    --> Measured Response Time: 5,048ms (>> 58.4ms threshold)
+[!] BLIND SQL INJECTION VERIFIED on parameter: 'cat_id'
+[*] Initiating Multi-Threaded Binary Search String Extraction:
+    [char 01] 'c' (RTT: 5,039ms)
+    [char 02] 'u' (RTT: 5,042ms)
+    [char 03] 's' (RTT: 5,038ms)
+    [char 04] 't' (RTT: 5,041ms)
+[+] Extracted Schema: 'customer_db' | Total queries executed: 38`
+      },
+      {
+        id: "taintql",
+        codex: "#TQ-GQL-05",
+        category: "api",
+        categoryLabel: "GraphQL AST Auditor",
+        badgeClass: "badge-purple",
+        name: "TaintQL v2.0.0",
+        tagline: "GraphQL Security Auditor Parsing Query ASTs for Introspection Leaks, Depth Limits & Batching Bypasses",
+        threatScope: "OWASP API Security Top 10 (API4:2023, API8:2023) • GraphQL Security Standard",
+        img: "assets/11_presentation_cover.png",
+        benchmark: "27/27 Pytest Tests Passing • AST Query Tokenizer • Burp Proxy Integration",
+        demoUrl: "https://github.com/pratik-khairnar-sec/TaintQL",
+        repoUrl: "https://github.com/pratik-khairnar-sec/TaintQL",
+        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/TaintQL.git",
+        breakthrough: "Compiles GraphQL queries into Abstract Syntax Trees (AST) to evaluate recursion depth limits, schema introspection disclosures, and batching rate-limit bypasses. Hooks client mutation events in Playwright and proxies traffic through Burp Suite for automated field discovery.",
+        vectors: [
+          "Schema Introspection Exposure",
+          "Recursive Query Depth Exhaustion",
+          "Alias Mutation Batching Bypasses",
+          "Field Suggestion Information Leaks",
+          "BOLA on Nested Object Types",
+          "AST Token Stream Mutation"
+        ],
+        specs: ["Python 3", "GraphQL-Core AST", "Playwright", "Pytest (27/27 Passing)", "Burp Proxy Upstream"],
+        terminalLog: `[+] TaintQL v2.0.0 — GraphQL AST Security Auditor
+[*] Scanning Endpoint: https://api.target.corp/graphql
+[Phase 1] Schema Introspection Analysis:
+    [!] INTROSPECTION ENABLED: Full GraphQL schema exfiltrated (84 types, 312 fields)
+[Phase 2] AST Depth Limit Stress Test:
+    --> Generating recursive query AST (Depth 12)...
+    [!] VULNERABILITY DETECTED: No Query Depth Limit Enforced!
+    [+] Server CPU spiked to 98% on 5 concurrent recursive queries (Potential DoS)
+[Phase 3] Alias Batching Bypass Test:
+    --> Compiling 200 batched queries in single HTTP frame: { a1: login(...), a2: login(...) }
+    [!] RATE LIMIT BYPASSED: Backend processed 200 login attempts in single request!
+[+] Report Output: SARIF & JSON telemetry generated for VAPT dossier.`
+      },
+      {
+        id: "corsair",
+        codex: "#CO-CORS-06",
+        category: "api",
+        categoryLabel: "CORS Misconfig Auditor",
+        badgeClass: "badge-success",
+        name: "CORSair v3.0.0",
+        tagline: "In-Browser CORS Security Testing Suite with Dynamic Reflection Verification & Shannon Entropy Calculations",
+        threatScope: "OWASP Top 10 (A05:2021 Security Misconfiguration) • ASVS v4.0 14.4",
+        img: "assets/corsair_dashboard.webp",
+        benchmark: "Shannon Entropy Calculation • Dynamic ACAC/ACAO Verification • 1-Click PoC Generator",
+        demoUrl: "https://pratik-khairnar-sec.github.io/CORSair/",
+        repoUrl: "https://github.com/pratik-khairnar-sec/CORSair",
+        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/CORSair.git",
+        breakthrough: "Audits CORS policy implementations against 14 complex bypass patterns (null origin, regex dot unescapes, prefix/suffix trust). Measures Shannon Entropy on reflected responses to distinguish between harmless public markup and high-entropy secret token disclosures.",
+        vectors: [
+          "ACAC / ACAO Wildcard Exploitation",
+          "Null Origin Trust Abuse",
+          "Subdomain Regex Bypass",
+          "Pre-Flight Cache Poisoning",
+          "Shannon Entropy Secret Detection",
+          "Automated Exploit HTML PoC Builder"
+        ],
+        specs: ["HTML5 / ES6 Modules", "Shannon Entropy Engine", "Bootstrap 5 Dark", "CORS Preflight Tester"],
+        terminalLog: `[+] CORSair v3.0.0 — Cross-Origin Resource Sharing Auditor
+[*] Target API: https://banking.target.corp/api/v1/user/private-data
+[*] Testing Origin Reflection Matrix:
+    --> Origin: https://evil.com               [BLOCKED]
+    --> Origin: null                           [CRITICAL VULNERABILITY!]
+        [+] Response Header: Access-Control-Allow-Origin: null
+        [+] Response Header: Access-Control-Allow-Credentials: true
+[*] Calculating Response Shannon Entropy:
+    [+] Entropy Value: 4.82 bits/byte (High Entropy Detected)
+    [+] Sensitive Token Pattern: Bearer eyJhbGciOi... (Session Token Leaked!)
+[+] Generated Weaponized PoC: index.html (Exfiltrates authenticated response to attacker C2)`
+      },
+      {
+        id: "waybacklens",
+        codex: "#WL-CDX-07",
+        category: "recon",
+        categoryLabel: "Chrome MV3 Extension",
+        badgeClass: "badge-primary",
+        name: "WaybackLens v1.0.0",
+        tagline: "Chrome Extension (MV3) for Real-Time Wayback Machine CDX Endpoint Reconnaissance & Risk Scoring",
+        threatScope: "Historical Endpoint Recon • Unmapped Attack Surface • Sensitive File Leakage",
+        img: "assets/wayback_lens_dashboard.webp",
+        benchmark: "Real-Time CDX Streaming • Heuristic Security Risk Scoring • Live 200 HTTP Probe",
+        demoUrl: "https://pratik-khairnar-sec.github.io/wayback-lens/",
+        repoUrl: "https://github.com/pratik-khairnar-sec/wayback-lens",
+        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/wayback-lens.git",
+        breakthrough: "Streams historical endpoints directly from the Internet Archive Wayback CDX API without memory exhaustion. Applies a real-time heuristic security classifier to identify dangerous extensions (.env, .git, .sql, .bak) and active API routes, enabling 1-click export to Burp Suite scope.",
+        vectors: [
+          "Historical Endpoint Recon",
+          "Unindexed Admin Portals",
+          "Leaked Database Backups",
+          "Deprecated API Routes",
+          "Heuristic Risk Classification",
+          "Direct Burp Scope Export"
+        ],
+        specs: ["Chrome Extensions (MV3)", "JavaScript ES6", "Web Streams API", "IndexedDB Cache", "Service Workers"],
+        terminalLog: `[+] WaybackLens v1.0.0 (Chrome MV3) Active
+[*] Intercepting active tab domain: finance.target.corp
+[*] Streaming CDX records from archive.org...
+    [+] 14,280 historical URLs streamed in 1.4s
+[*] Applying Heuristic Risk Classifier:
+    [HIGH RISK] https://finance.target.corp/admin/old_backup_2023.zip (Status: 200 OK)
+    [HIGH RISK] https://finance.target.corp/api/v1/debug/tokens (Status: 403 Forbidden)
+    [MEDIUM]    https://finance.target.corp/swagger/v1/swagger.json (Status: 200 OK)
+[+] Export: 42 High-Value VAPT Endpoints exported to Burp Scope format.`
+      }
+    ];
+
+    let activeWeaponIndex = 0;
+    let currentFilter = 'all';
+    let scanlinesEnabled = true;
+
+    function renderArsenalDeck() {
+      const deckEl = document.getElementById('arsenalDeck');
+      if (!deckEl) return;
+
+      const filtered = arsenalData.filter(item => currentFilter === 'all' || item.category === currentFilter);
+      if (filtered.length === 0) {
+        deckEl.innerHTML = '<div class="text-muted p-3">No tools found matching current filter.</div>';
+        return;
+      }
+
+      deckEl.innerHTML = filtered.map((item, idx) => {
+        const globalIdx = arsenalData.findIndex(w => w.id === item.id);
+        const isActive = globalIdx === activeWeaponIndex;
+        return `
+          <div class="arsenal-weapon-item ${isActive ? 'active' : ''}" onclick="selectWeapon(${globalIdx})" data-index="${globalIdx}">
+            <div class="weapon-item-top">
+              <span class="weapon-codex-id">${item.codex}</span>
+              <span class="badge ${item.badgeClass} weapon-badge-pill">${item.categoryLabel}</span>
+            </div>
+            <div class="weapon-name-row">
+              <h5 class="weapon-name">${item.name}</h5>
+              <i class="fas fa-chevron-right text-muted" style="font-size: 0.75rem;"></i>
+            </div>
+            <p class="weapon-tagline">${item.tagline}</p>
+            <div class="weapon-micro-chips">
+              ${item.specs.slice(0, 3).map(s => `<span class="weapon-chip">${s}</span>`).join('')}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function renderDossierConsole() {
+      const consoleEl = document.getElementById('dossierContent');
+      if (!consoleEl) return;
+
+      const item = arsenalData[activeWeaponIndex];
+      if (!item) return;
+
+      consoleEl.innerHTML = `
+        <!-- Header -->
+        <div class="dossier-header-bar">
+          <div>
+            <div class="dossier-meta-crumb">
+              <span class="live-pulse-dot mr-1"></span> SYS_ID: ${item.codex} // CLASSIFICATION: ${item.categoryLabel.toUpperCase()}
+            </div>
+            <h3 class="dossier-title">
+              ${item.name}
+              <span class="badge ${item.badgeClass}" style="font-size: 0.75rem; vertical-align: middle;">OPERATIONAL</span>
+            </h3>
+            <p class="dossier-tagline">${item.tagline}</p>
+            <div class="dossier-threat-scope">
+              <i class="fas fa-crosshairs text-warning mr-1"></i> ${item.threatScope}
+            </div>
+          </div>
+
+          <div class="dossier-action-btns">
+            <a href="${item.demoUrl}" target="_blank" class="arsenal-btn-primary" title="Launch Interactive Showcase">
+              <i class="fas fa-arrow-up-right-from-square"></i> Live Demo
+            </a>
+            <a href="${item.repoUrl}" target="_blank" class="arsenal-btn-secondary" title="View Source Repository">
+              <i class="fab fa-github"></i> Repository
+            </a>
+            <button class="arsenal-btn-cli" onclick="copyArsenalCmd('${item.cloneCmd}', this)" title="Copy Git Clone Command">
+              <i class="fas fa-terminal"></i> Clone
+            </button>
+          </div>
+        </div>
+
+        <!-- Viewport & Tech Breakdown -->
+        <div class="dossier-viewport-box">
+          <!-- Left: Viewport Image Frame -->
+          <div class="viewport-img-frame" onclick="openCertModal('custom', '${item.img}', '${item.name} Architecture & Dashboard')">
+            <div class="viewport-telemetry-badge">
+              <i class="fas fa-bolt text-danger mr-1"></i> ${item.benchmark}
+            </div>
+            <img src="${item.img}" alt="${item.name} Dashboard" loading="lazy">
+            <div class="crt-overlay ${scanlinesEnabled ? '' : 'disabled'}" id="crtOverlay"></div>
+            <div class="viewport-tools-bar" onclick="event.stopPropagation()">
+              <button class="viewport-tool-btn" onclick="toggleScanlines()" title="Toggle CRT Scanline HUD Effect">
+                <i class="fas fa-tv mr-1"></i> CRT: ${scanlinesEnabled ? 'ON' : 'OFF'}
+              </button>
+              <button class="viewport-tool-btn" onclick="openCertModal('custom', '${item.img}', '${item.name} Architecture & Dashboard')" title="Inspect Fullscreen Lightbox">
+                <i class="fas fa-expand mr-1"></i> Expand
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Technical Intelligence -->
+          <div class="dossier-tech-pane">
+            <div class="dossier-breakthrough-box">
+              <div class="breakthrough-label"><i class="fas fa-microchip mr-1"></i> Architectural Breakthrough:</div>
+              <p class="breakthrough-text">${item.breakthrough}</p>
+            </div>
+
+            <div class="dossier-vectors-box">
+              <div class="vectors-label"><i class="fas fa-shield-virus mr-1"></i> Deterministic Attack Vectors Covered:</div>
+              <div class="vectors-chips">
+                ${item.vectors.map(v => `<span class="vector-chip"><i class="fas fa-check-circle mr-1" style="font-size: 0.65rem;"></i>${v}</span>`).join('')}
+              </div>
+            </div>
+
+            <div class="dossier-specs-row">
+              ${item.specs.map(s => `<span class="spec-chip">${s}</span>`).join('')}
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Terminal Sandbox -->
+        <div class="arsenal-term-sandbox">
+          <div class="term-sandbox-bar">
+            <div class="term-window-dots">
+              <span class="term-dot term-dot-red"></span>
+              <span class="term-dot term-dot-yellow"></span>
+              <span class="term-dot term-dot-green"></span>
+            </div>
+            <div class="term-sandbox-title">
+              <i class="fas fa-terminal text-danger mr-1"></i> LIVE TELEMETRY LOG // ${item.codex}
+            </div>
+            <button class="term-rerun-btn" onclick="rerunTermSimulation()">
+              <i class="fas fa-rotate-right mr-1"></i> Re-run Simulation
+            </button>
+          </div>
+          <div class="term-sandbox-body" id="termSandboxBody">${formatTerminalLog(item.terminalLog)}</div>
+        </div>
+      `;
+    }
+
+    function formatTerminalLog(raw) {
+      return raw
+        .replace(/\n/g, '<br>')
+        .replace(/(\[\+\])/g, '<span style="color: #34d399; font-weight: bold;">$1</span>')
+        .replace(/(\[\*\])/g, '<span style="color: #38bdf8; font-weight: bold;">$1</span>')
+        .replace(/(\[\!\])/g, '<span style="color: #f87171; font-weight: bold;">$1</span>')
+        .replace(/(-->)/g, '<span style="color: #fbbf24; font-weight: bold;">$1</span>')
+        .replace(/(CRITICAL|HIGH RISK|VULNERABILITY CONFIRMED)/g, '<strong style="color: #ef4444;">$1</strong>');
+    }
+
+    function rerunTermSimulation() {
+      const termEl = document.getElementById('termSandboxBody');
+      if (!termEl) return;
+      const item = arsenalData[activeWeaponIndex];
+      termEl.innerHTML = '<span style="color: #fbbf24;">[*] Initializing dynamic exploit simulation probe...</span>';
+      setTimeout(() => {
+        termEl.innerHTML = formatTerminalLog(item.terminalLog);
+      }, 350);
+    }
+
+    function selectWeapon(idx) {
+      activeWeaponIndex = idx;
+      renderArsenalDeck();
+      renderDossierConsole();
+    }
+
+    function filterArsenal(cat) {
+      currentFilter = cat;
+      document.querySelectorAll('#arsenalFilters .filter-chip').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-filter') === cat);
+      });
+
+      const firstMatch = arsenalData.findIndex(item => cat === 'all' || item.category === cat);
+      if (firstMatch !== -1) {
+        activeWeaponIndex = firstMatch;
+      }
+      renderArsenalDeck();
+      renderDossierConsole();
+    }
+
+    function switchArsenalView(mode) {
+      const dossierView = document.getElementById('arsenalDossierView');
+      const matrixView = document.getElementById('arsenalMatrixView');
+      const btnDossier = document.getElementById('btnViewDossier');
+      const btnMatrix = document.getElementById('btnViewMatrix');
+
+      if (mode === 'dossier') {
+        dossierView.style.display = 'grid';
+        matrixView.style.display = 'none';
+        btnDossier.classList.add('active');
+        btnMatrix.classList.remove('active');
+      } else {
+        dossierView.style.display = 'none';
+        matrixView.style.display = 'block';
+        btnDossier.classList.remove('active');
+        btnMatrix.classList.add('active');
+        renderMatrixTable();
+      }
+    }
+
+    function renderMatrixTable() {
+      const tbody = document.getElementById('matrixTableBody');
+      if (!tbody) return;
+
+      tbody.innerHTML = arsenalData.map(item => `
+        <tr>
+          <td class="matrix-codex">${item.codex}</td>
+          <td>
+            <span class="matrix-tool-name">${item.name}</span>
+            <small class="text-muted">${item.tagline.substring(0, 70)}...</small>
+          </td>
+          <td><span class="badge ${item.badgeClass} matrix-badge">${item.categoryLabel}</span></td>
+          <td style="max-width: 320px; font-size: 0.8rem; line-height: 1.45;">${item.breakthrough.substring(0, 110)}...</td>
+          <td><span class="badge badge-dark text-info p-1" style="font-family: 'Fira Code', monospace; font-size: 0.72rem;">${item.benchmark}</span></td>
+          <td>
+            <div class="matrix-links">
+              <a href="${item.demoUrl}" target="_blank" class="matrix-link-btn" title="Live Demo"><i class="fas fa-link mr-1"></i>Demo</a>
+              <a href="${item.repoUrl}" target="_blank" class="matrix-link-btn" title="GitHub Repo"><i class="fab fa-github mr-1"></i>Code</a>
+            </div>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function toggleScanlines() {
+      scanlinesEnabled = !scanlinesEnabled;
+      renderDossierConsole();
+    }
+
+    function copyArsenalCmd(cmd, btn) {
+      navigator.clipboard.writeText(cmd).then(() => {
+        const originalHtml = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-check text-success"></i> Copied!';
+        setTimeout(() => {
+          btn.innerHTML = originalHtml;
+        }, 2000);
+      });
+    }
+
+    // Keyboard Navigation for Arsenal Deck
+    document.addEventListener('keydown', (e) => {
+      const projectsSection = document.getElementById('projects');
+      if (!projectsSection) return;
+      const rect = projectsSection.getBoundingClientRect();
+      const inView = rect.top < window.innerHeight && rect.bottom > 0;
+      if (!inView) return;
+
+      if (e.key >= '1' && e.key <= '7') {
+        const targetIdx = parseInt(e.key) - 1;
+        if (targetIdx < arsenalData.length) {
+          selectWeapon(targetIdx);
+        }
+      } else if (e.key === 'ArrowDown') {
+        if (activeWeaponIndex < arsenalData.length - 1) {
+          selectWeapon(activeWeaponIndex + 1);
+        }
+      } else if (e.key === 'ArrowUp') {
+        if (activeWeaponIndex > 0) {
+          selectWeapon(activeWeaponIndex - 1);
+        }
+      }
+    });
+
+    // Initialize Red Team Arsenal on Page Load
+    document.addEventListener("DOMContentLoaded", () => {
+      renderArsenalDeck();
+      renderDossierConsole();
+    });
   </script>
 
 </body>

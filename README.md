@@ -1,6 +1,6 @@
 # 🛡️ Pratik Khairnar — Executive Cybersecurity Portfolio & Showcase
 
-> **Certified Ethical Hacker (CEH v13) • Offensive Security Tool Architect • Web & API VAPT Engineer**  
+> **Penetration Testing Intern (VAPT) @ Cyber Warfare Intelligence Lab (CWIL) • Certified Ethical Hacker (CEH v13) • Offensive Security Tool Architect**  
 > Grounded in real-world evidentiary digital forensics, Burp Suite Montoya API engineering, and automated authorization flaw detection.
 
 <p align="center">
@@ -28,26 +28,35 @@
 
 ---
 
-## 🛡️ Production Security Arsenal & Open-Source Tooling
+## 🛡️ Professional Security Operations & Experience
 
-| Suite / Tool | Core Architecture & Technology | Version | Live Demo | Repository |
-|---|---|---|---|---|
-| **AUTHENTIX Enterprise** | Native Burp Suite Montoya API: 34 Invariants, 30+ Secret Rules, 16 ATO Chains (Java 17/21) | `v3.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/authentix-enterprise/) | [`authentix-enterprise`](https://github.com/pratik-khairnar-sec/authentix-enterprise) |
-| **BlindStrike** | Latency-calibrated Time & Boolean Blind SQLi Framework with Interquartile Range (IQR) noise filtering | `v7.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/BlindStrike/) | [`BlindStrike`](https://github.com/pratik-khairnar-sec/BlindStrike) |
-| **Reflectra** | Context-aware DOM XSS scanner with Headless Chrome verification & zero false positives | `v7.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/Reflectra/) | [`Reflectra`](https://github.com/pratik-khairnar-sec/Reflectra) |
-| **ReconForge** | Master Bug Bounty & VAPT Reconnaissance Operating System (30 Phases & 52,630+ Curated Dorks) | `v3.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/ReconForge/) | [`ReconForge`](https://github.com/pratik-khairnar-sec/ReconForge) |
-| **CORSair** | Cross-Origin Resource Sharing security analyzer with Shannon entropy token leak detection | `v3.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/CORSair/) | [`CORSair`](https://github.com/pratik-khairnar-sec/CORSair) |
-| **WaybackLens** | High-performance Wayback Machine CDX Recon & Triage Chrome Extension (Manifest V3) | `v2.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/wayback-lens/) | [`wayback-lens`](https://github.com/pratik-khairnar-sec/wayback-lens) |
-| **EndpointFinder** | Autonomous Chrome Extension for deep client-side JavaScript endpoint & parameter extraction | `v1.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/endpoint-finder-extension/) | [`endpoint-finder-extension`](https://github.com/pratik-khairnar-sec/endpoint-finder-extension) |
-
----
-
-## 🔍 Law Enforcement Forensics Operations
+* **Penetration Testing Intern (VAPT) & Security Researcher — Cyber Warfare Intelligence Lab (OPC) Pvt. Ltd. (CWIL)** *(Nov 2026 – Present)*:
+  * Conducting manual enterprise web application and REST/GraphQL API penetration testing aligned with **OWASP Top 10 (2021)**, **OWASP API Security Top 10 (2023)**, **WSTG v4.2**, and **ASVS v4.0**.
+  * Uncovered critical authorization flaws (BOLA/IDOR), broken authentication, and sensitive PII exposures across active client targets (e.g., MediBuddy healthcare SSO/CookieBridge, Kewal Kiran Clothing infrastructure).
+  * Engineered internal automated fuzzing harnesses (Dirsearch/FFUF workflows), race condition testing engines (RaceSentinel), and cyber warfare intelligence automation (WARSENTINEL).
+  * Validated scanner findings (Burp Suite Pro, Nessus, Nmap), eliminated false positives, and delivered defensible **CVSS v3.1**-scored reports with deterministic PoCs and remediation blueprints.
+  * Authored official red team training SOPs on XSS discovery, subdomain enumeration, and advanced Google Dorking for junior researchers.
 
 * **Cyber Crime Intern — Cyber Police Station, Nashik Police Commissionerate** *(Jan 2026 – May 2026)*:
   * Investigated **15+ live cybercrime and financial fraud cases** under senior officers.
   * Preserved evidentiary integrity adhering strictly to **ISO/IEC 27037** Chain of Custody standards.
   * Dissected malicious sessions in **Wireshark** to reconstruct C2 communication and trace attack vectors.
+  * Correlated **CDR/IPDR telecom logs** with banking records to trace fraudulent transactions.
+  * Extracted hardcoded C2 endpoints and permissions from malicious Android APKs via **Jadx** and **Apktool**.
+
+---
+
+## 🛡️ Production Security Arsenal & Open-Source Tooling
+
+| Suite / Tool | Core Architecture & Technology | Version | Live Demo | Repository |
+|---|---|---|---|---|
+| **AUTHENTIX Enterprise** | Native Burp Suite Montoya API: 34 Invariants, 30+ Secret Rules, 16 ATO Chains (Java 17/21) | `v3.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/authentix-enterprise/) | [`authentix-enterprise`](https://github.com/pratik-khairnar-sec/authentix-enterprise) |
+| **ReconForge** | Master Bug Bounty & VAPT Reconnaissance Operating System (30 Phases & 52,630+ Curated Dorks) | `v4.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/ReconForge/) | [`ReconForge`](https://github.com/pratik-khairnar-sec/ReconForge) |
+| **Reflectra** | Context-aware DOM XSS scanner with Headless Chrome verification & zero false positives | `v7.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/Reflectra/) | [`Reflectra`](https://github.com/pratik-khairnar-sec/Reflectra) |
+| **BlindStrike** | Latency-calibrated Time & Boolean Blind SQLi Framework with Interquartile Range (IQR) noise filtering | `v7.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/BlindStrike/) | [`BlindStrike`](https://github.com/pratik-khairnar-sec/BlindStrike) |
+| **TaintQL** | GraphQL AST Security Auditor parsing query trees for introspection leaks & depth bypasses | `v2.0.0` | [🌐 Repository](https://github.com/pratik-khairnar-sec/TaintQL) | [`TaintQL`](https://github.com/pratik-khairnar-sec/TaintQL) |
+| **CORSair** | Cross-Origin Resource Sharing security analyzer with Shannon entropy token leak detection | `v3.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/CORSair/) | [`CORSair`](https://github.com/pratik-khairnar-sec/CORSair) |
+| **WaybackLens** | High-performance Wayback Machine CDX Recon & Triage Chrome Extension (Manifest V3) | `v1.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/wayback-lens/) | [`wayback-lens`](https://github.com/pratik-khairnar-sec/wayback-lens) |
   * Correlated **CDR/IPDR telecom intelligence** and transaction trails to locate compromised endpoints and assist in formal charge sheet preparation.
 
 ---

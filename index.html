@@ -3039,6 +3039,38 @@
       color: #b45309;
     }
 
+
+    /* Refined Private Repo Card Layout & Typography */
+    .private-repo-card {
+      word-break: break-word;
+      overflow-wrap: break-word;
+      min-height: 220px;
+    }
+    .private-repo-name {
+      font-size: 0.98rem;
+      letter-spacing: 0.2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: 190px;
+    }
+    .private-cat-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+    @media (max-width: 1200px) {
+      .private-repo-item {
+        flex: 0 0 50%;
+        max-width: 50%;
+      }
+    }
+    @media (max-width: 768px) {
+      .private-repo-item {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+
 </style>
 </head>
 
@@ -3678,7 +3710,6 @@
           </tbody>
         </table>
       </div>
-    </div>
   
       <!-- ========================================================================= -->
       <!-- PROPRIETARY & INTERNAL TESTING REPOSITORIES (20 PRIVATE REPOSITORIES) -->
@@ -4030,6 +4061,7 @@
           </div>
         </div>
       </div>
+    </div> <!-- Closes container-fluid px-lg-5 -->
 
     </section>
 
@@ -4054,12 +4086,10 @@
                   <div class="timeline-org">Cyber Warfare Intelligence Lab (OPC) Private Limited &bull; Remote</div>
                 </div>
               </div>
-              <span class="timeline-badge timeline-badge-active"><span class="live-pulse-dot mr-1"></span> 1 Nov 2026 &ndash; 17 Apr 2027 (24 Weeks)</span>
+              <span class="timeline-badge timeline-badge-active"><span class="live-pulse-dot mr-1"></span> 1 Nov 2026 &ndash; Present</span>
             </div>
 
-            <div class="timeline-scope-pill my-2">
-              <i class="fas fa-certificate text-danger mr-1"></i> <strong>Offer Reference:</strong> CWIL/INT/2026/VAPT/0001 &bull; Verifiable at <a href="https://verify.cwil.in" target="_blank" class="text-danger font-weight-bold" style="text-decoration: underline;">verify.cwil.in</a>
-            </div>
+            
 
             <p class="text-muted mb-2 small" style="line-height: 1.65;">
               Executing comprehensive Web Application, API, and Network Vulnerability Assessment &amp; Penetration Testing (VAPT) across authorized lab and client scopes aligned with standard industry benchmarks (OWASP Top 10, WSTG v4.2, and NIST SP 800-115):
@@ -4490,7 +4520,7 @@
     function sanitizeSecurityInput(str, maxLen) {
       if (typeof str !== 'string') return '';
       return str
-        .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '')
+        .replace(new RegExp('<' + 'script[^>]*>[\\s\\S]*?<\\/' + 'script>', 'gi'), '')
         .replace(/<[^>]+>/g, '')
         .replace(/javascript:/gi, '')
         .replace(/vbscript:/gi, '')
@@ -4711,7 +4741,7 @@
             outputHtml = `
               <div style="margin-bottom: 4px;"><strong class="text-white">Pratik Sanjay Khairnar</strong> &bull; <span class="badge badge-danger">CEH v13 Certified</span> &bull; <span class="badge badge-danger">CWIL Penetration Testing Intern</span></div>
               <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Position:</strong> Penetration Testing Intern (VAPT) @ Cyber Warfare Intelligence Lab (OPC) Private Limited (Remote)</div>
-              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Offer Ref:</strong> CWIL/INT/2026/VAPT/0001 (Verifiable at verify.cwil.in)</div>
+              <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Duration:</strong> 1 Nov 2026 &ndash; Present (Remote)</div>
               <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Focus:</strong> Web &amp; Network Vulnerability Assessments, OWASP Top 10, False Positive Removal, CVSS v3.1</div>
               <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Tools:</strong> Burp Suite, Nmap, Nessus/OpenVAS, OWASP ZAP, Kali Linux, SQLMap, Metasploit</div>
               <div style="color: #cbd5e1;">&bull; <strong style="color: #dc3545;">Education:</strong> B.Tech Cyber Security &amp; Forensics (Sandip University, Nashik &bull; 2023–2027 &bull; CGPA: 7.42/10)</div>
@@ -4773,8 +4803,8 @@
               <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">[Professional Experience Timeline]</div>
               <div style="margin-bottom: 8px;">
                 <span class="text-white font-weight-bold">&bull; Penetration Testing Intern (VAPT)</span><br>
-                <span style="color: #dc3545; font-weight: 600;">Cyber Warfare Intelligence Lab (OPC) Private Limited</span> <span class="badge badge-danger ml-1" style="font-size: 0.7rem;">ACTIVE</span> <span class="text-muted">(1 Nov 2026 – 17 Apr 2027 &bull; Remote)</span><br>
-                <span style="color: #94a3b8; padding-left: 10px; display: inline-block;">Web application &amp; network vulnerability assessments on CWIL lab environments and authorised client scopes, OWASP Top 10 mapping, manual verification, false positive elimination, and client-delivery reporting (Offer Ref: CWIL/INT/2026/VAPT/0001 &bull; verify.cwil.in).</span>
+                <span style="color: #dc3545; font-weight: 600;">Cyber Warfare Intelligence Lab (OPC) Private Limited</span> <span class="badge badge-danger ml-1" style="font-size: 0.7rem;">ACTIVE</span> <span class="text-muted">(1 Nov 2026 &ndash; Present &bull; Remote)</span><br>
+                <span style="color: #94a3b8; padding-left: 10px; display: inline-block;">Web application &amp; network vulnerability assessments on CWIL lab environments and authorised client scopes, OWASP Top 10 mapping, manual verification, false positive elimination, and client-delivery reporting (1 Nov 2026 &ndash; Present &bull; Remote).</span>
               </div>
               <div style="margin-bottom: 8px;">
                 <span class="text-white font-weight-bold">&bull; Cyber Crime &amp; Digital Forensics Intern</span><br>
@@ -5115,7 +5145,7 @@ async def audit_dom_xss_sink(target_url: str, payload: str):
         return {"status": "SAFE"}`,
         terminalLog: `[+] Reflectra v7.0.0 — Context-Aware DOM XSS Auditing Engine
 [*] Target URL: https://app.target.corp/search?q=FUZZ
-[*] Analyzing DOM Context: Sink located inside <script> tag: var query = "FUZZ";
+[*] Analyzing DOM Context: Sink located inside [script] block: var query = \"FUZZ\";
 [*] Context Engine selected: SCRIPT_STRING_BREAKOUT (Prioritized 42 payloads)
 [-->] Injecting Payload: "-alert(document.domain)-"
 [*] Chrome DevTools Protocol Hook: Intercepting Runtime events...
@@ -5677,47 +5707,36 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
     function getActiveSection() {
       const scrollPos = window.scrollY || window.pageYOffset;
       const windowHeight = window.innerHeight;
-      const docHeight = document.documentElement.scrollHeight;
-      const headerOffset = 110;
 
-      // Bottom of page -> Activate last nav link (Contact)
-      if (scrollPos + windowHeight >= docHeight - 40) {
-        return trackedSections[trackedSections.length - 1];
-      }
-
-      // Top of page -> Activate first nav link (Home)
-      if (scrollPos < 120) {
+      // At top of page -> Activate HOME
+      if (scrollPos < 80) {
         return trackedSections[0];
       }
 
-      // Scan sections from top to bottom
-      let active = null;
+      // Trigger line: 130px from top of viewport (right beneath 75px fixed navbar)
+      const triggerY = 130;
+
       for (let i = 0; i < trackedSections.length; i++) {
         const item = trackedSections[i];
         const rect = item.el.getBoundingClientRect();
-        const top = item.el.offsetTop - headerOffset;
-        const bottom = top + item.el.offsetHeight;
-
-        if (scrollPos >= top && scrollPos < bottom) {
-          active = item;
-          break;
+        if (rect.top <= triggerY && rect.bottom > triggerY) {
+          return item;
         }
       }
 
-      // Fallback: choose the section with the largest visible portion in viewport
-      if (!active) {
-        let maxVisible = -Infinity;
-        trackedSections.forEach(item => {
-          const rect = item.el.getBoundingClientRect();
-          const visibleHeight = Math.max(0, Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 70));
-          if (visibleHeight > maxVisible) {
-            maxVisible = visibleHeight;
-            active = item;
-          }
-        });
-      }
+      // Fallback: find section with largest visible area on screen
+      let bestItem = null;
+      let maxVisible = -Infinity;
+      trackedSections.forEach(item => {
+        const rect = item.el.getBoundingClientRect();
+        const visible = Math.max(0, Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 75));
+        if (visible > maxVisible) {
+          maxVisible = visible;
+          bestItem = item;
+        }
+      });
 
-      return active || trackedSections[0];
+      return bestItem || trackedSections[0];
     }
 
     function updateNavHighlight() {

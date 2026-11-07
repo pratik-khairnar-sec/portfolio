@@ -1556,16 +1556,6 @@
     }
 
     /* Private / Internal Security Arsenal */
-    .private-arsenal-card {
-      background: rgba(12, 16, 26, 0.88);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 26px;
-      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
-      max-width: 1360px;
-      margin-left: auto;
-      margin-right: auto;
-    }
 
     .private-lock-icon {
       width: 44px;
@@ -1628,10 +1618,7 @@
       border: 1px solid rgba(245, 158, 11, 0.3);
     }
 
-    body.light-mode .private-arsenal-card {
-      background: #ffffff;
-      border-color: rgba(0, 0, 0, 0.08);
-    }
+    body
 
     body.light-mode .private-tool-box {
       background: #f8fafc;
@@ -2894,79 +2881,12 @@
     /* ========================================================================= */
     /* 20 PROPRIETARY & PRIVATE REPOSITORIES SHOWCASE STYLES */
     /* ========================================================================= */
-    .private-arsenal-wrapper {
-      border-top: 1px solid rgba(245, 158, 11, 0.18);
-    }
-    .priv-filter-btn {
-      background: rgba(15, 23, 42, 0.7);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #94a3b8;
-      font-size: 0.82rem;
-      font-weight: 600;
-      padding: 6px 14px;
-      border-radius: 20px;
-      transition: all 0.2s ease;
-      cursor: pointer;
-    }
-    .priv-filter-btn:hover {
-      border-color: rgba(245, 158, 11, 0.5);
-      color: #f1f5f9;
-      background: rgba(245, 158, 11, 0.1);
-    }
-    .priv-filter-btn.active {
-      background: rgba(245, 158, 11, 0.2);
-      border-color: #f59e0b;
-      color: #fbbf24;
-      box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
-    }
     .priv-count {
       font-size: 0.74rem;
       background: rgba(255, 255, 255, 0.1);
       padding: 2px 7px;
       border-radius: 10px;
       margin-left: 4px;
-    }
-    .priv-filter-btn.active .priv-count {
-      background: rgba(245, 158, 11, 0.3);
-      color: #fff;
-    }
-    .private-repo-card {
-      background: #0f172a;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      border-radius: 12px;
-      padding: 16px 18px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-      position: relative;
-      overflow: hidden;
-    }
-    .private-repo-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 3px;
-      height: 100%;
-      background: #f59e0b;
-      opacity: 0;
-      transition: opacity 0.25s ease;
-    }
-    .private-repo-card:hover {
-      transform: translateY(-3px);
-      border-color: rgba(245, 158, 11, 0.4);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5), 0 0 14px rgba(245, 158, 11, 0.15);
-    }
-    .private-repo-card:hover::before {
-      opacity: 1;
-    }
-    .private-repo-name {
-      color: #f8fafc;
-      font-weight: 700;
-      font-size: 1.02rem;
-      letter-spacing: 0.3px;
-      font-family: 'JetBrains Mono', 'Fira Code', monospace;
     }
     .private-badge {
       font-size: 0.68rem;
@@ -3018,65 +2938,27 @@
       display: inline-block;
       box-shadow: 0 0 6px #f59e0b;
     }
-    body.light-mode .private-repo-card {
-      background: #ffffff;
-      border-color: #e2e8f0;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
-    }
-    body.light-mode .private-repo-card:hover {
-      border-color: #f59e0b;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    }
-    body.light-mode .private-repo-name {
-      color: #0f172a;
-    }
+    body
+    body
+    body
     body.light-mode .private-desc {
       color: #475569;
     }
     body.light-mode .private-stack-tag {
       color: #334155;
     }
-    body.light-mode .priv-filter-btn {
-      background: #f8fafc;
-      border-color: #cbd5e1;
-      color: #475569;
-    }
-    body.light-mode .priv-filter-btn.active {
-      background: #fef3c7;
-      border-color: #f59e0b;
-      color: #b45309;
-    }
+    body
+    body
 
 
     /* Refined Private Repo Card Layout & Typography */
-    .private-repo-card {
-      word-break: break-word;
-      overflow-wrap: break-word;
-      min-height: 220px;
-    }
-    .private-repo-name {
-      font-size: 0.98rem;
-      letter-spacing: 0.2px;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      max-width: 190px;
-    }
     .private-cat-tag {
       font-size: 0.72rem;
       font-weight: 700;
     }
     @media (max-width: 1200px) {
-      .private-repo-item {
-        flex: 0 0 50%;
-        max-width: 50%;
-      }
     }
     @media (max-width: 768px) {
-      .private-repo-item {
-        flex: 0 0 100%;
-        max-width: 100%;
-      }
     }
 
 
@@ -3648,7 +3530,7 @@
           <i class="fas fa-terminal text-danger mr-2"></i>SECURITY TOOLS &amp; CUSTOM ARSENAL
         </div>
         <h2 class="section-title">Production Security Tools &amp; Arsenal</h2>
-        <p class="section-lead">Production-grade security extensions, automated exploitation frameworks, and 15 verified proprietary testing repositories built by Pratik Khairnar.</p>
+        <p class="section-lead">Production-grade security extensions, automated exploitation frameworks, and verified offensive security tooling.</p>
         
         <!-- Telemetry Status Bar -->
         <div class="arsenal-telemetry-strip">
@@ -3743,277 +3625,7 @@
         </table>
       </div>
   
-      <!-- ========================================================================= -->
-      <!-- PROPRIETARY & INTERNAL TESTING REPOSITORIES (15 PRIVATE REPOSITORIES) -->
-      <!-- ========================================================================= -->
-      <div class="private-arsenal-wrapper mt-5 pt-4">
-        <div class="private-arsenal-header text-center mb-4">
-          <div class="tactical-kicker" style="color: #f59e0b;">
-            <i class="fas fa-lock mr-2 text-warning"></i>PROPRIETARY &amp; INTERNAL SECURITY TOOLING
-          </div>
-          <h3 class="text-white font-weight-bold mb-2" style="font-size: 1.85rem;">
-            Verified Private Repositories &amp; Internal Tooling <span class="badge badge-warning ml-2" style="font-size: 0.9rem; vertical-align: middle; background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.35);">15 REPOSITORIES</span>
-          </h3>
-          <p class="text-muted mx-auto" style="max-width: 820px; font-size: 0.95rem; line-height: 1.65;">
-            Dedicated internal security frameworks, custom Burp Montoya modules, race-condition engines, and AI-augmented automation suites engineered and actively maintained by Pratik Khairnar in private repositories.
-          </p>
-
-          <!-- Quick Category Filters for Private Repos -->
-          <div class="d-flex justify-content-center flex-wrap gap-2 mt-3" id="privateRepoFilters">
-            <button class="priv-filter-btn active" onclick="filterPrivateRepos('all', this)">All Private Tools <span class="priv-count">20</span></button>
-            <button class="priv-filter-btn" onclick="filterPrivateRepos('auth', this)"><i class="fas fa-key text-warning mr-1"></i>Auth &amp; Race <span class="priv-count">4</span></button>
-            <button class="priv-filter-btn" onclick="filterPrivateRepos('cloud', this)"><i class="fas fa-cloud text-warning mr-1"></i>Cloud &amp; WAF <span class="priv-count">4</span></button>
-            <button class="priv-filter-btn" onclick="filterPrivateRepos('vapt', this)"><i class="fas fa-crosshairs text-warning mr-1"></i>VAPT &amp; Logic <span class="priv-count">4</span></button>
-            <button class="priv-filter-btn" onclick="filterPrivateRepos('recon', this)"><i class="fas fa-satellite-dish text-warning mr-1"></i>OSINT &amp; Recon <span class="priv-count">3</span></button>
-            <button class="priv-filter-btn" onclick="filterPrivateRepos('auto', this)"><i class="fas fa-robot text-warning mr-1"></i>AI &amp; Automation <span class="priv-count">5</span></button>
-          </div>
-        </div>
-
-        <!-- 20 Private Repos Responsive Grid -->
-        <div class="row" id="privateReposGrid">
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="vapt">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>WARSENTINEL</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">Enterprise VAPT Framework</div>
-              </div>
-              <p class="private-desc">Enterprise Cyber Warfare VAPT & Attack Surface Assessment Framework with Multi-Vector Discovery & DPDP Compliance — v2026.1.0</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Python 3 • Async IO • DPDP</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="auth">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>RaceSentinel</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">HTTP/2 Concurrency Audit</div>
-              </div>
-              <p class="private-desc">Single-Packet HTTP/2 Concurrency & TOCTOU Race Condition Audit Framework — v1.1.0</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Python 3 • H2 / TLS Sync</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="auth">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>Invarauth</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">Authorization Invariant Oracle</div>
-              </div>
-              <p class="private-desc">Multi-Account BOLA/IDOR Invariant Verification Engine & High-Precision Oracle Framework</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Python 3 • Differential Oracle</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="auth">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>p1auth</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">BBP Authentication Hunter</div>
-              </div>
-              <p class="private-desc">Autonomous Authentication Bug Hunter & Live Evidence Suite for Authorized Bugcrowd BBP Targets</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Python 3 • Requests Session</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="cloud">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>HyperSentry</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">Modern Web & Cloud Audit</div>
-              </div>
-              <p class="private-desc">Modern Web & Cloud Attack Surface Assessment Engine: Next.js, BaaS RLS Authorization & Edge Cache Audit — v1.0.0</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Next.js • BaaS RLS • Edge Cache</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="cloud">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>OriginUnmask</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">WAF & Real-IP Discovery</div>
-              </div>
-              <p class="private-desc">Advanced WAF Bypass, Origin Server De-anonymization & Real IP Discovery Suite — v1.0.0</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Python 3 • SSL Cert Matrix</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="cloud">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>dbhunt</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">Wire Database Exposure</div>
-              </div>
-              <p class="private-desc">Autonomous wire-level database exposure & unauthenticated cloud data store mapper by Pratik Khairnar (@pratikkhairnarsec)</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Python 3 • Socket Handshake</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="vapt">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>TaintQL</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">GraphQL & Stored SQLi</div>
-              </div>
-              <p class="private-desc">Production Second-Order SQLi & Stored Data Flow Tracer: Dual-Role Privilege Boundary Audit & Deep UI State Unfolder</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Python 3 • GraphQL AST • Tracer</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="vapt">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>ParamMatrix</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">Hidden Parameter Mining</div>
-              </div>
-              <p class="private-desc">Autonomous hidden parameter and differential logic mining engine for bug bounty reconnaissance and API security auditing</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Python 3 • Differential Logic</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="auto">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>CaptchaForge</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">AI Automation & OCR</div>
-              </div>
-              <p class="private-desc">Autonomous Universal AI CAPTCHA Solver Supporting Cloudflare Turnstile, reCAPTCHA v2/v3, hCaptcha & Local Canvas OCR</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Chrome MV3 • Canvas OCR • Physics</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="auto">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>Aarya-AI</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">AI Career Copilot</div>
-              </div>
-              <p class="private-desc">24/7 Cybersecurity Career Copilot & Real-Time Job Finder with ATS Verification, Resume Boost & Instant Email Alerts</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>FastAPI • Gemini • ATS Engine</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="auto">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>ArsenalForge</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">Red Team Workstations</div>
-              </div>
-              <p class="private-desc">Enterprise Security Engineering Arsenal, 8 Mastery Workstations & Authoritative Research Publications</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Offensive Handbooks • Dork Engine</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="recon">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>Hackbot-v4</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">Recon & Surface Discovery</div>
-              </div>
-              <p class="private-desc">Autonomous multi-phase reconnaissance and attack surface discovery engine featuring canary soft-404 verification and real-time dashboard</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Python 3 • Soft-404 • FastAPI</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="recon">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>recon-arsenal</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">Passive OSINT Suite</div>
-              </div>
-              <p class="private-desc">Unified Passive OSINT & Attack Surface Intelligence Suite with Instant Telegram Alerts for authorized research</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Python 3 • Bash • Telegram API</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xl-3 col-lg-4 col-md-6 mb-4 private-repo-item" data-repo-cat="auto">
-            <div class="private-repo-card h-100">
-              <div class="private-card-top">
-                <div class="d-flex align-items-center justify-content-between mb-2">
-                  <span class="private-repo-name"><i class="fas fa-lock text-warning mr-1"></i>cyber-automation-scripts</span>
-                  <span class="private-badge"><i class="fas fa-shield-alt mr-1"></i>PRIVATE</span>
-                </div>
-                <div class="private-cat-tag">Offensive Automation Toolchain</div>
-              </div>
-              <p class="private-desc">High-velocity offensive security automation toolchain for asset discovery, 1-day CVE correlation, and legacy architecture auditing</p>
-              <div class="private-card-bottom">
-                <div class="private-stack-tag"><i class="fas fa-microchip mr-1 text-danger"></i>Bash • Python • CVE Matcher</div>
-                <div class="private-status"><span class="private-dot"></span>Internal Research &bull; Private Repo</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- Closes container-fluid px-lg-5 -->
+      </div> <!-- Closes container-fluid px-lg-5 -->
 
     </section>
 
@@ -4491,151 +4103,128 @@
 
       const toast = document.getElementById('form-toast');
 
-      // 1. Bot Trap Honeypot Check
+      // Bot Honeypot Trap
       const honeyTrap = document.getElementById('sec_honey_trap');
       if (honeyTrap && honeyTrap.value) {
         return false;
       }
 
-      // 2. Sanitize and Validate Inputs
-      const rawName = document.getElementById('contact-name').value;
-      const rawEmail = document.getElementById('contact-email').value;
-      const rawSubject = document.getElementById('contact-subject').value;
-      const rawMessage = document.getElementById('contact-message').value;
+      const rawName = document.getElementById('contact-name').value.trim();
+      const rawEmail = document.getElementById('contact-email').value.trim();
+      const rawSubject = document.getElementById('contact-subject').value.trim();
+      const rawMessage = document.getElementById('contact-message').value.trim();
 
       const name = sanitizeSecurityInput(rawName, 80);
       const email = sanitizeSecurityInput(rawEmail, 100);
       const subject = sanitizeSecurityInput(rawSubject, 120);
       const message = sanitizeSecurityInput(rawMessage, 2000);
 
-      // Validate email format
       const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+
+      // Inline non-blocking feedback (No browser alerts)
       if (!name || name.length < 2) {
-        alert("Please enter a valid name (at least 2 characters).");
+        showInlineToast('warning', '<i class="fas fa-exclamation-triangle mr-2 text-warning"></i>Please enter your name or organization (minimum 2 characters).');
+        document.getElementById('contact-name').focus();
         return false;
       }
       if (!email || !emailRegex.test(email)) {
-        alert("Please enter a valid corporate or personal email address.");
+        showInlineToast('warning', '<i class="fas fa-exclamation-triangle mr-2 text-warning"></i>Please enter a valid email address.');
+        document.getElementById('contact-email').focus();
         return false;
       }
       if (!subject || subject.length < 3) {
-        alert("Please enter a subject (at least 3 characters).");
+        showInlineToast('warning', '<i class="fas fa-exclamation-triangle mr-2 text-warning"></i>Please enter a subject for your inquiry.');
+        document.getElementById('contact-subject').focus();
         return false;
       }
       if (!message || message.length < 10) {
-        alert("Please write a message with at least 10 characters.");
+        showInlineToast('warning', '<i class="fas fa-exclamation-triangle mr-2 text-warning"></i>Please enter your message (at least 10 characters).');
+        document.getElementById('contact-message').focus();
         return false;
       }
 
       const submitBtn = document.getElementById('submitBtn');
       const originalBtnHtml = submitBtn.innerHTML;
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Transmitting Inquiry...';
+      submitBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin mr-2"></i>Processing Inquiry...';
 
-      toast.style.display = 'block';
-      toast.className = 'alert alert-info mt-3 text-left';
-      toast.innerHTML = '<div class="d-flex align-items-center"><i class="fas fa-circle-notch fa-spin text-info mr-3" style="font-size: 1.5rem;"></i><div><strong>Transmitting Inquiry...</strong><br><span class="small">Contacting dispatcher. Please wait a moment...</span></div></div>';
+      const mailSubject = `[VAPT Inquiry] ${subject} — from ${name}`;
+      const mailBody = `Hello Pratik,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}\n\n--- Delivered from Portfolio: https://pratikkhairnarsec.web.app`;
 
-      const mailSubject = `⚡ [VAPT Inquiry] ${subject} — from ${name}`;
-      const mailBody = `Hello Pratik,\n\nName / Organization: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}\n\n--- Delivered from Portfolio: https://pratikkhairnarsec.web.app`;
-
-      // Copy formatted text to clipboard immediately
-      const clipboardText = `To: pratik.khairnar.sec@gmail.com\nSubject: ${mailSubject}\n\n${mailBody}`;
+      // Copy text to clipboard silently
       if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(clipboardText).catch(() => {});
+        navigator.clipboard.writeText(`To: pratik.khairnar.sec@gmail.com\nSubject: ${mailSubject}\n\n${mailBody}`).catch(() => {});
       }
-
-      // Fast async dispatch with strict 2-second timeout
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 2000);
-
-      fetch("https://formsubmit.co/ajax/pratik.khairnar.sec@gmail.com", {
-        method: "POST",
-        signal: controller.signal,
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          "Name": name,
-          "Email": email,
-          "Subject": subject,
-          "Message": message,
-          "Source": "https://pratikkhairnarsec.web.app",
-          _replyto: email,
-          _subject: mailSubject,
-          _captcha: "false"
-        })
-      })
-      .then(response => response.json())
-      .then(data => {
-        clearTimeout(timeoutId);
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalBtnHtml;
-
-        if (data.success === "true" || data.success === true) {
-          toast.className = 'alert alert-success mt-3 text-left';
-          toast.innerHTML = `<div class="d-flex align-items-center"><i class="fas fa-check-circle text-success mr-3" style="font-size: 1.8rem;"></i><div><strong style="font-size: 1.05rem;">Inquiry Delivered Successfully!</strong><br><span class="small">Thank you for reaching out. Your message has been received, and I will respond to your email at <strong>${email}</strong> shortly.</span></div></div>`;
-          document.getElementById('contactForm').reset();
-        } else {
-          showDirectMailSuccess(name, email, subject, message);
-        }
-      })
-      .catch(() => {
-        clearTimeout(timeoutId);
-        submitBtn.disabled = false;
-        submitBtn.innerHTML = originalBtnHtml;
-        showDirectMailSuccess(name, email, subject, message);
-      });
-    }
-
-    // Direct Instant Email Client & Webmail Dispatcher (Zero Delay, 100% Reliable)
-    function showDirectMailSuccess(name, email, subject, message) {
-      const toast = document.getElementById('form-toast');
-      const mailSubject = `⚡ [VAPT Inquiry] ${subject} — from ${name}`;
-      const mailBody = `Hello Pratik,\n\nName / Organization: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`;
 
       const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=pratik.khairnar.sec@gmail.com&su=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
       const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=pratik.khairnar.sec@gmail.com&subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
       const mailtoUrl = `mailto:pratik.khairnar.sec@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
       const waUrl = `https://wa.me/918799981052?text=${encodeURIComponent('Hi Pratik, sent inquiry: ' + subject + ' - ' + message)}`;
 
-      // Automatically launch default mail client
-      try {
-        window.location.href = mailtoUrl;
-      } catch (e) {}
-
+      // Immediate clean action card
       toast.style.display = 'block';
-      toast.className = 'alert alert-success mt-3 text-left';
+      toast.className = 'alert alert-success mt-3 text-left p-3';
       toast.style.background = 'rgba(16, 185, 129, 0.12)';
       toast.style.border = '1px solid rgba(16, 185, 129, 0.35)';
       toast.style.borderRadius = '12px';
       toast.style.color = '#f1f5f9';
-      toast.style.padding = '18px 20px';
 
       toast.innerHTML = `
         <div class="d-flex align-items-center mb-2">
-          <i class="fas fa-paper-plane text-success mr-3" style="font-size: 1.6rem;"></i>
+          <i class="fas fa-check-circle text-success mr-3" style="font-size: 1.8rem;"></i>
           <div>
-            <strong style="font-size: 1.05rem; color: #34d399;">Inquiry Ready &bull; Email Client Launched!</strong><br>
-            <span class="small" style="color: #cbd5e1;">Your default email client has been launched with your message pre-filled. Complete inquiry also copied to your clipboard!</span>
+            <strong style="font-size: 1.05rem; color: #34d399;">Inquiry Ready &bull; Message Copied to Clipboard!</strong><br>
+            <span class="small" style="color: #cbd5e1;">Target address: <strong>pratik.khairnar.sec@gmail.com</strong></span>
           </div>
         </div>
-        <div class="d-flex align-items-center flex-wrap gap-2 mt-3 pt-2" style="border-top: 1px solid rgba(255,255,255,0.08);">
-          <a href="${gmailUrl}" target="_blank" class="btn btn-sm btn-outline-danger mr-2 mb-1" style="font-size: 0.8rem; border-radius: 20px;">
-            <i class="fab fa-google mr-1"></i>Open in Gmail
+        <p class="small mb-3" style="color: #94a3b8; line-height: 1.5;">
+          Your inquiry has been formatted. Choose how you would like to transmit:
+        </p>
+        <div class="d-flex flex-wrap gap-2">
+          <a href="${gmailUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-danger px-3 py-2 font-weight-bold" style="border-radius: 6px;">
+            <i class="fab fa-google mr-2"></i>Send via Gmail (Web)
           </a>
-          <a href="${outlookUrl}" target="_blank" class="btn btn-sm btn-outline-primary mr-2 mb-1" style="font-size: 0.8rem; border-radius: 20px;">
-            <i class="fab fa-microsoft mr-1"></i>Open in Outlook
+          <a href="${outlookUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light px-3 py-2 font-weight-bold" style="border-radius: 6px;">
+            <i class="fab fa-windows mr-2"></i>Send via Outlook
           </a>
-          <a href="${waUrl}" target="_blank" class="btn btn-sm btn-outline-success mr-2 mb-1" style="font-size: 0.8rem; border-radius: 20px;">
-            <i class="fab fa-whatsapp mr-1"></i>WhatsApp (+91 87999 81052)
+          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-success px-3 py-2 font-weight-bold" style="border-radius: 6px;">
+            <i class="fab fa-whatsapp mr-2"></i>WhatsApp Direct
+          </a>
+          <a href="${mailtoUrl}" class="btn btn-sm btn-outline-info px-3 py-2 font-weight-bold" style="border-radius: 6px;">
+            <i class="fas fa-envelope mr-2"></i>Email Client
           </a>
         </div>
       `;
-      document.getElementById('contactForm').reset();
+
+      // Non-blocking background dispatch
+      fetch("https://formsubmit.co/ajax/pratik.khairnar.sec@gmail.com", {
+        method: "POST",
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify({
+          Name: name,
+          Email: email,
+          Subject: subject,
+          Message: message,
+          Source: "https://pratikkhairnarsec.web.app"
+        })
+      })
+      .then(r => r.json())
+      .catch(() => {})
+      .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHtml;
+      });
     }
 
+    function showInlineToast(type, msg) {
+      const toast = document.getElementById('form-toast');
+      toast.style.display = 'block';
+      toast.className = `alert alert-${type} mt-3 text-left`;
+      toast.style.borderRadius = '10px';
+      toast.style.fontSize = '0.92rem';
+      toast.innerHTML = msg;
+    }
+    
     // ==========================================================================
     // Interactive Security Console Logic (VAPT CLI Environment)
     // ==========================================================================
@@ -4714,24 +4303,15 @@
 
           case 'tools':
             outputHtml = `
-              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">[Public Production Security Suites (7 Tools)]</div>
+              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">[Public Production Security Suites (7 Weaponized Tools)]</div>
               <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">1. AUTHENTIX Enterprise (v3.0.0):</span> Burp Suite Montoya API: 34 Invariants, 16 ATO Chains &amp; 3-Way Differential IDOR.</div>
               <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">2. ReconForge (v4.0):</span> Multi-target Bug Bounty OSINT framework with 30 phases &amp; 52,630+ Dork Vault.</div>
               <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">3. Reflectra (v7.0.0):</span> Headless Chrome dialog interception DOM XSS auditing engine (0% FP).</div>
               <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">4. BlindStrike (v7.0.0):</span> Statistical Time/Boolean Blind SQLi framework with IQR jitter filtering.</div>
-              <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">5. TaintQL (v2.0.0):</span> GraphQL AST query auditor detecting introspection leaks &amp; batching bypasses.</div>
+              <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">5. Endpoint Hunter (v10.0):</span> Fast JavaScript AST endpoint miner and sensitive regex secret extractor.</div>
               <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">6. CORSair (v3.0.0):</span> In-browser CORS analyzer with dynamic reflection &amp; Shannon entropy calculations.</div>
-              <div style="color: #cbd5e1; margin-bottom: 8px;"><span style="color: #dc3545; font-weight: 600;">7. WaybackLens (v1.0.0):</span> Chrome extension (MV3) for real-time Wayback CDX endpoint streaming.</div>
-              <div style="color: #fbbf24; font-weight: bold; margin-bottom: 6px;">[Proprietary Tooling &amp; Internal Research (20 Verified Private Repositories)]</div>
-              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>RaceSentinel:</strong> Concurrency &amp; race condition audit engine (single-packet HTTP/2 blast)</div>
-              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>WARSENTINEL:</strong> Offensive threat intelligence &amp; C2 surface correlation platform</div>
-              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>HyperSentry:</strong> Continuous external attack surface &amp; certificate transparency monitor</div>
-              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>Invarauth:</strong> Invariant-driven authorization &amp; multi-tenant session state tester</div>
-              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>p1auth:</strong> P1 critical authentication analyzer for OAuth 2.0 / OIDC / SAML flows</div>
-              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>OriginUnmask:</strong> WAF &amp; Cloudflare bypass engine identifying true backend origin IPs</div>
-              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>ParamMatrix:</strong> Hidden parameter discovery engine for complex web endpoints</div>
-              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>CaptchaForge:</strong> Anti-automation &amp; CAPTCHA session reuse vulnerability suite</div>
-              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>dbhunt:</strong> Perimeter scanner for unauthenticated databases (MongoDB, Redis, PG)</div>`;
+              <div style="color: #cbd5e1; margin-bottom: 6px;"><span style="color: #dc3545; font-weight: 600;">7. WaybackLens (v1.0.0):</span> Chrome extension (MV3) for real-time Wayback CDX endpoint streaming.</div>
+              <div style="color: #10b981; font-size: 0.82rem; margin-top: 6px;"><i class="fas fa-check-circle mr-1 text-success"></i>All 7 flagship repositories are 100% public, verified, and available on GitHub.</div>`;
             break;
 
           case 'vapt-scan':
@@ -5750,30 +5330,7 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
     });
   })();
 
-  // ============================================================================
-  // PROPRIETARY REPOSITORIES QUICK CATEGORY FILTER
-  // ============================================================================
-  function filterPrivateRepos(category, btn) {
-    // Update active button
-    const buttons = document.querySelectorAll('#privateRepoFilters .priv-filter-btn');
-    buttons.forEach(b => b.classList.remove('active'));
-    if (btn) btn.classList.add('active');
 
-    const items = document.querySelectorAll('#privateReposGrid .private-repo-item');
-    items.forEach(item => {
-      const cat = item.getAttribute('data-repo-cat');
-      if (category === 'all' || cat === category) {
-        item.style.display = 'block';
-        item.style.opacity = '0';
-        setTimeout(() => {
-          item.style.transition = 'opacity 0.25s ease';
-          item.style.opacity = '1';
-        }, 30);
-      } else {
-        item.style.display = 'none';
-      }
-    });
-  }
 
   </script>
 

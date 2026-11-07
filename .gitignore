@@ -29,3 +29,6 @@ desktop.ini
 firebase-debug.log
 firebase-debug.*.log
 
+
+# Local image backups
+assets/original_backup/

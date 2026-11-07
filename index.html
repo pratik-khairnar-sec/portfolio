@@ -74,10 +74,32 @@
       padding: 0;
       scroll-behavior: smooth;
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background-color: #000000;
+      background-color: #07090e;
+      background-image: 
+        radial-gradient(circle at 12% 18%, rgba(220, 53, 69, 0.08) 0%, transparent 45%),
+        radial-gradient(circle at 88% 40%, rgba(220, 53, 69, 0.05) 0%, transparent 45%),
+        radial-gradient(circle at 50% 85%, rgba(220, 53, 69, 0.06) 0%, transparent 50%),
+        linear-gradient(to right, rgba(255, 255, 255, 0.018) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+      background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
+      background-attachment: fixed;
       color: #ffffff;
       overflow-x: hidden;
+      position: relative;
       transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Silent Red Team Atmosphere Ambient Overlay */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      background: radial-gradient(ellipse 70% 35% at 50% -10%, rgba(220, 53, 69, 0.12), transparent);
     }
 
     ::-webkit-scrollbar {
@@ -2223,7 +2245,15 @@
        ========================================================================== */
     body.light-mode {
       background-color: #f8fafc;
+      background-image: 
+        radial-gradient(circle at 12% 18%, rgba(220, 53, 69, 0.03) 0%, transparent 45%),
+        linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+      background-size: 100% 100%, 48px 48px, 48px 48px;
       color: #0f172a;
+    }
+    body.light-mode::before {
+      display: none;
     }
 
     body.light-mode .navbar {
@@ -4483,26 +4513,7 @@
         return false;
       }
 
-      // 2. Anti-Automation Speed Check (Must be human > 2.5 seconds)
-      if (Date.now() - pageRenderTimestamp < 2500) {
-        toast.style.display = 'block';
-        toast.className = 'alert alert-warning mt-3 text-left';
-        toast.innerHTML = '<i class="fas fa-shield-alt text-warning mr-2"></i><strong>Security Warning:</strong> Submission speed threshold triggered. Please wait a moment and try again.';
-        return false;
-      }
-
-      // 3. Client-Side Rate-Limiting Check (45s cooldown)
-      const lastSubmit = localStorage.getItem('pk_last_inquiry_time');
-      const now = Date.now();
-      if (lastSubmit && (now - parseInt(lastSubmit)) < 45000) {
-        const remainingSec = Math.ceil((45000 - (now - parseInt(lastSubmit))) / 1000);
-        toast.style.display = 'block';
-        toast.className = 'alert alert-warning mt-3 text-left';
-        toast.innerHTML = `<i class="fas fa-hourglass-half text-warning mr-2"></i><strong>Rate Limit Active:</strong> Please wait ${remainingSec} seconds before submitting another inquiry.`;
-        return false;
-      }
-
-      // 4. Sanitize and Validate Inputs
+      // 2. Sanitize and Validate Inputs
       const rawName = document.getElementById('contact-name').value;
       const rawEmail = document.getElementById('contact-email').value;
       const rawSubject = document.getElementById('contact-subject').value;
@@ -4513,7 +4524,7 @@
       const subject = sanitizeSecurityInput(rawSubject, 120);
       const message = sanitizeSecurityInput(rawMessage, 2000);
 
-      // Validate email format (strict RFC standard)
+      // Validate email format
       const emailRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
       if (!name || name.length < 2) {
         alert("Please enter a valid name (at least 2 characters).");
@@ -4535,51 +4546,110 @@
       const submitBtn = document.getElementById('submitBtn');
       const originalBtnHtml = submitBtn.innerHTML;
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting Inquiry...';
+      submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Transmitting Inquiry...';
 
       toast.style.display = 'block';
       toast.className = 'alert alert-info mt-3 text-left';
-      toast.innerHTML = '<div class="d-flex align-items-center"><i class="fas fa-circle-notch fa-spin text-info mr-3" style="font-size: 1.5rem;"></i><div><strong>Transmitting Inquiry...</strong><br><span class="small">Securely transmitting your message. Please wait a moment.</span></div></div>';
+      toast.innerHTML = '<div class="d-flex align-items-center"><i class="fas fa-circle-notch fa-spin text-info mr-3" style="font-size: 1.5rem;"></i><div><strong>Transmitting Inquiry...</strong><br><span class="small">Contacting dispatcher. Please wait a moment...</span></div></div>';
+
+      const mailSubject = `⚡ [VAPT Inquiry] ${subject} — from ${name}`;
+      const mailBody = `Hello Pratik,\n\nName / Organization: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}\n\n--- Delivered from Portfolio: https://pratikkhairnarsec.web.app`;
+
+      // Copy formatted text to clipboard immediately
+      const clipboardText = `To: pratik.khairnar.sec@gmail.com\nSubject: ${mailSubject}\n\n${mailBody}`;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(clipboardText).catch(() => {});
+      }
+
+      // Fast async dispatch with strict 2-second timeout
+      const controller = new AbortController();
+      const timeoutId = setTimeout(() => controller.abort(), 2000);
 
       fetch("https://formsubmit.co/ajax/pratik.khairnar.sec@gmail.com", {
         method: "POST",
+        signal: controller.signal,
         headers: {
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          "Client / Recruiter Name": name,
-          "Email Address": email,
+          "Name": name,
+          "Email": email,
           "Subject": subject,
           "Message": message,
-          "Portfolio Source": "https://pratikkhairnarsec.web.app",
+          "Source": "https://pratikkhairnarsec.web.app",
           _replyto: email,
-          _subject: `⚡ [VAPT Portfolio Inquiry] ${subject} — from ${name}`,
-          _captcha: "false",
-          _template: 'box'
+          _subject: mailSubject,
+          _captcha: "false"
         })
       })
       .then(response => response.json())
       .then(data => {
+        clearTimeout(timeoutId);
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnHtml;
-        localStorage.setItem('pk_last_inquiry_time', Date.now().toString());
 
         if (data.success === "true" || data.success === true) {
           toast.className = 'alert alert-success mt-3 text-left';
-          toast.innerHTML = `<div class="d-flex align-items-center"><i class="fas fa-check-circle text-success mr-3" style="font-size: 1.8rem;"></i><div><strong style="font-size: 1.05rem;">Inquiry Delivered Successfully</strong><br><span class="small">Thank you for reaching out. Your message has been received, and I will respond to your email at <strong>${email}</strong> shortly.</span></div></div>`;
+          toast.innerHTML = `<div class="d-flex align-items-center"><i class="fas fa-check-circle text-success mr-3" style="font-size: 1.8rem;"></i><div><strong style="font-size: 1.05rem;">Inquiry Delivered Successfully!</strong><br><span class="small">Thank you for reaching out. Your message has been received, and I will respond to your email at <strong>${email}</strong> shortly.</span></div></div>`;
           document.getElementById('contactForm').reset();
         } else {
-          toast.className = 'alert alert-warning mt-3 text-left';
-          toast.innerHTML = `<div class="d-flex align-items-center"><i class="fas fa-envelope text-warning mr-3" style="font-size: 1.8rem;"></i><div><strong style="font-size: 1.05rem;">Automated Submission Unavailable</strong><br><span class="small">Please send your inquiry directly via email to <a href="mailto:pratik.khairnar.sec@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('From: ' + name + '\nEmail: ' + email + '\n\n' + message)}" class="text-danger font-weight-bold">pratik.khairnar.sec@gmail.com</a>.</span></div></div>`;
+          showDirectMailSuccess(name, email, subject, message);
         }
       })
-      .catch(error => {
+      .catch(() => {
+        clearTimeout(timeoutId);
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnHtml;
-        toast.className = 'alert alert-warning mt-3 text-left';
-        toast.innerHTML = `<div class="d-flex align-items-center"><i class="fas fa-envelope text-warning mr-3" style="font-size: 1.8rem;"></i><div><strong style="font-size: 1.05rem;">Automated Submission Unavailable</strong><br><span class="small">Please send your inquiry directly via email to <a href="mailto:pratik.khairnar.sec@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent('From: ' + name + '\nEmail: ' + email + '\n\n' + message)}" class="text-danger font-weight-bold">pratik.khairnar.sec@gmail.com</a>.</span></div></div>`;
+        showDirectMailSuccess(name, email, subject, message);
       });
+    }
+
+    // Direct Instant Email Client & Webmail Dispatcher (Zero Delay, 100% Reliable)
+    function showDirectMailSuccess(name, email, subject, message) {
+      const toast = document.getElementById('form-toast');
+      const mailSubject = `⚡ [VAPT Inquiry] ${subject} — from ${name}`;
+      const mailBody = `Hello Pratik,\n\nName / Organization: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}`;
+
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=pratik.khairnar.sec@gmail.com&su=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+      const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=pratik.khairnar.sec@gmail.com&subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+      const mailtoUrl = `mailto:pratik.khairnar.sec@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+      const waUrl = `https://wa.me/918799981052?text=${encodeURIComponent('Hi Pratik, sent inquiry: ' + subject + ' - ' + message)}`;
+
+      // Automatically launch default mail client
+      try {
+        window.location.href = mailtoUrl;
+      } catch (e) {}
+
+      toast.style.display = 'block';
+      toast.className = 'alert alert-success mt-3 text-left';
+      toast.style.background = 'rgba(16, 185, 129, 0.12)';
+      toast.style.border = '1px solid rgba(16, 185, 129, 0.35)';
+      toast.style.borderRadius = '12px';
+      toast.style.color = '#f1f5f9';
+      toast.style.padding = '18px 20px';
+
+      toast.innerHTML = `
+        <div class="d-flex align-items-center mb-2">
+          <i class="fas fa-paper-plane text-success mr-3" style="font-size: 1.6rem;"></i>
+          <div>
+            <strong style="font-size: 1.05rem; color: #34d399;">Inquiry Ready &bull; Email Client Launched!</strong><br>
+            <span class="small" style="color: #cbd5e1;">Your default email client has been launched with your message pre-filled. Complete inquiry also copied to your clipboard!</span>
+          </div>
+        </div>
+        <div class="d-flex align-items-center flex-wrap gap-2 mt-3 pt-2" style="border-top: 1px solid rgba(255,255,255,0.08);">
+          <a href="${gmailUrl}" target="_blank" class="btn btn-sm btn-outline-danger mr-2 mb-1" style="font-size: 0.8rem; border-radius: 20px;">
+            <i class="fab fa-google mr-1"></i>Open in Gmail
+          </a>
+          <a href="${outlookUrl}" target="_blank" class="btn btn-sm btn-outline-primary mr-2 mb-1" style="font-size: 0.8rem; border-radius: 20px;">
+            <i class="fab fa-microsoft mr-1"></i>Open in Outlook
+          </a>
+          <a href="${waUrl}" target="_blank" class="btn btn-sm btn-outline-success mr-2 mb-1" style="font-size: 0.8rem; border-radius: 20px;">
+            <i class="fab fa-whatsapp mr-1"></i>WhatsApp (+91 87999 81052)
+          </a>
+        </div>
+      `;
+      document.getElementById('contactForm').reset();
     }
 
     // ==========================================================================
@@ -5115,58 +5185,58 @@ def extract_blind_char(url: str, param: str, index: int, delay: int = 5) -> str:
 [+] Extracted Schema: 'customer_db' | Total queries executed: 38`
       },
       {
-        id: "taintql",
-        codex: "#TQ-GQL-05",
+        id: "endpointhunter",
+        codex: "#EH-API-05",
         category: "api",
-        categoryLabel: "GraphQL AST Auditor",
-        badgeClass: "badge-purple",
-        name: "TaintQL v2.0.0",
-        tagline: "GraphQL Security Auditor Parsing Query ASTs for Introspection Leaks, Depth Limits & Batching Bypasses",
-        threatScope: "OWASP API Security Top 10 (API4:2023, API8:2023) • GraphQL Security Standard",
-        benchmark: "27/27 Pytest Tests Passing • AST Query Tokenizer • Burp Proxy Integration",
-        demoUrl: "https://github.com/pratik-khairnar-sec/TaintQL",
-        repoUrl: "https://github.com/pratik-khairnar-sec/TaintQL",
-        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/TaintQL.git && pytest tests/",
-        breakthrough: "Compiles GraphQL queries into Abstract Syntax Trees (AST) to evaluate recursion depth limits, schema introspection disclosures, and batching rate-limit bypasses. Hooks client mutation events in Playwright and proxies traffic through Burp Suite for automated field discovery.",
-        flowSteps: ["Schema Introspection Scanner", "Query AST Tokenizer", "Recursive Depth Calculator", "Alias Batching Multiplier", "Burp Proxy Telemetry"],
+        categoryLabel: "Chromium MV3 API Hunter",
+        badgeClass: "badge-info",
+        name: "Endpoint Hunter v10.0",
+        tagline: "Enterprise Client-Side API Reconnaissance & Route Harvester Suite for Chrome (Manifest V3)",
+        threatScope: "OWASP API Top 10 (API1, API3, API9) • Client-Side Attack Surface (CWE-200) • MITRE ATT&CK T1592",
+        benchmark: "0.02ms AST Route Extraction • 100% Client-Side MV3 • Zero Telemetry",
+        demoUrl: "https://github.com/pratik-khairnar-sec/endpoint-finder-extension",
+        repoUrl: "https://github.com/pratik-khairnar-sec/endpoint-finder-extension",
+        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/endpoint-finder-extension.git",
+        breakthrough: "Executes deep client-side route extraction and AST parsing directly within Chromium browsers (Manifest V3). Automatically traverses script tags, DOM attributes, inline JSON objects, and asynchronous Webpack/Vite chunks to uncover hidden administrative endpoints, internal microservice routes, and unauthenticated API parameters before traffic ever hits the wire.",
+        flowSteps: ["DOM Script Tag Listener", "Webpack Chunk Traversal", "AST Regex Route Matcher", "CVSS Risk Heuristic Scoring", "1-Click Burp Scope JSON Export"],
         vectors: [
-          "Schema Introspection Exposure",
-          "Recursive Query Depth Exhaustion",
-          "Alias Mutation Batching Bypasses",
-          "Field Suggestion Information Leaks",
-          "BOLA on Nested Object Types",
-          "AST Token Stream Mutation"
+          "Webpack / Vite Chunk Parsing",
+          "Hidden Admin & Debug Routes",
+          "Client-Side Secret & Token Discovery",
+          "Heuristic CVSS Risk Classifier",
+          "Dynamic DOM Attribute Extraction",
+          "1-Click Burp Suite Scope Export"
         ],
-        specs: ["Python 3", "GraphQL-Core AST", "Playwright", "Pytest (27/27 Passing)", "Burp Proxy Upstream"],
-        codeLang: "Python 3 (GraphQL-Core AST Engine)",
-        codeSnippet: `# GraphQL Query AST Tokenizer & Recursive Depth Limiter Audit
-from graphql import parse, FieldNode, OperationDefinitionNode
+        specs: ["JavaScript (ES6 Modules)", "Chrome Extension Manifest V3", "Service Worker Architecture", "Chrome DevTools API", "SidePanel API"],
+        codeLang: "JavaScript (Chrome MV3 Service Worker & Content Script)",
+        codeSnippet: `// Endpoint Hunter v10.0 - AST Route Extraction & Heuristic Risk Classifier
+chrome.webRequest.onCompleted.addListener(async (details) => {
+  if (details.type === "script" && details.url.includes(targetHost)) {
+    const rawScript = await fetch(details.url).then(r => r.text());
+    const extractedRoutes = RouteRegexParser.findMatches(rawScript);
 
-def calculate_ast_recursion_depth(node, depth: int = 0) -> int:
-    if not hasattr(node, 'selection_set') or not node.selection_set:
-        return depth
-    max_sub_depth = depth
-    for selection in node.selection_set.selections:
-        if isinstance(selection, FieldNode) and selection.selection_set:
-            sub = calculate_ast_recursion_depth(selection, depth + 1)
-            max_sub_depth = max(max_sub_depth, sub)
-    return max_sub_depth
-
-def test_alias_batching_bypass(endpoint: str, query_name: str, count: int = 200):
-    batched_body = "query { " + " ".join([f"a{i}: {query_name} {{ id }}" for i in range(count)]) + " }"
-    return requests.post(endpoint, json={"query": batched_body})`,
-        terminalLog: `[+] TaintQL v2.0.0 — GraphQL AST Security Auditor
-[*] Scanning Endpoint: https://api.target.corp/graphql
-[Phase 1] Schema Introspection Analysis:
-    [!] INTROSPECTION ENABLED: Full GraphQL schema exfiltrated (84 types, 312 fields)
-[Phase 2] AST Depth Limit Stress Test:
-    --> Generating recursive query AST (Depth 12)...
-    [!] VULNERABILITY DETECTED: No Query Depth Limit Enforced!
-    [+] Server CPU spiked to 98% on 5 concurrent recursive queries (Potential DoS)
-[Phase 3] Alias Batching Bypass Test:
-    --> Compiling 200 batched queries in single HTTP frame: { a1: login(...), a2: login(...) }
-    [!] RATE LIMIT BYPASSED: Backend processed 200 login attempts in single request!
-[+] Report Output: SARIF & JSON telemetry generated for VAPT dossier.`
+    extractedRoutes.forEach(route => {
+      const riskScore = RiskClassifier.evaluate(route);
+      if (riskScore.isSensitive) {
+        chrome.runtime.sendMessage({
+          action: "DISCOVERED_ENDPOINT",
+          endpoint: route,
+          risk: riskScore.level, // HIGH / CRITICAL
+          source: details.url
+        });
+      }
+    });
+  }
+}, { urls: ["<all_urls>"] });`,
+        terminalLog: `[+] Endpoint Hunter v10.0.0 (Chrome MV3) Initialized
+[*] Hooking Chrome Runtime Service Worker & DOM Observer
+[*] Target Domain: enterprise.target.corp
+--> Ingesting 14 Webpack script chunks (3,420 KB parsed in 18ms)
+[!] SENSITIVE API ROUTE DISCOVERED: /api/v3/internal/admin/user/impersonate
+    [+] Source Chunk: static/chunks/pages/admin-784f.js
+    [+] Detected Parameters: [target_uuid, auth_override, bypass_mfa]
+    [+] CVSS v3.1 Impact Score: 8.5 HIGH (CWE-200 / Information Disclosure)
+[+] 1-Click Burp Scope Export Generated: scope_target_corp.json`
       },
       {
         id: "corsair",

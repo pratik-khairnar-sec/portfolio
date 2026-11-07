@@ -58,6 +58,22 @@
 | **TaintQL** | GraphQL AST Security Auditor parsing query trees for introspection leaks & depth bypasses | `v2.0.0` | [🌐 Repository](https://github.com/pratik-khairnar-sec/TaintQL) | [`TaintQL`](https://github.com/pratik-khairnar-sec/TaintQL) |
 | **CORSair** | Cross-Origin Resource Sharing security analyzer with Shannon entropy token leak detection | `v3.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/CORSair/) | [`CORSair`](https://github.com/pratik-khairnar-sec/CORSair) |
 | **WaybackLens** | High-performance Wayback Machine CDX Recon & Triage Chrome Extension (Manifest V3) | `v1.0.0` | [🌐 Live Demo](https://pratik-khairnar-sec.github.io/wayback-lens/) | [`wayback-lens`](https://github.com/pratik-khairnar-sec/wayback-lens) |
+
+---
+
+### 🔒 Proprietary & Internal Security Tooling (10+ Private Repositories)
+
+| Suite / Tool | Core Architecture & Operational Focus | Classification |
+|---|---|---|
+| **RaceSentinel** | Single-packet HTTP/2 blast engine testing concurrency & atomic balance transfer race windows | `Private Repository` |
+| **WARSENTINEL** | Offensive threat intelligence, external C2 surface correlation, and automated listener fingerprinting | `Private Repository` |
+| **HyperSentry** | Continuous external attack surface monitor tracking live subdomain births & certificate log deltas | `Private Repository` |
+| **Invarauth** | Invariant-driven authorization testing suite modeling multi-tenant session states for RBAC bypass | `Private Repository` |
+| **p1auth** | P1 critical authentication analyzer auditing OAuth 2.0 / OIDC redirection & SAML assertion tampering | `Private Repository` |
+| **OriginUnmask** | WAF & CDN bypass engine identifying true backend origin IP addresses through historical DNS archives | `Private Repository` |
+| **ParamMatrix** | Automated hidden parameter discovery engine parsing JavaScript ASTs & testing hidden query inputs | `Private Repository` |
+| **CaptchaForge** | Anti-automation & CAPTCHA testing suite evaluating token reuse windows & validation bypass logic | `Private Repository` |
+| **dbhunt** | Database perimeter scanner detecting exposed or unauthenticated MongoDB, Redis, and PostgreSQL ports | `Private Repository` |
   * Correlated **CDR/IPDR telecom intelligence** and transaction trails to locate compromised endpoints and assist in formal charge sheet preparation.
 
 ---

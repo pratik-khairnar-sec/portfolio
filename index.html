@@ -594,7 +594,7 @@
     }
 
     /* ==========================================================================
-       Red Team Cyber Arsenal & Tactical Dossier Section (High-Tech HUD UI/UX)
+       Red Team Cyber Arsenal & Interactive Tool Inspector Section (High-Tech HUD UI/UX)
        ========================================================================== */
     #projects {
       background-color: #05070a;
@@ -1315,6 +1315,97 @@
     .term-sandbox-body::-webkit-scrollbar-thumb {
       background: rgba(255, 255, 255, 0.15);
       border-radius: 3px;
+    }
+
+    /* Private / Internal Security Arsenal */
+    .private-arsenal-card {
+      background: rgba(12, 16, 26, 0.88);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 12px;
+      padding: 26px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+      max-width: 1360px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .private-lock-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 10px;
+      background: rgba(220, 53, 69, 0.12);
+      border: 1px solid rgba(220, 53, 69, 0.35);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+    }
+
+    .private-tool-box {
+      background: rgba(15, 20, 30, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      border-radius: 8px;
+      padding: 16px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+    }
+
+    .private-tool-box:hover {
+      background: rgba(25, 32, 48, 0.85);
+      border-color: rgba(220, 53, 69, 0.35);
+      transform: translateY(-3px);
+    }
+
+    .private-tool-desc {
+      color: #94a3b8;
+      font-size: 0.81rem;
+      line-height: 1.5;
+      margin: 6px 0 12px 0;
+    }
+
+    .private-tool-stack {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .private-tool-stack span {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      font-size: 0.68rem;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Fira Code', monospace;
+    }
+
+    .private-badge {
+      font-size: 0.68rem;
+      letter-spacing: 0.4px;
+      background: rgba(245, 158, 11, 0.15) !important;
+      color: #fbbf24 !important;
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    body.light-mode .private-arsenal-card {
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    body.light-mode .private-tool-box {
+      background: #f8fafc;
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    body.light-mode .private-tool-name {
+      color: #0f172a !important;
+    }
+
+    body.light-mode .private-tool-desc {
+      color: #475569;
     }
 
     /* Arsenal Matrix Table */
@@ -2634,6 +2725,210 @@
         </div>
 
       </div>
+
+      <!-- Proprietary & Internal Security Tooling (10+ Private Repositories) -->
+      <div class="private-arsenal-card mt-5">
+        <div class="private-arsenal-header">
+          <div class="d-flex align-items-center">
+            <div class="private-lock-icon mr-3">
+              <i class="fas fa-shield-halved text-danger"></i>
+            </div>
+            <div>
+              <div class="d-flex align-items-center flex-wrap gap-2">
+                <h4 class="text-white font-weight-bold mb-1" style="font-size: 1.28rem;">
+                  Proprietary &amp; Internal Security Tooling
+                </h4>
+                <span class="badge badge-warning ml-md-2" style="font-size: 0.74rem; letter-spacing: 0.5px;">10+ PRIVATE REPOSITORIES</span>
+              </div>
+              <p class="text-muted small mb-0">
+                Custom vulnerability testing engines, high-concurrency race audit frameworks, and recon automation developed for specialized internal VAPT operations and offensive security research.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mt-4">
+          <!-- 1. RaceSentinel -->
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="private-tool-box">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="private-tool-name text-white font-weight-bold">
+                  <i class="fas fa-bolt text-danger mr-1"></i> RaceSentinel
+                </span>
+                <span class="badge badge-dark text-warning private-badge"><i class="fas fa-lock mr-1"></i>Private Repo</span>
+              </div>
+              <p class="private-tool-desc">
+                High-concurrency race condition testing framework executing single-packet HTTP/2 blast bursts to detect state transition race windows, limit bypasses, and atomic balance transfers.
+              </p>
+              <div class="private-tool-stack">
+                <span>Python 3</span>
+                <span>HTTP/2 Multiplexing</span>
+                <span>Thread Sync</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. WARSENTINEL -->
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="private-tool-box">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="private-tool-name text-white font-weight-bold">
+                  <i class="fas fa-crosshairs text-danger mr-1"></i> WARSENTINEL
+                </span>
+                <span class="badge badge-dark text-warning private-badge"><i class="fas fa-lock mr-1"></i>Private Repo</span>
+              </div>
+              <p class="private-tool-desc">
+                Offensive threat intelligence and external C2 surface mapping framework correlating exposed infrastructure telemetry, active listener fingerprints, and IOC feeds.
+              </p>
+              <div class="private-tool-stack">
+                <span>Threat Intel</span>
+                <span>C2 Profiling</span>
+                <span>Automation</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 3. HyperSentry -->
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="private-tool-box">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="private-tool-name text-white font-weight-bold">
+                  <i class="fas fa-satellite text-danger mr-1"></i> HyperSentry
+                </span>
+                <span class="badge badge-dark text-warning private-badge"><i class="fas fa-lock mr-1"></i>Private Repo</span>
+              </div>
+              <p class="private-tool-desc">
+                Continuous external attack surface monitor tracking live subdomain creation, certificate transparency log shifts, and infrastructure delta updates with real-time alerting.
+              </p>
+              <div class="private-tool-stack">
+                <span>EASM</span>
+                <span>Cert Transparency</span>
+                <span>Delta Diff</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 4. Invarauth -->
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="private-tool-box">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="private-tool-name text-white font-weight-bold">
+                  <i class="fas fa-user-lock text-danger mr-1"></i> Invarauth
+                </span>
+                <span class="badge badge-dark text-warning private-badge"><i class="fas fa-lock mr-1"></i>Private Repo</span>
+              </div>
+              <p class="private-tool-desc">
+                Invariant-driven authorization testing suite modeling multi-tenant session states to uncover horizontal/vertical privilege escalation and tenant isolation desync flaws.
+              </p>
+              <div class="private-tool-stack">
+                <span>Auth Matrix</span>
+                <span>RBAC Auditing</span>
+                <span>Multi-Tenant</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 5. p1auth -->
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="private-tool-box">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="private-tool-name text-white font-weight-bold">
+                  <i class="fas fa-key text-danger mr-1"></i> p1auth
+                </span>
+                <span class="badge badge-dark text-warning private-badge"><i class="fas fa-lock mr-1"></i>Private Repo</span>
+              </div>
+              <p class="private-tool-desc">
+                Critical authentication &amp; SSO vulnerability analyzer auditing OAuth 2.0 / OpenID Connect (OIDC) redirection flows, SAML token tampering, and session replay vulnerabilities.
+              </p>
+              <div class="private-tool-stack">
+                <span>OAuth 2.0 / OIDC</span>
+                <span>SAML 2.0</span>
+                <span>Token Tampering</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 6. OriginUnmask -->
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="private-tool-box">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="private-tool-name text-white font-weight-bold">
+                  <i class="fas fa-mask text-danger mr-1"></i> OriginUnmask
+                </span>
+                <span class="badge badge-dark text-warning private-badge"><i class="fas fa-lock mr-1"></i>Private Repo</span>
+              </div>
+              <p class="private-tool-desc">
+                WAF and CDN bypass engine identifying true backend origin IP addresses through historical DNS archives, SSL certificate SAN fingerprinting, and direct socket handshakes.
+              </p>
+              <div class="private-tool-stack">
+                <span>WAF Bypass</span>
+                <span>Origin Discovery</span>
+                <span>DNS Archives</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 7. ParamMatrix -->
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="private-tool-box">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="private-tool-name text-white font-weight-bold">
+                  <i class="fas fa-search-plus text-danger mr-1"></i> ParamMatrix
+                </span>
+                <span class="badge badge-dark text-warning private-badge"><i class="fas fa-lock mr-1"></i>Private Repo</span>
+              </div>
+              <p class="private-tool-desc">
+                Automated hidden parameter discovery engine parsing JavaScript AST structures, inline JSON objects, and heuristically testing hidden query parameters for injection flaws.
+              </p>
+              <div class="private-tool-stack">
+                <span>Param Mining</span>
+                <span>JS AST Parsing</span>
+                <span>HTTP Fuzzing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 8. CaptchaForge -->
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="private-tool-box">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="private-tool-name text-white font-weight-bold">
+                  <i class="fas fa-robot text-danger mr-1"></i> CaptchaForge
+                </span>
+                <span class="badge badge-dark text-warning private-badge"><i class="fas fa-lock mr-1"></i>Private Repo</span>
+              </div>
+              <p class="private-tool-desc">
+                Anti-automation and CAPTCHA implementation testing suite evaluating token reuse windows, session state persistence, and client-side validation bypass vectors.
+              </p>
+              <div class="private-tool-stack">
+                <span>Anti-Automation</span>
+                <span>Session Reuse</span>
+                <span>Rate Limit Testing</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 9. dbhunt -->
+          <div class="col-md-6 col-lg-4 mb-3">
+            <div class="private-tool-box">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <span class="private-tool-name text-white font-weight-bold">
+                  <i class="fas fa-database text-danger mr-1"></i> dbhunt
+                </span>
+                <span class="badge badge-dark text-warning private-badge"><i class="fas fa-lock mr-1"></i>Private Repo</span>
+              </div>
+              <p class="private-tool-desc">
+                Database perimeter scanner detecting exposed or unauthenticated MongoDB, Redis, Elasticsearch, and PostgreSQL ports across authorized CIDR ranges.
+              </p>
+              <div class="private-tool-stack">
+                <span>NoSQL / SQL</span>
+                <span>Port Probing</span>
+                <span>Misconfig Audit</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -3042,35 +3337,31 @@
   <!-- Projects Section (Red Team Cyber Command & Interactive Arsenal Dossier) -->
   <section id="projects">
     <div class="container-fluid px-lg-5">
-      <!-- Header with Operational HUD Telemetry -->
+      <!-- Header with Professional Security Tooling & Telemetry -->
       <div class="text-center mb-4">
         <div class="tactical-kicker">
-          <span class="live-pulse-dot mr-2"></span> DEFCON-1 // OFFENSIVE SECURITY ARSENAL
+          <i class="fas fa-terminal text-danger mr-2"></i>SECURITY TOOLS &amp; CUSTOM ARSENAL
         </div>
-        <h2 class="section-title">Red Team Cyber Arsenal</h2>
-        <p class="section-lead">Production-grade offensive tooling, Burp Suite Montoya API extensions, and statistical AST auditing engines engineered for zero false positives.</p>
+        <h2 class="section-title">Production Security Tools &amp; Arsenal</h2>
+        <p class="section-lead">Production-grade security extensions, automated exploitation frameworks, and 10+ proprietary internal testing engines built by Pratik Khairnar.</p>
         
         <!-- Telemetry Status Bar -->
         <div class="arsenal-telemetry-strip">
           <div class="telemetry-chip">
-            <span class="telemetry-label">SYSTEM STATUS:</span>
-            <span class="telemetry-val text-success"><i class="fas fa-circle text-success mr-1"></i>OPERATIONAL</span>
+            <span class="telemetry-label">PUBLIC TOOLS:</span>
+            <span class="telemetry-val text-danger">07 WEAPONIZED</span>
           </div>
           <div class="telemetry-chip">
-            <span class="telemetry-label">WEAPONIZED SUITES:</span>
-            <span class="telemetry-val text-danger">07 ACTIVE</span>
+            <span class="telemetry-label">PROPRIETARY TOOLS:</span>
+            <span class="telemetry-val text-warning">10+ PRIVATE REPOSITORIES</span>
           </div>
           <div class="telemetry-chip">
-            <span class="telemetry-label">DETERMINISTIC INVARIANTS:</span>
-            <span class="telemetry-val text-info">34+ COVERED</span>
+            <span class="telemetry-label">CORE INVARIANTS:</span>
+            <span class="telemetry-val text-info">34+ SECURITY CHECKS</span>
           </div>
           <div class="telemetry-chip">
-            <span class="telemetry-label">FALSE POSITIVE RATE:</span>
-            <span class="telemetry-val text-warning">0.00% VERIFIED</span>
-          </div>
-          <div class="telemetry-chip">
-            <span class="telemetry-label">ORGANIZATION:</span>
-            <span class="telemetry-val text-white">PENETRATION TESTING INTERN (CWIL)</span>
+            <span class="telemetry-label">OFFENSIVE STACK:</span>
+            <span class="telemetry-val text-white">JAVA (MONTOYA) &bull; PYTHON 3 &bull; BASH</span>
           </div>
         </div>
       </div>
@@ -3098,8 +3389,8 @@
 
         <!-- View Switcher -->
         <div class="view-switch-group">
-          <button class="view-switch-btn active" id="btnViewDossier" onclick="switchArsenalView('dossier')" title="Interactive Mission Dossier View">
-            <i class="fas fa-desktop mr-1"></i>Tactical Dossier
+          <button class="view-switch-btn active" id="btnViewDossier" onclick="switchArsenalView('dossier')" title="Interactive Tool Inspector View">
+            <i class="fas fa-desktop mr-1"></i>Interactive Inspector
           </button>
           <button class="view-switch-btn" id="btnViewMatrix" onclick="switchArsenalView('matrix')" title="Technical Engineering Comparison Matrix">
             <i class="fas fa-table-cells mr-1"></i>Arsenal Matrix
@@ -3107,7 +3398,7 @@
         </div>
       </div>
 
-      <!-- 1. TACTICAL DOSSIER VIEW (Default Interactive Command Console) -->
+      <!-- 1. INTERACTIVE TOOL INSPECTOR VIEW (Default Interactive Command Console) -->
       <div id="arsenalDossierView" class="arsenal-dossier-layout">
         <!-- Left: Weapon Selector Deck -->
         <div class="arsenal-deck" id="arsenalDeck" tabindex="0" aria-label="Weapon Arsenal List">
@@ -3178,26 +3469,29 @@
             </div>
 
             <p class="text-muted mb-2 small" style="line-height: 1.65;">
-              Penetration Testing Intern in the Offensive Security (VAPT) team at Cyber Warfare Intelligence Lab (OPC) Private Limited, executing authorized assessments under formal Rules of Engagement:
+              Executing comprehensive Web Application, API, and Network Vulnerability Assessment &amp; Penetration Testing (VAPT) across authorized lab and client scopes aligned with standard industry benchmarks (OWASP Top 10, WSTG v4.2, and NIST SP 800-115):
             </p>
             <ul class="text-muted mb-3 small pl-3" style="line-height: 1.65;">
-              <li><strong>Web Application &amp; Network Assessments:</strong> Perform web application and network vulnerability assessments on CWIL lab environments and authorised client scopes.</li>
-              <li><strong>OWASP Top 10 Mapping &amp; CVSS Rating:</strong> Map security findings to the <strong>OWASP Top 10</strong> and rate severity utilizing standardized <strong>CVSS v3.1</strong> metrics.</li>
-              <li><strong>Manual Verification &amp; False Positive Elimination:</strong> Manually verify automated scanner output from <strong>Burp Suite</strong>, <strong>Nmap</strong>, <strong>Nessus/OpenVAS</strong>, <strong>OWASP ZAP</strong>, and <strong>SQLMap</strong> to eliminate false positives and prove exploitability.</li>
-              <li><strong>Actionable Remediation &amp; Reporting:</strong> Write clear, reproducible findings with actionable remediation guidance adhering to professional client-delivery standard.</li>
-              <li><strong>Engagement Workflow &amp; Retests:</strong> Support senior penetration testers during authorised engagements and retests following strict Rules of Engagement (RoE) and legal compliance.</li>
+              <li><strong>Manual &amp; Automated Web / API Pentesting:</strong> Perform end-to-end vulnerability assessments on web applications and REST APIs targeting the <strong>OWASP Top 10 (2021)</strong> and <strong>OWASP API Security Top 10</strong>, identifying Broken Object Level Authorization (<strong>BOLA/IDOR</strong>), Broken Authentication, SQL Injection, Cross-Site Scripting (XSS), SSRF, and sensitive data leakage.</li>
+              <li><strong>Scanner Execution &amp; False-Positive Elimination:</strong> Execute vulnerability scans utilizing industry tools (<strong>Burp Suite Professional</strong>, <strong>Nmap</strong>, <strong>Nessus / OpenVAS</strong>, <strong>OWASP ZAP</strong>, and <strong>SQLMap</strong>); manually validate scanner telemetry to eliminate false positives and demonstrate exploitability with non-destructive Proof-of-Concepts (PoCs).</li>
+              <li><strong>Network Service Enumeration &amp; Auditing:</strong> Enumerate network perimeters, open ports, live services, and banner information across authorized target ranges to detect unpatched software, weak encryption ciphers, and security misconfigurations.</li>
+              <li><strong>CVSS v3.1 Scoring &amp; Client-Delivery Reporting:</strong> Quantify vulnerability severity utilizing <strong>CVSS v3.1</strong> base and vector metrics; author comprehensive technical VAPT reports including executive summaries, detailed reproduction steps, impact analysis, and developer-actionable remediation blueprints.</li>
+              <li><strong>Remediation Verification &amp; Retesting:</strong> Coordinate with development and IT teams to retest remediated vulnerabilities, verify security patch effectiveness, and support ticket closure strictly following Rules of Engagement (RoE).</li>
             </ul>
 
             <div class="timeline-tech-stack">
-              <span class="timeline-tech-chip">Burp Suite</span>
+              <span class="timeline-tech-chip">Burp Suite Pro</span>
               <span class="timeline-tech-chip">OWASP Top 10</span>
+              <span class="timeline-tech-chip">OWASP API Top 10</span>
               <span class="timeline-tech-chip">Nmap</span>
               <span class="timeline-tech-chip">Nessus / OpenVAS</span>
               <span class="timeline-tech-chip">OWASP ZAP</span>
-              <span class="timeline-tech-chip">Kali Linux</span>
               <span class="timeline-tech-chip">SQLMap</span>
               <span class="timeline-tech-chip">Metasploit</span>
+              <span class="timeline-tech-chip">Kali Linux</span>
               <span class="timeline-tech-chip">CVSS v3.1</span>
+              <span class="timeline-tech-chip">WSTG v4.2</span>
+              <span class="timeline-tech-chip">Remediation Retesting</span>
             </div>
           </div>
         </div>
@@ -3814,13 +4108,24 @@
 
           case 'tools':
             outputHtml = `
-              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">[Security Arsenal &amp; Extensions]</div>
-              <div style="color: #cbd5e1; margin-bottom: 4px;"><span style="color: #dc3545; font-weight: 600;">1. AUTHENTIX Enterprise (v3.0.0):</span> Burp Suite Montoya extension with 34 Invariants, 16 ATO Chains &amp; 3-Way Differential IDOR.</div>
-              <div style="color: #cbd5e1; margin-bottom: 4px;"><span style="color: #dc3545; font-weight: 600;">2. ReconForge (v4.0.0):</span> Master bug bounty reconnaissance engine (30 phases, 52,630+ dorks).</div>
-              <div style="color: #cbd5e1; margin-bottom: 4px;"><span style="color: #dc3545; font-weight: 600;">3. Reflectra (v7.0.0):</span> Context-aware XSS scanner with Headless Chrome verification &amp; 0 false positives.</div>
-              <div style="color: #cbd5e1; margin-bottom: 4px;"><span style="color: #dc3545; font-weight: 600;">4. BlindStrike (v7.0.0):</span> Latency-calibrated Time/Boolean Blind SQLi extraction with IQR baseline filtering.</div>
-              <div style="color: #cbd5e1; margin-bottom: 4px;"><span style="color: #dc3545; font-weight: 600;">5. CORSair (v3.0.0):</span> In-browser CORS auditor with dynamic origin reflection &amp; Shannon entropy calculations.</div>
-              <div style="color: #cbd5e1;"><span style="color: #dc3545; font-weight: 600;">6. WaybackLens (v1.0.0):</span> Chrome extension (MV3) for high-speed Wayback CDX endpoint reconnaissance.</div>`;
+              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">[Public Production Security Suites (7 Tools)]</div>
+              <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">1. AUTHENTIX Enterprise (v3.0.0):</span> Burp Suite Montoya API: 34 Invariants, 16 ATO Chains &amp; 3-Way Differential IDOR.</div>
+              <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">2. ReconForge (v4.0):</span> Multi-target Bug Bounty OSINT framework with 30 phases &amp; 52,630+ Dork Vault.</div>
+              <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">3. Reflectra (v7.0.0):</span> Headless Chrome dialog interception DOM XSS auditing engine (0% FP).</div>
+              <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">4. BlindStrike (v7.0.0):</span> Statistical Time/Boolean Blind SQLi framework with IQR jitter filtering.</div>
+              <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">5. TaintQL (v2.0.0):</span> GraphQL AST query auditor detecting introspection leaks &amp; batching bypasses.</div>
+              <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">6. CORSair (v3.0.0):</span> In-browser CORS analyzer with dynamic reflection &amp; Shannon entropy calculations.</div>
+              <div style="color: #cbd5e1; margin-bottom: 8px;"><span style="color: #dc3545; font-weight: 600;">7. WaybackLens (v1.0.0):</span> Chrome extension (MV3) for real-time Wayback CDX endpoint streaming.</div>
+              <div style="color: #fbbf24; font-weight: bold; margin-bottom: 6px;">[Proprietary Tooling &amp; Internal Research (10+ Private Repositories)]</div>
+              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>RaceSentinel:</strong> Concurrency &amp; race condition audit engine (single-packet HTTP/2 blast)</div>
+              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>WARSENTINEL:</strong> Offensive threat intelligence &amp; C2 surface correlation platform</div>
+              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>HyperSentry:</strong> Continuous external attack surface &amp; certificate transparency monitor</div>
+              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>Invarauth:</strong> Invariant-driven authorization &amp; multi-tenant session state tester</div>
+              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>p1auth:</strong> P1 critical authentication analyzer for OAuth 2.0 / OIDC / SAML flows</div>
+              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>OriginUnmask:</strong> WAF &amp; Cloudflare bypass engine identifying true backend origin IPs</div>
+              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>ParamMatrix:</strong> Hidden parameter discovery engine for complex web endpoints</div>
+              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>CaptchaForge:</strong> Anti-automation &amp; CAPTCHA session reuse vulnerability suite</div>
+              <div style="color: #94a3b8; font-size: 0.78rem;">&bull; <strong>dbhunt:</strong> Perimeter scanner for unauthenticated databases (MongoDB, Redis, PG)</div>`;
             break;
 
           case 'vapt-scan':
@@ -4015,7 +4320,7 @@
     }
 
     // ==========================================================================
-    // Red Team Cyber Arsenal & Tactical Dossier Controller (7 Master Tools)
+    // Red Team Cyber Arsenal & Interactive Tool Inspector Controller (7 Master Tools)
     // ==========================================================================
     const arsenalData = [
       {
@@ -4323,7 +4628,7 @@
         <div class="dossier-header-bar">
           <div>
             <div class="dossier-meta-crumb">
-              <span class="live-pulse-dot mr-1"></span> SYS_ID: ${item.codex} // CLASSIFICATION: ${item.categoryLabel.toUpperCase()}
+              <span class="live-pulse-dot mr-1"></span> ENGINE SPECIFICATIONS // ${item.codex} &bull; ${item.categoryLabel.toUpperCase()}
             </div>
             <h3 class="dossier-title">
               ${item.name}

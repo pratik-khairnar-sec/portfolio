@@ -30,12 +30,13 @@
 
 ## 🛡️ Professional Security Operations & Experience
 
-* **Penetration Testing Intern (VAPT) & Security Researcher — Cyber Warfare Intelligence Lab (OPC) Pvt. Ltd. (CWIL)** *(Nov 2026 – Present)*:
-  * Conducting manual enterprise web application and REST/GraphQL API penetration testing aligned with **OWASP Top 10 (2021)**, **OWASP API Security Top 10 (2023)**, **WSTG v4.2**, and **ASVS v4.0**.
-  * Uncovered critical authorization flaws (BOLA/IDOR), broken authentication, and sensitive PII exposures across active client targets (e.g., MediBuddy healthcare SSO/CookieBridge, Kewal Kiran Clothing infrastructure).
-  * Engineered internal automated fuzzing harnesses (Dirsearch/FFUF workflows), race condition testing engines (RaceSentinel), and cyber warfare intelligence automation (WARSENTINEL).
-  * Validated scanner findings (Burp Suite Pro, Nessus, Nmap), eliminated false positives, and delivered defensible **CVSS v3.1**-scored reports with deterministic PoCs and remediation blueprints.
-  * Authored official red team training SOPs on XSS discovery, subdomain enumeration, and advanced Google Dorking for junior researchers.
+* **Penetration Testing Intern (VAPT) — Cyber Warfare Intelligence Lab (OPC) Private Limited** *(1 Nov 2026 – 17 Apr 2027 • Remote • Ref: CWIL/INT/2026/VAPT/0001)*:
+  * Perform web application and network vulnerability assessments on CWIL lab environments and authorised client scopes.
+  * Map findings to the **OWASP Top 10** and rate them with **CVSS v3.1** severity metrics.
+  * Manually verify automated scanner output from **Burp Suite**, **Nmap**, **Nessus/OpenVAS**, **OWASP ZAP**, and **SQLMap** to eliminate false positives.
+  * Write clear, reproducible findings with actionable remediation guidance adhering to professional client-delivery standard.
+  * Support senior testers during authorised engagements and retests following strict Rules of Engagement (RoE).
+  * Verification reference: `CWIL/INT/2026/VAPT/0001` (verifiable at [verify.cwil.in](https://verify.cwil.in)).
 
 * **Cyber Crime Intern — Cyber Police Station, Nashik Police Commissionerate** *(Jan 2026 – May 2026)*:
   * Investigated **15+ live cybercrime and financial fraud cases** under senior officers.

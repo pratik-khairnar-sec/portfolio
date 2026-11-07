@@ -3,13 +3,19 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://pratikkhairnarsec.web.app/</loc>
-    <lastmod>2026-10-13</lastmod>
+    <lastmod>2026-11-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://pratikkhairnarsec.web.app/assets/reconforge_hero_dashboard.png</image:loc>
-      <image:title>Pratik Khairnar — VAPT Engineer Portfolio</image:title>
-      <image:caption>Pratik Khairnar Cybersecurity Portfolio and Security Tooling Suite</image:caption>
+      <image:loc>https://pratikkhairnarsec.web.app/assets/pratik_khairnar.png</image:loc>
+      <image:title>Pratik Khairnar — Penetration Tester &amp; Security Researcher</image:title>
+      <image:caption>Pratik Khairnar Certified Ethical Hacker (CEH v13) VAPT Portfolio</image:caption>
     </image:image>
+  </url>
+  <url>
+    <loc>https://pratik-khairnar-sec.github.io/portfolio/</loc>
+    <lastmod>2026-11-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>

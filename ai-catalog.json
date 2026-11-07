@@ -1,0 +1,63 @@
+{
+  "$schema": "https://agenticresourcediscovery.org/spec/v1/schema.json",
+  "name": "Pratik Khairnar Cybersecurity Portfolio",
+  "description": "Professional VAPT portfolio and security tooling catalog of Pratik Khairnar, Certified Ethical Hacker (CEH v13) & Penetration Tester.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Pratik Khairnar",
+    "email": "pratik.khairnar.sec@gmail.com",
+    "url": "https://pratikkhairnarsec.web.app/"
+  },
+  "capabilities": [
+    "Web Application Penetration Testing",
+    "API Security Auditing",
+    "Mobile Application VAPT",
+    "Burp Suite Montoya Extension Engineering",
+    "Exploit Verification",
+    "Attack Surface Reconnaissance"
+  ],
+  "tools": [
+    {
+      "name": "AUTHENTIX Enterprise v3.0.0",
+      "type": "Burp Suite Montoya Extension",
+      "repository": "https://github.com/pratik-khairnar-sec/authentix-enterprise",
+      "demo": "https://pratik-khairnar-sec.github.io/authentix-enterprise/"
+    },
+    {
+      "name": "ReconForge v4.0",
+      "type": "Reconnaissance Framework",
+      "repository": "https://github.com/pratik-khairnar-sec/reconforge",
+      "demo": "https://pratik-khairnar-sec.github.io/reconforge/"
+    },
+    {
+      "name": "Reflectra v7.0.0",
+      "type": "DOM XSS Auditing Engine",
+      "repository": "https://github.com/pratik-khairnar-sec/reflectra",
+      "demo": "https://pratik-khairnar-sec.github.io/reflectra/"
+    },
+    {
+      "name": "BlindStrike v7.0.0",
+      "type": "Statistical Blind SQLi Engine",
+      "repository": "https://github.com/pratik-khairnar-sec/blindstrike",
+      "demo": "https://pratik-khairnar-sec.github.io/blindstrike/"
+    },
+    {
+      "name": "Endpoint Hunter v10.0",
+      "type": "Chrome MV3 Extension",
+      "repository": "https://github.com/pratik-khairnar-sec/endpoint-finder-extension",
+      "demo": "https://pratik-khairnar-sec.github.io/endpoint-finder-extension/"
+    },
+    {
+      "name": "CORSair v3.0.0",
+      "type": "CORS Vulnerability Scanner",
+      "repository": "https://github.com/pratik-khairnar-sec/corsair",
+      "demo": "https://pratik-khairnar-sec.github.io/corsair/"
+    },
+    {
+      "name": "WaybackLens v1.0.0",
+      "type": "Historical Archive Scanner",
+      "repository": "https://github.com/pratik-khairnar-sec/wayback-lens",
+      "demo": "https://pratik-khairnar-sec.github.io/wayback-lens/"
+    }
+  ]
+}

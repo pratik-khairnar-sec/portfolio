@@ -56,12 +56,23 @@
   <link rel="icon" type="image/svg+xml"
     href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23000000'/%3E%3Ccircle cx='32' cy='32' r='24' fill='none' stroke='%23dc3545' stroke-width='2.5' stroke-dasharray='4 3'/%3E%3Ccircle cx='32' cy='32' r='10' fill='none' stroke='%23ffffff' stroke-width='2'/%3E%3Ccircle cx='32' cy='32' r='3.5' fill='%23dc3545'/%3E%3C/svg%3E">
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Stylesheets (Non-blocking & 100% Core Web Vitals Optimized) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap"></noscript>
+  
+  <link rel="preload" as="style" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></noscript>
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"></noscript>
+
+  <link rel="alternate" type="text/plain" href="llms.txt" title="LLM Agent Context">
+  <link rel="alternate" type="application/json" href="ai-catalog.json" title="AI Agent Directory">
 
   <style>
     /* ==========================================================================
@@ -1971,7 +1982,7 @@
     }
 
     .timeline-org {
-      color: #dc3545;
+      color: #f87171 !important;
       font-weight: 600;
       font-size: 0.95rem;
       margin-bottom: 10px;
@@ -2555,7 +2566,7 @@
 
     .chip-label {
       font-size: 0.75rem !important;
-      color: #64748b !important;
+      color: #cbd5e1 !important;
       font-weight: 600 !important;
       margin-right: 4px !important;
     }
@@ -2620,7 +2631,7 @@
     }
 
     .prompt-user {
-      color: #dc3545 !important;
+      color: #f87171 !important;
       font-weight: 700 !important;
     }
     .prompt-path {
@@ -2994,8 +3005,7 @@
         <span>Pratik Khairnar</span>
       </a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-bars"></i>
       </button>
 
@@ -3010,13 +3020,13 @@
           <li class="nav-item"><a class="nav-link" href="#timeline">EXPERIENCE</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
           <li class="nav-item d-none d-lg-flex ml-2">
-            <a class="nav-icon" href="https://github.com/pratik-khairnar-sec" target="_blank" title="GitHub">
+            <a class="nav-icon" href="https://github.com/pratik-khairnar-sec" target="_blank" title="GitHub" aria-label="Visit Pratik Khairnar GitHub profile">
               <i class="fab fa-github"></i>
             </a>
-            <a class="nav-icon" href="https://linkedin.com/in/pratik-khairnar-sec" target="_blank" title="LinkedIn">
+            <a class="nav-icon" href="https://linkedin.com/in/pratik-khairnar-sec" target="_blank" title="LinkedIn" aria-label="Visit Pratik Khairnar LinkedIn profile">
               <i class="fab fa-linkedin-in"></i>
             </a>
-            <a class="nav-icon" href="mailto:pratik.khairnar.sec@gmail.com" title="Email Pratik">
+            <a class="nav-icon" href="mailto:pratik.khairnar.sec@gmail.com" title="Email Pratik" aria-label="Send direct email to Pratik Khairnar">
               <i class="fas fa-envelope"></i>
             </a>
           </li>
@@ -3042,13 +3052,19 @@
         <div class="col-lg-6 hero-content">
           <div class="d-flex flex-wrap align-items-center gap-2 mb-3">
             <a href="#timeline" class="hero-cwil-pill mr-2 mb-2" title="Penetration Testing Intern @ Cyber Warfare Intelligence Lab (OPC) Pvt. Ltd.">
-              <img src="assets/cwil_logo.png" alt="CWIL Logo" class="hero-cwil-badge-img" width="22" height="22">
+              <picture>
+                <source srcset="assets/cwil_logo.webp" type="image/webp">
+                <img src="assets/cwil_logo.png" alt="CWIL Logo" class="hero-cwil-badge-img" width="22" height="22">
+              </picture>
               <span class="hero-cwil-pill-text">
                 <span class="live-pulse-dot mr-1"></span> Penetration Testing Intern &bull; CWIL
               </span>
             </a>
             <a href="#certifications" class="hero-ceh-pill mb-2" title="Click to view EC-Council Verified Credential & Scan">
-              <img src="assets/ceh_badge.png" alt="EC-Council CEH v13 Badge" class="hero-ceh-pill-badge" width="22" height="22">
+              <picture>
+                <source srcset="assets/ceh_badge.webp" type="image/webp">
+                <img src="assets/ceh_badge.png" alt="EC-Council CEH v13 Badge" class="hero-ceh-pill-badge" width="22" height="22">
+              </picture>
               <span class="hero-ceh-pill-text">
                 <span class="hero-ceh-live-dot"></span> CEH v13 Verified
               </span>
@@ -3057,8 +3073,8 @@
           </div>
           <h1 class="display-4 text-white font-weight-bold mb-0">Hi There! I'm</h1>
           <h1 class="display-4 text-danger font-weight-bold mb-3">Pratik Khairnar</h1>
-          <div class="hero-lead-text">
-            <span id="dynamic-text"></span><span class="cursor"></span>
+          <div class="hero-lead-text" style="min-height: 52px; contain: layout;">
+            <span id="dynamic-text">Penetration Tester &amp; Security Researcher</span><span class="cursor"></span>
           </div>
 
           <p class="hero-bio">
@@ -3087,11 +3103,11 @@
               <div class="spin-arrow" id="spinButton" title="Click to spin!"></div>
               <div class="wheel" id="languageWheel">
                 <div class="wheel-hub"><i class="fas fa-shield-halved"></i></div>
-                <div id="vaptLabel" class="language-label">Web VAPT</div>
-                <div id="apiLabel" class="language-label">API Security</div>
-                <div id="sqliLabel" class="language-label">Blind SQLi</div>
-                <div id="xssLabel" class="language-label">DOM XSS</div>
-                <div id="reconLabel" class="language-label">OSINT Recon</div>
+                <div id="vaptLabel" class="language-label" style="position: absolute; left: 105px; top: 20px; transform: rotate(0deg);">Web VAPT</div>
+                <div id="apiLabel" class="language-label" style="position: absolute; left: 214px; top: 99px; transform: rotate(72deg);">API Security</div>
+                <div id="sqliLabel" class="language-label" style="position: absolute; left: 173px; top: 228px; transform: rotate(144deg);">Blind SQLi</div>
+                <div id="xssLabel" class="language-label" style="position: absolute; left: 37px; top: 228px; transform: rotate(216deg);">DOM XSS</div>
+                <div id="reconLabel" class="language-label" style="position: absolute; left: -4px; top: 99px; transform: rotate(288deg);">OSINT Recon</div>
               </div>
             </div>
 
@@ -3141,7 +3157,7 @@
         <div class="row">
           <!-- Column 1: Core VAPT Assessment Focus -->
           <div class="col-md-6 mb-4 mb-md-0">
-            <h5 class="text-danger font-weight-bold mb-3"><i class="fas fa-crosshairs mr-2"></i>Testing Methodologies &amp; Standards</h5>
+            <h3 class="text-danger font-weight-bold mb-3" style="font-size: 1.12rem;"><i class="fas fa-crosshairs mr-2"></i>Testing Methodologies &amp; Standards</h3>
             <ul class="list-unstyled contact-details-list">
               <li>
                 <i class="fas fa-shield-halved"></i>
@@ -3304,7 +3320,7 @@
                   <i class="fas fa-network-wired"></i>
                 </div>
                 <div>
-                  <h5 class="text-white font-weight-bold mb-0">Cisco CCNA (Routing &amp; Switching)</h5>
+                  <h3 class="text-white font-weight-bold mb-0" style="font-size: 1.15rem;">Cisco CCNA (Routing &amp; Switching)</h3>
                   <span class="text-muted small">Cisco Networking Academy</span>
                 </div>
               </div>
@@ -3330,7 +3346,7 @@
                   <i class="fas fa-graduation-cap"></i>
                 </div>
                 <div>
-                  <h5 class="text-white font-weight-bold mb-0">B.Tech — Cyber Security &amp; Forensics</h5>
+                  <h3 class="text-white font-weight-bold mb-0" style="font-size: 1.15rem;">B.Tech — Cyber Security &amp; Forensics</h3>
                   <span class="text-muted small">Sandip University, Nashik &bull; CGPA: 7.42/10</span>
                 </div>
               </div>
@@ -3535,20 +3551,16 @@
         <!-- Telemetry Status Bar -->
         <div class="arsenal-telemetry-strip">
           <div class="telemetry-chip">
-            <span class="telemetry-label">FLAGSHIP SUITE:</span>
-            <span class="telemetry-val text-danger">07 WEAPONIZED TOOLS</span>
+            <span class="telemetry-label">OPEN-SOURCE SUITE:</span>
+            <span class="telemetry-val text-danger">07 VERIFIED REPOSITORIES</span>
           </div>
           <div class="telemetry-chip">
-            <span class="telemetry-label">PROPRIETARY REPOS:</span>
-            <span class="telemetry-val text-warning">15 PRIVATE REPOSITORIES</span>
-          </div>
-          <div class="telemetry-chip">
-            <span class="telemetry-label">TOTAL GITHUB CODE:</span>
-            <span class="telemetry-val text-info">22 VERIFIED REPOSITORIES</span>
+            <span class="telemetry-label">SPECIALIZATIONS:</span>
+            <span class="telemetry-val text-warning">WEB VAPT &bull; API SECURITY &bull; RECON</span>
           </div>
           <div class="telemetry-chip">
             <span class="telemetry-label">OFFENSIVE STACK:</span>
-            <span class="telemetry-val text-white">JAVA (MONTOYA) &bull; PYTHON 3 &bull; BASH &bull; GO</span>
+            <span class="telemetry-val text-white">JAVA 17/21 (MONTOYA) &bull; PYTHON 3 &bull; BASH &bull; GO</span>
           </div>
         </div>
       </div>
@@ -3642,11 +3654,14 @@
           <div class="timeline-content">
             <div class="timeline-header">
               <div class="d-flex align-items-center">
-                <img src="assets/cwil_logo.png" alt="Cyber Warfare Intelligence Lab Official Logo" class="timeline-org-logo mr-3" width="36" height="36">
+                <picture>
+                    <source srcset="assets/cwil_logo.webp" type="image/webp">
+                    <img src="assets/cwil_logo.png" alt="Cyber Warfare Intelligence Lab Official Logo" class="timeline-org-logo mr-3" width="36" height="36">
+                  </picture>
                 <div>
-                  <h4 class="timeline-title mb-1">
+                  <h3 class="timeline-title mb-1">
                     <i class="fas fa-shield-halved text-danger mr-2"></i>Penetration Testing Intern (VAPT)
-                  </h4>
+                  </h3>
                   <div class="timeline-org">Cyber Warfare Intelligence Lab (OPC) Private Limited &bull; Remote</div>
                 </div>
               </div>
@@ -3885,21 +3900,32 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+  <!-- Scripts (100% Native Vanilla JS — Zero Render-Blocking Dependencies) -->
   <script>
-    // Navbar scroll background toggle
-    $(document).ready(function () {
-      $(window).scroll(function () {
-        if ($(window).scrollTop() > 50) {
-          $('.navbar').addClass('scrolled');
-        } else {
-          $('.navbar').removeClass('scrolled');
-        }
-      });
+    // Pure Vanilla Navbar Background Toggle & Mobile Menu Handler
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('mainNavbar');
+      if (!navbar) return;
+      if (window.scrollY > 40) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const toggler = document.querySelector('.navbar-toggler');
+      const collapse = document.getElementById('navbarNav');
+      if (toggler && collapse) {
+        toggler.addEventListener('click', function () {
+          collapse.classList.toggle('show');
+        });
+        document.querySelectorAll('#navbarNav .nav-link').forEach(function (link) {
+          link.addEventListener('click', function () {
+            collapse.classList.remove('show');
+          });
+        });
+      }
     });
 
     // Page Load Timestamp for Bot Detection
@@ -4458,7 +4484,7 @@
         </button>
       </div>
       <div class="text-center" style="overflow-y: auto;">
-        <img id="certModalImg" src="" alt="Certificate" class="cert-modal-img img-fluid">
+        <img id="certModalImg" src="" alt="Official Certificate Verification Scan" class="cert-modal-img img-fluid" width="800" height="600" loading="lazy">
       </div>
       <div class="d-flex align-items-center justify-content-between mt-2 pt-2 border-top border-secondary flex-wrap gap-2">
         <span id="certModalMeta" class="text-muted small">Candidate: Pratik Sanjay Khairnar</span>
@@ -4938,7 +4964,7 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
               <span class="badge ${item.badgeClass} weapon-badge-pill">${item.categoryLabel}</span>
             </div>
             <div class="weapon-name-row">
-              <h5 class="weapon-name">${item.name}</h5>
+              <h3 class="weapon-name">${item.name}</h3>
               <i class="fas fa-chevron-right text-muted" style="font-size: 0.75rem;"></i>
             </div>
             <p class="weapon-tagline">${item.tagline}</p>
@@ -5117,8 +5143,23 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
     }
 
     function selectWeapon(idx) {
+      if (idx < 0 || idx >= arsenalData.length) return;
       activeWeaponIndex = idx;
-      renderArsenalDeck();
+
+      // Update active state in deck without destroying elements or scroll position
+      const deckItems = document.querySelectorAll('.arsenal-weapon-item');
+      deckItems.forEach(el => {
+        const itemIdx = parseInt(el.getAttribute('data-index'), 10);
+        if (itemIdx === idx) {
+          el.classList.add('active');
+          try {
+            el.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+          } catch (e) {}
+        } else {
+          el.classList.remove('active');
+        }
+      });
+
       renderDossierConsole();
     }
 
@@ -5222,7 +5263,7 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
 
   
   // ============================================================================
-  // ROCK-SOLID REVERSE-SCAN SCROLLSPY (ZERO DRIFT, BUTTERY SMOOTH)
+  // ROCK-SOLID ACCURATE SCROLLSPY (ZERO DRIFT, BUTTERY SMOOTH, PURE VANILLA)
   // ============================================================================
   (function () {
     const navLinks = Array.from(document.querySelectorAll('.navbar-nav .nav-link[href^="#"]'));
@@ -5242,22 +5283,25 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
       const windowHeight = window.innerHeight;
       const docHeight = document.documentElement.scrollHeight;
 
-      // 1. Top of page (< 80px) -> Always HOME
-      if (scrollY < 80) {
+      // 1. Top of page (< 60px) -> Always HOME
+      if (scrollY < 60) {
         return sections[0];
       }
 
-      // 2. Bottom of page (within 80px of page end) -> Always CONTACT
-      if (scrollY + windowHeight >= docHeight - 80) {
-        return sections[sections.length - 1];
+      // 2. Absolute bottom check: only if near the bottom of the document AND contact in view
+      const contactSec = sections.find(s => s.id === '#contact');
+      if (contactSec) {
+        const cRect = contactSec.el.getBoundingClientRect();
+        if (scrollY + windowHeight >= docHeight - 40 && cRect.top < windowHeight * 0.75) {
+          return contactSec;
+        }
       }
 
-      // 3. Reverse-scan from bottom to top with 140px fixed-nav trigger threshold
-      const triggerY = scrollY + 140;
+      // 3. Scan sections from bottom to top using offsetTop
+      const navOffset = 110;
       for (let i = sections.length - 1; i >= 0; i--) {
         const s = sections[i];
-        const secTop = s.el.getBoundingClientRect().top + scrollY;
-        if (triggerY >= secTop) {
+        if (scrollY >= s.el.offsetTop - navOffset) {
           return s;
         }
       }
@@ -5309,16 +5353,18 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
           this.classList.add('active');
 
           const navbar = document.getElementById('mainNavbar');
-          const navHeight = navbar ? navbar.offsetHeight : 75;
-          const targetTop = targetEl.getBoundingClientRect().top + window.pageYOffset - (navHeight - 2);
+          const navHeight = navbar ? navbar.offsetHeight : 72;
+          const targetTop = targetEl.offsetTop - (navHeight - 2);
 
           window.scrollTo({
             top: targetTop,
             behavior: 'smooth'
           });
 
-          if ($('.navbar-collapse').length && $('.navbar-collapse').hasClass('show')) {
-            $('.navbar-collapse').collapse('hide');
+          // Pure Vanilla collapse close (Zero jQuery)
+          const navCollapse = document.getElementById('navbarNav');
+          if (navCollapse && navCollapse.classList.contains('show')) {
+            navCollapse.classList.remove('show');
           }
 
           clickTimeout = setTimeout(function () {

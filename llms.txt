@@ -1,0 +1,33 @@
+# Pratik Khairnar — Penetration Tester & Security Researcher
+
+> Certified Ethical Hacker (CEH v13) & Cisco CCNA Certified Offensive Security Engineer.
+> Specializing in Web & Mobile VAPT, PortSwigger Burp Suite Montoya API Extension Engineering, API Security (OWASP Top 10), and Exploit Verification.
+
+## Core Capabilities
+- Web Application Penetration Testing (VAPT)
+- Mobile Application Security Testing (OWASP MASVS)
+- Burp Suite Montoya API Extension Development (Java 17/21)
+- Concurrency & Race Condition Auditing (Single-Packet HTTP/2 Engine)
+- Blind SQL Injection Verification (Interquartile Range Noise Filtration)
+- Attack Surface Reconnaissance & OSINT Automation
+
+## Verified Open Source Security Tools
+- [AUTHENTIX Enterprise v3.0.0](https://github.com/pratik-khairnar-sec/authentix-enterprise): Asynchronous Burp Suite Montoya API extension for differential authorization auditing and 34 BOLA/IDOR invariants.
+- [ReconForge v4.0](https://github.com/pratik-khairnar-sec/reconforge): Modular reconnaissance automation framework with 30 target phases and a 52,630+ Dork Vault.
+- [Reflectra v7.0.0](https://github.com/pratik-khairnar-sec/reflectra): Headless Chrome dialog interception engine for 0% false positive DOM XSS discovery.
+- [BlindStrike v7.0.0](https://github.com/pratik-khairnar-sec/blindstrike): Statistical Blind SQLi engine with IQR latency curve analysis.
+- [Endpoint Hunter v10.0](https://github.com/pratik-khairnar-sec/endpoint-finder-extension): Real-time JavaScript endpoint mining Chrome MV3 extension.
+- [CORSair v3.0.0](https://github.com/pratik-khairnar-sec/corsair): In-browser CORS vulnerability and entropy evaluation extension.
+- [WaybackLens v1.0.0](https://github.com/pratik-khairnar-sec/wayback-lens): Historical URL and secret discovery Chrome MV3 extension.
+
+## Verified Credentials
+- **Certified Ethical Hacker (CEH v13 AI)** — EC-Council (Credential ID: ECC8041352697)
+- **Cisco CCNA (Routing & Switching)** — Cisco Networking Academy
+- **B.Tech in Cyber Security & Forensics** — Sandip University (2023–2027)
+
+## Contact & Profiles
+- **Website:** https://pratikkhairnarsec.web.app/
+- **GitHub:** https://github.com/pratik-khairnar-sec
+- **LinkedIn:** https://linkedin.com/in/pratik-khairnar-sec
+- **Email:** pratik.khairnar.sec@gmail.com
+- **Phone / WhatsApp:** +91 87999 81052

@@ -837,7 +837,227 @@
 
     @media (max-width: 991px) {
       .arsenal-dossier-layout {
-        grid-template-columns: 1fr;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        gap: 16px;
+      }
+      .arsenal-deck {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        max-height: 480px;
+        padding-right: 0;
+      }
+      .arsenal-tool-item {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 12px 14px;
+      }
+      .tool-item-top {
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .tool-badge-pill {
+        font-size: 0.62rem;
+        white-space: normal;
+        max-width: 100%;
+      }
+      .tool-name-row {
+        flex-wrap: wrap;
+      }
+      .tool-name {
+        font-size: 0.96rem;
+        word-break: break-word;
+      }
+      .tool-tagline {
+        font-size: 0.78rem;
+        white-space: normal;
+      }
+      .tool-micro-chips {
+        flex-wrap: wrap;
+        gap: 4px;
+      }
+      .tool-chip {
+        font-size: 0.65rem;
+        white-space: normal;
+        word-break: break-word;
+      }
+      .arsenal-dossier-console {
+        min-width: 0;
+        width: 100%;
+        max-width: 100%;
+        padding: 18px 14px;
+        min-height: auto;
+        box-sizing: border-box;
+        overflow-x: hidden;
+      }
+      .dossier-header-bar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+      }
+      .dossier-meta-crumb {
+        font-size: 0.68rem;
+        word-break: break-word;
+        white-space: normal;
+      }
+      .dossier-title {
+        font-size: 1.25rem;
+        word-break: break-word;
+      }
+      .dossier-tagline {
+        font-size: 0.84rem;
+      }
+      .dossier-threat-scope {
+        font-size: 0.68rem;
+        white-space: normal;
+        word-break: break-word;
+        max-width: 100%;
+        display: block;
+      }
+      .dossier-action-btns {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+      .arsenal-btn-primary, .arsenal-btn-secondary, .arsenal-btn-cli {
+        font-size: 0.76rem;
+        padding: 7px 12px;
+        flex: 1 1 auto;
+        justify-content: center;
+        text-align: center;
+      }
+      .console-tab-bar {
+        display: flex;
+        overflow-x: auto;
+        white-space: nowrap;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+        padding: 4px;
+        scrollbar-width: thin;
+      }
+      .console-tab-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+        font-size: 0.72rem;
+        padding: 6px 10px;
+      }
+      .attack-flow-box {
+        padding: 12px;
+        box-sizing: border-box;
+      }
+      .attack-flow-title {
+        font-size: 0.68rem;
+        white-space: normal;
+        word-break: break-word;
+      }
+      .attack-flow-steps {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 6px;
+      }
+      .flow-step-node {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: flex-start;
+      }
+      .flow-arrow-icon {
+        transform: rotate(90deg);
+        align-self: center;
+        margin: 2px 0;
+      }
+      .dossier-breakthrough-box {
+        padding: 12px;
+        box-sizing: border-box;
+      }
+      .breakthrough-text {
+        font-size: 0.82rem;
+        line-height: 1.5;
+      }
+      .dossier-vectors-box {
+        box-sizing: border-box;
+      }
+      .vector-chip {
+        font-size: 0.68rem;
+        white-space: normal;
+        word-break: break-word;
+      }
+      .dossier-specs-row {
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+      .spec-chip {
+        font-size: 0.68rem;
+        white-space: normal;
+        word-break: break-word;
+      }
+      .code-snippet-container {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .code-snippet-pre {
+        overflow-x: auto;
+        white-space: pre;
+        max-width: 100%;
+        box-sizing: border-box;
+        font-size: 0.72rem;
+        padding: 12px;
+      }
+      .term-sandbox-body {
+        font-size: 0.72rem;
+        padding: 10px 12px;
+      }
+      .arsenal-telemetry-strip {
+        padding: 8px 12px;
+        gap: 6px 10px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .telemetry-chip {
+        font-size: 0.66rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+      }
+      .arsenal-controls-bar {
+        margin: 18px auto 14px auto;
+        gap: 12px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      .arsenal-filters {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 6px;
+        width: 100%;
+      }
+      .filter-chip {
+        padding: 5px 10px;
+        font-size: 0.74rem;
+      }
+      .view-switch-group {
+        width: 100%;
+        max-width: 320px;
+        justify-content: center;
+      }
+      .view-switch-btn {
+        flex: 1 1 50%;
+        text-align: center;
+        padding: 6px 8px;
+        font-size: 0.72rem;
       }
     }
 

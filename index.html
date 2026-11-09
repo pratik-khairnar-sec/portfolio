@@ -4043,8 +4043,12 @@
         .slice(0, maxLen);
     }
 
+    // Set this access key from https://web3forms.com (free, 0 ads, zero sponsor footers)
+    // If empty, automatically delivers via FormSubmit Box Engine with auto direct reply-to.
+    const WEB3FORMS_ACCESS_KEY = "";
+
     // Direct Email Dispatch Handler with Multi-Layer Security Checks
-    function handleInquirySubmit(event) {
+    async function handleInquirySubmit(event) {
       event.preventDefault();
 
       const toast = document.getElementById('form-toast');
@@ -4092,74 +4096,136 @@
       const submitBtn = document.getElementById('submitBtn');
       const originalBtnHtml = submitBtn.innerHTML;
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin mr-2"></i>Processing Inquiry...';
+      submitBtn.innerHTML = '<i class="fas fa-circle-notch fa-spin mr-2"></i>Transmitting Inquiry...';
 
-      const mailSubject = `[VAPT Inquiry] ${subject} — from ${name}`;
+      // Inline pending status
+      toast.style.display = 'block';
+      toast.className = 'alert alert-secondary mt-3 text-left p-3';
+      toast.style.background = 'rgba(255, 255, 255, 0.04)';
+      toast.style.border = '1px solid rgba(255, 255, 255, 0.12)';
+      toast.style.borderRadius = '10px';
+      toast.style.color = '#cbd5e1';
+      toast.innerHTML = '<i class="fas fa-circle-notch fa-spin mr-2 text-danger"></i>Securing transmission to Pratik\'s priority inbox...';
+
+      const mailSubject = `[VAPT Lead] ${subject} — ${name}`;
       const mailBody = `Hello Pratik,\n\nName: ${name}\nEmail: ${email}\nSubject: ${subject}\n\nMessage:\n${message}\n\n--- Delivered from Portfolio: https://pratikkhairnarsec.web.app`;
-
-      // Copy text to clipboard silently
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(`To: pratik.khairnar.sec@gmail.com\nSubject: ${mailSubject}\n\n${mailBody}`).catch(() => {});
-      }
 
       const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=pratik.khairnar.sec@gmail.com&su=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
       const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=pratik.khairnar.sec@gmail.com&subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
       const mailtoUrl = `mailto:pratik.khairnar.sec@gmail.com?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
-      const waUrl = `https://wa.me/918799981052?text=${encodeURIComponent('Hi Pratik, sent inquiry: ' + subject + ' - ' + message)}`;
+      const waUrl = `https://wa.me/918799981052?text=${encodeURIComponent('Hi Pratik, I just submitted an inquiry on your portfolio regarding: ' + subject)}`;
 
-      // Immediate clean action card
-      toast.style.display = 'block';
-      toast.className = 'alert alert-success mt-3 text-left p-3';
-      toast.style.background = 'rgba(16, 185, 129, 0.12)';
-      toast.style.border = '1px solid rgba(16, 185, 129, 0.35)';
-      toast.style.borderRadius = '12px';
-      toast.style.color = '#f1f5f9';
+      try {
+        let endpoint = "https://formsubmit.co/ajax/pratik.khairnar.sec@gmail.com";
+        let payload = {
+          _subject: `⚡ [VAPT / AppSec Lead] ${subject} — ${name}`,
+          _replyto: email,
+          _template: "box",
+          _captcha: "false",
+          "Candidate / Organization": name,
+          "Official Email": email,
+          "Inquiry Subject": subject,
+          "Message Scope": message,
+          "Delivered From": "Pratik Khairnar Portfolio (pratikkhairnarsec.web.app)",
+          "Timestamp (IST)": new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata", dateStyle: "full", timeStyle: "medium" })
+        };
 
-      toast.innerHTML = `
-        <div class="d-flex align-items-center mb-2">
-          <i class="fas fa-check-circle text-success mr-3" style="font-size: 1.8rem;"></i>
-          <div>
-            <strong style="font-size: 1.05rem; color: #34d399;">Inquiry Ready &bull; Message Copied to Clipboard!</strong><br>
-            <span class="small" style="color: #cbd5e1;">Target address: <strong>pratik.khairnar.sec@gmail.com</strong></span>
+        if (typeof WEB3FORMS_ACCESS_KEY === 'string' && WEB3FORMS_ACCESS_KEY.trim() !== '') {
+          endpoint = "https://api.web3forms.com/submit";
+          payload = {
+            access_key: WEB3FORMS_ACCESS_KEY.trim(),
+            subject: `⚡ [VAPT / AppSec Lead] ${subject} — ${name}`,
+            from_name: `${name} via Security Portfolio`,
+            replyto: email,
+            name: name,
+            email: email,
+            subject_title: subject,
+            message: message,
+            source: "https://pratikkhairnarsec.web.app"
+          };
+        }
+
+        const response = await fetch(endpoint, {
+          method: "POST",
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json().catch(() => ({}));
+
+        if (response.ok || (data && (data.success === true || data.success === "true"))) {
+          // Success! Reset form fields cleanly
+          const contactForm = document.getElementById('contactForm');
+          if (contactForm) contactForm.reset();
+
+          const safeName = typeof escapeHtml === 'function' ? escapeHtml(name) : name;
+          const safeSubject = typeof escapeHtml === 'function' ? escapeHtml(subject) : subject;
+          const safeEmail = typeof escapeHtml === 'function' ? escapeHtml(email) : email;
+
+          toast.className = 'alert alert-success mt-3 text-left p-3';
+          toast.style.background = 'rgba(16, 185, 129, 0.12)';
+          toast.style.border = '1px solid rgba(16, 185, 129, 0.45)';
+          toast.style.borderRadius = '12px';
+          toast.style.color = '#f1f5f9';
+
+          toast.innerHTML = `
+            <div class="d-flex align-items-center mb-2">
+              <i class="fas fa-check-circle text-success mr-3" style="font-size: 1.9rem;"></i>
+              <div>
+                <strong style="font-size: 1.05rem; color: #34d399;">Inquiry Transmitted Successfully!</strong><br>
+                <span class="small" style="color: #cbd5e1;">Delivered directly to Pratik's priority inbox.</span>
+              </div>
+            </div>
+            <p class="small mb-3" style="color: #94a3b8; line-height: 1.55;">
+              Thank you, <strong>${safeName}</strong>. Your message regarding "<em>${safeSubject}</em>" has been securely received. Pratik reviews incoming VAPT & AppSec opportunities promptly and will reply to <strong>${safeEmail}</strong>.
+            </p>
+            <div class="pt-2 border-top" style="border-color: rgba(255,255,255,0.08) !important;">
+              <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-success font-weight-bold px-3 py-1.5" style="border-radius: 6px; font-size: 0.82rem;">
+                <i class="fab fa-whatsapp mr-1.5"></i>Need Immediate Response? Connect on WhatsApp
+              </a>
+            </div>
+          `;
+        } else {
+          throw new Error(data.message || 'Dispatch error');
+        }
+      } catch (err) {
+        // Fallback UI ONLY IF network or adblocker blocks API
+        toast.className = 'alert alert-warning mt-3 text-left p-3';
+        toast.style.background = 'rgba(245, 158, 11, 0.12)';
+        toast.style.border = '1px solid rgba(245, 158, 11, 0.4)';
+        toast.style.borderRadius = '12px';
+        toast.style.color = '#f1f5f9';
+
+        toast.innerHTML = `
+          <div class="d-flex align-items-center mb-2">
+            <i class="fas fa-exclamation-triangle text-warning mr-3" style="font-size: 1.8rem;"></i>
+            <div>
+              <strong style="font-size: 1.02rem; color: #fbbf24;">Direct Dispatch Blocked by Browser/Network</strong><br>
+              <span class="small" style="color: #cbd5e1;">Your message has been preserved. Choose a 1-click option below:</span>
+            </div>
           </div>
-        </div>
-        <p class="small mb-3" style="color: #94a3b8; line-height: 1.5;">
-          Your inquiry has been formatted. Choose how you would like to transmit:
-        </p>
-        <div class="d-flex flex-wrap gap-2">
-          <a href="${gmailUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-danger px-3 py-2 font-weight-bold" style="border-radius: 6px;">
-            <i class="fab fa-google mr-2"></i>Send via Gmail (Web)
-          </a>
-          <a href="${outlookUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light px-3 py-2 font-weight-bold" style="border-radius: 6px;">
-            <i class="fab fa-windows mr-2"></i>Send via Outlook
-          </a>
-          <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-success px-3 py-2 font-weight-bold" style="border-radius: 6px;">
-            <i class="fab fa-whatsapp mr-2"></i>WhatsApp Direct
-          </a>
-          <a href="${mailtoUrl}" class="btn btn-sm btn-outline-info px-3 py-2 font-weight-bold" style="border-radius: 6px;">
-            <i class="fas fa-envelope mr-2"></i>Email Client
-          </a>
-        </div>
-      `;
-
-      // Non-blocking background dispatch
-      fetch("https://formsubmit.co/ajax/pratik.khairnar.sec@gmail.com", {
-        method: "POST",
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify({
-          Name: name,
-          Email: email,
-          Subject: subject,
-          Message: message,
-          Source: "https://pratikkhairnarsec.web.app"
-        })
-      })
-      .then(r => r.json())
-      .catch(() => {})
-      .finally(() => {
+          <p class="small mb-2" style="color: #94a3b8; line-height: 1.5;">
+            An ad-blocker or network rule prevented automated background dispatch. Choose your client to transmit:
+          </p>
+          <div class="d-flex flex-wrap gap-2 mt-2">
+            <a href="${gmailUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-danger px-3 py-2 font-weight-bold" style="border-radius: 6px;">
+              <i class="fab fa-google mr-2"></i>Send via Gmail (Web)
+            </a>
+            <a href="${outlookUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-light px-3 py-2 font-weight-bold" style="border-radius: 6px;">
+              <i class="fab fa-windows mr-2"></i>Send via Outlook
+            </a>
+            <a href="${waUrl}" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-success px-3 py-2 font-weight-bold" style="border-radius: 6px;">
+              <i class="fab fa-whatsapp mr-2"></i>WhatsApp Direct
+            </a>
+            <a href="${mailtoUrl}" class="btn btn-sm btn-outline-info px-3 py-2 font-weight-bold" style="border-radius: 6px;">
+              <i class="fas fa-envelope mr-2"></i>Email Client
+            </a>
+          </div>
+        `;
+      } finally {
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalBtnHtml;
-      });
+      }
     }
 
     function showInlineToast(type, msg) {

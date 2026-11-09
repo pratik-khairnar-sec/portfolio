@@ -130,7 +130,7 @@ Pin these 4 links in your **Featured** section (Click `Add profile section` -> `
 1. **Item 1 (Live Portfolio):**
    * **URL:** `https://pratikkhairnarsec.web.app/`
    * **Title:** `⚡ Official Cybersecurity Portfolio & Live Showcase`
-   * **Description:** `Interactive showcase featuring live project suites, Web VAPT weaponry wheel, terminal simulator, and technical resume.`
+   * **Description:** `Interactive showcase featuring live project suites, Web VAPT capabilities wheel, terminal simulator, and technical resume.`
 
 2. **Item 2 (Flagship Security Suite):**
    * **URL:** `https://pratik-khairnar-sec.github.io/authentix-enterprise/`

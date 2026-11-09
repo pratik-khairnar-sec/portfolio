@@ -76,7 +76,7 @@
 
   <style>
     /* ==========================================================================
-       Global Reset & Dark Aesthetic (Sandesh Benchmark: Pure Black + Crimson)
+       Global Reset & Dark Aesthetic (High-Contrast Cyber Theme: Pure Black + Crimson)
        ========================================================================== */
     html,
     body {
@@ -378,7 +378,7 @@
     }
 
     /* ==========================================================================
-       Interactive Rotating Weaponry Wheel (Sandesh Physics)
+       Interactive Rotating Security Capabilities Wheel
        ========================================================================== */
     .wheel-container {
       display: flex;
@@ -518,7 +518,7 @@
     }
 
     /* ==========================================================================
-       About Section (Clean Sandesh 2-Column Standard — ZERO PHOTO)
+       About Section (Professional 2-Column Layout)
        ========================================================================== */
     #about {
       background-color: #121212;
@@ -561,7 +561,7 @@
     }
 
     /* ==========================================================================
-       Skills Section (Sandesh Modern Cards Grid)
+       Skills Section (Modern Cards Grid)
        ========================================================================== */
     #skills {
       background-color: #0a0a0a !important;
@@ -851,7 +851,7 @@
       border-radius: 3px;
     }
 
-    .arsenal-weapon-item {
+    .arsenal-tool-item {
       background: rgba(15, 20, 30, 0.75);
       border: 1px solid rgba(255, 255, 255, 0.08);
       border-radius: 10px;
@@ -864,7 +864,7 @@
       user-select: none;
     }
 
-    .arsenal-weapon-item::before {
+    .arsenal-tool-item::before {
       content: '';
       position: absolute;
       top: 0;
@@ -875,38 +875,38 @@
       transition: all 0.25s ease;
     }
 
-    .arsenal-weapon-item:hover {
+    .arsenal-tool-item:hover {
       background: rgba(25, 32, 48, 0.9);
       border-color: rgba(220, 53, 69, 0.35);
       transform: translateX(4px);
     }
 
-    .arsenal-weapon-item.active {
+    .arsenal-tool-item.active {
       background: linear-gradient(90deg, rgba(220, 53, 69, 0.16) 0%, rgba(15, 20, 30, 0.98) 100%);
       border-color: rgba(220, 53, 69, 0.7);
       box-shadow: 0 4px 22px rgba(220, 53, 69, 0.22);
     }
 
-    .arsenal-weapon-item.active::before {
+    .arsenal-tool-item.active::before {
       background: #dc3545;
       box-shadow: 0 0 12px #dc3545;
     }
 
-    .weapon-item-top {
+    .tool-item-top {
       display: flex;
       justify-content: space-between;
       align-items: center;
       margin-bottom: 6px;
     }
 
-    .weapon-codex-id {
+    .tool-codex-id {
       font-family: 'Fira Code', monospace;
       font-size: 0.72rem;
       color: #38bdf8;
       letter-spacing: 1px;
     }
 
-    .weapon-badge-pill {
+    .tool-badge-pill {
       font-size: 0.68rem;
       font-weight: 700;
       padding: 2px 7px;
@@ -915,13 +915,13 @@
       text-transform: uppercase;
     }
 
-    .weapon-name-row {
+    .tool-name-row {
       display: flex;
       align-items: center;
       justify-content: space-between;
     }
 
-    .weapon-name {
+    .tool-name {
       font-size: 1.02rem;
       font-weight: 700;
       color: #ffffff;
@@ -929,11 +929,11 @@
       transition: color 0.2s ease;
     }
 
-    .arsenal-weapon-item.active .weapon-name {
+    .arsenal-tool-item.active .tool-name {
       color: #ff4d61;
     }
 
-    .weapon-tagline {
+    .tool-tagline {
       color: #94a3b8;
       font-size: 0.8rem;
       line-height: 1.45;
@@ -944,13 +944,13 @@
       overflow: hidden;
     }
 
-    .weapon-micro-chips {
+    .tool-micro-chips {
       display: flex;
       flex-wrap: wrap;
       gap: 4px;
     }
 
-    .weapon-chip {
+    .tool-chip {
       background: rgba(0, 0, 0, 0.45);
       border: 1px solid rgba(255, 255, 255, 0.08);
       color: #cbd5e1;
@@ -1750,22 +1750,22 @@
       color: #ffffff;
     }
 
-    body.light-mode .arsenal-weapon-item {
+    body.light-mode .arsenal-tool-item {
       background: #ffffff;
       border-color: rgba(0, 0, 0, 0.08);
       box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
     }
 
-    body.light-mode .arsenal-weapon-item.active {
+    body.light-mode .arsenal-tool-item.active {
       background: linear-gradient(90deg, rgba(220, 53, 69, 0.08) 0%, #ffffff 100%);
       border-color: rgba(220, 53, 69, 0.5);
     }
 
-    body.light-mode .weapon-name {
+    body.light-mode .tool-name {
       color: #0f172a;
     }
 
-    body.light-mode .weapon-tagline {
+    body.light-mode .tool-tagline {
       color: #64748b;
     }
 
@@ -2247,7 +2247,7 @@
     }
 
     /* ==========================================================================
-       Light Mode (Sandesh Benchmark)
+       Light Mode Styles
        ========================================================================== */
     body.light-mode {
       background-color: #f8fafc;
@@ -2669,7 +2669,7 @@
     }
   
     /* ==========================================================================
-       CEH v13 Hero Badge & Certifications Showcase (100/100 Executive Standard)
+       CEH v13 Hero Badge & Certifications Showcase
        ========================================================================== */
     .hero-ceh-pill {
       display: inline-flex;
@@ -3012,7 +3012,7 @@
           </div>
         </div>
 
-        <!-- Right Hero Weaponry Wheel (Sandesh Physics) -->
+        <!-- Right Hero Security Capabilities Wheel -->
         <div class="col-lg-6 d-none d-lg-flex justify-content-center">
           <div class="wheel-container">
             <div class="wheel-wrapper">
@@ -3049,7 +3049,7 @@
       </div>
   </section>
 
-  <!-- Certifications Section (100/100 Top-Tier Executive Credentials) -->
+  <!-- About Section -->
   <section id="about">
     <div class="container">
       <h2 class="section-title">About Me</h2>
@@ -3157,7 +3157,7 @@
       <h2 class="section-title">Industry Credentials &amp; Certifications</h2>
       <p class="section-lead">Internationally accredited offensive security and network engineering credentials verified by EC-Council and Cisco Networking Academy.</p>
 
-      <!-- Row 1: The Crown Jewel — EC-Council CEH v13 Master Showcase -->
+      <!-- Row 1: EC-Council CEH v13 Credential Showcase -->
       <div class="cert-master-card mb-5">
         <div class="row align-items-center">
           <!-- Left: Official CEH Badge Image -->
@@ -3275,7 +3275,7 @@
               <li><i class="fas fa-check text-danger mr-2"></i><strong>Digital Forensics &amp; Incident Response</strong> — In-depth academic training in disk forensics, memory analysis, network artifact triage, and ISO/IEC 27037 evidence handling standards.</li>
             </ul>
             <div style="font-size: 0.8rem; color: #94a3b8;">
-              <i class="fas fa-shield-halved text-danger mr-1"></i>Academic Transcripts verified &bull; Grounded in defensive &amp; offensive systems engineering.
+              <i class="fas fa-graduation-cap text-warning mr-1"></i>Accredited University Curriculum &bull; Grounded in defensive &amp; offensive systems engineering.
             </div>
           </div>
         </div>
@@ -3283,11 +3283,7 @@
     </div>
   </section>
 
-
-  <!-- About Section (Clean Sandesh 2-Column Standard — ZERO PHOTO) -->
-  
-
-  <!-- Skills Section (Sandesh Modern Cards) -->
+  <!-- Skills Section -->
   <section id="skills">
     <div class="container">
       <h2 class="section-title">My Skills</h2>
@@ -3516,9 +3512,9 @@
 
       <!-- 1. INTERACTIVE TOOL INSPECTOR VIEW (Default Interactive Command Console) -->
       <div id="arsenalDossierView" class="arsenal-dossier-layout">
-        <!-- Left: Weapon Selector Deck -->
-        <div class="arsenal-deck" id="arsenalDeck" tabindex="0" aria-label="Weapon Arsenal List">
-          <!-- Weapon items will be injected by JavaScript -->
+        <!-- Left: Security Tools Selector Deck -->
+        <div class="arsenal-deck" id="arsenalDeck" tabindex="0" aria-label="Security Tools Arsenal List">
+          <!-- Security tool items will be injected by JavaScript -->
         </div>
 
         <!-- Right: Interactive Mission Dossier & HUD Viewport -->
@@ -3672,14 +3668,12 @@
             <div class="d-flex align-items-center gap-3 my-2">
               <img src="assets/ceh_badge.png" alt="CEH v13 Badge" style="width: 48px; height: 48px; object-fit: contain; filter: drop-shadow(0 0 8px rgba(220,53,69,0.5));" width="48" height="48">
               <div>
-                <strong class="text-white">&bull; Certified Ethical Hacker (CEH v13)</strong> &mdash; EC-Council <span class="badge badge-danger ml-1" style="font-size: 0.75rem;">Verified</span><br>
-                <strong class="text-white">&bull; Cisco Certified Network Associate (CCNA)</strong> &mdash; Cisco Academy
+                <strong class="text-white">Certified Ethical Hacker (CEH v13)</strong> &mdash; EC-Council <span class="badge badge-danger ml-1" style="font-size: 0.75rem;">Verified</span><br>
+                <strong class="text-white">Cisco Certified Network Associate (CCNA)</strong> &mdash; Cisco Networking Academy
               </div>
             </div>
             <p class="text-muted mb-0 small" style="line-height: 1.65;">
-              &bull; <strong>Certified Ethical Hacker (CEH v13)</strong> &mdash; EC-Council<br>
-              &bull; <strong>Cisco Certified Network Associate (CCNA)</strong> &mdash; Cisco Networking Academy<br>
-              &bull; Focus Areas: Network Defense, Web Application Attacks, Threat Intelligence, and Enterprise Penetration Testing Methodologies.
+              <strong>Specialized Domains:</strong> Web Application Penetration Testing (OWASP Top 10), Network Architecture &amp; Defense, Cryptography, Threat Intelligence, and Enterprise Security Assessment Methodologies.
             </p>
           </div>
         </div>
@@ -3887,7 +3881,7 @@
       typeRole();
     });
 
-    // Rotating Wheel Physics (Sandesh Standard)
+    // Rotating Capabilities Wheel Physics
     const wheelData = {
       "Web VAPT": {
         title: "Manual Web Application VAPT",
@@ -4025,7 +4019,7 @@
       });
     }
 
-    // Hack-Proof Input Sanitization Helper
+    // Input Sanitization & XSS Mitigation Helper
     function sanitizeSecurityInput(str, maxLen) {
       if (typeof str !== 'string') return '';
       return str
@@ -4246,7 +4240,7 @@
 
           case 'tools':
             outputHtml = `
-              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">[Public Production Security Suites (7 Weaponized Tools)]</div>
+              <div style="color: #38bdf8; font-weight: bold; margin-bottom: 6px;">[Public Production Security Tools &amp; Frameworks (7 Repositories)]</div>
               <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">1. AUTHENTIX Enterprise (v3.0.0):</span> Burp Suite Montoya API: 34 Invariants, 16 ATO Chains &amp; 3-Way Differential IDOR.</div>
               <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">2. ReconForge (v4.0):</span> Multi-target Bug Bounty OSINT framework with 30 phases &amp; 52,630+ Dork Vault.</div>
               <div style="color: #cbd5e1; margin-bottom: 3px;"><span style="color: #dc3545; font-weight: 600;">3. Reflectra (v7.0.0):</span> Headless Chrome dialog interception DOM XSS auditing engine (0% FP).</div>
@@ -4528,8 +4522,8 @@ public class DifferentialAuditEngine {
         demoUrl: "https://pratik-khairnar-sec.github.io/ReconForge/",
         repoUrl: "https://github.com/pratik-khairnar-sec/ReconForge",
         cloneCmd: "git clone https://github.com/pratik-khairnar-sec/ReconForge.git",
-        breakthrough: "Standardizes disparate reconnaissance workflows into a unified 30-phase offensive pipeline. Features an offline, zero-telemetry vault of 52,630+ indexed Google, GitHub, and Shodan dorks, generating 1-click weaponized execution chains for Subfinder, HTTPX, Katana, Nuclei, and Gau.",
-        flowSteps: ["Target Scope Domain", "Subdomain Permutation Engine", "30-Phase Dork Vault", "Automated Tool Generator", "Weaponized Bash Dispatch"],
+        breakthrough: "Standardizes disparate reconnaissance workflows into a unified 30-phase offensive pipeline. Features an offline, zero-telemetry vault of 52,630+ indexed Google, GitHub, and Shodan dorks, generating 1-click execution pipelines for Subfinder, HTTPX, Katana, Nuclei, and Gau.",
+        flowSteps: ["Target Scope Domain", "Subdomain Permutation Engine", "30-Phase Dork Vault", "Automated Tool Generator", "Automated Bash Pipeline"],
         vectors: [
           "Subdomain Permutation Matrix",
           "Leaked S3 / GCP Storage Buckets",
@@ -4798,7 +4792,7 @@ export function analyzeCORSResponse(headers, body) {
 [*] Calculating Response Shannon Entropy:
     [+] Entropy Value: 4.82 bits/byte (High Entropy Detected)
     [+] Sensitive Token Pattern: Bearer eyJhbGciOi... (Session Token Leaked!)
-[+] Generated Weaponized PoC: index.html (Exfiltrates authenticated response to attacker C2)`
+[+] Generated Exploitation PoC: index.html (Demonstrates cross-origin data exfiltration)`
       },
       {
         id: "waybacklens",
@@ -4857,7 +4851,7 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
       }
     ];
 
-    let activeWeaponIndex = 0;
+    let activeToolIndex = 0;
     let currentFilter = 'all';
     let currentConsoleTab = 'architecture';
 
@@ -4873,20 +4867,20 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
 
       deckEl.innerHTML = filtered.map((item) => {
         const globalIdx = arsenalData.findIndex(w => w.id === item.id);
-        const isActive = globalIdx === activeWeaponIndex;
+        const isActive = globalIdx === activeToolIndex;
         return `
-          <div class="arsenal-weapon-item ${isActive ? 'active' : ''}" onclick="selectWeapon(${globalIdx})" data-index="${globalIdx}">
-            <div class="weapon-item-top">
-              <span class="weapon-codex-id">${item.codex}</span>
-              <span class="badge ${item.badgeClass} weapon-badge-pill">${item.categoryLabel}</span>
+          <div class="arsenal-tool-item ${isActive ? 'active' : ''}" onclick="selectTool(${globalIdx})" data-index="${globalIdx}">
+            <div class="tool-item-top">
+              <span class="tool-codex-id">${item.codex}</span>
+              <span class="badge ${item.badgeClass} tool-badge-pill">${item.categoryLabel}</span>
             </div>
-            <div class="weapon-name-row">
-              <h3 class="weapon-name">${item.name}</h3>
+            <div class="tool-name-row">
+              <h3 class="tool-name">${item.name}</h3>
               <i class="fas fa-chevron-right text-muted" style="font-size: 0.75rem;"></i>
             </div>
-            <p class="weapon-tagline">${item.tagline}</p>
-            <div class="weapon-micro-chips">
-              ${item.specs.slice(0, 3).map(s => `<span class="weapon-chip">${s}</span>`).join('')}
+            <p class="tool-tagline">${item.tagline}</p>
+            <div class="tool-micro-chips">
+              ${item.specs.slice(0, 3).map(s => `<span class="tool-chip">${s}</span>`).join('')}
             </div>
           </div>
         `;
@@ -4897,7 +4891,7 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
       const consoleEl = document.getElementById('dossierContent');
       if (!consoleEl) return;
 
-      const item = arsenalData[activeWeaponIndex];
+      const item = arsenalData[activeToolIndex];
       if (!item) return;
 
       consoleEl.innerHTML = `
@@ -5052,19 +5046,19 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
     function rerunTermExecution() {
       const termEl = document.getElementById('termSandboxBody');
       if (!termEl) return;
-      const item = arsenalData[activeWeaponIndex];
+      const item = arsenalData[activeToolIndex];
       termEl.innerHTML = '<span style="color: #fbbf24;">[*] Initializing dynamic vulnerability assessment probe...</span>';
       setTimeout(() => {
         termEl.innerHTML = formatTerminalLog(item.terminalLog);
       }, 350);
     }
 
-    function selectWeapon(idx) {
+    function selectTool(idx) {
       if (idx < 0 || idx >= arsenalData.length) return;
-      activeWeaponIndex = idx;
+      activeToolIndex = idx;
 
       // Update active state in deck without destroying elements or scroll position
-      const deckItems = document.querySelectorAll('.arsenal-weapon-item');
+      const deckItems = document.querySelectorAll('.arsenal-tool-item');
       deckItems.forEach(el => {
         const itemIdx = parseInt(el.getAttribute('data-index'), 10);
         if (itemIdx === idx) {
@@ -5088,6 +5082,7 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
 
       const firstMatch = arsenalData.findIndex(item => cat === 'all' || item.category === cat);
       if (firstMatch !== -1) {
+        activeToolIndex = firstMatch;
         activeWeaponIndex = firstMatch;
       }
       renderArsenalDeck();
@@ -5159,15 +5154,15 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
       if (e.key >= '1' && e.key <= '7') {
         const targetIdx = parseInt(e.key) - 1;
         if (targetIdx < arsenalData.length) {
-          selectWeapon(targetIdx);
+          selectTool(targetIdx);
         }
       } else if (e.key === 'ArrowDown') {
-        if (activeWeaponIndex < arsenalData.length - 1) {
-          selectWeapon(activeWeaponIndex + 1);
+        if (activeToolIndex < arsenalData.length - 1) {
+          selectTool(activeToolIndex + 1);
         }
       } else if (e.key === 'ArrowUp') {
-        if (activeWeaponIndex > 0) {
-          selectWeapon(activeWeaponIndex - 1);
+        if (activeToolIndex > 0) {
+          selectTool(activeToolIndex - 1);
         }
       }
     });

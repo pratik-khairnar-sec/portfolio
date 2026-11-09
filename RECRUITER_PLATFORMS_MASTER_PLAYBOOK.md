@@ -149,7 +149,7 @@ Certified Ethical Hacker (CEH v13) & Web Penetration Tester with proven experien
 ### Detailed Breakdown:
 1. **Desktop & Laptop Experience (100%):**
    * Clear visual hierarchy on LinkedIn, GitHub, and Portfolio.
-   * Full terminal simulator, weaponry wheel, and project screenshots render instantaneously.
+   * Full terminal simulator, security capabilities wheel, and project screenshots render instantaneously.
 2. **Mobile Experience (98%):**
    * LinkedIn mobile app truncates headlines after ~90 characters. Our headline puts the most critical keywords (`VAPT Engineer | Web App Penetration Tester | CEH v13 & CCNA Certified`) right in the first 85 characters, ensuring full readability on smartphones!
    * Terminal window and portfolio wheel have been hardened with responsive flex-wrapping and touch-friendly padding.

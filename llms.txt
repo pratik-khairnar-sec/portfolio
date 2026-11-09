@@ -21,7 +21,7 @@
 - [WaybackLens v1.0.0](https://github.com/pratik-khairnar-sec/wayback-lens): Historical URL and secret discovery Chrome MV3 extension.
 
 ## Verified Credentials
-- **Certified Ethical Hacker (CEH v13 AI)** — EC-Council (Credential ID: ECC8041352697)
+- **Certified Ethical Hacker (CEH v13 AI)** — EC-Council (Credential ID: ECC8042517936)
 - **Cisco CCNA (Routing & Switching)** — Cisco Networking Academy
 - **B.Tech in Cyber Security & Forensics** — Sandip University (2023–2027)
 

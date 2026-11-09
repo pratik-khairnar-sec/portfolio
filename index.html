@@ -78,12 +78,16 @@
     /* ==========================================================================
        Global Reset & Dark Aesthetic (High-Contrast Cyber Theme: Pure Black + Crimson)
        ========================================================================== */
-    html,
+    html {
+      height: auto;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+    }
+
     body {
-      height: 100%;
+      min-height: 100vh;
       margin: 0;
       padding: 0;
-      scroll-behavior: smooth;
       font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background-color: #07090e;
       background-image: 
@@ -95,14 +99,19 @@
       background-size: 100% 100%, 100% 100%, 100% 100%, 48px 48px, 48px 48px;
       background-attachment: fixed;
       color: #ffffff;
-      overflow-x: hidden;
+      overflow-x: clip;
       position: relative;
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* Silent Red Team Atmosphere Ambient Overlay */
-    html, body {
-      overflow-x: hidden !important;
+    /* Ambient Atmosphere Overlay */
+    html {
+      overflow-x: hidden;
+      max-width: 100%;
+    }
+
+    body {
+      overflow-x: clip;
       max-width: 100%;
       width: 100%;
     }
@@ -2911,7 +2920,7 @@
 </style>
 </head>
 
-<body class="antigravity-scroll-body">
+<body>
 
   <!-- Navbar -->
   <nav id="mainNavbar" class="navbar navbar-expand-lg fixed-top">
@@ -5252,7 +5261,8 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
     window.addEventListener('resize', updateNavHighlight);
 
     // Smooth scroll and exact pixel target calculation on click
-    navLinks.forEach(link => {
+    const allScrollLinks = Array.from(document.querySelectorAll('.navbar-nav .nav-link[href^="#"], .navbar-brand[href^="#"]'));
+    allScrollLinks.forEach(link => {
       link.addEventListener('click', function (e) {
         const targetId = this.getAttribute('href');
         const targetEl = document.querySelector(targetId);
@@ -5262,11 +5272,18 @@ async function streamAndClassifyHistoricalEndpoints(targetDomain) {
           clearTimeout(clickTimeout);
 
           navLinks.forEach(l => l.classList.remove('active'));
-          this.classList.add('active');
+          const matchingNavLink = navLinks.find(l => l.getAttribute('href') === targetId);
+          if (matchingNavLink) {
+            matchingNavLink.classList.add('active');
+          }
 
-          const navbar = document.getElementById('mainNavbar');
-          const navHeight = navbar ? navbar.offsetHeight : 72;
-          const targetTop = targetEl.offsetTop - (navHeight - 2);
+          let targetTop = 0;
+          if (targetId !== '#home') {
+            const navbar = document.getElementById('mainNavbar');
+            const navHeight = navbar ? navbar.offsetHeight : 72;
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            targetTop = Math.max(0, targetEl.getBoundingClientRect().top + currentScroll - (navHeight - 2));
+          }
 
           window.scrollTo({
             top: targetTop,
